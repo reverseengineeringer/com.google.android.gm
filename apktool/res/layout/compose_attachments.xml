@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.mail.ui.AttachmentTileGrid android:id="@id/attachment_tile_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:animateLayoutChanges="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/attachment_bar_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" />
+</merge>

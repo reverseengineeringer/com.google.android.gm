@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="chip_padding">8.0dip</dimen>
+    <dimen name="chip_height">32.0dip</dimen>
+    <dimen name="chip_text_size">14.0sp</dimen>
+    <dimen name="undo_bar_width_list">718.0dip</dimen>
+    <dimen name="undo_bar_width_conv">600.0dip</dimen>
+    <dimen name="undo_bar_width_conv_list">360.0dip</dimen>
+    <dimen name="undo_bar_width_search_list">380.0dip</dimen>
+</resources>

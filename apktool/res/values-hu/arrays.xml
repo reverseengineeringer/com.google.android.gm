@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Válasz</item>
+        <item>Válasz mindenk.</item>
+        <item>Továbbítás</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Sikerült</item>
+        <item>Nincs kapcsolat.</item>
+        <item>A bejelentkezés sikertelen.</item>
+        <item>Biztonsági hiba</item>
+        <item>A szinkronizálás sikertelen.</item>
+        <item>Belső hiba</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Rendszer</item>
+        <item>Gyakori</item>
+        <item>Összes címke</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Újabb</item>
+        <item>Régebbi</item>
+        <item>Beszélgetéslista</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Újabb beszélgetés megjelenítése archiválás/törlés után</item>
+        <item>Régebbi beszélgetés megjelenítése archiválás/törlés után</item>
+        <item>Beszélgetéslista megjelenítése archiválás/törlés után</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Nincs hatása</item>
+        <item>Archiválja vagy törli</item>
+        <item>Mindig törli</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Nincs hatása</item>
+        <item>Beérkezett üzenetek: archiválja a beszélgetést. Gyakori címkék: eltávolítja az aktuális címkét. A „Minden levél\" vagy „Elküldött\" rendszercímkékhez hasonló címkék: törli a beszélgetést</item>
+        <item>Mindig törli a beszélgetést</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Apró</item>
+        <item>Kicsi</item>
+        <item>Normál</item>
+        <item>Nagy</item>
+        <item>Óriási</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Üzenetek tartalmának megjelenítése apró méretű szövegként</item>
+        <item>Üzenetek tartalmának megjelenítése kis méretű szövegként</item>
+        <item>Üzenetek tartalmának megjelenítése normál méretű szövegként</item>
+        <item>Üzenetek tartalmának megjelenítése nagy méretű szövegként</item>
+        <item>Üzenetek tartalmának megjelenítése óriás méretű szövegként</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Az üzenetműveletek mindig a képernyő tetején jelenjenek meg</item>
+        <item>A műveletek csak álló tájolásnál jelenjenek meg a képernyő tetején</item>
+        <item>Ne jelenjenek meg az üzenetműveletek az üzenet fejlécén kívül</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Mindig látszik</item>
+        <item>Megjelenítés csak álló tájolásban</item>
+        <item>Ne jelenjen meg</item>
+    </string-array>
+</resources>

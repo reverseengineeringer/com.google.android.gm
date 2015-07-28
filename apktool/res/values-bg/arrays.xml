@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Отговор</item>
+        <item>Отг. до всички</item>
+        <item>Препращане</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Успех</item>
+        <item>Няма връзка.</item>
+        <item>Не можахте да влезете.</item>
+        <item>Грешка в сигурността.</item>
+        <item>Не можа да се синхронизира.</item>
+        <item>Вътрешна грешка</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Система</item>
+        <item>Често ползвани</item>
+        <item>Всички етикети</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>По-нова</item>
+        <item>По-стара</item>
+        <item>Списък с кореспонденции</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>По-новата кореспонденция след архивиране или изтриване</item>
+        <item>По-старата кореспонденция след архивиране или изтриване</item>
+        <item>Списъкът с кореспонденции след архивиране или изтриване</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Няма ефект</item>
+        <item>Архивира или изтрива</item>
+        <item>Винаги изтрива</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Няма ефект</item>
+        <item>Вх. поща: арх. кореспонденцията. Станд. етикети: премахва тек. етикет. Сист. етикети, като „Цялата поща“ или „Изпратени“: изтр. кореспонденцията.</item>
+        <item>Винаги изтрива кореспонденцията</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Миниатюрен</item>
+        <item>Малък</item>
+        <item>Нормален</item>
+        <item>Голям</item>
+        <item>Огромен</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Показване на съдържанието на съобщенията с миниатюрен текст</item>
+        <item>Показване на съдържанието на съобщенията с малък текст</item>
+        <item>Показване на съдържанието на съобщенията с нормален шрифт</item>
+        <item>Показване на съдържанието на съобщенията с голям текст</item>
+        <item>Показване на съдържанието на съобщенията с огромен текст</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Действията със съобщението да се показват винаги в горната част на екрана</item>
+        <item>Действията със съобщението да се показват в горната част на екрана само при завъртане във вертикална ориентация</item>
+        <item>Действията със съобщението да не се показват извън заглавката му</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Винаги да се показва</item>
+        <item>Да се показва само във вертикална ориентация</item>
+        <item>Да не се показва</item>
+    </string-array>
+</resources>

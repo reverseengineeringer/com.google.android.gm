@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="compose_scrollview_width">700.0dip</dimen>
+    <dimen name="spinner_frame_width">172.0dip</dimen>
+    <dimen name="folder_list_pane_width">200.0dip</dimen>
+    <dimen name="undo_bar_width_list">600.0dip</dimen>
+    <dimen name="undo_bar_width_conv">800.0dip</dimen>
+    <dimen name="undo_bar_width_conv_list">800.0dip</dimen>
+    <dimen name="undo_bar_width_search_list">800.0dip</dimen>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_manage_folders">Gerenciar marcadores</string>
+    <string name="menu_folder_options">Gerenciar marcadores</string>
+    <string name="add_cc_label">+ Cc/Cco</string>
+    <string name="add_bcc_label">+ Cco</string>
+    <string name="menu_label_options">Gerenciar marcadores</string>
+</resources>

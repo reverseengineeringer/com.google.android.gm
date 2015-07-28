@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="list_collapsed">true</bool>
+    <bool name="show_two_pane_search_results">false</bool>
+    <bool name="show_disabled_archive_menu_item">true</bool>
+    <bool name="show_conversation_subject">true</bool>
+    <bool name="display_folder_colors_in_widget">true</bool>
+    <bool name="prefDefault_actionStripActionReplyAll">false</bool>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Svar</item>
+        <item>Svar alle</item>
+        <item>Fremover</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Fullført</item>
+        <item>Ingen tilkobling.</item>
+        <item>Påloggingen mislyktes.</item>
+        <item>Sikkerhetsfeil.</item>
+        <item>Synkroniseringen mislyktes.</item>
+        <item>Intern feil</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>System</item>
+        <item>Ofte brukt</item>
+        <item>Alle etikettene</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Nyere</item>
+        <item>Eldre</item>
+        <item>Samtaleliste</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Vis nyere samtaler etter at du har arkivert eller slettet</item>
+        <item>Vis eldre samtaler etter at du har arkivert eller slettet</item>
+        <item>Vis samtaleliste etter at du har arkivert eller slettet</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Er ikke aktivert</item>
+        <item>Arkiverer eller sletter</item>
+        <item>Sletter alltid</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Er ikke aktivert</item>
+        <item>Innboks: arkivér samtale. Vanlige etiketter: fjern gjeldende etikett. Systemetiketter (som All e-post eller Sendt): slett samtalen.</item>
+        <item>Sletter alltid samtalen</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Bitteliten</item>
+        <item>Liten</item>
+        <item>Normal</item>
+        <item>Stor</item>
+        <item>Kjempestor</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Vis innholdet i e-poster med bitteliten skriftstørrelse</item>
+        <item>Vis innholdet i e-poster med liten skriftstørrelse</item>
+        <item>Vis innholdet i meldinger med normal skriftstørrelse</item>
+        <item>Vis innholdet i e-poster med stor skriftstørrelse</item>
+        <item>Vis innholdet i e-poster med kjempestor skriftstørrelse</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Vis alltid meldingshandlinger øverst på skjermen</item>
+        <item>Vis kun meldingalternativer øverst på skjermen når rotert til stående</item>
+        <item>Ikke vis e-postalternativer utenfor e-postoverskriften</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Vis alltid</item>
+        <item>Kun stående visning</item>
+        <item>Ikke vis</item>
+    </string-array>
+</resources>

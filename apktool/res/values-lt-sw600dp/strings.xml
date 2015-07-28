@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_manage_folders">Tvarkyti etiketes</string>
+    <string name="menu_folder_options">Tvarkyti etiketes</string>
+    <string name="add_cc_label">+ kop. / nemat. kop.</string>
+    <string name="add_bcc_label">+ nematomoji kopija</string>
+    <string name="menu_label_options">Valdyti etiketes</string>
+</resources>

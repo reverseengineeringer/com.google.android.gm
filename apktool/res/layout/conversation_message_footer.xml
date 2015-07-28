@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.browse.MessageFooterView android:orientation="vertical" android:id="@id/attachments" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_view_margin_side" android:layout_marginRight="@dimen/conversation_view_margin_side"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/attachments_header_text" android:paddingLeft="@dimen/message_details_header_padding_left" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attachments_header" android:textAllCaps="true" style="@style/MessageAttachmentsHeaderStyle" />
+    <View android:id="@id/attachments_header_bar" android:background="@color/conv_subject_border" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/message_details_header_bottom_border_height" android:layout_marginBottom="8.0dip" />
+    <com.android.mail.ui.AttachmentTileGrid android:id="@id/attachment_tile_grid" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/attachment_bar_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+</com.android.mail.browse.MessageFooterView>

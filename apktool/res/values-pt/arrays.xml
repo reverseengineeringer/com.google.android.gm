@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Responder</item>
+        <item>Resp. a todos</item>
+        <item>Encaminhar</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Êxito</item>
+        <item>Sem conexão.</item>
+        <item>Falha ao fazer login.</item>
+        <item>Erro de segurança.</item>
+        <item>Não foi possível sincronizar.</item>
+        <item>Erro interno</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Sistema</item>
+        <item>Uso frequente</item>
+        <item>Tod. marcadores</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Mais recente</item>
+        <item>Mais antiga</item>
+        <item>Lista de conversas</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Exibir conversas mais recentes depois que você arquivar ou excluir</item>
+        <item>Exibir conversas mais antigas depois que você arquivar ou excluir</item>
+        <item>Exibir a lista de conversas depois que você arquivar ou excluir</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Não tem efeito</item>
+        <item>Arquiva ou exclui</item>
+        <item>Sempre exclui</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Não tem efeito</item>
+        <item>Caixa de ent: arquiva a conversa. Marc normais: remove o marcador. Marc do sist.: exclui a conversa.</item>
+        <item>Sempre exclui a conversa</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Muito pequeno</item>
+        <item>Pequeno</item>
+        <item>Normal</item>
+        <item>Grande</item>
+        <item>Enorme</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Exibir conteúdo das mensagens em tamanho muito pequeno</item>
+        <item>Exibir conteúdo das mensagens em texto de tamanho pequeno</item>
+        <item>Exibir conteúdo das mensagens em texto de tamanho normal</item>
+        <item>Exibir conteúdo das mensagens em texto de tamanho grande</item>
+        <item>Exibir conteúdo das mensagens em tamanho muito grande</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Sempre mostrar as ações da mensagem no topo da tela</item>
+        <item>Mostrar as ações da mensagem somente no topo da tela quando alternar para o modo de retrato</item>
+        <item>Não mostrar as ações da mensagem fora do cabeçalho da mensagem</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Mostrar sempre</item>
+        <item>Mostrar apenas no modo de retrato</item>
+        <item>Não mostrar</item>
+    </string-array>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Odpovědět</item>
+        <item>Odpovědět všem</item>
+        <item>Předat dál</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Podařilo se</item>
+        <item>Žádné připojení.</item>
+        <item>Přihlášení se nezdařilo.</item>
+        <item>Chyba zabezpečení.</item>
+        <item>Chyba synchronizace.</item>
+        <item>Interní chyba</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Systém</item>
+        <item>Často používané</item>
+        <item>Všechny štítky</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Novější</item>
+        <item>Starší</item>
+        <item>Seznam konverzací</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Po archivaci či smazání zobrazit novější konverzaci</item>
+        <item>Po archivaci či smazání zobrazit starší konverzaci</item>
+        <item>Po archivaci či smazání zobrazit seznam konverzací</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Žádná funkce</item>
+        <item>Archivovat nebo smazat</item>
+        <item>Vždy smazat</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Žádná funkce</item>
+        <item>Doručená pošta: archivuje konverzaci. Běžné štítky: odstraní aktuální štítek. Systémové štítky jako Všechny zprávy nebo Odeslaná pošta: smaže konverzaci.</item>
+        <item>Vždy odstranit konverzaci</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Velmi malý</item>
+        <item>Malý</item>
+        <item>Normální</item>
+        <item>Velký</item>
+        <item>Velmi velký</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Zobrazit obsah zpráv velmi malým písmem</item>
+        <item>Zobrazit obsah zpráv malým písmem</item>
+        <item>Zobrazit obsah zpráv středně velkým písmem</item>
+        <item>Zobrazit obsah zpráv velkým písmem</item>
+        <item>Zobrazit obsah zpráv velmi velkým písmem</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Vždy zobrazovat akce zpráv v horní části obrazovky</item>
+        <item>Zobrazovat akce zpráv v horní části obrazovky jen v případě, kdy je natočena na výšku</item>
+        <item>Nezobrazovat akce zpráv mimo záhlaví zprávy</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Vždy zobrazovat</item>
+        <item>Zobrazit pouze v režimu na výšku</item>
+        <item>Nezobrazovat</item>
+    </string-array>
+</resources>

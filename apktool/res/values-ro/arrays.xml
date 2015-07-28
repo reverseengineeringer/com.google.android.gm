@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Răspundeţi</item>
+        <item>Răsp. tuturor</item>
+        <item>Redirecţionaţi</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Finalizat</item>
+        <item>Nicio conexiune.</item>
+        <item>Conectarea a eşuat.</item>
+        <item>Eroare de securitate.</item>
+        <item>Sincronizarea a eşuat.</item>
+        <item>Eroare internă</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Sistem</item>
+        <item>Frecvente</item>
+        <item>Toate etichet.</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Mai nouă</item>
+        <item>Mai veche</item>
+        <item>Lista de conversaţii</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Afişaţi conversaţia mai nouă după ce arhivaţi sau ştergeţi</item>
+        <item>Afişaţi conversaţia mai veche după ce arhivaţi sau ştergeţi</item>
+        <item>Afişaţi lista de conversaţii după ce arhivaţi sau ştergeţi</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Nu are efect</item>
+        <item>Arhivează sau şterge</item>
+        <item>Întotdeauna şterge</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Nu are efect</item>
+        <item>Mes. primite: arhiv. conv. Etichete obiş.: elim. eticheta curentă. Etichete sistem (Toate e-mail. sau Mes. trimise): şterge conv.</item>
+        <item>Întotdeauna şterge conversaţia</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Minusculă</item>
+        <item>Mică</item>
+        <item>Normală</item>
+        <item>Mare</item>
+        <item>Foarte mare</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Afişaţi conţinutul mesajelor cu text foarte mic</item>
+        <item>Afişaţi conţinutul mesajelor cu text de dimensiune mică</item>
+        <item>Afişaţi conţinutul mesajelor cu text de dimensiune normală</item>
+        <item>Afişaţi conţinutul mesajelor cu text de dimensiune mare</item>
+        <item>Afişaţi conţinutul mesajelor cu text foarte mare</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Afişaţi întotdeauna acţiunile pentru mesaje în partea de sus a ecranului</item>
+        <item>Afişaţi acţiunile pentru mesaje în partea de sus a ecranului numai când acesta este rotit în modul Portret</item>
+        <item>Nu afişaţi acţiunile pentru mesaje în afara antetului mesajului</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Afişaţi întotdeauna</item>
+        <item>Afişaţi numai în modul Portret</item>
+        <item>Nu afişaţi</item>
+    </string-array>
+</resources>

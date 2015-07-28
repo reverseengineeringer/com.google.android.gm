@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/conversation_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/header" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/conv_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/conversation_view_header" />
+                <include android:id="@id/message_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/conv_header" layout="@layout/conversation_message_header" />
+            </RelativeLayout>
+            <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <include android:id="@id/message_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/conversation_message_footer" />
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/conversation_topmost_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/conversation_load_spinner" />
+</FrameLayout>

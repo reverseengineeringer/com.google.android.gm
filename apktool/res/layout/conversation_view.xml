@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.mail.browse.ConversationContainer android:id="@id/conversation_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.mail.browse.ConversationWebView android:id="@id/webview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/conversation_topmost_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:layout_gravity="top" android:id="@id/snap_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/conversation_message_header" />
+            <include android:layout_gravity="bottom" android:paddingLeft="@dimen/conversation_view_margin_side" android:paddingRight="@dimen/conversation_view_margin_side" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/new_message_notification_bar" />
+        </FrameLayout>
+    </com.android.mail.browse.ConversationContainer>
+    <com.android.mail.browse.ScrollIndicatorsView android:scrollbarStyle="outsideOverlay" android:id="@id/scroll_indicators" android:scrollbars="horizontal|vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/conversation_load_spinner" />
+</FrameLayout>

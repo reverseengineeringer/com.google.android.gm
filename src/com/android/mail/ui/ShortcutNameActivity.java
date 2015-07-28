@@ -1,0 +1,92 @@
+package com.android.mail.ui;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.Selection;
+import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
+
+public class ShortcutNameActivity
+  extends Activity
+  implements View.OnClickListener, TextView.OnEditorActionListener
+{
+  private String mFolderName;
+  private EditText mFolderText;
+  private Intent mShortcutClickIntent;
+  
+  private void doCancel()
+  {
+    setResult(0);
+    finish();
+  }
+  
+  private void doCreateShortcut()
+  {
+    Object localObject = mFolderText.getText();
+    Intent localIntent = new Intent();
+    localIntent.putExtra("extra_folder_click_intent", mShortcutClickIntent);
+    localIntent.putExtra("android.intent.extra.shortcut.NAME", mFolderName);
+    localObject = localObject.toString();
+    if (TextUtils.getTrimmedLength((CharSequence)localObject) > 0) {
+      mShortcutClickIntent.putExtra("android.intent.extra.shortcut.NAME", (String)localObject);
+    }
+    setResult(-1, mShortcutClickIntent);
+    finish();
+  }
+  
+  public void onClick(View paramView)
+  {
+    int i = paramView.getId();
+    if (2131755258 == i) {
+      doCreateShortcut();
+    }
+    while (2131755199 != i) {
+      return;
+    }
+    doCancel();
+  }
+  
+  public void onCreate(Bundle paramBundle)
+  {
+    super.onCreate(paramBundle);
+    setContentView(2130968679);
+    mShortcutClickIntent = ((Intent)getIntent().getParcelableExtra("extra_folder_click_intent"));
+    mFolderName = getIntent().getStringExtra("extra_shortcut_name");
+    mFolderText = ((EditText)findViewById(2131755244));
+    mFolderText.setText(mFolderName);
+    mFolderText.setOnEditorActionListener(this);
+    mFolderText.requestFocus();
+    paramBundle = mFolderText.getText();
+    Selection.setSelection(paramBundle, paramBundle.length());
+    findViewById(2131755258).setOnClickListener(this);
+    findViewById(2131755199).setOnClickListener(this);
+    paramBundle = getActionBar();
+    if (paramBundle != null) {
+      paramBundle.setIcon(2130903041);
+    }
+  }
+  
+  public boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
+  {
+    if (paramInt == 6)
+    {
+      doCreateShortcut();
+      return true;
+    }
+    return false;
+  }
+}
+
+/* Location:
+ * Qualified Name:     com.android.mail.ui.ShortcutNameActivity
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

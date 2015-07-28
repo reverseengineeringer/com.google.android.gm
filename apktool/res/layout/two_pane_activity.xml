@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.TwoPaneLayout android:orientation="horizontal" android:id="@id/two_pane_activity" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content_pane" android:background="@drawable/folder_bg_holo_light" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/conversation_list_pane" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+    <com.android.mail.ui.ConversationListCopy android:id="@id/conversation_list_copy" android:layout_width="0.0dip" android:layout_height="fill_parent" />
+    <include android:id="@id/conversation_pane" android:layout_width="0.0dip" android:layout_height="fill_parent" layout="@layout/conversation_pager" />
+    <RelativeLayout android:id="@id/wait" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.mail.ui.ActionableToastBar android:id="@id/toast_bar" style="@style/ToastBarStyle" />
+</com.android.mail.ui.TwoPaneLayout>

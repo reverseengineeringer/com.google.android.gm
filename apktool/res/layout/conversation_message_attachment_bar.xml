@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.browse.MessageAttachmentBar android:background="@drawable/attachment_bg_holo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:minHeight="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/attachment_icon" android:background="@color/attachment_image_background_color" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:src="@drawable/ic_menu_attachment_holo_light" android:scaleType="center" />
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="#ff333333" android:ellipsize="end" android:id="@id/attachment_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="true" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffaaaaaa" android:ellipsize="end" android:id="@id/attachment_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_below="@id/attachment_title" />
+            <ProgressBar android:id="@id/attachment_progress" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:indeterminate="true" android:layout_below="@id/attachment_title" style="?android:attr/progressBarStyleHorizontal" />
+        </RelativeLayout>
+        <ImageView android:id="@id/overflow" android:layout_width="48.0dip" android:layout_height="fill_parent" style="@android:style/Widget.Holo.Light.ActionButton.Overflow" />
+        <ImageButton android:id="@id/cancel_attachment" android:background="?android:selectableItemBackground" android:visibility="gone" android:clickable="true" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_cancel_holo_light" android:scaleType="center" />
+    </LinearLayout>
+    <View android:id="@id/attachment_push_state" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.android.mail.browse.MessageAttachmentBar>

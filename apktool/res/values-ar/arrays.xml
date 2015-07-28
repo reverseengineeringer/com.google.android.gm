@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>رد</item>
+        <item>الرد على الكل</item>
+        <item>إعادة توجيه</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>تم بنجاح</item>
+        <item>لا يتوفر اتصال.</item>
+        <item>تعذر تسجيل الدخول.</item>
+        <item>خطأ أمنى.</item>
+        <item>تعذرت المزامنة</item>
+        <item>خطأ داخلي</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>النظام</item>
+        <item>مستخدمة بشكل متكرر</item>
+        <item>جميع التصنيفات</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>أحدث</item>
+        <item>أقدم</item>
+        <item>قائمة المحادثات</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>عرض المحادثة الأحدث بعد الأرشفة أو الحذف</item>
+        <item>عرض المحادثة الأقدم بعد الأرشفة أو الحذف</item>
+        <item>عرض قائمة المحادثات بعد الأرشفة أو الحذف</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>بدون تأثير</item>
+        <item>الأرشفة أو الحذف</item>
+        <item>الحذف دائمًا</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>بدون تأثير</item>
+        <item>صندوق الوارد: أرشفة المحادثة. التصنيفات العادية: إزالة التصنيف الحالي. تصنيفات النظام مثل \"كل البريد\" أو \"المرسلة\": حذف المحادثة.</item>
+        <item>حذف المحادثة دائمًا</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>صغير جدًا</item>
+        <item>صغير</item>
+        <item>عادي</item>
+        <item>كبير</item>
+        <item>ضخم</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>عرض محتوى الرسائل في نص حجمه صغير جدًا</item>
+        <item>عرض محتوى الرسائل في نص بحجم صغير</item>
+        <item>عرض محتوى الرسائل في نص حجمه عادي</item>
+        <item>عرض محتوى الرسائل في نص حجمه كبير</item>
+        <item>عرض محتوى الرسائل في نص حجمه ضخم</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>عرض إجراءات الرسائل أعلى الشاشة دومًا</item>
+        <item>عرض إجراءات الرسائل أعلى الشاشة عند التدوير إلى الوضع العمودي فقط</item>
+        <item>عدم عرض إجراءات الرسائل خارج رأس الرسالة</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>عرض دومًا</item>
+        <item>عرض عموديًا فقط</item>
+        <item>عدم العرض</item>
+    </string-array>
+</resources>

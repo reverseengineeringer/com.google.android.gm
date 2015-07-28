@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_manage_folders">Manage labels</string>
+    <string name="menu_folder_options">Manage labels</string>
+    <string name="add_cc_label">+ Cc/Bcc</string>
+    <string name="add_bcc_label">+ Bcc</string>
+    <string name="prefDefault_autoAdvance">list</string>
+    <string name="menu_label_options">Manage labels</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Répondre</item>
+        <item>Répondre à tous</item>
+        <item>Transférer</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Opération réussie.</item>
+        <item>Aucune connexion</item>
+        <item>Connexion impossible.</item>
+        <item>Erreur de sécurité.</item>
+        <item>Synchronisation impossible.</item>
+        <item>Erreur interne</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Système</item>
+        <item>Souvent utilisé</item>
+        <item>Tous les libellés</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Plus récente</item>
+        <item>Plus ancienne</item>
+        <item>Liste des conversations</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Afficher conv. plus récente après archivage ou suppression</item>
+        <item>Afficher convers. plus ancienne après archivage ou suppression</item>
+        <item>Afficher liste conversations après archivage ou suppression</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Aucun effet</item>
+        <item>Archive ou supprime</item>
+        <item>Supprime toujours</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Aucun effet</item>
+        <item>Boîte récep. : arch. conv. Libellés standards : suppr. libellé en cours. Libellés sys. tels que \"Tous les messages\"/\"Messages envoyés\" : suppr. conv.</item>
+        <item>Supprime toujours la conversation</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Très petite</item>
+        <item>Petite</item>
+        <item>Normale</item>
+        <item>Grande</item>
+        <item>Très grande</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Afficher le contenu des messages en très petits caractères</item>
+        <item>Afficher le contenu des messages en petits caractères</item>
+        <item>Afficher le contenu des messages en taille normale</item>
+        <item>Afficher le contenu des messages en grands caractères</item>
+        <item>Afficher le contenu des messages en très grands caractères</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>"Toujours afficher les actions relatives aux messages en haut de l'écran"</item>
+        <item>"Afficher les actions relatives aux messages en haut de l'écran uniquement en mode Portrait"</item>
+        <item>"Ne pas afficher les actions relatives aux messages en dehors de l'en-tête des messages"</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Toujours afficher</item>
+        <item>Afficher uniquement en mode Portrait</item>
+        <item>Ne pas afficher</item>
+    </string-array>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Resposta</item>
+        <item>Respon a tots</item>
+        <item>Reenvia</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Correcte</item>
+        <item>Sense connexió.</item>
+        <item>"No s'ha pogut iniciar la sessió."</item>
+        <item>Error de seguretat.</item>
+        <item>"No s'ha pogut sincronitzar."</item>
+        <item>Error intern</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Sistema</item>
+        <item>Ús freqüent</item>
+        <item>Totes etiquetes</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Més recent</item>
+        <item>Més antiga</item>
+        <item>Llista de converses</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Mostra la conversa més recent en arxivar o suprimir</item>
+        <item>Mostra les converses més antigues en arxivar o en suprimir</item>
+        <item>Mostra la llista de converses en arxivar o en suprimir</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>No té cap efecte</item>
+        <item>Arxiva o suprimeix</item>
+        <item>Suprimeix sempre</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>No té cap efecte</item>
+        <item>Rebuts.: arxiva converses Etiquetes normals: elimina etiqueta actual. Etiquetes del sistema: suprimeix conversa.</item>
+        <item>Suprimeix sempre les converses</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Molt petita</item>
+        <item>Petita</item>
+        <item>Normal</item>
+        <item>Gran</item>
+        <item>Enorme</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Mostra el contingut dels missatges amb lletra molt petita</item>
+        <item>Mostra el contingut dels missatges amb lletra petita</item>
+        <item>Mostra el contingut dels missatges amb una lletra normal</item>
+        <item>Mostra el contingut dels missatges amb lletra gran</item>
+        <item>Mostra el contingut dels missatges amb lletra molt gran</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Mostra sempre les accions de missatges a la part superior de la pantalla</item>
+        <item>Mostra només accions de missatges a la part superior de la pantalla en girar a vertical</item>
+        <item>No mostris accions de missatges fora de la capçalera del missatge</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Mostra sempre</item>
+        <item>Mostra només en vertical</item>
+        <item>No mostris</item>
+    </string-array>
+</resources>

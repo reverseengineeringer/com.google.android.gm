@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.OnePaneRoot android:id="@id/one_pane_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content_pane" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/conversation_pager" />
+    <com.android.mail.ui.ActionableToastBar android:id="@id/toast_bar" style="@style/ToastBarStyle" />
+</com.android.mail.ui.OnePaneRoot>

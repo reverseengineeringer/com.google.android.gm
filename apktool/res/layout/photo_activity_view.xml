@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/photo_activity_root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.ex.photo.PhotoViewPager android:id="@id/photo_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageButton android:id="@id/photopage_bottom_control_panorama" android:background="?android:selectableItemBackground" android:paddingLeft="15.0dip" android:paddingTop="5.0dip" android:paddingRight="15.0dip" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/ic_view_photosphere" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

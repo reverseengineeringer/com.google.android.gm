@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Atsakyti</item>
+        <item>Atsakyt visiems</item>
+        <item>Persiųsti</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Sėkmingai</item>
+        <item>Nėra ryšio.</item>
+        <item>Nepavyko prisijungti.</item>
+        <item>Saugos klaida.</item>
+        <item>Nepavyko sinchronizuoti.</item>
+        <item>Vidinė klaida</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Sistema</item>
+        <item>Dažnai naudoj.</item>
+        <item>Visos etiketės</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Naujesnis</item>
+        <item>Senesnis</item>
+        <item>Pokalbių sąrašas</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Ištrynus ar įtraukus į archyvą rodyti naujesnį pokalbį</item>
+        <item>Ištrynus ar įtraukus į archyvą rodyti senesnį pokalbį</item>
+        <item>Ištrynus ar įtraukus į archyvą rodyti pokalbių sąrašą</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Jokio poveikio</item>
+        <item>Archyvuoja arba trina</item>
+        <item>Visada trina</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Jokio poveikio</item>
+        <item>Gautieji: archyvuoja pokalbį. Įpr. etiketės: šalina dab. etiketę. Sist. etiketės, pvz., „Visi laiškai“ ar „Išsiųsti“: ištrina pokalbį.</item>
+        <item>Visada ištrina pokalbį</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Itin mažas</item>
+        <item>Mažas</item>
+        <item>Įprastas</item>
+        <item>Didelis</item>
+        <item>Itin didelis</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Pateikti pranešimų turinį itin mažo dydžio tekstu</item>
+        <item>Pateikti pranešimų turinį mažo dydžio tekstu</item>
+        <item>Pateikti pranešimų turinį įprasto dydžio tekstu</item>
+        <item>Pateikti pranešimų turinį didelio dydžio tekstu</item>
+        <item>Pateikti pranešimų turinį itin didelio dydžio tekstu</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Visada rodyti pranešimų veiksmus ekrano viršuje</item>
+        <item>Pranešimo veiksmus ekrano viršuje rodyti tik tada, kai pasukta stačiai</item>
+        <item>Nerodyti pranešimo veiksmų už pranešimo antraštės ribų</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Visada rodyti</item>
+        <item>Rodyti tik stačiai</item>
+        <item>Nerodyti</item>
+    </string-array>
+</resources>

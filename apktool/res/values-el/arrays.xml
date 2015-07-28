@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Απάντηση</item>
+        <item>Απάντ. σε όλους</item>
+        <item>Προώθηση</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Επιτυχία</item>
+        <item>Δεν υπάρχει σύνδεση.</item>
+        <item>Δεν ήταν δυνατή η σύνδεση.</item>
+        <item>Σφάλμα ασφαλείας.</item>
+        <item>Δεν ήταν δυνατός ο συγχρονισμός.</item>
+        <item>Εσωτερικό σφάλμα</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Σύστημα</item>
+        <item>Συχνή χρήση</item>
+        <item>Όλες οι ετικέτ.</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Νεότερες</item>
+        <item>Παλαιότερες</item>
+        <item>Λίστα συνομιλίας</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Εμφάνιση νεότερης συνομιλ. μετά την αρχειοθ. ή τη διαγρ.</item>
+        <item>Εμφάνιση παλαιότερης συνομιλ. μετά την αρχειοθ. ή τη διαγρ.</item>
+        <item>Εμφάνιση λίστας συνομιλιών μετά την αρχειοθ. ή τη διαγρ.</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Δεν εκτελεί κάποια ενέργεια</item>
+        <item>Αρχειοθετεί ή διαγράφει</item>
+        <item>Πάντα διαγράφει</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Δεν εκτελεί κάποια ενέργεια</item>
+        <item>Εισερχόμενα: αρχειοθετεί συνομιλία. Τακτικές ετικέτες: καταργεί την τρέχουσα ετικέτα. Ετικέτες συστήματος, όπως \"Όλα τα μηνύματα\" ή \"Απεσταλμένα\": διαγράφει συνομιλία.</item>
+        <item>Διαγράφει πάντα συνομιλία</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Πολύ μικρό</item>
+        <item>Μικρό</item>
+        <item>Κανονικό</item>
+        <item>Μεγάλο</item>
+        <item>Πολύ μεγάλο</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Εμφάνιση περιεχομένου μηνυμάτων σε κείμενο μικρού μεγέθους</item>
+        <item>Εμφάνιση περιεχομένου μηνυμάτων σε κείμενο μικρού μεγέθους</item>
+        <item>Εμφάνιση περιεχομένου μηνυμάτων σε κείμενο κανονικού μεγέθ.</item>
+        <item>Εμφάνιση περιεχομένου μηνυμάτων σε κείμενο μεγάλου μεγέθους</item>
+        <item>Εμφάνιση περιεχομένου μηνυμάτων σε κείμενο πολύ μεγάλου μεγέθους</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Οι ενέργειες του μηνύματος εμφανίζονται πάντα στην κορυφή της οθόνης</item>
+        <item>Να εμφανίζονται μόνο ενέργειες μηνύματος στην κορυφή της οθόνης όταν ο προσανατολισμός είναι κατακόρυφος</item>
+        <item>Να μην εμφανίζονται ενέργειες μηνύματος εκτός της κεφαλίδας μηνύματος</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Να εμφανίζονται πάντα</item>
+        <item>Μόνο στην κατακόρυφη προβολή</item>
+        <item>Να μην εμφανίζονται</item>
+    </string-array>
+</resources>

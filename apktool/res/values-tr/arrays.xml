@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Yanıtla</item>
+        <item>Yanıtı tüm alıcılara gönder</item>
+        <item>Yönlendir</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Başarılı</item>
+        <item>Bağlantı yok.</item>
+        <item>Oturum açılamadı.</item>
+        <item>Güvenlik hatası.</item>
+        <item>Senkronize edilemedi.</item>
+        <item>Dahili Hata</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Sistem</item>
+        <item>Sık Kullanılanlar</item>
+        <item>Tüm Etiketler</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Daha yeni</item>
+        <item>Daha eski</item>
+        <item>İleti dizisi listesi</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Arşivledikten veya sildikten sonra yeni ileti dizisini göster</item>
+        <item>Arşivledikten veya sildikten sonra eski ileti dizisini göster</item>
+        <item>Arşivledikten veya sildikten sonra ileti dizisi listesini göster</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Etkisi yok</item>
+        <item>Arşivler veya siler</item>
+        <item>Her zaman siler</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Etkisi yok</item>
+        <item>Gelen kutusu: ileti dizisini arşivler. Normal etiketler: mevcut etiketi kaldırır. Tüm posta veya Gönderilenler gibi sistem etiketleri: ileti dizisini siler.</item>
+        <item>İleti dizisini her zaman siler</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Çok Küçük</item>
+        <item>Küçük</item>
+        <item>Normal</item>
+        <item>Büyük</item>
+        <item>Çok büyük</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>İletilerin içeriğini çok küçük boyutlu metin ile görüntüle</item>
+        <item>İletilerin içeriğini küçük boyutlu metin ile görüntüle</item>
+        <item>İletilerin içeriğini normal boyutlu metin ile görüntüle</item>
+        <item>İletilerin içeriğini büyük boyutlu metin ile görüntüle</item>
+        <item>İletilerin içeriğini çok büyük boyutlu metin ile görüntüle</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>İleti işlemlerini her zaman ekranın üst kısmında göster</item>
+        <item>İleti işlemlerini yalnızca dikey tutulduğunda ekranın üst kısmında göster</item>
+        <item>İleti işlemlerini iletinin üstbilgisi dışında gösterme</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Her zaman göster</item>
+        <item>Yalnızca dikey tutulduğunda göster</item>
+        <item>Gösterme</item>
+    </string-array>
+</resources>

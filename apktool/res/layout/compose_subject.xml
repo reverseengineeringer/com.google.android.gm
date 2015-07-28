@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_below="@id/cc_bcc_wrapper" style="@style/ComposeFieldLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.mail.compose.EnterSubject android:id="@id/subject" style="@style/ComposeSubjectView" />
+</RelativeLayout>

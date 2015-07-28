@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/folder_list_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="@dimen/folder_list_popup_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:name="com.android.mail.ui.FolderListFragment" android:id="@id/content_pane" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <include layout="@layout/one_button_button_bar" />
+</LinearLayout>

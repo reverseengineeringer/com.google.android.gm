@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>پاسخ</item>
+        <item>پاسخ به همه</item>
+        <item>هدایت</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>موفقیت‌آمیز</item>
+        <item>اتصال برقرار نیست.</item>
+        <item>ورود به برنامه انجام نشد.</item>
+        <item>خطای امنیتی.</item>
+        <item>همگام‌سازی انجام نشد.</item>
+        <item>خطای داخلی</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>سیستم</item>
+        <item>اغلب استفاده‌شده</item>
+        <item>همهٔ برچسب‌ها</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>جدیدتر</item>
+        <item>قدیمی‌تر</item>
+        <item>لیست گفتگو</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>نمایش مکالمه جدیدتر بعد از اینکه بایگانی یا حذف را انجام دادید</item>
+        <item>نمایش مکالمه قدیمی‌تر بعد از اینکه بایگانی یا حذف را انجام دادید</item>
+        <item>نمایش لیست مکالمه بعد از اینکه بایگانی یا حذف را انجام دادید</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>عمل نمی‌کند</item>
+        <item>بایگانی یا حذف می‌کند</item>
+        <item>همیشه حذف می‌کند</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>عمل نمی‌کند</item>
+        <item>ص. ورودی: بایگانی مکالمات. برچسب‌های منظم: حذف برچسب کنونی. برچسب‌های سیستم مانند همهٔ نامه‌ها یا ارسال شده: حذف مکالمه.</item>
+        <item>همیشه مکالمه را حذف می‌کند</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>خیلی کوچک</item>
+        <item>کوچک</item>
+        <item>معمولی</item>
+        <item>بزرگ</item>
+        <item>بسیار بزرگ</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه بسیار کوچک</item>
+        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه کوچک</item>
+        <item>نمایش محتوای پیام‌ها در متن با اندازه معمولی</item>
+        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه بزرگ</item>
+        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه بسیار بزرگ</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>عملکردهای پیام همیشه در بالای صفحه نشان داده شود</item>
+        <item>عملکردهای پیام فقط وقتی در بالای صفحه نشان داده شود که به حالت عمودی چرخانده شود</item>
+        <item>عملکردهای پیام خارج از سرصفحه پیام نشان داده نشود</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>همیشه نمایش داده شود</item>
+        <item>فقط در حالت عمودی نشان داده شود</item>
+        <item>نشان داده نشود</item>
+    </string-array>
+</resources>

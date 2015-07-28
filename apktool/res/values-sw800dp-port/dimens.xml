@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="compose_scrollview_width">800.0dip</dimen>
+    <dimen name="spinner_frame_width">172.0dip</dimen>
+    <dimen name="compose_area_left_padding">80.0dip</dimen>
+    <dimen name="compose_area_right_padding">80.0dip</dimen>
+</resources>

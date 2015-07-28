@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Responder</item>
+        <item>Responder a todos</item>
+        <item>Reenviar</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>La acción se realizó correctamente.</item>
+        <item>Sin conexión</item>
+        <item>No se pudo acceder.</item>
+        <item>Error de seguridad</item>
+        <item>No se pudo establecer la sincronización.</item>
+        <item>Error interno</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Sistema</item>
+        <item>Uso frecuente</item>
+        <item>Todas las etiquetas</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Más reciente</item>
+        <item>Más antigua</item>
+        <item>Lista de conversación</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Mostrar conversación más reciente tras archivar o eliminar</item>
+        <item>Mostrar conversación más antigua tras archivar o eliminar</item>
+        <item>Mostrar lista de conversaciones tras archivar o eliminar</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Sin efecto</item>
+        <item>Archivar o eliminar</item>
+        <item>Eliminar siempre</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Sin efecto</item>
+        <item>Band. entrada: archivar convers. Etiq. regulares: eliminar actual. Etiq. sistema: eliminar convers.</item>
+        <item>Eliminar conversación siempre</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Más pequeño</item>
+        <item>Pequeño</item>
+        <item>Normal</item>
+        <item>Grande</item>
+        <item>Enorme</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Mostrar el contenido de los mensajes en letra muy pequeña</item>
+        <item>Mostrar el contenido de los mensajes en letra pequeña</item>
+        <item>Mostrar contenido de mensajes en texto de tamaño normal</item>
+        <item>Mostrar el contenido de los mensajes en letra grande</item>
+        <item>Mostrar el contenido de los mensajes en letra enorme</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Mostrar siempre las acciones de los mensajes en la parte superior de la pantalla</item>
+        <item>Mostrar las acciones de los mensajes solo en la parte superior de la pantalla cuando se la rota a la posición vertical</item>
+        <item>No mostrar fuera del encabezado de los mensajes las acciones que se pueden realizar con ellos</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Mostrar siempre</item>
+        <item>Mostrar solo en posición vertical</item>
+        <item>No mostrar</item>
+    </string-array>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Svar</item>
+        <item>Svar alle</item>
+        <item>Videresend</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Gennemført</item>
+        <item>Ingen forbindelse.</item>
+        <item>Det var ikke muligt at logge ind.</item>
+        <item>Sikkerhedsfejl.</item>
+        <item>Det var ikke muligt at synkronisere.</item>
+        <item>Intern fejl</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>System</item>
+        <item>Ofte anvendt</item>
+        <item>Alle etiketter</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Nyere</item>
+        <item>Ældre</item>
+        <item>Samtaleliste</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Se nyere samtale efter arkivering eller sletning</item>
+        <item>Se ældre samtale efter arkivering eller sletning</item>
+        <item>Se samtaleliste efter arkivering eller sletning</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Har ingen effekt</item>
+        <item>Arkiverer eller sletter</item>
+        <item>Sletter altid</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Har ingen effekt</item>
+        <item>Indbakke: arkiverer samtalen. Regulære etiketter: fjerner den aktuelle etiket. Systemetiketter såsom Alle e-mails eller Sendte e-mails: sletter samtalen.</item>
+        <item>Sletter altid samtalen</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Lillebitte</item>
+        <item>Lille</item>
+        <item>Normal</item>
+        <item>Stor</item>
+        <item>Kæmpestor</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Vis meddelelsernes indhold som meget lille tekst</item>
+        <item>Vis meddelelsernes indhold som lille tekst</item>
+        <item>Vis indholdet i beskeden som normal tekst</item>
+        <item>Vis meddelelsernes indhold som stor tekst</item>
+        <item>Vis meddelelsernes indhold som meget stor tekst</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Vis altid beskedhandlinger øverst på skærmen</item>
+        <item>Vis kun beskedhandlinger øverst på skærmen i portrættilstand</item>
+        <item>Vis ikke beskedhandlinger uden for meddelelsens sidehoved</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Vis altid</item>
+        <item>Vis kun i portræt</item>
+        <item>Vis ikke</item>
+    </string-array>
+</resources>

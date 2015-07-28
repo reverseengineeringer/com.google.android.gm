@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Відповісти</item>
+        <item>Відповісти всім</item>
+        <item>Переслати</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Виконано</item>
+        <item>Немає з’єднання.</item>
+        <item>Не вдалося ввійти.</item>
+        <item>Помилка безпеки.</item>
+        <item>Не вдалося синхронізувати.</item>
+        <item>Внутрішня помилка</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Система</item>
+        <item>Часто використ.</item>
+        <item>Усі мітки</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Новіша</item>
+        <item>Старіша</item>
+        <item>Список бесід</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Показувати новішу бесіду після архівування чи видалення</item>
+        <item>Показувати старішу бесіду після архівування чи видалення</item>
+        <item>Показувати список бесід після архівування чи видалення</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Нічого не відбувається</item>
+        <item>Архівує або видаляє</item>
+        <item>Завжди видаляє</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Нічого не відбувається</item>
+        <item>Вхідні: архівує бесіду. Звичайні мітки: видаляє поточну мітку. Системні мітки, як-от \"Уся пошта\" або \"Надіслані\": видаляє бесіду.</item>
+        <item>Завжди видаляє бесіду</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Дуже малий</item>
+        <item>Малий</item>
+        <item>Звичайний</item>
+        <item>Великий</item>
+        <item>Дуже великий</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Відображати вміст повідомлень текстом дуже малого розміру</item>
+        <item>Відображати вміст повідомлень текстом малого розміру</item>
+        <item>Відображати вміст повідомлень текстом звичайного розміру</item>
+        <item>Відображати вміст повідомлень текстом великого розміру</item>
+        <item>Відображати вміст повідомлень текстом дуже великого розміру</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Завжди показувати дії з повідомленнями вгорі екрана</item>
+        <item>Показувати дії з повідомленнями вгорі екрана лише в книжковій орієнтації</item>
+        <item>Не показувати дії з повідомленнями за межами заголовка повідомлення</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Завжди показувати</item>
+        <item>Показувати лише в книжковій орієнтації</item>
+        <item>Не показувати</item>
+    </string-array>
+</resources>

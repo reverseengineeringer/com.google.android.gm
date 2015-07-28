@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Trả lời</item>
+        <item>Trả lời tất cả</item>
+        <item>Chuyển tiếp</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Thành công</item>
+        <item>Không có kết nối.</item>
+        <item>Không thể đăng nhập.</item>
+        <item>Lỗi bảo mật.</item>
+        <item>Không thể đồng bộ hóa.</item>
+        <item>Lỗi nội bộ</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Hệ thống</item>
+        <item>Sử dụng thường xuyên</item>
+        <item>Tất cả nhãn</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Mới hơn</item>
+        <item>Cũ hơn</item>
+        <item>Danh sách cuộc hội thoại</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Hiển thị cuộc trò chuyện mới hơn sau khi bạn lưu trữ hoặc xóa</item>
+        <item>Hiển thị cuộc trò chuyện cũ hơn sau khi bạn lưu trữ hoặc xóa</item>
+        <item>Hiển thị danh sách cuộc trò chuyện sau khi bạn lưu trữ hoặc xóa</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Không có tác dụng</item>
+        <item>Lưu trữ hoặc xóa</item>
+        <item>Luôn xóa</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Không có tác dụng</item>
+        <item>Hộp thư đến: lưu trữ cuộc hội thoại. Các nhãn thông thường: xóa nhãn hiện tại. Các nhãn hệ thống, chẳng hạn như Tất cả thư hoặc Đã gửi: xóa cuộc hội thoại.</item>
+        <item>Luôn xóa cuộc hội thoại</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Rất nhỏ</item>
+        <item>Nhỏ</item>
+        <item>Thường</item>
+        <item>Lớn</item>
+        <item>Rất lớn</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Hiển thị nội dung thư trong văn bản cỡ rất nhỏ</item>
+        <item>Hiển thị nội dung thư trong văn bản cỡ nhỏ</item>
+        <item>Hiển thị nội dung thư trong văn bản cỡ thường</item>
+        <item>Hiển thị nội dung thư trong văn bản cỡ lớn</item>
+        <item>Hiển thị nội dung thư trong văn bản cỡ rất lớn</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Luôn hiển thị các tác vụ thư ở phía trên cùng của màn hình</item>
+        <item>Chỉ hiển thị các tác vụ thư ở đỉnh màn hình khi được xoay sang chiều dọc</item>
+        <item>Không hiển thị các tác vụ thư bên ngoài tiêu đề thư</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Luôn hiển thị</item>
+        <item>Chỉ hiển thị theo chiều dọc</item>
+        <item>Không hiển thị</item>
+    </string-array>
+</resources>

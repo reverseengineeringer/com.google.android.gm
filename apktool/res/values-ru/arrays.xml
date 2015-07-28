@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Ответить</item>
+        <item>Ответить всем</item>
+        <item>Переслать</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Без ошибок</item>
+        <item>Нет соединения</item>
+        <item>Не удалось войти</item>
+        <item>Ошибка системы безопасности</item>
+        <item>Ошибка синхронизации</item>
+        <item>Внутренняя ошибка</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Система</item>
+        <item>Часто использ.</item>
+        <item>Все ярлыки</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Следующие</item>
+        <item>Предыдущие</item>
+        <item>Списку писем</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Показывать следующие цепочки после удаления и архивации</item>
+        <item>Показывать предыдущие цепочки после удаления и архивации</item>
+        <item>Показывать список цепочек после удаления и архивации</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Нет действия</item>
+        <item>Архивирование или удаление</item>
+        <item>Удаление</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Нет действия</item>
+        <item>Входящие: архивирует цепочку. Обычные ярлыки: удаляет текущий ярлык. Системные ярлыки, напр. \"Все сообщения\" или \"Отправленные\": удаляет цепочку.</item>
+        <item>Удаление цепочки</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Мелкий</item>
+        <item>Небольшой</item>
+        <item>Обычный</item>
+        <item>Большой</item>
+        <item>Огромный</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Показывать содержание сообщений мелким шрифтом</item>
+        <item>Показывать содержание сообщений небольшим шрифтом</item>
+        <item>Показывать содержание сообщений нормальным шрифтом</item>
+        <item>Показывать содержание сообщений большим шрифтом</item>
+        <item>Показывать содержание сообщений огромным шрифтом</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Всегда показывать доступные действия вверху экрана</item>
+        <item>Показывать доступные действия в верхней части экрана только при вертикальной ориентации</item>
+        <item>Не показывать доступные действия вне заголовка сообщения</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Всегда показывать</item>
+        <item>Показывать только в вертикальной ориентации</item>
+        <item>Не показывать</item>
+    </string-array>
+</resources>

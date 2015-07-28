@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_manage_folders">Administrer etiketter</string>
+    <string name="menu_folder_options">Administrer etiketter</string>
+    <string name="add_cc_label">+ Kopi/blindkopi</string>
+    <string name="add_bcc_label">+ Blindkopi</string>
+    <string name="menu_label_options">Administrer etiketter</string>
+</resources>

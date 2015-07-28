@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.browse.MessageAttachmentTile android:id="@id/attachment_tile" android:background="@drawable/attachment_bg_holo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/attachment_preview" />
+    <ProgressBar android:id="@id/attachment_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:indeterminate="true" android:layout_alignParentBottom="true" style="?android:attr/progressBarStyleHorizontal" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/attachment_tile_text_container" android:paddingLeft="8.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/attachment_progress" android:layout_alignWithParentIfMissing="true">
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:ellipsize="marquee" android:id="@id/attachment_tile_title" android:fadingEdge="horizontal" android:fadingEdgeLength="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="12.0sp" android:textColor="@color/attachment_tile_subtitle_color" android:ellipsize="marquee" android:id="@id/attachment_tile_subtitle" android:paddingBottom="4.0dip" android:fadingEdge="horizontal" android:fadingEdgeLength="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" />
+    </LinearLayout>
+    <View android:id="@id/attachment_tile_push_state" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.android.mail.browse.MessageAttachmentTile>

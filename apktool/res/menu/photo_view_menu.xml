@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/photo_view_menu_group">
+        <item android:id="@id/menu_save" android:title="@string/save_attachment" android:showAsAction="never" />
+        <item android:id="@id/menu_save_all" android:title="@string/menu_photo_save_all" android:showAsAction="never" />
+        <item android:id="@id/menu_share" android:title="@string/menu_photo_share" android:showAsAction="never" />
+        <item android:id="@id/menu_share_all" android:title="@string/menu_photo_share_all" android:showAsAction="never" />
+    </group>
+</menu>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Tumugon</item>
+        <item>Tumugon lahat</item>
+        <item>Ipasa</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Tagumpay</item>
+        <item>Walang koneksyon.</item>
+        <item>Hindi makapag-sign in.</item>
+        <item>Error sa seguridad.</item>
+        <item>Hindi makapag-sync.</item>
+        <item>Panloob na Error</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>System</item>
+        <item>Madalas Gamitin</item>
+        <item>Lahat ng Label</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Mas bago</item>
+        <item>Mas luma</item>
+        <item>Listahan ng pag-uusap</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Pakita mas bagong pag-uusap pagka-archive mo o pagkatanggal</item>
+        <item>Pakita mas lumang pag-uusap pagka-archive mo o pagkatanggal</item>
+        <item>Pakita listahan ng pag-uusap pagka-archive mo o pagkatanggal</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Walang epekto</item>
+        <item>Nag-a-archive o nagtatanggal</item>
+        <item>Palaging nagtatanggal</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Walang epekto</item>
+        <item>Inbox: ina-archive ang pag-uusap. Mga regular na label: inaalis ang kasalukuyang label. Mga system label gaya ng Lahat ng mail o Ipinadala: tinatanggal ang pag-uusap.</item>
+        <item>Palaging tinatanggal ang pag-uusap</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Maliit</item>
+        <item>Maliit</item>
+        <item>Normal</item>
+        <item>Malaki</item>
+        <item>Malaki</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Ipakita ang nilalaman ng mga mensahe sa napakaliit na teksto</item>
+        <item>Ipakita ang nilalaman ng mga mensahe sa maliit na teksto</item>
+        <item>Ipakita ang nilalaman ng mensahe sa tekstong normal ang laki</item>
+        <item>Ipakita ang nilalaman ng mga mensahe sa malaking teksto</item>
+        <item>Ipakita ang nilalaman ng mga mensahe sa napakalaking teksto</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Palaging ipakita ang mga pagkilos sa mensahe sa tuktok ng screen</item>
+        <item>Ipakita lamang ang mga pagkilos sa mensahe sa tuktok ng screen kapag ni-rotate sa portrait.</item>
+        <item>Huwag ipakita ang mga pagkilos sa mensahe sa labas ng header ng mensahe</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Palaging ipakita</item>
+        <item>Ipakita lang sa portrait</item>
+        <item>Huwag ipakita</item>
+    </string-array>
+</resources>

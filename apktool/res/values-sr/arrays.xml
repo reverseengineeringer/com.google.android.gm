@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Одговори</item>
+        <item>Одговори свима</item>
+        <item>Проследи</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Успешно</item>
+        <item>Веза није успостављена.</item>
+        <item>Пријављивање није могуће.</item>
+        <item>Безбедносна грешка.</item>
+        <item>Синхронизација није могућа.</item>
+        <item>Интерна грешка</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Систем</item>
+        <item>Често коришћено</item>
+        <item>Све ознаке</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Новије</item>
+        <item>Старије</item>
+        <item>Листа преписки</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Приказивање новије преписке након архивирања или брисања</item>
+        <item>Приказивање старије преписке након архивирања или брисања</item>
+        <item>Приказивање листе преписки након архивирања или брисања</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Нема никаквог ефекта</item>
+        <item>Архивира или брише</item>
+        <item>Увек брише</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Нема никаквог ефекта</item>
+        <item>Примљене: архивира преписке. Регуларне ознаке: уклања актуелну ознаку. Системске ознаке попут Сва пошта или Послате: брише преписку.</item>
+        <item>Увек брише преписку</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Мајушно</item>
+        <item>Мала</item>
+        <item>Нормалан</item>
+        <item>Велика</item>
+        <item>Огромно</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Приказивање садржаја порука сићушним текстом</item>
+        <item>Прикажи садржај порука ситним текстом</item>
+        <item>Прикажи садржај порука текстом нормалне величине</item>
+        <item>Прикажи садржај порука великим текстом</item>
+        <item>Приказивање садржаја порука огромним текстом</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Увек приказуј радње са порукама на врху екрана</item>
+        <item>Приказуј активности са порукама на врху екрана само када је положај промењен у вертикални</item>
+        <item>Без приказивања радњи са порукама ван заглавља поруке</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Увек приказуј</item>
+        <item>Приказуј само у вертикалном положају</item>
+        <item>Не приказуј</item>
+    </string-array>
+</resources>

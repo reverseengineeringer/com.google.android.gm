@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Balas</item>
+        <item>Balas semua</item>
+        <item>Teruskan</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Berhasil</item>
+        <item>Tidak ada sambungan.</item>
+        <item>Tidak dapat masuk.</item>
+        <item>Kesalahan keamanan.</item>
+        <item>Tidak dapat menyinkronkan.</item>
+        <item>Kesalahan Internal</item>
+    </string-array>
+    <string-array name="moveto_folder_sections">
+        <item>Sistem</item>
+        <item>Sering Dgunakan</item>
+        <item>Semua Label</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Baru</item>
+        <item>Lama</item>
+        <item>Daftar percakapan</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Tampilkan percakapan baru setelah menghapus atau mengarsipkan</item>
+        <item>Tampilkan percakapan lama setelah menghapus atau mengarsipkan</item>
+        <item>Tampilkan daftar percakapan setelah menghapus atau mengarsipkan</item>
+    </string-array>
+    <string-array name="prefEntries_swipe">
+        <item>Tidak memiliki efek</item>
+        <item>Mengarsipkan atau menghapus</item>
+        <item>Selalu menghapus</item>
+    </string-array>
+    <string-array name="prefSummaries_swipe">
+        <item>Tidak memiliki efek</item>
+        <item>Kotak masuk: mengarsipkan percakapan. Label reguler: menghapus label aktif. Label sistem seperti Semua email atau Terkirim: menghapus percakapan.</item>
+        <item>Selalu menghapus percakapan</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Mini</item>
+        <item>Kecil</item>
+        <item>Normal</item>
+        <item>Besar</item>
+        <item>Sangat besar</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Menampilkan konten pesan dalam teks berukuran mini</item>
+        <item>Menampilkan konten pesan dalam teks berukuran kecil</item>
+        <item>Tampilkan konten pesan dalam teks berukuran normal</item>
+        <item>Menampilkan konten pesan dalam teks berukuran besar</item>
+        <item>Menampilkan konten pesan dalam teks berukuran raksasa</item>
+    </string-array>
+    <string-array name="prefSummaries_snapHeader">
+        <item>Selalu tampilkan aksi pesan di bagian atas layar</item>
+        <item>Hanya tampilkan aksi pesan di atas layar saat diputar ke orientasi potret</item>
+        <item>Jangan tampilkan tindakan pesan di luar judul pesan</item>
+    </string-array>
+    <string-array name="prefEntries_snapHeader">
+        <item>Selalu tampilkan</item>
+        <item>Hanya tampilkan dalam orientasi potret</item>
+        <item>Jangan tampilkan</item>
+    </string-array>
+</resources>
