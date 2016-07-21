@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.mail.compose.EnterSubject android:id="@id/subject" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/subject_hint" android:maxLength="@integer/vacation_responder_subject_length" android:inputType="textEmailSubject|textAutoCorrect|textCapSentences|textImeMultiLine|textMultiLine" android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen" style="@style/VacationResponderInputField" />
+    <View style="@style/DefaultDividerStyle" />
+    <EditText android:id="@id/body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VacationResponderMessageField" />
+    <View style="@style/DefaultDividerStyle" />
+    <CheckedTextView android:id="@id/checkbox_send_to_contacts" android:text="@string/send_to_contacts_text" style="@style/TextCheckBox" />
+    <CheckedTextView android:id="@id/checkbox_send_to_domain" style="@style/TextCheckBox" />
+</LinearLayout>

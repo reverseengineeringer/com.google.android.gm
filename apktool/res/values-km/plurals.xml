@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">ប្រតិទិន​មិនត្រូវបានចែករំលែក</item>
+        <item quantity="one">ប្រតិទិនមិនត្រូវបានចែករំលែក</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">ពង្រាង</item>
+        <item quantity="one">ពង្រាង</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">លុប​ទាំង %1$d ​សន្ទនានេះ​?</item>
+        <item quantity="one">លុប​​សន្ទនា​នេះ​​?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">ទុក %1$d ​សន្ទនាទាំងនេះក្នុងប័ណ្ណសារ​?</item>
+        <item quantity="one">ទុក​សន្ទនា​​នេះ​ក្នុង​ប័ណ្ណសារ​​​​?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">​បោះបង់​ពី %1$d ​សន្ទនា​ទាំង​នេះ​?</item>
+        <item quantity="one">បោះបង់​​​ពង្រាង​ពី​សន្ទនា​នេះ​?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">ការដកផ្កាយ %1$d សន្ទនា។</item>
+        <item quantity="one">ការដកផ្កាយ %1$d សន្ទនា។</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d បានរាយការណ៍​ថា​ជា​សារ​ឥត​បាន​ការ ​និងបានឈប់​ជា​វ</item>
+        <item quantity="one">%1$d បានរាយការណ៍​ថា​ជា​សារ​ឥត​បាន​ការ ​និងបានឈប់​ជា​វ</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> បានបិទសំឡេង</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> បានបិទសំឡេង</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> បានរាយការន៍ជាសារឥតបានការ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> បានរាយការណ៍ជាសារឥតបានការ</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> បានរាយការន៍ជាសារឥតបានការ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> បានរាយការន៍ជាសារឥតបានការ</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> បានគូសសម្គាល់ថាមិនសំខាន់</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> បានគូសសម្គាល់ថាមិនសំខាន់</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> បានដាក់ប័ណ្ណសារ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> បានដាក់ប័ណ្ណសារ</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> បានលុប</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> បានលុប</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">បាន​ប្តូ​រ​ស្លាក​។</item>
+        <item quantity="one">បាន​ប្ដូរ​ស្លាក</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d សារថ្មី</item>
+        <item quantity="one">%1$d សារ​ថ្មី​</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">ពង្រីក %1$d សារចាស់ៗជាង</item>
+        <item quantity="one">ពង្រីកសារចាស់ជាង</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">ត្រូវបានពង្រីក%1$d</item>
+        <item quantity="one">សារចាស់ជាងមួយត្រូវបានពង្រីក</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d សារថ្មីៗ</item>
+        <item quantity="one">%1$d សារថ្មី</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d សន្ទនានឹងត្រូវបានលុបជារៀងរហូត។</item>
+        <item quantity="one">%1$d សន្ទនានឹងត្រូវបានលុបជារៀងរហូត។</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d សារ</item>
+        <item quantity="one">%1$d សារ</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d ឯកសារភ្ជាប់</item>
+        <item quantity="one">%1$d ឯកសារ​ភ្ជាប់</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">សារទាំងនេះនឹងត្រូវបានសម្គាល់ថា​ឥតបានការ។ តើអ្នកចង់ឈប់ទទួល​សារ​ស្រដៀងគ្នាផងដែរពី &amp;lt;b>%2$d អ្នក​ផ្ញើ&amp;lt;/b>ទាំងនេះឬ៖%1$s</item>
+        <item quantity="one">សារនេះ​នឹងត្រូវបានសម្គាល់ថា​ឥតបានការ។ តើអ្នកចង់ឈប់ទទួលសារ​ស្រដៀងគ្នាពី %1$s ផងដែរឬ?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">សម​កាល​កម្ម​៖ %1$d ថ្ងៃចុងក្រោយ</item>
+        <item quantity="one">សម​កាល​កម្ម​៖ %1$d ថ្ងៃចុងក្រោយ</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ថ្ងៃ</item>
+        <item quantity="one">មួយ​ថ្ងៃ</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">ថ្ងៃ</item>
+        <item quantity="one">ថ្ងៃ​</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">%1$d ថ្ងៃចុងក្រោយ​នៃ​សារ​នឹង​ទាញ​យក ​នៅ​ពេល​ដែល​បាន​ភ្ជាប់</item>
+        <item quantity="one">ថ្ងៃ​ចុង​ក្រោយនៃសារនឹង​ទាញ​យក នៅពេល​ភ្ជាប់​បណ្ដាញ។</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">ចំណាំ៖ អ្នក​ទទួល​មួយចំនួន​អាច​នឹង​នៅ​តែ​មិន​មាន​ការចូល​ដំណើរការ​ទៅ​កាន់​ឯកសារ​នេះ​ទេ​។ អ្នក​អាច​ត្រូវ​ការ​ចែក​រំលែក​ឯកសារ​នេះ​ពី​ក្នុង Google Drive។</item>
+        <item quantity="one">ចំណាំ៖ អ្នក​ទទួល​មួយចំនួន​អាច​នឹង​នៅ​តែ​មិន​មាន​ការចូល​ដំណើរការ​ទៅ​កាន់​ឯកសារ​នេះ​ទេ​។ អ្នក​អាច​ត្រូវ​ការ​ចែក​រំលែក​ឯកសារ​នេះ​ពី​ក្នុង Google Drive។</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"អ្នកកំពុងចែករំលែកជាមួយអ្នកទទួល៖%1$s
+&amp;lt;/b>&amp;lt;br>ដែលមិនស្ថិតក្នុងអង្គភាព Google Apps ដែលឯកសារទាំងនេះជាកម្មសិទ្ធិរបស់។"</item>
+        <item quantity="one">អ្នកកំពុងចែករំលែកជាមួយអ្នកទទួល៖&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>ដែលមិនស្ថិតក្នុងអង្គភាព Google Apps ដែលឯកសារនេះជាកម្មសិទ្ធិរបស់។</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">]អ្នក​ទទួល​របស់​អ្នក​ប្រហែល​ជា​មិន​មាន​ការចូល​ដំណើរការ​ទៅ​ឯកសារ​ដែល​អ្នក​បាន​បញ្ចូល​ពីថាសឡើយ។ អ្នក​អាច​ត្រូវ​ការ​ចែក​រំលែក​ឯកសារ​នៅ​ពី​ក្នុង Google Drive។</item>
+        <item quantity="one">អ្នក​ទទួល​របស់​អ្នក​ប្រហែល​ជា​មិន​មាន​ការចូល​ដំណើរការ​ទៅ​ឯកសារ​ដែល​អ្នក​បាន​បញ្ចូល​ពីថាសឡើយ។ អ្នក​អាច​ត្រូវ​ការ​ចែក​រំលែក​ឯកសារ​នៅ​ពី​ក្នុង Google Drive។</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">អាសយដ្ឋានអ៊ីម៉ែលបច្ចុប្បន្នរបស់អ្នក៖</item>
+        <item quantity="one">អាសយដ្ឋាន​អ៊ីមែល​បច្ចុប្បន្ន​របស់​អ្នក​៖</item>
+    </plurals>
+</resources>

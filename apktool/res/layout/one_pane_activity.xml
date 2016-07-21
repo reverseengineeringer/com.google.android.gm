@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.mail.ui.OnePaneRoot android:id="@id/one_pane_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<android.support.v4.widget.DrawerLayout android:id="@id/drawer_container" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/content_pane" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <include layout="@layout/conversation_pager" />
-    <com.android.mail.ui.ActionableToastBar android:id="@id/toast_bar" style="@style/ToastBarStyle" />
-</com.android.mail.ui.OnePaneRoot>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/toolbar_with_search" />
+        <FrameLayout android:id="@id/content_pane" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:windowContentOverlay" android:foregroundGravity="fill_horizontal|center|top">
+            <FrameLayout android:id="@id/conversation_list_place_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include layout="@layout/conversation_pager" />
+            <include layout="@layout/floating_actions" />
+            <include layout="@layout/survey_holder" />
+            <include layout="@layout/search_suggestion_list" />
+        </FrameLayout>
+    </LinearLayout>
+    <include android:layout_gravity="start" android:layout_width="@dimen/drawer_width" android:layout_height="fill_parent" layout="@layout/drawer_fragment" />
+</android.support.v4.widget.DrawerLayout>

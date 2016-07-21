@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View android:id="@id/border" android:background="@color/conversation_view_border_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/conversation_border_margin_side" android:layout_marginRight="@dimen/conversation_border_margin_side"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

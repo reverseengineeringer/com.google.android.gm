@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.teasers.NestedFolderTeaserView android:orientation="vertical" android:background="@drawable/conversation_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/nested_folder_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_gravity="center_vertical" android:id="@id/show_more_folders_row" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/folder_teaser_item_height" style="@style/FolderTeaserPaddingEndStyle">
+        <ImageView android:id="@id/show_more_folders_icon" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="@dimen/folder_teaser_start_margin" android:layout_height="fill_parent" android:scaleType="center" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/folder_teaser_main_text" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/show_more_folders_textView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:id="@id/show_more_folders_count_textView" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/FolderTeaserUnreadCountTextStyle" />
+    </LinearLayout>
+    <View style="@style/ConversationListDividerStyle" />
+</com.android.mail.ui.teasers.NestedFolderTeaserView>

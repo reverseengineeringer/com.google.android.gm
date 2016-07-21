@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sync-adapter android:accountType="@string/account_manager_type_pop3" android:contentAuthority="@string/authority_email_provider" android:supportsUploading="true" android:allowParallelSyncs="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

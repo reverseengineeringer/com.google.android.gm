@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">കലണ്ടറുകൾ പങ്കിട്ടിട്ടില്ല</item>
+        <item quantity="one">കലണ്ടർ പങ്കിട്ടിട്ടില്ല</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">ഡ്രാഫ്‌റ്റുകൾ</item>
+        <item quantity="one">ഡ്രാഫ്‌റ്റ്</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">ഈ %1$d സംഭാഷണങ്ങൾ ഇല്ലാതാക്കണോ?</item>
+        <item quantity="one">ഈ സംഭാഷണം ഇല്ലാതാക്കണോ?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">ഈ %1$d സംഭാഷണങ്ങൾ ആർക്കൈവുചെയ്യണോ?</item>
+        <item quantity="one">ഈ സംഭാഷണം ആർക്കൈവുചെയ്യണോ?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">ഈ %1$d സംഭാഷണങ്ങളിൽ നിന്നും ഡ്രാഫ്റ്റുകൾ നിരസിക്കണോ?</item>
+        <item quantity="one">ഈ സംഭാഷണത്തിൽ നിന്നും ഡ്രാഫ്റ്റുകൾ നിരസിക്കണോ?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d സംഭാഷണങ്ങൾക്ക് നക്ഷത്രമിട്ടത് മാറ്റുന്നു</item>
+        <item quantity="one">%1$d സംഭാഷണത്തിന് നക്ഷത്രമിട്ടത് മാറ്റുന്നു</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d സ്പാമാണെന്ന് റിപ്പോർട്ടുചെയ്ത് അൺസബ്‌സ്ക്രൈബ് ചെയ്തു</item>
+        <item quantity="one">%1$d സ്പാമാണെന്ന് റിപ്പോർട്ടുചെയ്ത് അൺസബ്‌സ്ക്രൈബ് ചെയ്തു</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> മ്യൂട്ടുചെയ്‌തു</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> മ്യൂട്ടുചെയ്‌തു</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം സ്‌പാമായി റിപ്പോർട്ടുചെയ്‌തു</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം സ്‌പാമായി റിപ്പോർട്ടുചെയ്‌തു</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം സ്‌പാമല്ലെന്ന് റിപ്പോർട്ടുചെയ്‌തു</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം സ്‌പാമല്ലെന്ന് റിപ്പോർട്ടുചെയ്‌തു</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം പ്രാധാന്യമല്ലെന്ന് അടയാളപ്പെടുത്തി</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം പ്രാധാന്യമല്ലെന്ന് അടയാളപ്പെടുത്തി</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം ആർക്കൈവുചെയ്‌തു</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം ആർക്കൈവുചെയ്‌തു</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം ഇല്ലാതാക്കി</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> എണ്ണം ഇല്ലാതാക്കി</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">ലേബലുകൾ മാറ്റി.</item>
+        <item quantity="one">ലേബൽ മാറ്റി.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d പുതിയ സന്ദേശങ്ങൾ</item>
+        <item quantity="one">%1$d പുതിയ സന്ദേശം</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">പഴയ %1$d സന്ദേശങ്ങൾ വിപുലീകരിക്കുക</item>
+        <item quantity="one">പഴയ സന്ദേശം വിപുലീകരിക്കുക</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">പഴയ %1$d സന്ദേശങ്ങൾ വിപുലീകരിച്ചു</item>
+        <item quantity="one">ഒരു പഴയ സന്ദേശം വിപുലീകരിച്ചു</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d പുതിയ സന്ദേശങ്ങൾ</item>
+        <item quantity="one">%1$d പുതിയ സന്ദേശം</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d സംഭാഷണങ്ങൾ ശാശ്വതമായി ഇല്ലാതാക്കും.</item>
+        <item quantity="one">%1$d സംഭാഷണം ശാശ്വതമായി ഇല്ലാതാക്കും.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d സന്ദേശങ്ങൾ</item>
+        <item quantity="one">%1$d സന്ദേശം</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d അറ്റാച്ചുമെന്റുകൾ</item>
+        <item quantity="one">%1$d അറ്റാച്ചുമെന്റ്</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">ഈ സന്ദേശങ്ങൾ സ്പാം ആയി അടയാളപ്പെടുത്തപ്പെടും. ഈ &amp;lt;b>%2$d അയയ്ക്കുന്നവരിൽ&amp;lt;/b> നിന്ന് സമാന സന്ദേശങ്ങൾ സ്വീകരിക്കുന്നത് അവസാനിപ്പിക്കാനും നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ:%1$s</item>
+        <item quantity="one">ഈ സന്ദേശം സ്പാം ആയി അടയാളപ്പെടുത്തപ്പെടും. %1$s എന്ന വ്യക്തിയിൽ നിന്ന് സമാന സന്ദേശങ്ങൾ സ്വീകരിക്കുന്നത് അവസാനിപ്പിക്കാനും നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">സമന്വയിപ്പിക്കുക: കഴിഞ്ഞ %1$d ദിവസം</item>
+        <item quantity="one">സമന്വയിപ്പിക്കുക: കഴിഞ്ഞ %1$d ദിവസം</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ദിവസം</item>
+        <item quantity="one">ഒരു ദിവസം</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">ദിവസങ്ങൾ</item>
+        <item quantity="one">ദിവസം</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">കണക്റ്റുചെയ്യു‌മ്പോൾ, കഴിഞ്ഞ %1$d ദിവസത്തെ സന്ദേശങ്ങൾ ഡൗൺലോഡുചെയ്യും</item>
+        <item quantity="one">കണക്റ്റുചെയ്യു‌മ്പോൾ, കഴിഞ്ഞ ഒരു ദിവസത്തെ സന്ദേശങ്ങൾ ഡൗൺലോഡുചെയ്യും</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">ശ്രദ്ധിക്കുക: ചില സ്വീകർത്താക്കൾക്ക് ഇപ്പോഴും ഈ ഫയലുകളിലേക്ക് ആക്‌സസ്സുണ്ടായിരിക്കാൻ ഇടയില്ല. Google ഡ്രൈവിൽ നിന്ന് ഈ ഫയലുകൾ പങ്കിടേണ്ടതായി വരാം.</item>
+        <item quantity="one">ശ്രദ്ധിക്കുക: ചില സ്വീകർത്താക്കൾക്ക് ഇപ്പോഴും ഈ ഫയലിലേക്ക് ആക്‌സസ്സുണ്ടായിരിക്കാൻ ഇടയില്ല. Google ഡ്രൈവിൽ നിന്ന് ഈ ഫയൽ പങ്കിടേണ്ടതായി വരാം.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"നിങ്ങൾ ഈ ഫയലുകൾ ഉൾപ്പെടുന്ന Google Apps ഓർഗനൈസേഷനിൽ ഇല്ലാത്ത ഈ സ്വീകർത്താക്കളുമായി പങ്കിടുന്നു:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>."</item>
+        <item quantity="one">നിങ്ങൾ ഈ ഫയൽ ഉൾപ്പെടുന്ന Google Apps ഓർഗനൈസേഷനിൽ ഇല്ലാത്ത ഇനിപ്പറയുന്ന സ്വീകർത്താക്കളുമായി പങ്കിടുന്നു:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">ഡ്രൈവിൽ നിന്ന് ചേർത്ത ഫയലുകളിലേക്ക് നിങ്ങളുടെ സ്വീകർത്താകൾക്ക് ആക്‌സസ്സുണ്ടായിരിക്കാൻ ഇടയില്ല. Google ഡ്രൈവിൽ നിന്ന് ഫയൽ പങ്കിടേണ്ടതായി വരാം.</item>
+        <item quantity="one">ഡ്രൈവിൽ നിന്ന് ചേർത്ത ഫയലിലേക്ക് നിങ്ങളുടെ സ്വീകർത്താകൾക്ക് ആക്‌സസ്സുണ്ടായിരിക്കാൻ ഇടയില്ല. Google ഡ്രൈവിൽ നിന്ന് ഫയൽ പങ്കിടേണ്ടതായി വരാം.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">നിങ്ങളുടെ നിലവിലുള്ള ഇമെയിൽ വിലാസങ്ങൾ:</item>
+        <item quantity="one">നിങ്ങളുടെ നിലവിലുള്ള ഇമെയിൽ വിലാസം:</item>
+    </plurals>
+</resources>

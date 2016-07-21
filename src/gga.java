@@ -1,0 +1,7 @@
+public final class gga {}
+
+/* Location:
+ * Qualified Name:     gga
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

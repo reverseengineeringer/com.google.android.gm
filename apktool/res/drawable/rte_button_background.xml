@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <inset android:drawable="@drawable/rte_button_background_off" android:insetLeft="@dimen/rte_toolbar_button_insetLeft" android:insetRight="@dimen/rte_toolbar_button_insetRight" android:insetTop="@dimen/rte_toolbar_button_insetTop" android:insetBottom="@dimen/rte_toolbar_button_insetBottom" />
+    </item>
+    <item android:state_checked="true">
+        <inset android:drawable="@drawable/rte_button_background_on" android:insetLeft="@dimen/rte_toolbar_button_insetLeft" android:insetRight="@dimen/rte_toolbar_button_insetRight" android:insetTop="@dimen/rte_toolbar_button_insetTop" android:insetBottom="@dimen/rte_toolbar_button_insetBottom" />
+    </item>
+</selector>

@@ -1,147 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="number_of_attachments">
-        <item quantity="other">%d pried</item>
-        <item quantity="one">%d pried.</item>
-    </plurals>
-    <plurals name="move_conversation">
-        <item quantity="other">Perkelti %1$d pokalbius</item>
-        <item quantity="one">Perkelti pokalbį</item>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Kalendoriai nebendrinami</item>
+        <item quantity="one">Kalendoriai nebendrinami</item>
+        <item quantity="few">Kalendoriai nebendrinami</item>
+        <item quantity="many">Kalendoriai nebendrinami</item>
     </plurals>
     <plurals name="draft">
-        <item quantity="other">Juodraščiai</item>
+        <item quantity="other">Juodraščių</item>
         <item quantity="one">Juodraštis</item>
+        <item quantity="few">Juodraščiai</item>
+        <item quantity="many">Juodraščio</item>
     </plurals>
     <plurals name="confirm_delete_conversation">
-        <item quantity="other">Ištrinti šiuos %1$d pokalb.?</item>
-        <item quantity="one">Ištrinti šį pokalbį?</item>
+        <item quantity="other">Ištrinti šiuos %1$d pokalbių?</item>
+        <item quantity="one">Ištrinti šį %1$d pokalbį?</item>
+        <item quantity="few">Ištrinti šiuos %1$d pokalbius?</item>
+        <item quantity="many">Ištrinti šį %1$d pokalbio?</item>
     </plurals>
     <plurals name="confirm_archive_conversation">
-        <item quantity="other">Archyvuoti šiuos %1$d pokalb.?</item>
-        <item quantity="one">Archyvuoti šį pokalbį?</item>
+        <item quantity="other">Archyvuoti šiuos %1$d pokalbių?</item>
+        <item quantity="one">Archyvuoti šį %1$d pokalbį?</item>
+        <item quantity="few">Archyvuoti šiuos %1$d pokalbius?</item>
+        <item quantity="many">Archyvuoti šį %1$d pokalbio?</item>
     </plurals>
     <plurals name="confirm_discard_drafts_conversation">
-        <item quantity="other">Išmesti juodraščius iš šių %1$d pokalb.?</item>
-        <item quantity="one">Išmesti juodraščius iš šio pokalbio?</item>
-    </plurals>
-    <plurals name="conversation_marking_read">
-        <item quantity="other">%1$d pokalbiai (-ių) žymimi (-a) kaip perskaityti.</item>
-        <item quantity="one">%1$d pokalbių žymėjimas kaip perskaitytų.</item>
-    </plurals>
-    <plurals name="conversation_marking_unread">
-        <item quantity="other">%1$d pokalbiai (-ų) pažymėti (-a) kaip neperskaityti.</item>
-        <item quantity="one">%1$d pokalbis žymimas kaip neperskaitytas.</item>
-    </plurals>
-    <plurals name="conversation_starring">
-        <item quantity="other">%1$d pokalbiai (-ių) pažymėti (-a) žvaigždutėmis.</item>
-        <item quantity="one">%1$d pokalbio žymėjimas žvaigždute.</item>
+        <item quantity="other">Išmesti juodraščius iš šių %1$d pokalbių?</item>
+        <item quantity="one">Išmesti juodraščius iš šio %1$d pokalbio?</item>
+        <item quantity="few">Išmesti juodraščius iš šių %1$d pokalbių?</item>
+        <item quantity="many">Išmesti juodraščius iš šio %1$d pokalbio?</item>
     </plurals>
     <plurals name="conversation_unstarred">
-        <item quantity="other">Atšaukiamas %1$d pokalb. žymėjimas žvaigždute.</item>
-        <item quantity="one">Atšaukiamas %1$d pokalb. žymėjimas žvaigždute.</item>
+        <item quantity="other">Panaikinamas %1$d pokalbių žymėjimas žvaigždutėmis.</item>
+        <item quantity="one">Panaikinamas %1$d pokalbio žymėjimas žvaigždutėmis.</item>
+        <item quantity="few">Panaikinamas %1$d pokalbių žymėjimas žvaigždutėmis.</item>
+        <item quantity="many">Panaikinamas %1$d pokalbio žymėjimas žvaigždutėmis.</item>
     </plurals>
-    <plurals name="conversation_unknown_operation">
-        <item quantity="other">Laukiama operacijos dėl %1$d pokalb.</item>
-        <item quantity="one">Laukiama operacijos dėl %1$d pokalbio.</item>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">Pranešta, kad %1$d pokalbių yra šlamštas, ir atsisakyta jų prenumeratos</item>
+        <item quantity="one">Pranešta, kad %1$d pokalbis yra šlamštas, ir atsisakyta jų prenumeratos</item>
+        <item quantity="few">Pranešta, kad %1$d pokalbiai yra šlamštas, ir atsisakyta jų prenumeratos</item>
+        <item quantity="many">Pranešta, kad %1$d pokalbio yra šlamštas, ir atsisakyta jų prenumeratos</item>
     </plurals>
     <plurals name="conversation_muted">
-        <item quantity="other">Nutildyta: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Nutildyta: &amp;lt;b>%1$d&amp;lt;/b>.</item>
+        <item quantity="other">Nutildyta: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Nutildyta: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="few">Nutildyta: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="many">Nutildyta: &amp;lt;b>%1$d&amp;lt;/b></item>
     </plurals>
     <plurals name="conversation_spammed">
-        <item quantity="other">Pranešta kaip apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Pranešta kaip apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b>.</item>
+        <item quantity="other">Pranešta kaip apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Pranešta kaip apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="few">Pranešta kaip apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="many">Pranešta kaip apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
     </plurals>
     <plurals name="conversation_not_spam">
-        <item quantity="other">Apie &amp;lt;b>%1$d&amp;lt;/b> pokalb. pranešta kaip apie šlamštą.</item>
-        <item quantity="one">Apie &amp;lt;b>%1$d&amp;lt;/b> pokalb. pranešta kaip apie šlamštą.</item>
+        <item quantity="other">Pranešta kaip ne apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Pranešta kaip ne apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="few">Pranešta kaip ne apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="many">Pranešta kaip ne apie šlamštą: &amp;lt;b>%1$d&amp;lt;/b></item>
     </plurals>
     <plurals name="conversation_not_important">
-        <item quantity="other">Pažymėta kaip nesvarbūs: &amp;lt;b>%1$d&amp;lt;/b></item>
-        <item quantity="one">Pažymėta kaip nesvarbūs: &amp;lt;b>%1$d&amp;lt;/b></item>
-    </plurals>
-    <plurals name="conversation_phished">
-        <item quantity="other">Apie &amp;lt;b>%1$d&amp;lt;/b> pokalb. pranešta kaip apie sukčiavimą.</item>
-        <item quantity="one">Apie &amp;lt;b>%1$d&amp;lt;/b> pokalb. pranešta kaip apie sukčiavimą.</item>
+        <item quantity="other">Pažymėta kaip nesvarbių: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Pažymėta kaip nesvarbių: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="few">Pažymėta kaip nesvarbių: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="many">Pažymėta kaip nesvarbių: &amp;lt;b>%1$d&amp;lt;/b></item>
     </plurals>
     <plurals name="conversation_archived">
-        <item quantity="other">Suarchyvuota: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Suarchyvuota: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-    </plurals>
-    <plurals name="conversation_moved_to_inbox">
-        <item quantity="other">Perkelta į „Gautuosius“: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Perkelta į „Gautuosius“: &amp;lt;b>%1$d&amp;lt;/b>.</item>
+        <item quantity="other">Suarchyvuota: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Suarchyvuota: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="few">Suarchyvuota: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="many">Suarchyvuota: &amp;lt;b>%1$d&amp;lt;/b></item>
     </plurals>
     <plurals name="conversation_deleted">
-        <item quantity="other">Ištrinta: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Ištrinta: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-    </plurals>
-    <plurals name="conversation_marked_important">
-        <item quantity="other">Pažymėta kaip svarbūs: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Pažymėta kaip svarbūs: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-    </plurals>
-    <plurals name="conversation_marked_not_important">
-        <item quantity="other">Pažymėta kaip nesvarbūs: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Pažymėta kaip nesvarbūs: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-    </plurals>
-    <plurals name="conversation_marked_read">
-        <item quantity="other">Pažymėta kaip skaityti: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Pažymėta kaip skaityti: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-    </plurals>
-    <plurals name="conversation_marked_unread">
-        <item quantity="other">Pažymėta kaip neskaityti: &amp;lt;b>%1$d&amp;lt;/b>.</item>
-        <item quantity="one">Pažymėta kaip neskaityti: &amp;lt;b>%1$d&amp;lt;/b>.</item>
+        <item quantity="other">Ištrinta: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="one">Ištrinta: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="few">Ištrinta: &amp;lt;b>%1$d&amp;lt;/b></item>
+        <item quantity="many">Ištrinta: &amp;lt;b>%1$d&amp;lt;/b></item>
     </plurals>
     <plurals name="conversation_folder_changed">
         <item quantity="other">Pakeistos etiketės.</item>
-        <item quantity="one">Pakeista etiketė.</item>
+        <item quantity="one">Pakeistos etiketės.</item>
+        <item quantity="few">Pakeistos etiketės.</item>
+        <item quantity="many">Pakeistos etiketės.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d naujų pranešimų</item>
+        <item quantity="one">%1$d naujas pranešimas</item>
+        <item quantity="few">%1$d nauji pranešimai</item>
+        <item quantity="many">%1$d naujo pranešimo</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Išskleisti %1$d senesnių pranešimų</item>
+        <item quantity="one">Išskleisti %1$d senesnį pranešimą</item>
+        <item quantity="few">Išskleisti %1$d senesnius pranešimus</item>
+        <item quantity="many">Išskleisti %1$d senesnio pranešimo</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Išskleista %1$d senesnių pranešimų</item>
+        <item quantity="one">Išskleistas %1$d senesnis pranešimas</item>
+        <item quantity="few">Išskleisti %1$d senesni pranešimai</item>
+        <item quantity="many">Išskleista %1$d senesnio pranešimo</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d naujų pranešimų</item>
+        <item quantity="one">%1$d naujas pranešimas</item>
+        <item quantity="few">%1$d nauji pranešimai</item>
+        <item quantity="many">%1$d naujo pranešimo</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d pokalbių bus visam laikui ištrinti.</item>
+        <item quantity="one">%1$d pokalbis bus visam laikui ištrintas.</item>
+        <item quantity="few">%1$d pokalbiai bus visam laikui ištrinti.</item>
+        <item quantity="many">%1$d pokalbio bus visam laikui ištrinta.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d pranešimų</item>
+        <item quantity="one">%1$d pranešimas</item>
+        <item quantity="few">%1$d pranešimai</item>
+        <item quantity="many">%1$d pranešimo</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d priedų</item>
+        <item quantity="one">%1$d priedas</item>
+        <item quantity="few">%1$d priedai</item>
+        <item quantity="many">%1$d priedo</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Šie pranešimai bus pažymėti kaip šlamštas. Ar taip pat norite nebegauti panašių pranešimų nuo šių &amp;lt;b>%2$d siuntėjų&amp;lt;/b>:%1$s</item>
+        <item quantity="one">Šie pranešimai bus pažymėti kaip šlamštas. Ar taip pat norite nebegauti panašių pranešimų nuo šio &amp;lt;b>%2$d siuntėjo&amp;lt;/b>:%1$s</item>
+        <item quantity="few">Šie pranešimai bus pažymėti kaip šlamštas. Ar taip pat norite nebegauti panašių pranešimų nuo šių &amp;lt;b>%2$d siuntėjų&amp;lt;/b>:%1$s</item>
+        <item quantity="many">Šie pranešimai bus pažymėti kaip šlamštas. Ar taip pat norite nebegauti panašių pranešimų nuo šio &amp;lt;b>%2$d siuntėjo&amp;lt;/b>:%1$s</item>
     </plurals>
     <plurals name="sync_recent">
-        <item quantity="other">Sinchronizuoti: paskutin. %1$d d.</item>
-        <item quantity="one">Sinchronizuoti: paskutin. %1$d d.</item>
-    </plurals>
-    <plurals name="confirm_discard_conversation">
-        <item quantity="other">Atmesti šiuos %1$d juodr.?</item>
-        <item quantity="one">Atmesti šį juodraštį?</item>
-    </plurals>
-    <plurals name="conversation_muting">
-        <item quantity="other">Nutildoma pokalbių: %1$d.</item>
-        <item quantity="one">%1$d pokalbis nutildytas.</item>
-    </plurals>
-    <plurals name="conversation_spamming">
-        <item quantity="other">Pranešama apie %1$d pokalbius (-ių) kaip apie šlamštą.</item>
-        <item quantity="one">Pranešama apie %1$d pokalbius (-ių) kaip apie šlamštą.</item>
-    </plurals>
-    <plurals name="conversation_archiving">
-        <item quantity="other">Archyvuojama pokalbių: %1$d.</item>
-        <item quantity="one">Archyvuojamas %1$d pokalbis.</item>
-    </plurals>
-    <plurals name="conversation_deleting">
-        <item quantity="other">Ištrinama pokalbių: %1$d.</item>
-        <item quantity="one">Trinamas %1$d pokalbis.</item>
-    </plurals>
-    <plurals name="conversation_unstarring">
-        <item quantity="other">%1$d pokalb. pažymėjimo žvaigždute atšaukimas.</item>
-        <item quantity="one">%1$d pokalb. pažymėjimo žvaigždute atšaukimas.</item>
-    </plurals>
-    <plurals name="conversation_label_changed">
-        <item quantity="other">Pakeistos etiketės.</item>
-        <item quantity="one">Pakeista etiketė.</item>
+        <item quantity="other">Sinchronizuoti: paskutinės %1$d dienų</item>
+        <item quantity="one">Sinchronizuoti: paskutinė %1$d diena</item>
+        <item quantity="few">Sinchronizuoti: paskutinės %1$d dienos</item>
+        <item quantity="many">Sinchronizuoti: paskutin. %1$d dienos</item>
     </plurals>
     <plurals name="sync_duration">
-        <item quantity="other">%d d.</item>
-        <item quantity="one">Vieną dieną</item>
+        <item quantity="other">%d dienų</item>
+        <item quantity="one">%d diena</item>
+        <item quantity="few">%d dienos</item>
+        <item quantity="many">%d dienos</item>
     </plurals>
     <plurals name="title_day_dialog_content">
-        <item quantity="other">dienos</item>
-        <item quantity="one">Diena</item>
-    </plurals>
-    <plurals name="notify_attachment_error">
-        <item quantity="other">Nepavyko parodyti „%s“ priedo</item>
-        <item quantity="one">Nepavyko parodyti priedo</item>
+        <item quantity="other">Dienos</item>
+        <item quantity="one">Dienos</item>
+        <item quantity="few">Dienos</item>
+        <item quantity="many">Dienos</item>
     </plurals>
     <plurals name="sync_messages_partial_description">
-        <item quantity="other">Pastarosiso (-ių) %1$d dienos (-ų) pranešimai bus atsisiųsti prisijungus</item>
-        <item quantity="one">Pastarosios 1 dienos pranešimai bus atsisiųsti prisijungus</item>
+        <item quantity="other">Paskutinių %1$d dienų pranešimai bus atsisiųsti prisijungus</item>
+        <item quantity="one">Paskutinės %1$d dienos pranešimai bus atsisiųsti prisijungus</item>
+        <item quantity="few">Paskutinių %1$d dienų pranešimai bus atsisiųsti prisijungus</item>
+        <item quantity="many">Paskutin. %1$d dienos pranešimai bus atsisiųsti prisijungus</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Pastaba: kai kurie gavėjai vis dar gali neturėti prieigos prie šių failų. Gali reikėti bendrinti šiuos failus „Google“ diske.</item>
+        <item quantity="one">Pastaba: kai kurie gavėjai vis dar gali neturėti prieigos prie šių failų. Gali reikėti bendrinti šiuos failus „Google“ diske.</item>
+        <item quantity="few">Pastaba: kai kurie gavėjai vis dar gali neturėti prieigos prie šių failų. Gali reikėti bendrinti šiuos failus „Google“ diske.</item>
+        <item quantity="many">Pastaba: kai kurie gavėjai vis dar gali neturėti prieigos prie šių failų. Gali reikėti bendrinti šiuos failus „Google“ diske.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Bendrinate su gavėjais:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>, kurie nėra „Google Apps“ organizacijos, kuriai priklauso šie failai, nariai."</item>
+        <item quantity="one">"Bendrinate su gavėjais:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>, kurie nėra „Google Apps“ organizacijos, kuriai priklauso šie failai, nariai."</item>
+        <item quantity="few">"Bendrinate su gavėjais:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>, kurie nėra „Google Apps“ organizacijos, kuriai priklauso šie failai, nariai."</item>
+        <item quantity="many">"Bendrinate su gavėjais:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>, kurie nėra „Google Apps“ organizacijos, kuriai priklauso šie failai, nariai."</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Gavėjai gali neturėti prieigos prie failų, kuriuos įterpėte iš Disko. Gali reikėti bendrinti failus „Google“ diske.</item>
+        <item quantity="one">Gavėjai gali neturėti prieigos prie failų, kuriuos įterpėte iš Disko. Gali reikėti bendrinti failus „Google“ diske.</item>
+        <item quantity="few">Gavėjai gali neturėti prieigos prie failų, kuriuos įterpėte iš Disko. Gali reikėti bendrinti failus „Google“ diske.</item>
+        <item quantity="many">Gavėjai gali neturėti prieigos prie failų, kuriuos įterpėte iš Disko. Gali reikėti bendrinti failus „Google“ diske.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Dabartiniai el. pašto adresai:</item>
+        <item quantity="one">Dabartiniai el. pašto adresai:</item>
+        <item quantity="few">Dabartiniai el. pašto adresai:</item>
+        <item quantity="many">Dabartiniai el. pašto adresai:</item>
     </plurals>
 </resources>

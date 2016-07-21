@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <integer name="use_tablet_ui">1</integer>
-    <integer name="conversation_header_mode">1</integer>
-    <integer name="folder_list_weight">1</integer>
-    <integer name="conversation_list_weight">3</integer>
-    <integer name="conversation_view_weight">5</integer>
-    <integer name="conversation_desired_font_size_px">16</integer>
-</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rte_swatch_button_background_pressed" />
+    <item android:drawable="@drawable/rte_colorpicker_tinted_yellow_24" android:left="@dimen/rte_toolbar_button_insetLeft" android:top="@dimen/rte_toolbar_button_insetTop" android:right="@dimen/rte_toolbar_button_insetRight" android:bottom="@dimen/rte_toolbar_button_insetBottom" />
+</layer-list>

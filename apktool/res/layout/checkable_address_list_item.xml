@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.ui.CheckableAddressListItem android:orientation="horizontal" android:id="@id/owner" android:paddingLeft="@dimen/setup_addresses_space" android:paddingTop="@dimen/setup_address_item_padding_vertical" android:paddingRight="@dimen/setup_addresses_space" android:paddingBottom="@dimen/setup_address_item_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="@dimen/setup_addresses_avatar_size" android:layout_height="@dimen/setup_addresses_avatar_size" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/setup_address_item_padding_horizontal" android:paddingRight="@dimen/setup_address_item_padding_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/account_display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SetupAccount.Text" />
+        <TextView android:ellipsize="middle" android:id="@id/account_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/SetupAccount.Text.Secondary" />
+        <TextView android:textColor="@color/text_color_blue" android:id="@id/setup_addresses_change_address_status" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_change_address_action" />
+    </LinearLayout>
+</com.google.android.gm.ui.CheckableAddressListItem>

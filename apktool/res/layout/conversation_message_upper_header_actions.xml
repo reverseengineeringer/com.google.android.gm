@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/star" android:visibility="gone" android:src="@drawable/message_header_star" android:contentDescription="@string/add_star" style="@style/MessageHeaderActionButtonStyle" />
-    <ImageView android:id="@id/reply" android:src="@drawable/ic_reply_holo_dark" android:contentDescription="@string/reply" style="@style/MessageHeaderActionButtonStyle" />
-    <ImageView android:id="@id/reply_all" android:src="@drawable/ic_reply_all_holo_dark" android:contentDescription="@string/reply_all" style="@style/MessageHeaderActionButtonStyle" />
-    <ImageView android:id="@id/edit_draft" android:visibility="gone" android:src="@drawable/ic_edit_holo_dark" android:contentDescription="@string/resume_draft" style="@style/MessageHeaderActionButtonStyle" />
-    <ImageView android:id="@id/overflow" android:layout_width="@dimen/message_header_height" android:layout_height="fill_parent" style="@android:style/Widget.Holo.ActionButton.Overflow" />
+    <ImageView android:id="@id/edit_draft" android:visibility="gone" android:src="@drawable/ic_pencil_24dp" android:contentDescription="@string/resume_draft" style="@style/MessageHeaderActionButtonStyle" />
+    <ImageView android:id="@id/reply" android:src="@drawable/ic_reply_24dp" android:contentDescription="@string/reply" style="@style/MessageHeaderActionButtonStyle" />
+    <ImageView android:id="@id/reply_all" android:src="@drawable/ic_reply_all_24dp" android:contentDescription="@string/reply_all" style="@style/MessageHeaderActionButtonStyle" />
+    <ImageView android:id="@id/overflow" android:src="@drawable/ic_overflow_24dp" android:contentDescription="@string/overflow_description" style="@style/MessageHeaderOverflowButtonStyle" />
 </merge>

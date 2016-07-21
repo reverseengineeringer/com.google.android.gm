@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rte_button_background" />
+    <item>
+        <selector>
+            <item android:state_enabled="true" android:drawable="@drawable/rte_toolbar_button_italic_enabled" />
+            <item android:state_enabled="false" android:drawable="@drawable/rte_toolbar_button_italic_disabled" />
+        </selector>
+    </item>
+</layer-list>

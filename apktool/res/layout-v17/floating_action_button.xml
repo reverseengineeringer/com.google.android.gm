@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/compose_button" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/compose_button_margin_side" android:layout_marginBottom="@dimen/compose_button_margin_bottom" android:src="@drawable/ic_pencil_wht_24dp" android:contentDescription="@string/compose" android:layout_marginEnd="@dimen/compose_button_margin_side" app:backgroundTint="?colorPrimary" style="@style/Widget.Design.FloatingActionButton"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

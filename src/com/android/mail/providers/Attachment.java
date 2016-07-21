@@ -1,5 +1,8 @@
 package com.android.mail.providers;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.net.Uri.Builder;
@@ -7,10 +10,21 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import android.text.TextUtils;
-import com.android.mail.utils.LogTag;
-import com.android.mail.utils.LogUtils;
-import com.android.mail.utils.Utils;
-import com.google.common.collect.Lists;
+import bco;
+import bcu;
+import bdi;
+import bdn;
+import bna;
+import cfz;
+import cvl;
+import cvm;
+import cvr;
+import cxa;
+import hgd;
+import idc;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -22,114 +36,199 @@ import org.json.JSONObject;
 public class Attachment
   implements Parcelable
 {
-  public static final Parcelable.Creator<Attachment> CREATOR = new Parcelable.Creator()
-  {
-    public Attachment createFromParcel(Parcel paramAnonymousParcel)
-    {
-      return new Attachment(paramAnonymousParcel);
-    }
-    
-    public Attachment[] newArray(int paramAnonymousInt)
-    {
-      return new Attachment[paramAnonymousInt];
-    }
-  };
-  public static final String LOG_TAG = ;
-  public String contentType;
-  public Uri contentUri;
-  public int destination;
-  public int downloadedSize;
-  private transient Uri mIdentifierUri;
-  public String name;
-  @Deprecated
-  public int origin;
-  @Deprecated
-  public String originExtras;
-  @Deprecated
-  public String partId;
-  public Uri previewIntentUri;
-  public int size;
-  public int state;
-  public Uri thumbnailUri;
-  public Uri uri;
+  public static final Parcelable.Creator<Attachment> CREATOR = new cfz();
+  public static final String a = cvl.a;
+  public String b;
+  public String c;
+  public int d;
+  public Uri e;
+  public int f;
+  public int g;
+  public int h;
+  public Uri i;
+  public Uri j;
+  public int k;
+  public int l;
+  public String m;
+  public boolean n;
+  public boolean o;
+  private String p;
+  private String q;
+  private transient Uri r;
+  private boolean s;
   
   public Attachment() {}
+  
+  public Attachment(ContentValues paramContentValues)
+  {
+    c = paramContentValues.getAsString("_display_name");
+    d = paramContentValues.getAsInteger("_size").intValue();
+    e = d(paramContentValues.getAsString("uri"));
+    p = paramContentValues.getAsString("contentType");
+    f = paramContentValues.getAsInteger("state").intValue();
+    g = paramContentValues.getAsInteger("destination").intValue();
+    h = paramContentValues.getAsInteger("downloadedSize").intValue();
+    i = d(paramContentValues.getAsString("contentUri"));
+    j = d(paramContentValues.getAsString("thumbnailUri"));
+    m = paramContentValues.getAsString("providerData");
+    s = paramContentValues.getAsBoolean("supportsDownloadAgain").booleanValue();
+    k = paramContentValues.getAsInteger("type").intValue();
+    l = paramContentValues.getAsInteger("flags").intValue();
+    b = paramContentValues.getAsString("contentId");
+    n = paramContentValues.getAsBoolean("hasPreview").booleanValue();
+  }
+  
+  public Attachment(Context paramContext, bdn parambdn, Uri paramUri, String paramString1, String paramString2, boolean paramBoolean)
+  {
+    for (;;)
+    {
+      try
+      {
+        c = bco.a(bco.b(parambdn.b()), "name");
+        if (c == null) {
+          c = bco.a(bco.b(parambdn.c()), "filename");
+        }
+        p = cvr.a(c, parambdn.e());
+        e = EmlAttachmentProvider.a.buildUpon().appendPath("attachment").appendPath(Integer.toString(paramUri.hashCode())).appendPath(paramString1).appendPath(paramString2).build();
+        i = e;
+        j = e;
+        f = 3;
+        m = null;
+        s = false;
+        g = 0;
+        if (paramBoolean)
+        {
+          i1 = 1;
+          k = i1;
+          b = paramString2;
+          l = 0;
+          n = false;
+          paramContext = paramContext.getContentResolver();
+          paramContext.insert(e, p());
+          try
+          {
+            parambdn = parambdn.a().g_();
+            paramUri = paramContext.openOutputStream(e, "rwt");
+            d = idc.a(parambdn, paramUri);
+            h = d;
+            parambdn.close();
+            paramUri.close();
+            paramContext.insert(e, p());
+            return;
+          }
+          catch (IOException parambdn)
+          {
+            cvm.e(a, parambdn, "Error in writing attachment to cache", new Object[0]);
+            continue;
+          }
+        }
+        int i1 = 0;
+      }
+      catch (bdi paramContext)
+      {
+        cvm.e(a, paramContext, "Error parsing eml attachment", new Object[0]);
+        return;
+      }
+    }
+  }
   
   public Attachment(Cursor paramCursor)
   {
     if (paramCursor == null) {
       return;
     }
-    name = paramCursor.getString(paramCursor.getColumnIndex("_display_name"));
-    size = paramCursor.getInt(paramCursor.getColumnIndex("_size"));
-    uri = Uri.parse(paramCursor.getString(paramCursor.getColumnIndex("uri")));
-    contentType = paramCursor.getString(paramCursor.getColumnIndex("contentType"));
-    state = paramCursor.getInt(paramCursor.getColumnIndex("state"));
-    destination = paramCursor.getInt(paramCursor.getColumnIndex("destination"));
-    downloadedSize = paramCursor.getInt(paramCursor.getColumnIndex("downloadedSize"));
-    contentUri = parseOptionalUri(paramCursor.getString(paramCursor.getColumnIndex("contentUri")));
-    thumbnailUri = parseOptionalUri(paramCursor.getString(paramCursor.getColumnIndex("thumbnailUri")));
-    previewIntentUri = parseOptionalUri(paramCursor.getString(paramCursor.getColumnIndex("previewIntentUri")));
+    c = paramCursor.getString(paramCursor.getColumnIndex("_display_name"));
+    d = paramCursor.getInt(paramCursor.getColumnIndex("_size"));
+    e = Uri.parse(paramCursor.getString(paramCursor.getColumnIndex("uri")));
+    p = paramCursor.getString(paramCursor.getColumnIndex("contentType"));
+    f = paramCursor.getInt(paramCursor.getColumnIndex("state"));
+    g = paramCursor.getInt(paramCursor.getColumnIndex("destination"));
+    h = paramCursor.getInt(paramCursor.getColumnIndex("downloadedSize"));
+    i = d(paramCursor.getString(paramCursor.getColumnIndex("contentUri")));
+    j = d(paramCursor.getString(paramCursor.getColumnIndex("thumbnailUri")));
+    m = paramCursor.getString(paramCursor.getColumnIndex("providerData"));
+    if (paramCursor.getInt(paramCursor.getColumnIndex("supportsDownloadAgain")) == 1)
+    {
+      bool1 = true;
+      s = bool1;
+      k = paramCursor.getInt(paramCursor.getColumnIndex("type"));
+      l = paramCursor.getInt(paramCursor.getColumnIndex("flags"));
+      b = paramCursor.getString(paramCursor.getColumnIndex("contentId"));
+      if (paramCursor.getInt(paramCursor.getColumnIndex("hasPreview")) != 1) {
+        break label310;
+      }
+    }
+    label310:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      n = bool1;
+      return;
+      bool1 = false;
+      break;
+    }
   }
   
   public Attachment(Parcel paramParcel)
   {
-    name = paramParcel.readString();
-    size = paramParcel.readInt();
-    uri = ((Uri)paramParcel.readParcelable(null));
-    contentType = paramParcel.readString();
-    state = paramParcel.readInt();
-    destination = paramParcel.readInt();
-    downloadedSize = paramParcel.readInt();
-    contentUri = ((Uri)paramParcel.readParcelable(null));
-    thumbnailUri = ((Uri)paramParcel.readParcelable(null));
-    previewIntentUri = ((Uri)paramParcel.readParcelable(null));
-    partId = paramParcel.readString();
-    origin = paramParcel.readInt();
-    originExtras = paramParcel.readString();
+    c = paramParcel.readString();
+    d = paramParcel.readInt();
+    e = ((Uri)paramParcel.readParcelable(null));
+    p = paramParcel.readString();
+    f = paramParcel.readInt();
+    g = paramParcel.readInt();
+    h = paramParcel.readInt();
+    i = ((Uri)paramParcel.readParcelable(null));
+    j = ((Uri)paramParcel.readParcelable(null));
+    m = paramParcel.readString();
+    if (paramParcel.readInt() == 1)
+    {
+      bool1 = true;
+      s = bool1;
+      k = paramParcel.readInt();
+      l = paramParcel.readInt();
+      if (paramParcel.readInt() != 1) {
+        break label165;
+      }
+      bool1 = true;
+      label139:
+      n = bool1;
+      if (paramParcel.readInt() != 1) {
+        break label170;
+      }
+    }
+    label165:
+    label170:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      o = bool1;
+      return;
+      bool1 = false;
+      break;
+      bool1 = false;
+      break label139;
+    }
   }
   
   public Attachment(JSONObject paramJSONObject)
   {
-    name = paramJSONObject.optString("_display_name", null);
-    size = paramJSONObject.optInt("_size");
-    uri = parseOptionalUri(paramJSONObject, "uri");
-    contentUri = parseOptionalUri(paramJSONObject, "contentUri");
-    contentType = paramJSONObject.optString("contentType", null);
-    if (paramJSONObject.has("state")) {
-      state = paramJSONObject.optInt("state");
-    }
+    c = paramJSONObject.optString("_display_name", null);
+    d = paramJSONObject.optInt("_size");
+    e = a(paramJSONObject, "uri");
+    p = paramJSONObject.optString("contentType", null);
+    f = paramJSONObject.optInt("state");
+    g = paramJSONObject.optInt("destination");
+    h = paramJSONObject.optInt("downloadedSize");
+    i = a(paramJSONObject, "contentUri");
+    j = a(paramJSONObject, "thumbnailUri");
+    m = paramJSONObject.optString("providerData");
+    s = paramJSONObject.optBoolean("supportsDownloadAgain", true);
+    k = paramJSONObject.optInt("type");
+    l = paramJSONObject.optInt("flags");
+    b = paramJSONObject.optString("contentId");
+    n = paramJSONObject.optBoolean("hasPreview", false);
   }
   
-  public static List<Attachment> fromJSONArray(String paramString)
-  {
-    localArrayList = Lists.newArrayList();
-    try
-    {
-      paramString = new JSONArray(paramString);
-      int i = 0;
-      while (i < paramString.length())
-      {
-        localArrayList.add(new Attachment(paramString.getJSONObject(i)));
-        i += 1;
-      }
-      return localArrayList;
-    }
-    catch (JSONException paramString)
-    {
-      throw new IllegalArgumentException(paramString);
-    }
-  }
-  
-  private static Uri parseOptionalUri(String paramString)
-  {
-    if (paramString == null) {
-      return null;
-    }
-    return Uri.parse(paramString);
-  }
-  
-  private static Uri parseOptionalUri(JSONObject paramJSONObject, String paramString)
+  private static Uri a(JSONObject paramJSONObject, String paramString)
   {
     paramJSONObject = paramJSONObject.optString(paramString, null);
     if (paramJSONObject == null) {
@@ -138,33 +237,25 @@ public class Attachment
     return Uri.parse(paramJSONObject);
   }
   
-  public static JSONObject toJSON(String paramString1, int paramInt, Uri paramUri1, Uri paramUri2, String paramString2, Integer paramInteger)
-    throws JSONException
+  private static String a(Object paramObject)
   {
-    JSONObject localJSONObject = new JSONObject();
-    localJSONObject.putOpt("_display_name", paramString1);
-    localJSONObject.putOpt("_size", Integer.valueOf(paramInt));
-    if (paramUri1 != null) {
-      localJSONObject.putOpt("uri", paramUri1.toString());
+    if (paramObject != null) {
+      return paramObject.toString();
     }
-    if (paramUri2 != null) {
-      localJSONObject.putOpt("contentUri", paramUri2.toString());
-    }
-    localJSONObject.putOpt("contentType", paramString2);
-    if (paramInteger != null) {
-      localJSONObject.put("state", paramInteger.intValue());
-    }
-    return localJSONObject;
+    return null;
   }
   
-  public static String toJSONArray(Collection<Attachment> paramCollection)
+  public static String a(Collection<? extends Attachment> paramCollection)
   {
+    if (paramCollection == null) {
+      return null;
+    }
     localJSONArray = new JSONArray();
     try
     {
       paramCollection = paramCollection.iterator();
       while (paramCollection.hasNext()) {
-        localJSONArray.put(((Attachment)paramCollection.next()).toJSON());
+        localJSONArray.put(((Attachment)paramCollection.next()).a());
       }
       return localJSONArray.toString();
     }
@@ -174,19 +265,138 @@ public class Attachment
     }
   }
   
-  public boolean canPreview()
+  public static List<Attachment> a(Cursor paramCursor)
   {
-    return previewIntentUri != null;
+    if (paramCursor == null) {
+      return null;
+    }
+    try
+    {
+      ArrayList localArrayList = new ArrayList();
+      while (paramCursor.moveToNext()) {
+        localArrayList.add(new Attachment(paramCursor));
+      }
+    }
+    finally
+    {
+      paramCursor.close();
+    }
+    return localList;
   }
   
-  public boolean canSave()
+  public static ArrayList<Attachment> c(String paramString)
   {
-    return (origin != 1) && (state != 2) && (!isSavedToExternal());
+    localArrayList = new ArrayList();
+    if (paramString != null) {
+      try
+      {
+        paramString = new JSONArray(paramString);
+        int i1 = 0;
+        while (i1 < paramString.length())
+        {
+          localArrayList.add(new Attachment(paramString.getJSONObject(i1)));
+          i1 += 1;
+        }
+        return localArrayList;
+      }
+      catch (JSONException paramString)
+      {
+        throw new IllegalArgumentException(paramString);
+      }
+    }
   }
   
-  public boolean canShare()
+  private static Uri d(String paramString)
   {
-    return (isPresentLocally()) && (contentUri != null);
+    if (paramString == null) {
+      return null;
+    }
+    return Uri.parse(paramString);
+  }
+  
+  private final ContentValues p()
+  {
+    ContentValues localContentValues = new ContentValues(12);
+    localContentValues.put("_display_name", c);
+    localContentValues.put("_size", Integer.valueOf(d));
+    localContentValues.put("uri", e.toString());
+    localContentValues.put("contentType", p);
+    localContentValues.put("state", Integer.valueOf(f));
+    localContentValues.put("destination", Integer.valueOf(g));
+    localContentValues.put("downloadedSize", Integer.valueOf(h));
+    localContentValues.put("contentUri", i.toString());
+    localContentValues.put("thumbnailUri", j.toString());
+    localContentValues.put("providerData", m);
+    localContentValues.put("supportsDownloadAgain", Boolean.valueOf(s));
+    localContentValues.put("type", Integer.valueOf(k));
+    localContentValues.put("flags", Integer.valueOf(l));
+    localContentValues.put("contentId", b);
+    localContentValues.put("hasPreview", Boolean.valueOf(n));
+    return localContentValues;
+  }
+  
+  public JSONObject a()
+  {
+    JSONObject localJSONObject = new JSONObject();
+    localJSONObject.put("_display_name", c);
+    localJSONObject.put("_size", d);
+    localJSONObject.put("uri", a(e));
+    localJSONObject.put("contentType", p);
+    localJSONObject.put("state", f);
+    localJSONObject.put("destination", g);
+    localJSONObject.put("downloadedSize", h);
+    localJSONObject.put("contentUri", a(i));
+    localJSONObject.put("thumbnailUri", a(j));
+    localJSONObject.put("providerData", m);
+    localJSONObject.put("supportsDownloadAgain", s);
+    localJSONObject.put("type", k);
+    localJSONObject.put("flags", l);
+    localJSONObject.put("contentId", b);
+    localJSONObject.put("hasPreview", n);
+    return localJSONObject;
+  }
+  
+  public final void a(int paramInt)
+  {
+    f = paramInt;
+    if ((paramInt == 1) || (paramInt == 0)) {
+      h = 0;
+    }
+  }
+  
+  public final void a(String paramString)
+  {
+    if (!TextUtils.equals(p, paramString))
+    {
+      q = null;
+      p = paramString;
+    }
+  }
+  
+  public final boolean b()
+  {
+    return f == 3;
+  }
+  
+  public boolean b(String paramString)
+  {
+    if (!TextUtils.equals(c, paramString))
+    {
+      q = null;
+      c = paramString;
+      return true;
+    }
+    return false;
+  }
+  
+  public final boolean c()
+  {
+    return (!f()) && (!cvr.a(l())) && ((l & 0x200) == 0);
+  }
+  
+  public final boolean d()
+  {
+    return (b()) && (i != null);
   }
   
   public int describeContents()
@@ -194,135 +404,391 @@ public class Attachment
     return 0;
   }
   
-  public boolean downloadFailed()
+  public final boolean e()
   {
-    return state == 1;
+    return (f == 2) || (f == 5);
   }
   
-  public Uri getIdentifierUri()
+  public boolean equals(Object paramObject)
   {
-    if (mIdentifierUri == null) {
-      if (!Utils.isEmpty(uri)) {
-        break label31;
-      }
-    }
-    label31:
-    for (Uri localUri = Uri.EMPTY;; localUri = uri.buildUpon().clearQuery().build())
+    if (this == paramObject) {}
+    do
     {
-      mIdentifierUri = localUri;
-      return mIdentifierUri;
-    }
-  }
-  
-  public boolean isDownloading()
-  {
-    return state == 2;
-  }
-  
-  public boolean isImage()
-  {
-    if (!TextUtils.isEmpty(contentType)) {
-      return contentType.startsWith("image/");
-    }
+      return true;
+      if ((paramObject == null) || (getClass() != paramObject.getClass())) {
+        return false;
+      }
+      paramObject = (Attachment)paramObject;
+      if (g != g) {
+        return false;
+      }
+      if (h != h) {
+        return false;
+      }
+      if (d != d) {
+        return false;
+      }
+      if (f != f) {
+        return false;
+      }
+      if (s != s) {
+        return false;
+      }
+      if (k != k) {
+        return false;
+      }
+      if (p != null)
+      {
+        if (p.equals(p)) {}
+      }
+      else {
+        while (p != null) {
+          return false;
+        }
+      }
+      if (i != null)
+      {
+        if (i.equals(i)) {}
+      }
+      else {
+        while (i != null) {
+          return false;
+        }
+      }
+      if (c != null)
+      {
+        if (c.equals(c)) {}
+      }
+      else {
+        while (c != null) {
+          return false;
+        }
+      }
+      if (b != null)
+      {
+        if (b.equals(b)) {}
+      }
+      else {
+        while (b != null) {
+          return false;
+        }
+      }
+      if (m != null)
+      {
+        if (m.equals(m)) {}
+      }
+      else {
+        while (m != null) {
+          return false;
+        }
+      }
+      if (j != null)
+      {
+        if (j.equals(j)) {}
+      }
+      else {
+        while (j != null) {
+          return false;
+        }
+      }
+      if (e != null)
+      {
+        if (e.equals(e)) {}
+      }
+      else {
+        while (e != null) {
+          return false;
+        }
+      }
+    } while (n == n);
     return false;
   }
   
-  public boolean isPresentLocally()
+  public final boolean f()
   {
-    return (state == 3) || (origin == 1);
+    return (f == 3) && (g == 1);
   }
   
-  public boolean isSavedToExternal()
+  public final boolean g()
   {
-    return (state == 3) && (destination == 1);
+    return ((f == 2) || (f == 5)) && (d > 0) && (h > 0) && (h <= d);
   }
   
-  public boolean shouldShowProgress()
+  public final boolean h()
   {
-    return (state == 2) && (size > 0) && (downloadedSize > 0) && (downloadedSize < size);
+    return (f == 1) || (f == 3);
   }
   
-  public JSONObject toJSON()
-    throws JSONException
+  public int hashCode()
   {
-    return toJSON(name, size, uri, contentUri, contentType, Integer.valueOf(state));
+    int i10 = 1;
+    int i1;
+    int i2;
+    label33:
+    int i11;
+    int i3;
+    label54:
+    int i4;
+    label70:
+    int i12;
+    int i13;
+    int i14;
+    int i5;
+    label104:
+    int i6;
+    label120:
+    int i15;
+    int i7;
+    label142:
+    int i8;
+    label152:
+    int i9;
+    label168:
+    int i16;
+    if (b != null)
+    {
+      i1 = b.hashCode();
+      if (c == null) {
+        break label276;
+      }
+      i2 = c.hashCode();
+      i11 = d;
+      if (e == null) {
+        break label281;
+      }
+      i3 = e.hashCode();
+      if (p == null) {
+        break label286;
+      }
+      i4 = p.hashCode();
+      i12 = f;
+      i13 = g;
+      i14 = h;
+      if (i == null) {
+        break label292;
+      }
+      i5 = i.hashCode();
+      if (j == null) {
+        break label298;
+      }
+      i6 = j.hashCode();
+      i15 = k;
+      if (m == null) {
+        break label304;
+      }
+      i7 = m.hashCode();
+      if (!s) {
+        break label310;
+      }
+      i8 = 1;
+      if (b == null) {
+        break label316;
+      }
+      i9 = b.hashCode();
+      i16 = l;
+      if (!n) {
+        break label322;
+      }
+    }
+    for (;;)
+    {
+      return ((i9 + (i8 + (i7 + ((i6 + (i5 + ((((i4 + (i3 + ((i2 + i1 * 31) * 31 + i11) * 31) * 31) * 31 + i12) * 31 + i13) * 31 + i14) * 31) * 31) * 31 + i15) * 31) * 31) * 31) * 31 + i16) * 31 + i10;
+      i1 = 0;
+      break;
+      label276:
+      i2 = 0;
+      break label33;
+      label281:
+      i3 = 0;
+      break label54;
+      label286:
+      i4 = 0;
+      break label70;
+      label292:
+      i5 = 0;
+      break label104;
+      label298:
+      i6 = 0;
+      break label120;
+      label304:
+      i7 = 0;
+      break label142;
+      label310:
+      i8 = 0;
+      break label152;
+      label316:
+      i9 = 0;
+      break label168;
+      label322:
+      i10 = 0;
+    }
   }
   
-  @Deprecated
-  public String toJoinedString()
+  public final boolean i()
+  {
+    return (s) && ((l & 0x200) == 0);
+  }
+  
+  public final boolean j()
+  {
+    return (n) || (bna.a(l()));
+  }
+  
+  public final Uri k()
+  {
+    Uri localUri;
+    if (cxa.b(r))
+    {
+      if (!cxa.b(e)) {
+        break label52;
+      }
+      if (!cxa.b(i)) {
+        break label44;
+      }
+      localUri = Uri.EMPTY;
+    }
+    for (;;)
+    {
+      r = localUri;
+      return r;
+      label44:
+      localUri = i;
+      continue;
+      label52:
+      localUri = e.buildUpon().clearQuery().build();
+    }
+  }
+  
+  public final String l()
+  {
+    if (TextUtils.isEmpty(q)) {
+      q = cvr.a(c, p);
+    }
+    return q;
+  }
+  
+  public final boolean m()
+  {
+    return k != 0;
+  }
+  
+  public String n()
   {
     String str1;
     String str2;
-    label23:
-    String str4;
-    int j;
+    label22:
     String str5;
-    int i;
-    label49:
-    Uri localUri;
-    if (partId == null)
+    int i1;
+    String str6;
+    String str3;
+    if (b == null)
     {
       str1 = "";
-      if (name != null) {
-        break label142;
+      if (c != null) {
+        break label144;
       }
       str2 = "";
-      str4 = contentType;
-      j = size;
-      str5 = contentType;
-      if (contentUri == null) {
-        break label160;
+      str5 = l();
+      i1 = d;
+      str6 = l();
+      if (i == null) {
+        break label161;
       }
-      i = 1;
-      localUri = contentUri;
-      if (originExtras != null) {
-        break label165;
+      str3 = "SERVER_ATTACHMENT";
+      label51:
+      if (i == null) {
+        break label169;
       }
     }
-    label142:
-    label160:
-    label165:
-    for (String str3 = "";; str3 = originExtras)
+    label144:
+    label161:
+    label169:
+    for (String str4 = i.toString();; str4 = "")
     {
-      return TextUtils.join("|", Lists.newArrayList(new Comparable[] { str1, str2, str4, Integer.valueOf(j), str5, Integer.valueOf(i), localUri, str3, "" }));
-      str1 = partId;
+      return TextUtils.join("|", hgd.a(new String[] { str1, str2, str5, String.valueOf(i1), str6, str3, str4, "", String.valueOf(k) }));
+      str1 = b;
       break;
-      str2 = name.replaceAll("[|\n]", "");
-      break label23;
-      i = 0;
-      break label49;
+      str2 = c.replaceAll("[|\n]", "");
+      break label22;
+      str3 = "LOCAL_FILE";
+      break label51;
     }
+  }
+  
+  public final boolean o()
+  {
+    return (l & 0x200) == 0;
   }
   
   public String toString()
   {
     try
     {
-      String str = toJSON().toString();
-      return str;
+      JSONObject localJSONObject = a();
+      localJSONObject.put("partId", b);
+      boolean bool = TextUtils.isEmpty(m);
+      if (!bool) {}
+      try
+      {
+        localJSONObject.put("providerData", new JSONObject(m));
+        return localJSONObject.toString(4);
+      }
+      catch (JSONException localJSONException2)
+      {
+        for (;;)
+        {
+          cvm.e(a, localJSONException2, "JSONException when adding provider data", new Object[0]);
+        }
+      }
+      return super.toString();
     }
-    catch (JSONException localJSONException)
+    catch (JSONException localJSONException1)
     {
-      LogUtils.e(LOG_TAG, localJSONException, "JSONException in toString", new Object[0]);
+      cvm.e(a, localJSONException1, "JSONException in toString", new Object[0]);
     }
-    return super.toString();
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeString(name);
-    paramParcel.writeInt(size);
-    paramParcel.writeParcelable(uri, paramInt);
-    paramParcel.writeString(contentType);
-    paramParcel.writeInt(state);
-    paramParcel.writeInt(destination);
-    paramParcel.writeInt(downloadedSize);
-    paramParcel.writeParcelable(contentUri, paramInt);
-    paramParcel.writeParcelable(thumbnailUri, paramInt);
-    paramParcel.writeParcelable(previewIntentUri, paramInt);
-    paramParcel.writeString(partId);
-    paramParcel.writeInt(origin);
-    paramParcel.writeString(originExtras);
+    int i2 = 1;
+    paramParcel.writeString(c);
+    paramParcel.writeInt(d);
+    paramParcel.writeParcelable(e, paramInt);
+    paramParcel.writeString(p);
+    paramParcel.writeInt(f);
+    paramParcel.writeInt(g);
+    paramParcel.writeInt(h);
+    paramParcel.writeParcelable(i, paramInt);
+    paramParcel.writeParcelable(j, paramInt);
+    paramParcel.writeString(m);
+    int i1;
+    if (s)
+    {
+      i1 = 1;
+      paramParcel.writeInt(i1);
+      paramParcel.writeInt(k);
+      paramParcel.writeInt(paramInt);
+      if (!n) {
+        break label148;
+      }
+      paramInt = 1;
+      label122:
+      paramParcel.writeInt(paramInt);
+      if (!o) {
+        break label153;
+      }
+    }
+    label148:
+    label153:
+    for (paramInt = i2;; paramInt = 0)
+    {
+      paramParcel.writeInt(paramInt);
+      return;
+      i1 = 0;
+      break;
+      paramInt = 0;
+      break label122;
+    }
   }
 }
 

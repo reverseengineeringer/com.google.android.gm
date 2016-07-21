@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:icon="@drawable/archive" android:id="@id/archive" android:title="@string/archive" android:alphabeticShortcut="@string/trigger_y_char" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/archive" android:id="@id/remove_folder" android:visible="false" android:title="@string/remove_folder" android:alphabeticShortcut="@string/trigger_y_char" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/trash" android:id="@id/delete" android:title="@string/delete" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/trash" android:id="@id/discard_drafts" android:title="@string/discard_drafts" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_menu_folders_holo_light" android:id="@id/change_folder" android:title="@string/menu_change_folders" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_menu_mark_read_holo_light" android:id="@id/read" android:title="@string/mark_read" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_menu_mark_unread_holo_light" android:id="@id/unread" android:title="@string/mark_unread" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_menu_star_holo_light" android:id="@id/star" android:title="@string/add_star" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_menu_star_off_holo_light" android:id="@id/remove_star" android:title="@string/remove_star" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_email_caret_double" android:id="@id/mark_important" android:title="@string/mark_important" android:showAsAction="never" />
-    <item android:icon="@drawable/ic_email_caret_single" android:id="@id/mark_not_important" android:title="@string/mark_not_important" android:showAsAction="never" />
-    <item android:id="@id/mute" android:title="@string/mute" android:showAsAction="never" />
-    <item android:id="@id/report_spam" android:title="@string/report_spam" android:showAsAction="never" />
-    <item android:id="@id/mark_not_spam" android:title="@string/mark_not_spam" android:showAsAction="never" />
-    <item android:id="@id/report_phishing" android:title="@string/report_phishing" android:showAsAction="never" />
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_pencil_wht_24dp" android:id="@id/compose" android:visible="false" android:title="@string/menu_compose" android:alphabeticShortcut="@string/trigger_compose_char" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_archive_wht_24dp" android:id="@id/archive" android:title="@string/archive" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_remove_label_wht_24dp" android:id="@id/remove_folder" android:visible="false" android:title="@string/remove_folder" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete_wht_24dp" android:id="@id/delete" android:title="@string/delete" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete_wht_24dp" android:id="@id/discard_drafts" android:visible="false" android:title="@string/discard_drafts" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete_wht_24dp" android:id="@id/discard_outbox" android:visible="false" android:title="@string/discard_failed" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_mark_read_wht_24dp" android:id="@id/read" android:title="@string/mark_read" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_mark_unread_wht_24dp" android:id="@id/unread" android:title="@string/mark_unread" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_move_to_wht_24dp" android:id="@id/move_to" android:title="@string/menu_move_to" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_change_labels_wht_24dp" android:id="@id/change_folders" android:title="@string/menu_change_folders" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_move_to_inbox_wht_24dp" android:id="@id/move_to_inbox" android:title="@string/menu_move_to_inbox" app:showAsAction="never" />
+    <item android:id="@id/star" android:title="@string/add_star" app:showAsAction="never" />
+    <item android:id="@id/remove_star" android:title="@string/remove_star" app:showAsAction="never" />
+    <item android:id="@id/mark_important" android:title="@string/mark_important" app:showAsAction="never" />
+    <item android:id="@id/mark_not_important" android:title="@string/mark_not_important" app:showAsAction="never" />
+    <item android:id="@id/mute" android:title="@string/mute" app:showAsAction="never" />
+    <item android:id="@id/report_spam" android:title="@string/report_spam" app:showAsAction="never" />
+    <item android:id="@id/mark_not_spam" android:title="@string/mark_not_spam" app:showAsAction="never" />
 </menu>

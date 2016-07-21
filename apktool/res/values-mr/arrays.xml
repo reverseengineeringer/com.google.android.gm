@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>प्रत्युत्तर द्या</item>
+        <item>सर्वांना प्रत्युत्तर द्या</item>
+        <item>अग्रेषित करा</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>यशस्वी</item>
+        <item>कोणतेही कनेक्शन नाही</item>
+        <item>साइन इन करू शकलो नाही</item>
+        <item>सुरक्षा त्रुटी</item>
+        <item>संकालन करू शकलो नाही</item>
+        <item>सर्व्हरची चूक</item>
+        <item>अंतर्गत त्रुटी</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>नवीनतर</item>
+        <item>अधिक जुने</item>
+        <item>संभाषण सूची</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>आपण संग्रहण केल्यानंतर किंवा हटविल्यानंतर नवीनतर संभाषण दर्शवा</item>
+        <item>आपण संग्रहण केल्यानंतर किंवा हटविल्यानंतर थोडे जुने संभाषण दर्शवा</item>
+        <item>आपण संग्रहण केल्यानंतर किंवा हटविल्यानंतर संभाषण सूची दर्शवा</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>संग्रहण करा</item>
+        <item>हटवा</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>संग्रहण करा</item>
+        <item>हटवा</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>उच्च</item>
+        <item>सामान्य</item>
+        <item>निम्न</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>दुसरी फ्लाइट चुकवू नका.</item>
+        <item>दुसरी फ्लाइट चुकवू नका.</item>
+        <item>ही फ्लाइट आपल्या कॅलेंडरमध्ये जोडायची?</item>
+        <item>आपल्या Google कॅलेंडरवर आरक्षण मिळवा.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google कॅलेंडर आपल्या कॅलेंडरमध्ये फ्लाइट आणि इतर आरक्षणे स्वयंचलितपणे जोडते.</item>
+        <item>Google कॅलेंडर आपल्या कॅलेंडरमध्ये फ्लाइट आणि इतर आरक्षणे स्वयंचलितपणे जोडते.</item>
+        <item>Google कॅलेंडर अॅपसह Gmail वरील इव्हेंट स्वयंचलितपणे जोडले जाऊ शकतात.</item>
+        <item>फ्लाइट, हॉटेल आणि रेस्टॉरंट अारक्षणे स्वयंचलितपणे जोडून घ्या.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>हे आरक्षण Google कॅलेंडरवर जोडायचे?</item>
+        <item>आपल्या कॅलेंडरवर स्वयंचलितपणे अारक्षणे पाहिजे?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Google कॅलेंडर अॅपसह Gmail वरील इव्हेंट स्वयंचलितरित्या आपल्या कॅलेंडरमध्ये जोडली जातात.</item>
+        <item>Google कॅलेंडर आपल्या ईमेलवरून हॉटेल आणि इतर आरक्षणेे स्वयंचलितपणे जोडते.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>आपल्या जेवणाविषयी वेळोवेळी सूचना मिळवा.</item>
+        <item>हे आरक्षण Google कॅलेंडरवर जोडायचे?</item>
+        <item>आपल्या Google कॅलेंडरवर स्वयंचलितपणे आरक्षणे मिळवा.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google कॅलेंडर स्वयंचलितपणे रेस्टॉरंट आणि इतर आरक्षणे आपल्या कॅलेंडरवर जोडते.</item>
+        <item>Gmail वरील इव्हेंट स्वयंचलितपणे आपल्या कॅलेंडरमध्ये जोडले जाऊ शकतात.</item>
+        <item>फ्लाइट, हॉटेल आणि रेस्टॉरंट अारक्षणे स्वयंचलितपणे जोडून घ्या.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>या इव्हेंटपूर्वी वेळोवेळी सूचना मिळवा.</item>
+        <item>हा इव्हेंट Google कॅलेंडरवर जोडायचा?</item>
+        <item>आपला इव्हेंट चुकवू नका.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>या इमेलमधील एका इव्हेंटप्रमाणे Google कॅलेंडर स्वयंचलितपणे आपल्या कॅलेंडरमध्ये इव्हेंट आणि आरक्षणे जोडते.</item>
+        <item>Gmail वरील इव्हेंट स्वयंचलितपणे आपल्या कॅलेंडरमध्ये जोडले जाऊ शकतात.</item>
+        <item>Google कॅलेंडरसह इव्हेंट आणि अारक्षणे स्वयंचलितपणे जोडून घ्या.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>आपली आरक्षणे एका ठिकाणी ट्रॅक करा.</item>
+        <item>ही आरक्षणे Google कॅलेंडरवर जोडायची?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>आपल्या Google कॅलेंडरमध्ये फ्लाइट, हॉटेल आणि रेस्टॉरंटची आरक्षणे स्वयंचलितपणे जोडून घ्या.</item>
+        <item>Gmail वरील इव्हेंट स्वयंचलितपणे आपल्या कॅलेंडरमध्ये जोडले जाऊ शकतात.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>अतिशय लहान</item>
+        <item>लहान</item>
+        <item>सामान्य</item>
+        <item>मोठा</item>
+        <item>विशाल</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>लघु मजकुरात संदेशांची सामग्री प्रदर्शित करा</item>
+        <item>लहान मजकुरात संदेशांची सामग्री प्रदर्शित करा</item>
+        <item>सामान्य आकाराच्या मजकुरातील संदेशांची सामग्री प्रदर्शित करा</item>
+        <item>मोठ्या मजकुरातील संदेशांची सामग्री प्रदर्शित करा</item>
+        <item>प्रचंड मजकुरातील संदेशांची सामग्री प्रदर्शित करा</item>
+    </string-array>
+</resources>

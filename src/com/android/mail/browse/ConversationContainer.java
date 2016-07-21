@@ -2,7 +2,7 @@ package com.android.mail.browse;
 
 import android.content.Context;
 import android.database.DataSetObserver;
-import android.graphics.Canvas;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.MotionEvent;
@@ -12,42 +12,48 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup.MarginLayoutParams;
-import com.android.mail.utils.DequeMap;
-import com.android.mail.utils.InputSmoother;
-import com.android.mail.utils.LogUtils;
-import com.android.mail.utils.Utils;
-import com.google.common.collect.Lists;
+import buc;
+import bwb;
+import bwc;
+import bwd;
+import bwe;
+import bwf;
+import bxh;
+import bxp;
+import bzp;
+import cub;
+import cvm;
+import java.util.ArrayList;
+import java.util.Deque;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import rg;
 
 public class ConversationContainer
   extends ViewGroup
-  implements ScrollNotifier.ScrollListener
+  implements bzp
 {
-  private static final int[] BOTTOM_LAYER_VIEW_IDS = { 2131755181 };
-  private static final int[] TOP_LAYER_VIEW_IDS = { 2131755182 };
-  private int mActivePointerId;
-  private final DataSetObserver mAdapterObserver = new AdapterObserver(null);
-  private boolean mAttachedOverlaySinceLastDraw;
-  private boolean mDisableLayoutTracing;
-  private float mLastMotionY;
-  private boolean mMissedPointerDown;
-  private final List<View> mNonScrollingChildren = Lists.newArrayList();
-  private int mOffsetY;
-  private ConversationViewAdapter mOverlayAdapter;
-  private OverlayPosition[] mOverlayPositions;
-  private final SparseArray<OverlayView> mOverlayViews = new SparseArray();
-  private float mScale;
-  private final DequeMap<Integer, View> mScrapViews = new DequeMap();
-  private MessageHeaderView mSnapHeader;
-  private int mSnapIndex;
-  private View mTopMostOverlay;
-  private boolean mTouchInitialized;
-  private boolean mTouchIsDown = false;
-  private final int mTouchSlop;
-  private final InputSmoother mVelocityTracker;
-  private ConversationWebView mWebView;
-  private int mWidthMeasureSpec;
+  public static final int[] a = { buc.aK };
+  private static final int[] g = { buc.aJ };
+  public bxp b;
+  public bwe[] c;
+  public int d;
+  public final cub<Integer, View> e = new cub();
+  public final SparseArray<bwf> f = new SparseArray();
+  private ConversationWebView h;
+  private final List<View> i = new ArrayList();
+  private float j;
+  private boolean k;
+  private final int l;
+  private float m;
+  private int n;
+  private boolean o = false;
+  private boolean p;
+  private int q;
+  private boolean r;
+  private final DataSetObserver s = new bwb(this);
+  private int t;
   
   public ConversationContainer(Context paramContext)
   {
@@ -57,38 +63,18 @@ public class ConversationContainer
   public ConversationContainer(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    mVelocityTracker = new InputSmoother(paramContext);
-    mTouchSlop = ViewConfiguration.get(paramContext).getScaledTouchSlop();
+    l = ViewConfiguration.get(paramContext).getScaledTouchSlop();
     setMotionEventSplittingEnabled(false);
   }
   
-  private View addOverlayView(int paramInt)
+  private static bwe a(bxh parambxh, int paramInt1, int paramInt2, int paramInt3)
   {
-    int i = mOverlayAdapter.getItemViewType(paramInt);
-    View localView1 = (View)mScrapViews.poll(Integer.valueOf(i));
-    View localView2 = mOverlayAdapter.getView(paramInt, localView1, this);
-    mOverlayViews.put(paramInt, new OverlayView(localView2, i));
-    i = BOTTOM_LAYER_VIEW_IDS.length;
-    if (localView1 == localView2) {
-      LogUtils.d("ConvLayout", "want to REUSE scrolled-in view: index=%d obj=%s", new Object[] { Integer.valueOf(paramInt), localView2 });
-    }
-    for (;;)
-    {
-      addViewInLayout(localView2, i, localView2.getLayoutParams(), true);
-      mAttachedOverlaySinceLastDraw = true;
-      return localView2;
-      LogUtils.d("ConvLayout", "want to CREATE scrolled-in view: index=%d obj=%s", new Object[] { Integer.valueOf(paramInt), localView2 });
-    }
-  }
-  
-  private OverlayPosition calculatePosition(ConversationOverlayItem paramConversationOverlayItem, int paramInt1, int paramInt2, int paramInt3)
-  {
-    if (paramConversationOverlayItem.getHeight() == 0)
+    if (parambxh.e() == 0)
     {
       if (paramInt3 == 48) {}
       for (;;)
       {
-        return new OverlayPosition(paramInt1, paramInt1);
+        return new bwe(paramInt1, paramInt1);
         paramInt1 = paramInt2;
       }
     }
@@ -99,339 +85,379 @@ public class ConversationContainer
       switch (paramInt3)
       {
       default: 
-        throw new UnsupportedOperationException("unsupported gravity: " + paramInt3);
-        paramInt3 = paramConversationOverlayItem.getGravity();
+        throw new UnsupportedOperationException(32 + "unsupported gravity: " + paramInt3);
+        paramInt3 = parambxh.d();
       }
     }
-    return new OverlayPosition(paramInt2 - paramConversationOverlayItem.getHeight(), paramInt2);
-    return new OverlayPosition(paramInt1, paramConversationOverlayItem.getHeight() + paramInt1);
+    return new bwe(paramInt2 - parambxh.e(), paramInt2);
+    return new bwe(paramInt1, parambxh.e() + paramInt1);
   }
   
-  private void clearOverlays()
+  private final void a(int paramInt1, int paramInt2, int paramInt3, boolean paramBoolean)
   {
-    int i = 0;
-    int j = mOverlayViews.size();
-    while (i < j)
+    Object localObject1 = (bwf)f.get(paramInt1);
+    bxh localbxh = b.a(paramInt1);
+    a = paramInt2;
+    if ((paramInt2 != paramInt3) && (paramInt3 > d) && (paramInt2 < d + getHeight()))
     {
-      detachOverlay((OverlayView)mOverlayViews.valueAt(i));
-      i += 1;
-    }
-    mOverlayViews.clear();
-  }
-  
-  private void detachOverlay(OverlayView paramOverlayView)
-  {
-    removeViewInLayout(view);
-    mScrapViews.add(Integer.valueOf(itemType), view);
-    if ((view instanceof DetachListener)) {
-      ((DetachListener)view).onDetachedFromParent();
-    }
-  }
-  
-  private ConversationOverlayItem findNextPushingOverlay(int paramInt)
-  {
-    int i = mOverlayAdapter.getCount();
-    while (paramInt < i)
-    {
-      ConversationOverlayItem localConversationOverlayItem = mOverlayAdapter.getItem(paramInt);
-      if (localConversationOverlayItem.canPushSnapHeader()) {
-        return localConversationOverlayItem;
+      label110:
+      Object localObject2;
+      if (localObject1 != null)
+      {
+        localObject1 = a;
+        if (localObject1 != null) {
+          break label344;
+        }
+        paramInt3 = b.getItemViewType(paramInt1);
+        localObject1 = (Deque)e.a.get(Integer.valueOf(paramInt3));
+        if (localObject1 != null) {
+          break label297;
+        }
+        localObject1 = null;
+        localObject1 = (View)localObject1;
+        localObject2 = b.getView(paramInt1, (View)localObject1, this);
+        f.put(paramInt1, new bwf((View)localObject2, paramInt3));
+        if (localObject1 != localObject2) {
+          break label309;
+        }
+        cvm.b("ConvLayout", "want to REUSE scrolled-in view: index=%d obj=%s", new Object[] { Integer.valueOf(paramInt1), localObject2 });
+        label179:
+        if (((View)localObject2).getParent() != null) {
+          break label336;
+        }
+        a((View)localObject2, paramBoolean);
+        label195:
+        rg.d((View)localObject2, rg.g(this));
+        a((View)localObject2);
+        b = false;
+        a("show/measure overlay %d", new Object[] { Integer.valueOf(paramInt1) });
+        a("laying out overlay %d with h=%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(((View)localObject2).getMeasuredHeight()) });
+        paramInt1 = ((View)localObject2).getMeasuredHeight() + paramInt2;
+        a((View)localObject2, paramInt2, paramInt1);
+        if (paramInt1 <= t) {
+          break label449;
+        }
       }
-      paramInt += 1;
+      for (;;)
+      {
+        t = paramInt1;
+        return;
+        localObject1 = null;
+        break;
+        label297:
+        localObject1 = ((Deque)localObject1).poll();
+        break label110;
+        label309:
+        cvm.b("ConvLayout", "want to CREATE scrolled-in view: index=%d obj=%s", new Object[] { Integer.valueOf(paramInt1), localObject2 });
+        break label179;
+        label336:
+        ((View)localObject2).postInvalidate();
+        break label195;
+        label344:
+        a("move overlay %d", new Object[] { Integer.valueOf(paramInt1) });
+        if (!b) {}
+        for (paramInt3 = 1;; paramInt3 = 0)
+        {
+          localObject2 = localObject1;
+          if (paramInt3 != 0) {
+            break;
+          }
+          localbxh.b((View)localObject1);
+          a((View)localObject1);
+          b = false;
+          a("and (re)measure overlay %d, old/new heights=%d/%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(((View)localObject1).getHeight()), Integer.valueOf(((View)localObject1).getMeasuredHeight()) });
+          localObject2 = localObject1;
+          break;
+        }
+        label449:
+        paramInt1 = t;
+      }
     }
-    return null;
+    if (localObject1 != null)
+    {
+      a("hide overlay %d", new Object[] { Integer.valueOf(paramInt1) });
+      a(paramInt1, (bwf)localObject1, paramInt2, paramInt3);
+      if (paramInt3 <= t) {
+        break label524;
+      }
+    }
+    for (;;)
+    {
+      t = paramInt3;
+      return;
+      a("ignore non-visible overlay %d", new Object[] { Integer.valueOf(paramInt1) });
+      break;
+      label524:
+      paramInt3 = t;
+    }
   }
   
-  private void forwardFakeMotionEvent(MotionEvent paramMotionEvent, int paramInt)
+  private void a(int paramInt1, bwf parambwf, int paramInt2, int paramInt3)
+  {
+    f.remove(paramInt1);
+    a(parambwf, false);
+    a(a, paramInt2, paramInt3);
+  }
+  
+  private final void a(MotionEvent paramMotionEvent, int paramInt)
   {
     paramMotionEvent = MotionEvent.obtain(paramMotionEvent);
     paramMotionEvent.setAction(paramInt);
-    mWebView.onTouchEvent(paramMotionEvent);
-    LogUtils.v("ConvLayout", "in Container.OnTouch. fake: action=%d x/y=%f/%f pointers=%d", new Object[] { Integer.valueOf(paramMotionEvent.getActionMasked()), Float.valueOf(paramMotionEvent.getX()), Float.valueOf(paramMotionEvent.getY()), Integer.valueOf(paramMotionEvent.getPointerCount()) });
+    h.onTouchEvent(paramMotionEvent);
+    cvm.a("ConvLayout", "in Container.OnTouch. fake: action=%d x/y=%f/%f pointers=%d", new Object[] { Integer.valueOf(paramMotionEvent.getActionMasked()), Float.valueOf(paramMotionEvent.getX()), Float.valueOf(paramMotionEvent.getY()), Integer.valueOf(paramMotionEvent.getPointerCount()) });
   }
   
-  private int getOverlayBottom(int paramInt)
+  private final void a(View paramView, int paramInt1, int paramInt2)
   {
-    return webPxToScreenPx(mOverlayPositions[paramInt].bottom);
-  }
-  
-  private int getOverlayTop(int paramInt)
-  {
-    return webPxToScreenPx(mOverlayPositions[paramInt].top);
-  }
-  
-  private void layoutOverlay(View paramView, int paramInt1, int paramInt2)
-  {
-    int i = mOffsetY;
-    int j = mOffsetY;
+    int i1 = d;
+    int i2 = d;
     ViewGroup.MarginLayoutParams localMarginLayoutParams = (ViewGroup.MarginLayoutParams)paramView.getLayoutParams();
-    int k = getPaddingLeft() + leftMargin;
-    paramView.layout(k, paramInt1 - i, paramView.getMeasuredWidth() + k, paramInt2 - j);
+    int i3 = getPaddingLeft();
+    i3 = leftMargin + i3;
+    paramView.layout(i3, paramInt1 - i1, paramView.getMeasuredWidth() + i3, paramInt2 - i2);
   }
   
-  private void measureOverlayView(View paramView)
+  private final void a(bwf parambwf, boolean paramBoolean)
+  {
+    if (paramBoolean) {
+      removeViewInLayout(a);
+    }
+    e.a(Integer.valueOf(b), a);
+    if ((a instanceof bwd)) {
+      ((bwd)a).a();
+    }
+  }
+  
+  private final int c(int paramInt)
+  {
+    return (int)(paramInt * j);
+  }
+  
+  public final void a()
+  {
+    int i2 = f.size();
+    int i1 = 0;
+    while (i1 < i2)
+    {
+      a((bwf)f.valueAt(i1), true);
+      i1 += 1;
+    }
+    f.clear();
+  }
+  
+  public final void a(int paramInt)
+  {
+    r = true;
+    a(paramInt, true);
+    r = false;
+  }
+  
+  public final void a(int paramInt, boolean paramBoolean)
+  {
+    d = paramInt;
+    if (k)
+    {
+      j = h.getScale();
+      a("in positionOverlays, raw scale=%f, effective scale=%f", new Object[] { Float.valueOf(h.getScale()), Float.valueOf(j) });
+      if ((c != null) && (b != null)) {
+        break label95;
+      }
+    }
+    for (;;)
+    {
+      return;
+      if (j != 0.0F) {
+        break;
+      }
+      j = h.b();
+      break;
+      label95:
+      a("IN positionOverlays, spacerCount=%d overlayCount=%d", new Object[] { Integer.valueOf(c.length), Integer.valueOf(b.getCount()) });
+      t = 0;
+      paramInt = b.getCount() - 1;
+      int i1 = c.length - 1;
+      while ((i1 >= 0) && (paramInt >= 0))
+      {
+        int i8 = c(c[i1].a);
+        int i9 = c(c[i1].b);
+        int i2;
+        int i3;
+        int i4;
+        int i5;
+        label216:
+        bxh localbxh;
+        bwe localbwe;
+        label310:
+        label329:
+        int i6;
+        if (i1 == 0)
+        {
+          i2 = 48;
+          i3 = paramInt;
+          i4 = 1;
+          if (i4 == 0) {
+            break label471;
+          }
+          i5 = i3 - paramInt;
+          localbxh = b.a(i5);
+          localbwe = a(localbxh, i8, i9, i2);
+          a("in loop, spacer=%d overlay=%d t/b=%d/%d (%s)", new Object[] { Integer.valueOf(i1), Integer.valueOf(i5), Integer.valueOf(a), Integer.valueOf(b), localbxh });
+          a(i5, a, b, paramBoolean);
+          paramInt -= 1;
+          if (paramInt < 0) {
+            break label500;
+          }
+          if (i4 == 0) {
+            break label477;
+          }
+          i5 = i3 - paramInt;
+          localbxh = b.a(i5);
+          if ((i1 > 0) && (!localbxh.b())) {
+            break label500;
+          }
+          if (i4 == 0) {
+            break label483;
+          }
+          i6 = b;
+          label364:
+          if (i4 == 0) {
+            break label490;
+          }
+        }
+        label471:
+        label477:
+        label483:
+        label490:
+        for (int i7 = i9;; i7 = a)
+        {
+          localbwe = a(localbxh, i6, i7, i2);
+          a("in contig loop, spacer=%d overlay=%d t/b=%d/%d (%s)", new Object[] { Integer.valueOf(i1), Integer.valueOf(i5), Integer.valueOf(a), Integer.valueOf(b), localbxh });
+          a(i5, a, b, paramBoolean);
+          break label310;
+          i2 = 0;
+          i3 = 0;
+          i4 = 0;
+          break;
+          i5 = paramInt;
+          break label216;
+          i5 = paramInt;
+          break label329;
+          i6 = i8;
+          break label364;
+        }
+        label500:
+        i1 -= 1;
+      }
+    }
+  }
+  
+  public final void a(View paramView)
   {
     ViewGroup.MarginLayoutParams localMarginLayoutParams2 = (ViewGroup.MarginLayoutParams)paramView.getLayoutParams();
     ViewGroup.MarginLayoutParams localMarginLayoutParams1 = localMarginLayoutParams2;
     if (localMarginLayoutParams2 == null) {
       localMarginLayoutParams1 = (ViewGroup.MarginLayoutParams)generateDefaultLayoutParams();
     }
-    int j = ViewGroup.getChildMeasureSpec(mWidthMeasureSpec, getPaddingLeft() + getPaddingRight() + leftMargin + rightMargin, width);
-    int i = height;
-    if (i > 0) {}
-    for (i = View.MeasureSpec.makeMeasureSpec(i, 1073741824);; i = View.MeasureSpec.makeMeasureSpec(0, 0))
+    int i2 = ViewGroup.getChildMeasureSpec(q, getPaddingLeft() + getPaddingRight() + leftMargin + rightMargin, width);
+    int i1 = height;
+    if (i1 > 0) {}
+    for (i1 = View.MeasureSpec.makeMeasureSpec(i1, 1073741824);; i1 = View.MeasureSpec.makeMeasureSpec(0, 0))
     {
-      paramView.measure(j, i);
+      paramView.measure(i2, i1);
       return;
     }
   }
   
-  private void onDataSetChanged()
+  public final void a(View paramView, boolean paramBoolean)
   {
-    clearOverlays();
-    mSnapHeader.unbind();
-    positionOverlays(0, mOffsetY);
-  }
-  
-  private void onOverlayScrolledOff(int paramInt1, final OverlayView paramOverlayView, int paramInt2, int paramInt3)
-  {
-    mOverlayViews.remove(paramInt1);
-    post(new Runnable()
+    paramView = new bwc(this, paramView);
+    if (paramBoolean)
     {
-      public void run()
-      {
-        ConversationContainer.this.detachOverlay(paramOverlayView);
-      }
-    });
-    layoutOverlay(view, paramInt2, paramInt3);
-  }
-  
-  private void positionOverlay(int paramInt1, int paramInt2, int paramInt3)
-  {
-    Object localObject1 = (OverlayView)mOverlayViews.get(paramInt1);
-    ConversationOverlayItem localConversationOverlayItem = mOverlayAdapter.getItem(paramInt1);
-    localConversationOverlayItem.setTop(paramInt2);
-    Object localObject2;
-    if ((paramInt2 != paramInt3) && (paramInt3 > mOffsetY) && (paramInt2 < mOffsetY + getHeight())) {
-      if (localObject1 != null)
-      {
-        localObject1 = view;
-        if (localObject1 != null) {
-          break label187;
-        }
-        localObject2 = addOverlayView(paramInt1);
-        measureOverlayView((View)localObject2);
-        localConversationOverlayItem.markMeasurementValid();
-        traceLayout("show/measure overlay %d", new Object[] { Integer.valueOf(paramInt1) });
-        label108:
-        traceLayout("laying out overlay %d with h=%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(((View)localObject2).getMeasuredHeight()) });
-        layoutOverlay((View)localObject2, paramInt2, ((View)localObject2).getMeasuredHeight() + paramInt2);
-        label151:
-        if ((paramInt2 <= mOffsetY) && (localConversationOverlayItem.canPushSnapHeader()))
-        {
-          if (mSnapIndex != -1) {
-            break label331;
-          }
-          mSnapIndex = paramInt1;
-        }
-      }
-    }
-    label187:
-    label331:
-    while (paramInt1 <= mSnapIndex)
-    {
+      post(paramView);
       return;
-      localObject1 = null;
-      break;
-      traceLayout("move overlay %d", new Object[] { Integer.valueOf(paramInt1) });
-      localObject2 = localObject1;
-      if (localConversationOverlayItem.isMeasurementValid()) {
-        break label108;
-      }
-      measureOverlayView((View)localObject1);
-      localConversationOverlayItem.markMeasurementValid();
-      traceLayout("and (re)measure overlay %d, old/new heights=%d/%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(((View)localObject1).getHeight()), Integer.valueOf(((View)localObject1).getMeasuredHeight()) });
-      localObject2 = localObject1;
-      break label108;
-      if (localObject1 != null)
-      {
-        traceLayout("hide overlay %d", new Object[] { Integer.valueOf(paramInt1) });
-        onOverlayScrolledOff(paramInt1, (OverlayView)localObject1, paramInt2, paramInt3);
-        break label151;
-      }
-      traceLayout("ignore non-visible overlay %d", new Object[] { Integer.valueOf(paramInt1) });
-      break label151;
     }
-    mSnapIndex = paramInt1;
+    paramView.run();
   }
   
-  private void positionOverlays(int paramInt1, int paramInt2)
+  public final void a(bxp parambxp)
   {
-    mOffsetY = paramInt2;
-    if (mTouchInitialized) {
-      mScale = mWebView.getScale();
+    if (b != null)
+    {
+      b.unregisterDataSetObserver(s);
+      a();
+    }
+    b = parambxp;
+    if (b != null) {
+      b.registerDataSetObserver(s);
+    }
+  }
+  
+  public final void a(String paramString, Object... paramVarArgs)
+  {
+    if (r) {
+      return;
+    }
+    cvm.b("ConvLayout", paramString, paramVarArgs);
+  }
+  
+  public final void a(List<Integer> paramList)
+  {
+    paramList = paramList.iterator();
+    while (paramList.hasNext())
+    {
+      Object localObject = (Integer)paramList.next();
+      bxh localbxh = b.a(((Integer)localObject).intValue());
+      localObject = (bwf)f.get(((Integer)localObject).intValue());
+      if ((localObject != null) && (a != null) && (localbxh != null)) {
+        localbxh.a(a);
+      }
+    }
+  }
+  
+  public final void b()
+  {
+    b.d();
+  }
+  
+  public final void b(int paramInt)
+  {
+    int i1 = d;
+    d = 0;
+    bwf localbwf = (bwf)f.get(paramInt);
+    int i2;
+    if (localbwf != null)
+    {
+      i2 = getHeight();
+      a(paramInt, localbwf, i2, a.getHeight() + i2);
+      cvm.c("ConvLayout", "footer scrolled off. container height=%s, measuredHeight=%s", new Object[] { Integer.valueOf(i2), Integer.valueOf(getMeasuredHeight()) });
     }
     for (;;)
     {
-      traceLayout("in positionOverlays, raw scale=%f, effective scale=%f", new Object[] { Float.valueOf(mWebView.getScale()), Float.valueOf(mScale) });
-      if ((mOverlayPositions != null) && (mOverlayAdapter != null)) {
-        break;
-      }
+      d = i1;
       return;
-      if (mScale == 0.0F) {
-        mScale = mWebView.getInitialScale();
-      }
-    }
-    traceLayout("IN positionOverlays, spacerCount=%d overlayCount=%d", new Object[] { Integer.valueOf(mOverlayPositions.length), Integer.valueOf(mOverlayAdapter.getCount()) });
-    mSnapIndex = -1;
-    paramInt1 = mOverlayAdapter.getCount() - 1;
-    paramInt2 = mOverlayPositions.length - 1;
-    if ((paramInt2 >= 0) && (paramInt1 >= 0))
-    {
-      int i2 = getOverlayTop(paramInt2);
-      int i3 = getOverlayBottom(paramInt2);
-      int i;
-      int j;
-      int k;
-      label188:
-      label198:
-      ConversationOverlayItem localConversationOverlayItem;
-      OverlayPosition localOverlayPosition;
-      if (paramInt2 == 0)
+      cvm.c("ConvLayout", "footer not found with adapterIndex=%s", new Object[] { Integer.valueOf(paramInt) });
+      i2 = f.size();
+      paramInt = 0;
+      while (paramInt < i2)
       {
-        i = 1;
-        j = paramInt1;
-        k = 48;
-        if (i == 0) {
-          break label351;
-        }
-        m = j - paramInt1;
-        localConversationOverlayItem = mOverlayAdapter.getItem(m);
-        localOverlayPosition = calculatePosition(localConversationOverlayItem, i2, i3, k);
-        traceLayout("in loop, spacer=%d overlay=%d t/b=%d/%d (%s)", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(m), Integer.valueOf(top), Integer.valueOf(bottom), localConversationOverlayItem });
-        positionOverlay(m, top, bottom);
-        paramInt1 -= 1;
-        if (paramInt1 >= 0) {
-          if (i == 0) {
-            break label357;
-          }
-        }
+        int i3 = f.keyAt(paramInt);
+        localbwf = (bwf)f.valueAt(paramInt);
+        cvm.c("ConvLayout", "OverlayView: adapterIndex=%s, itemType=%s, view=%s", new Object[] { Integer.valueOf(i3), Integer.valueOf(b), a });
+        paramInt += 1;
       }
-      label351:
-      label357:
-      for (int m = j - paramInt1;; m = paramInt1)
+      i2 = b.getCount();
+      paramInt = 0;
+      while (paramInt < i2)
       {
-        localConversationOverlayItem = mOverlayAdapter.getItem(m);
-        if ((paramInt2 <= 0) || (localConversationOverlayItem.isContiguous())) {
-          break label363;
-        }
-        paramInt2 -= 1;
-        break;
-        i = 0;
-        j = 0;
-        k = 0;
-        break label188;
-        m = paramInt1;
-        break label198;
-      }
-      label363:
-      int n;
-      if (i != 0)
-      {
-        n = bottom;
-        label374:
-        if (i == 0) {
-          break label475;
-        }
-      }
-      label475:
-      for (int i1 = i3;; i1 = top)
-      {
-        localOverlayPosition = calculatePosition(localConversationOverlayItem, n, i1, k);
-        traceLayout("in contig loop, spacer=%d overlay=%d t/b=%d/%d (%s)", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(m), Integer.valueOf(top), Integer.valueOf(bottom), localConversationOverlayItem });
-        positionOverlay(m, top, bottom);
-        break;
-        n = i2;
-        break label374;
+        cvm.c("ConvLayout", "adapter item: index=%s, item=%s", new Object[] { Integer.valueOf(paramInt), b.a(paramInt) });
+        paramInt += 1;
       }
     }
-    positionSnapHeader(mSnapIndex);
-  }
-  
-  private void positionSnapHeader(int paramInt)
-  {
-    Object localObject2 = null;
-    Object localObject1 = localObject2;
-    if (paramInt != -1)
-    {
-      ConversationOverlayItem localConversationOverlayItem = mOverlayAdapter.getItem(paramInt);
-      localObject1 = localObject2;
-      if (localConversationOverlayItem.canBecomeSnapHeader()) {
-        localObject1 = localConversationOverlayItem;
-      }
-    }
-    if (localObject1 == null)
-    {
-      mSnapHeader.setVisibility(8);
-      mSnapHeader.unbind();
-      return;
-    }
-    ((ConversationOverlayItem)localObject1).bindView(mSnapHeader, false);
-    mSnapHeader.setVisibility(0);
-    int i = 0;
-    localObject1 = findNextPushingOverlay(paramInt + 1);
-    paramInt = i;
-    if (localObject1 != null)
-    {
-      i = Math.min(0, ((ConversationOverlayItem)localObject1).getTop() - mSnapHeader.getHeight() - mOffsetY);
-      paramInt = i;
-      if (i < 0)
-      {
-        localObject1 = mVelocityTracker.getSmoothedVelocity();
-        paramInt = i;
-        if (localObject1 != null)
-        {
-          paramInt = i;
-          if (((Float)localObject1).floatValue() > 600.0F) {
-            paramInt = 0;
-          }
-        }
-      }
-    }
-    mSnapHeader.setTranslationY(paramInt);
-  }
-  
-  private void traceLayout(String paramString, Object... paramVarArgs)
-  {
-    if (mDisableLayoutTracing) {
-      return;
-    }
-    LogUtils.d("ConvLayout", paramString, paramVarArgs);
-  }
-  
-  private int webPxToScreenPx(int paramInt)
-  {
-    return (int)(paramInt * mScale);
-  }
-  
-  public void addScrapView(int paramInt, View paramView)
-  {
-    mScrapViews.add(Integer.valueOf(paramInt), paramView);
   }
   
   protected boolean checkLayoutParams(ViewGroup.LayoutParams paramLayoutParams)
   {
     return paramLayoutParams instanceof ViewGroup.MarginLayoutParams;
-  }
-  
-  protected void dispatchDraw(Canvas paramCanvas)
-  {
-    super.dispatchDraw(paramCanvas);
-    if (mAttachedOverlaySinceLastDraw)
-    {
-      drawChild(paramCanvas, mTopMostOverlay, getDrawingTime());
-      mAttachedOverlaySinceLastDraw = false;
-    }
   }
   
   protected ViewGroup.LayoutParams generateDefaultLayoutParams()
@@ -449,108 +475,72 @@ public class ConversationContainer
     return new ViewGroup.MarginLayoutParams(paramLayoutParams);
   }
   
-  public View getScrapView(int paramInt)
-  {
-    return (View)mScrapViews.peek(Integer.valueOf(paramInt));
-  }
-  
-  public MessageHeaderView getSnapHeader()
-  {
-    return mSnapHeader;
-  }
-  
-  public void invalidateSpacerGeometry()
-  {
-    mOverlayPositions = null;
-  }
-  
-  public int measureOverlay(View paramView)
-  {
-    measureOverlayView(paramView);
-    return paramView.getMeasuredHeight();
-  }
-  
   protected void onFinishInflate()
   {
     super.onFinishInflate();
-    mWebView = ((ConversationWebView)findViewById(2131755181));
-    mWebView.addScrollListener(this);
-    mTopMostOverlay = findViewById(2131755182);
-    mSnapHeader = ((MessageHeaderView)findViewById(2131755183));
-    mSnapHeader.setSnappy(true);
-    int[] arrayOfInt = BOTTOM_LAYER_VIEW_IDS;
-    int j = arrayOfInt.length;
-    int i = 0;
-    int k;
-    while (i < j)
+    h = ((ConversationWebView)findViewById(buc.aK));
+    h.a(this);
+    int[] arrayOfInt = a;
+    int i2 = arrayOfInt.length;
+    int i1 = 0;
+    int i3;
+    while (i1 < i2)
     {
-      k = arrayOfInt[i];
-      mNonScrollingChildren.add(findViewById(k));
-      i += 1;
+      i3 = arrayOfInt[i1];
+      i.add(findViewById(i3));
+      i1 += 1;
     }
-    arrayOfInt = TOP_LAYER_VIEW_IDS;
-    j = arrayOfInt.length;
-    i = 0;
-    while (i < j)
+    arrayOfInt = g;
+    i2 = arrayOfInt.length;
+    i1 = 0;
+    while (i1 < i2)
     {
-      k = arrayOfInt[i];
-      mNonScrollingChildren.add(findViewById(k));
-      i += 1;
+      i3 = arrayOfInt[i1];
+      i.add(findViewById(i3));
+      i1 += 1;
     }
-  }
-  
-  public void onGeometryChange(OverlayPosition[] paramArrayOfOverlayPosition)
-  {
-    traceLayout("*** got overlay spacer positions:", new Object[0]);
-    int j = paramArrayOfOverlayPosition.length;
-    int i = 0;
-    while (i < j)
-    {
-      OverlayPosition localOverlayPosition = paramArrayOfOverlayPosition[i];
-      traceLayout("top=%d bottom=%d", new Object[] { Integer.valueOf(top), Integer.valueOf(bottom) });
-      i += 1;
-    }
-    mOverlayPositions = paramArrayOfOverlayPosition;
-    positionOverlays(0, mOffsetY);
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (!mTouchInitialized) {
-      mTouchInitialized = true;
+    boolean bool = true;
+    if (!k) {
+      k = true;
     }
-    if (mWebView.isHandlingTouch()) {}
-    float f;
-    do
-    {
+    if (h.f) {
       return false;
-      switch (paramMotionEvent.getActionMasked())
-      {
-      case 1: 
-      case 3: 
-      case 4: 
-      default: 
-        return false;
-      case 0: 
-        mLastMotionY = paramMotionEvent.getY();
-        mActivePointerId = paramMotionEvent.getPointerId(0);
-        return false;
-      case 5: 
-        LogUtils.d("ConvLayout", "Container is intercepting non-primary touch!", new Object[0]);
-        mMissedPointerDown = true;
-        requestDisallowInterceptTouchEvent(true);
-        return true;
+    }
+    switch (paramMotionEvent.getActionMasked())
+    {
+    case 1: 
+    case 3: 
+    case 4: 
+    default: 
+      bool = false;
+    }
+    for (;;)
+    {
+      return bool;
+      cvm.b("ConvLayout", "Container is intercepting non-primary touch!", new Object[0]);
+      p = true;
+      requestDisallowInterceptTouchEvent(true);
+      continue;
+      m = paramMotionEvent.getY();
+      n = paramMotionEvent.getPointerId(0);
+      bool = false;
+      continue;
+      float f1 = paramMotionEvent.getY(paramMotionEvent.findPointerIndex(n));
+      if ((int)Math.abs(f1 - m) <= l) {
+        break;
       }
-      f = paramMotionEvent.getY(paramMotionEvent.findPointerIndex(mActivePointerId));
-    } while ((int)Math.abs(f - mLastMotionY) <= mTouchSlop);
-    mLastMotionY = f;
-    return true;
+      m = f1;
+    }
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    LogUtils.d("ConvLayout", "*** IN header container onLayout", new Object[0]);
-    Iterator localIterator = mNonScrollingChildren.iterator();
+    cvm.b("ConvLayout", "*** IN header container onLayout", new Object[0]);
+    Iterator localIterator = i.iterator();
     while (localIterator.hasNext())
     {
       View localView = (View)localIterator.next();
@@ -561,29 +551,29 @@ public class ConversationContainer
         ViewGroup.MarginLayoutParams localMarginLayoutParams = (ViewGroup.MarginLayoutParams)localView.getLayoutParams();
         paramInt3 = leftMargin;
         paramInt4 = topMargin;
-        localView.layout(paramInt3, paramInt4, paramInt3 + paramInt1, paramInt4 + paramInt2);
+        localView.layout(paramInt3, paramInt4, paramInt1 + paramInt3, paramInt2 + paramInt4);
       }
     }
-    if (mOverlayAdapter != null)
+    if (b != null)
     {
+      paramInt2 = b.getCount();
       paramInt1 = 0;
-      paramInt2 = mOverlayAdapter.getCount();
       while (paramInt1 < paramInt2)
       {
-        mOverlayAdapter.getItem(paramInt1).invalidateMeasurement();
+        b.a(paramInt1).b = true;
         paramInt1 += 1;
       }
     }
-    positionOverlays(0, mOffsetY);
+    a(d, false);
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     super.onMeasure(paramInt1, paramInt2);
-    if (LogUtils.isLoggable("ConvLayout", 3)) {
-      LogUtils.d("ConvLayout", "*** IN header container onMeasure spec for w/h=%s/%s", new Object[] { View.MeasureSpec.toString(paramInt1), View.MeasureSpec.toString(paramInt2) });
+    if (cvm.a("ConvLayout", 3)) {
+      cvm.b("ConvLayout", "*** IN header container onMeasure spec for w/h=%s/%s", new Object[] { View.MeasureSpec.toString(paramInt1), View.MeasureSpec.toString(paramInt2) });
     }
-    Iterator localIterator = mNonScrollingChildren.iterator();
+    Iterator localIterator = i.iterator();
     while (localIterator.hasNext())
     {
       View localView = (View)localIterator.next();
@@ -591,109 +581,33 @@ public class ConversationContainer
         measureChildWithMargins(localView, paramInt1, 0, paramInt2, 0);
       }
     }
-    mWidthMeasureSpec = paramInt1;
+    q = paramInt1;
   }
   
-  public void onNotifierScroll(int paramInt1, int paramInt2)
+  protected boolean onRequestFocusInDescendants(int paramInt, Rect paramRect)
   {
-    mVelocityTracker.onInput(paramInt2);
-    mDisableLayoutTracing = true;
-    positionOverlays(paramInt1, paramInt2);
-    mDisableLayoutTracing = false;
-  }
-  
-  public void onOverlayModelUpdate(List<Integer> paramList)
-  {
-    paramList = paramList.iterator();
-    while (paramList.hasNext())
-    {
-      Integer localInteger = (Integer)paramList.next();
-      ConversationOverlayItem localConversationOverlayItem = mOverlayAdapter.getItem(localInteger.intValue());
-      OverlayView localOverlayView = (OverlayView)mOverlayViews.get(localInteger.intValue());
-      if ((localOverlayView != null) && (view != null) && (localConversationOverlayItem != null)) {
-        localConversationOverlayItem.onModelUpdated(view);
-      }
-      if (localInteger.intValue() == mSnapIndex) {
-        mSnapHeader.refresh();
-      }
+    if (b != null) {
+      return b.d();
     }
+    return false;
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
-    int i = paramMotionEvent.getActionMasked();
-    if ((i == 1) || (i == 3)) {}
-    for (mTouchIsDown = false;; mTouchIsDown = true)
+    int i1 = paramMotionEvent.getActionMasked();
+    if ((i1 == 1) || (i1 == 3)) {}
+    for (o = false;; o = true)
     {
       do
       {
-        return mWebView.onTouchEvent(paramMotionEvent);
-      } while ((mTouchIsDown) || ((i != 2) && (i != 5)));
-      forwardFakeMotionEvent(paramMotionEvent, 0);
-      if (mMissedPointerDown)
+        return h.onTouchEvent(paramMotionEvent);
+      } while ((o) || ((i1 != 2) && (i1 != 5)));
+      a(paramMotionEvent, 0);
+      if (p)
       {
-        forwardFakeMotionEvent(paramMotionEvent, 5);
-        mMissedPointerDown = false;
+        a(paramMotionEvent, 5);
+        p = false;
       }
-    }
-  }
-  
-  public void requestLayout()
-  {
-    Utils.checkRequestLayout(this);
-    super.requestLayout();
-  }
-  
-  public void setOverlayAdapter(ConversationViewAdapter paramConversationViewAdapter)
-  {
-    if (mOverlayAdapter != null)
-    {
-      mOverlayAdapter.unregisterDataSetObserver(mAdapterObserver);
-      clearOverlays();
-    }
-    mOverlayAdapter = paramConversationViewAdapter;
-    if (mOverlayAdapter != null) {
-      mOverlayAdapter.registerDataSetObserver(mAdapterObserver);
-    }
-  }
-  
-  private class AdapterObserver
-    extends DataSetObserver
-  {
-    private AdapterObserver() {}
-    
-    public void onChanged()
-    {
-      ConversationContainer.this.onDataSetChanged();
-    }
-  }
-  
-  public static abstract interface DetachListener
-  {
-    public abstract void onDetachedFromParent();
-  }
-  
-  public static class OverlayPosition
-  {
-    public final int bottom;
-    public final int top;
-    
-    public OverlayPosition(int paramInt1, int paramInt2)
-    {
-      top = paramInt1;
-      bottom = paramInt2;
-    }
-  }
-  
-  private static class OverlayView
-  {
-    int itemType;
-    public View view;
-    
-    public OverlayView(View paramView, int paramInt)
-    {
-      view = paramView;
-      itemType = paramInt;
     }
   }
 }

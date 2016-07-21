@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sync-adapter android:accountType="@string/account_manager_type_exchange" android:contentAuthority="com.android.contacts" android:allowParallelSyncs="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

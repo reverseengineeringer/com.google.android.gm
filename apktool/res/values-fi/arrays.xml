@@ -6,17 +6,13 @@
         <item>Lähetä edelleen</item>
     </string-array>
     <string-array name="sync_status">
-        <item>Onnistui</item>
+        <item>Onnistui.</item>
         <item>Ei yhteyttä.</item>
-        <item>Kirjautuminen ei onnistu.</item>
-        <item>Suojausvirhe.</item>
-        <item>Synkronointi epäonnistui.</item>
+        <item>Sisäänkirjautuminen epäonnistui</item>
+        <item>Suojausvirhe</item>
+        <item>Synkronointi ei onnistunut.</item>
+        <item>Palvelinvirhe</item>
         <item>Sisäinen virhe</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Järjestelmä</item>
-        <item>Usein käytetty</item>
-        <item>Kaikki tunnist.</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Uudempi</item>
@@ -24,42 +20,83 @@
         <item>Keskusteluluettelo</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
-        <item>Näytä uudempi keskustelu, kun poistat/arkistoit viestejä</item>
-        <item>Näytä vanhempi keskustelu, kun poistat/arkistoit viestejä</item>
-        <item>Näytä keskusteluluettelo, kun poistat/arkistoit viestejä</item>
+        <item>Näytä uudempi keskustelu, kun poistat/arkistoit viestejä.</item>
+        <item>Näytä vanhempi keskustelu, kun poistat/arkistoit viestejä.</item>
+        <item>Näytä keskusteluluettelo, kun poistat/arkistoit viestejä.</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Ei vaikutusta</item>
-        <item>Arkistoi tai poistaa</item>
-        <item>Poistaa aina</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arkistoi</item>
+        <item>Poista</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Ei vaikutusta</item>
-        <item>Saapun: arkistoi. Tav. tunnist: poistaa nyk. tunn. Järj.tunnist. (Kaikki viestit/Lähetetyt): poistaa</item>
-        <item>Poistaa keskustelun aina</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arkistoi</item>
+        <item>Poista</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Tärkeä</item>
+        <item>Normaali</item>
+        <item>Ei tärkeä</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Et enää koskaan myöhästy lennolta</item>
+        <item>Et enää koskaan myöhästy lennolta</item>
+        <item>Lisätäänkö tämä lento kalenteriisi?</item>
+        <item>Varaukset lisätään Google Kalenteriisi</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Kalenteri lisää lennot ja muut varaukset kalenteriisi automaattisesti.</item>
+        <item>Google Kalenteri lisää lennot ja muut varaukset kalenteriisi automaattisesti.</item>
+        <item>Google Kalenteri -sovellus lisää tapahtumat Gmailista automaattisesti.</item>
+        <item>Lentojen, hotellien ja ravintoloiden varaukset lisätään automaattisesti.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Lisätäänkö tämä varaus Google Kalenteriin?</item>
+        <item>Lisätäänkö varaukset Kalenteriin automaattisesti?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Google Kalenteri -sovellus lisää tapahtumat Gmailista kalenteriisi automaattisesti.</item>
+        <item>Google Kalenteri lisää hotellivaraukset ja muut varaukset automaattisesti sähköpostistasi.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Saat ilmoituksen ravintolavarauksestasi hyvissä ajoin</item>
+        <item>Lisätäänkö tämä varaus Google Kalenteriin?</item>
+        <item>Varaukset lisätään Google Kalenteriisi automaattisesti</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Kalenteri lisää ravintolavaraukset ja muut varaukset kalenteriisi automaattisesti.</item>
+        <item>Tapahtumat Gmailista voidaan lisätä kalenteriisi automaattisesti.</item>
+        <item>Lentojen, hotellien ja ravintoloiden varaukset lisätään automaattisesti.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Saat ilmoituksen hyvissä ajoin ennen tapahtumaa</item>
+        <item>Lisätäänkö tämä tapahtuma Google Kalenteriin?</item>
+        <item>Olet jatkossa aina ajoissa paikalla</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Kalenteri lisää tämän sähköpostin kaltaiset tapahtumat ja varaukset kalenteriisi automaattisesti.</item>
+        <item>Tapahtumat Gmailista voidaan lisätä kalenteriisi automaattisesti.</item>
+        <item>Tapahtumat ja muut varaukset lisätään Google Kalenteriin automaattisesti.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Kaikki varaukset löytyvät yhdestä paikasta</item>
+        <item>Lisätäänkö nämä varaukset Google Kalenteriin?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Lentojen, hotellien ja ravintoloiden varaukset lisätään automaattisesti Google Kalenteriisi.</item>
+        <item>Tapahtumat Gmailista voidaan lisätä kalenteriisi automaattisesti.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Hyvin pieni</item>
         <item>Pieni</item>
         <item>Normaali</item>
         <item>Suuri</item>
-        <item>Hyvin suuri</item>
+        <item>Valtava</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Näytä viestien sisältö hyvin pienikokoisena tekstinä.</item>
         <item>Näytä viestien sisältö pienikokoisena tekstinä.</item>
-        <item>Näytä viestien sisältö normaalikokoisena tekstinä</item>
+        <item>Näytä viestien sisältö normaalikokoisena tekstinä.</item>
         <item>Näytä viestien sisältö suurikokoisena tekstinä.</item>
         <item>Näytä viestien sisältö hyvin suurikokoisena tekstinä.</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Näytä viestitoiminnot aina näytön yläosassa</item>
-        <item>Näytä viestitoiminnot näytön yläosassa vain silloin, kun näyttö on käännetty pystysuuntaan</item>
-        <item>Älä näytä viestitoimintoja viestin otsikon ulkopuolella.</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Näytä aina</item>
-        <item>Näytä vain pystysuunnassa</item>
-        <item>Älä näytä</item>
     </string-array>
 </resources>

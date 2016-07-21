@@ -5,7 +5,7 @@ import com.android.mail.ui.MailboxSelectionActivity;
 public class MailboxSelectionActivityGmail
   extends MailboxSelectionActivity
 {
-  protected Class<?> getFolderSelectionActivity()
+  protected final Class<?> g()
   {
     return FolderSelectionActivityGmail.class;
   }

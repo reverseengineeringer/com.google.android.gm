@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/quantum_ic_flag_googred700_20" app:state_starred="true" />
+    <item android:drawable="@drawable/quantum_ic_outlined_flag_grey600_20" />
+</selector>

@@ -6,60 +6,97 @@
         <item>هدایت</item>
     </string-array>
     <string-array name="sync_status">
-        <item>موفقیت‌آمیز</item>
-        <item>اتصال برقرار نیست.</item>
-        <item>ورود به برنامه انجام نشد.</item>
-        <item>خطای امنیتی.</item>
-        <item>همگام‌سازی انجام نشد.</item>
+        <item>انجام شد</item>
+        <item>اتصال برقرار نیست</item>
+        <item>وارد سیستم نشدید</item>
+        <item>خطای امنیتی</item>
+        <item>همگام‌سازی نشد</item>
+        <item>خطای سرور</item>
         <item>خطای داخلی</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>سیستم</item>
-        <item>اغلب استفاده‌شده</item>
-        <item>همهٔ برچسب‌ها</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>جدیدتر</item>
         <item>قدیمی‌تر</item>
-        <item>لیست گفتگو</item>
+        <item>فهرست مکالمه</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
-        <item>نمایش مکالمه جدیدتر بعد از اینکه بایگانی یا حذف را انجام دادید</item>
-        <item>نمایش مکالمه قدیمی‌تر بعد از اینکه بایگانی یا حذف را انجام دادید</item>
-        <item>نمایش لیست مکالمه بعد از اینکه بایگانی یا حذف را انجام دادید</item>
+        <item>مکالمه جدیدتر بعد از بایگانی یا حذف نشان داده شود</item>
+        <item>مکالمه قدیمی‌تر بعد از بایگانی یا حذف نشان داده شود</item>
+        <item>فهرست مکالمه بعد از بایگانی یا حذف نشان داده شود</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>عمل نمی‌کند</item>
-        <item>بایگانی یا حذف می‌کند</item>
-        <item>همیشه حذف می‌کند</item>
+    <string-array name="prefEntries_removal_action">
+        <item>بایگانی</item>
+        <item>حذف</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>عمل نمی‌کند</item>
-        <item>ص. ورودی: بایگانی مکالمات. برچسب‌های منظم: حذف برچسب کنونی. برچسب‌های سیستم مانند همهٔ نامه‌ها یا ارسال شده: حذف مکالمه.</item>
-        <item>همیشه مکالمه را حذف می‌کند</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>بایگانی</item>
+        <item>حذف</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>زیاد</item>
+        <item>عادی</item>
+        <item>کم</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>پرواز دیگری را از دست ندهید.</item>
+        <item>پرواز دیگری را از دست ندهید.</item>
+        <item>این پرواز را به تقویمتان اضافه می‌کنید؟</item>
+        <item>‏رزروها را در تقویم Google دریافت کنید.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>‏تقویم Google به‌صورت خودکار پروازها و سایر رزروها را به تقویمتان اضافه می‌کند.</item>
+        <item>‏تقویم Google به‌صورت خودکار پروازها و سایر رزروها را به تقویمتان اضافه می‌کند.</item>
+        <item>‏با برنامه تقویم Google می‌توانید رویدادها را از Gmail به‌صورت خودکار اضافه کنید.</item>
+        <item>اطلاعات رزرو پرواز، هتل و رستوران به‌صورت خودکار اضافه می‌شوند.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>‏این رزرو را به تقویم Google اضافه می‌کنید؟</item>
+        <item>می‌خواهید رزروها به‌صورت خودکار به تقویمتان اضافه شوند؟</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>‏با برنامه تقویم Google، رویدادها از Gmail به‌صورت خودکار به تقویمتان اضافه می‌شوند.</item>
+        <item>‏تقویم Google به‌صورت خودکار اطلاعات رزرو هتل‌ها و سایر موارد را از رایانامه‌تان اضافه می‌کند.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>به‌موقع برای صرف غذا اعلام دریافت کنید.</item>
+        <item>‏این رزرو را به تقویم Google اضافه می‌کنید؟</item>
+        <item>‏رزروها را به‌صورت خودکار در تقویم Google دریافت کنید.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>‏تقویم Google به‌صورت خودکار اطلاعات رزرو رستوران‌ها و سایر موارد را به تقویمتان اضافه می‌کند.</item>
+        <item>‏رویدادها از Gmail را می‌توانید به‌صورت خودکار به تقویمتان اضافه کنید.</item>
+        <item>اطلاعات رزرو پرواز، هتل و رستوران به‌صورت خودکار اضافه می‌شوند.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>قبل از این رویداد به‌موقع اعلام دریافت کنید.</item>
+        <item>‏این رویداد را به تقویم Google اضافه می‌کنید؟</item>
+        <item>رویدادتان را از دست ندهید.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>‏تقویم Google به‌صورت خودکار اطلاعات رزرو رویدادها و سایر موارد را به تقویمتان اضافه می‌کند، مانند موارد موجود در این رایانامه.</item>
+        <item>‏رویدادها از Gmail را می‌توانید به‌صورت خودکار به تقویمتان اضافه کنید.</item>
+        <item>‏با تقویم Google، اطلاعات رزرو رویدادها و سایر موارد به‌صورت خودکار اضافه می‌شوند.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>همه رزروهایتان را در یک مکان واحد پیگیری کنید.</item>
+        <item>‏این رزروها به تقویم Google اضافه شود؟</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>‏اطلاعات رزرو پرواز، هتل و رستوران به‌صورت خودکار به تقویم Google اضافه می‌شوند.</item>
+        <item>‏رویدادها از Gmail را می‌توانید به‌صورت خودکار به تقویمتان اضافه کنید.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
-        <item>خیلی کوچک</item>
+        <item>بسیار کوچک</item>
         <item>کوچک</item>
-        <item>معمولی</item>
+        <item>عادی</item>
         <item>بزرگ</item>
-        <item>بسیار بزرگ</item>
+        <item>خیلی بزرگ</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
-        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه بسیار کوچک</item>
-        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه کوچک</item>
-        <item>نمایش محتوای پیام‌ها در متن با اندازه معمولی</item>
-        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه بزرگ</item>
-        <item>نمایش محتوای پیام‌ها در نوشتار با اندازه بسیار بزرگ</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>عملکردهای پیام همیشه در بالای صفحه نشان داده شود</item>
-        <item>عملکردهای پیام فقط وقتی در بالای صفحه نشان داده شود که به حالت عمودی چرخانده شود</item>
-        <item>عملکردهای پیام خارج از سرصفحه پیام نشان داده نشود</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>همیشه نمایش داده شود</item>
-        <item>فقط در حالت عمودی نشان داده شود</item>
-        <item>نشان داده نشود</item>
+        <item>محتوای پیام‌ها با نوشتار بسیار کوچک نشان داده شود</item>
+        <item>محتوای پیام‌ها با نوشتار کوچک نشان داده شود</item>
+        <item>محتوای پیام‌ها با نوشتار عادی نشان داده شود</item>
+        <item>محتوای پیام‌ها با نوشتار بزرگ نشان داده شود</item>
+        <item>محتوای پیام‌ها با نوشتار خیلی بزرگ نشان داده شود</item>
     </string-array>
 </resources>

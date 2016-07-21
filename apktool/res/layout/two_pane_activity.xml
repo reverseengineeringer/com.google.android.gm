@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.mail.ui.TwoPaneLayout android:orientation="horizontal" android:id="@id/two_pane_activity" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/content_pane" android:background="@drawable/folder_bg_holo_light" android:layout_width="0.0dip" android:layout_height="fill_parent" />
-    <FrameLayout android:id="@id/conversation_list_pane" android:layout_width="0.0dip" android:layout_height="fill_parent" />
-    <com.android.mail.ui.ConversationListCopy android:id="@id/conversation_list_copy" android:layout_width="0.0dip" android:layout_height="fill_parent" />
-    <include android:id="@id/conversation_pane" android:layout_width="0.0dip" android:layout_height="fill_parent" layout="@layout/conversation_pager" />
-    <RelativeLayout android:id="@id/wait" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.android.mail.ui.ActionableToastBar android:id="@id/toast_bar" style="@style/ToastBarStyle" />
-</com.android.mail.ui.TwoPaneLayout>
+    <include layout="@layout/toolbar_with_search" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:windowContentOverlay">
+        <com.android.mail.ui.TwoPaneLayout android:id="@id/two_pane_activity" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top">
+            <FrameLayout android:layout_gravity="left" android:id="@id/drawer" android:layout_width="@dimen/two_pane_drawer_width_open" android:layout_height="fill_parent">
+                <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/drawer_fragment" />
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="left" android:id="@id/conversation_list_pane" android:layout_width="0.0dip" android:layout_height="fill_parent">
+                <FrameLayout android:id="@id/conversation_list_place_holder" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <include layout="@layout/floating_action_button" />
+            </FrameLayout>
+            <com.android.mail.ui.ConversationViewFrame android:layout_gravity="left" android:id="@id/conversation_frame" android:layout_width="0.0dip" android:layout_height="fill_parent" style="@style/ConversationViewForegroundShadowStyle">
+                <FrameLayout android:id="@id/conversation_pane" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="center" android:id="@id/conversation_pane_no_message_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/conversation_pager" />
+                </FrameLayout>
+                <FrameLayout android:id="@id/miscellaneous_pane" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.android.mail.ui.ConversationViewFrame>
+            <include layout="@layout/floating_actions" />
+        </com.android.mail.ui.TwoPaneLayout>
+        <include layout="@layout/survey_holder" />
+        <include layout="@layout/search_suggestion_list" />
+    </FrameLayout>
+</LinearLayout>

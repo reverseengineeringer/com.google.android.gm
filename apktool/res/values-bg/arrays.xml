@@ -7,16 +7,12 @@
     </string-array>
     <string-array name="sync_status">
         <item>Успех</item>
-        <item>Няма връзка.</item>
-        <item>Не можахте да влезете.</item>
-        <item>Грешка в сигурността.</item>
-        <item>Не можа да се синхронизира.</item>
+        <item>Няма връзка</item>
+        <item>Влизането в профила не бе възможно</item>
+        <item>Грешка в сигурността</item>
+        <item>Синхронизирането не бе възможно</item>
+        <item>Грешка в сървъра</item>
         <item>Вътрешна грешка</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Система</item>
-        <item>Често ползвани</item>
-        <item>Всички етикети</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>По-нова</item>
@@ -28,38 +24,79 @@
         <item>По-старата кореспонденция след архивиране или изтриване</item>
         <item>Списъкът с кореспонденции след архивиране или изтриване</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Няма ефект</item>
-        <item>Архивира или изтрива</item>
-        <item>Винаги изтрива</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Архивиране</item>
+        <item>Изтриване</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Няма ефект</item>
-        <item>Вх. поща: арх. кореспонденцията. Станд. етикети: премахва тек. етикет. Сист. етикети, като „Цялата поща“ или „Изпратени“: изтр. кореспонденцията.</item>
-        <item>Винаги изтрива кореспонденцията</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Архивиране</item>
+        <item>Изтриване</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Висок</item>
+        <item>Нормален</item>
+        <item>Нисък</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Никога не изпускайте полет.</item>
+        <item>Никога не изпускайте полет.</item>
+        <item>Този полет да се добави ли в календара ви?</item>
+        <item>Получавайте резервации в календара си в Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Календар „автомагично“ добавя в календара ви полетни и други резервации.</item>
+        <item>Google Календар автоматично добавя в календара ви полетни и други резервации.</item>
+        <item>Събития от Gmail могат да бъдат добавяни автоматично с приложението Google Календар.</item>
+        <item>Осигурете си автоматично добавяне на резервации за полети, хотели и ресторанти.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Тази резервация да се добави ли в календара в Google?</item>
+        <item>Искате ли резервациите автоматично да влизат в календара ви?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>С приложението Google Календар събитията от Gmail се добавят автоматично в календара ви.</item>
+        <item>Google Календар автоматично добавя в календара ви хотелски и други резервации от електронната ви поща.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Получете навременно известие за посещението си на ресторант.</item>
+        <item>Тази резервация да се добави ли в календара в Google?</item>
+        <item>Автоматично получавайте резервации в календара си в Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Календар автоматично добавя в календара ви ресторантски и други резервации.</item>
+        <item>Събития от Gmail могат да бъдат добавяни автоматично в календара ви.</item>
+        <item>Осигурете си автоматично добавяне на резервации за полети, хотели и ресторанти.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Получете навременно известие преди това събитие.</item>
+        <item>Това събитие да се добави ли в календара в Google?</item>
+        <item>Не пропускайте събитието си.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Календар автоматично добавя в календара ви събития и резервации като тази в настоящия имейл.</item>
+        <item>Събития от Gmail могат да бъдат добавяни автоматично в календара ви.</item>
+        <item>Осигурете си автоматично добавяне на събития и други резервации с помощта на Google Календар.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Следете резервациите си от едно място.</item>
+        <item>Тези резервации да се добавят ли в календара в Google?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Осигурете си автоматично добавяне в календара ви в Google на резервации за полети, хотели и ресторанти.</item>
+        <item>Събития от Gmail могат да бъдат добавяни автоматично в календара ви.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
-        <item>Миниатюрен</item>
-        <item>Малък</item>
-        <item>Нормален</item>
-        <item>Голям</item>
-        <item>Огромен</item>
+        <item>миниатюрен</item>
+        <item>малък</item>
+        <item>нормален</item>
+        <item>голям</item>
+        <item>огромен</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Показване на съдържанието на съобщенията с миниатюрен текст</item>
         <item>Показване на съдържанието на съобщенията с малък текст</item>
-        <item>Показване на съдържанието на съобщенията с нормален шрифт</item>
+        <item>Показване на съдържанието на съобщенията с нормален текст</item>
         <item>Показване на съдържанието на съобщенията с голям текст</item>
         <item>Показване на съдържанието на съобщенията с огромен текст</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Действията със съобщението да се показват винаги в горната част на екрана</item>
-        <item>Действията със съобщението да се показват в горната част на екрана само при завъртане във вертикална ориентация</item>
-        <item>Действията със съобщението да не се показват извън заглавката му</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Винаги да се показва</item>
-        <item>Да се показва само във вертикална ориентация</item>
-        <item>Да не се показва</item>
     </string-array>
 </resources>

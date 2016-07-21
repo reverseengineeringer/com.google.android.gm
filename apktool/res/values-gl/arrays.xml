@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Responder</item>
+        <item>Responder a todos</item>
+        <item>Avanzar</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Correcto</item>
+        <item>Sen conexión</item>
+        <item>Non se puido iniciar sesión</item>
+        <item>Erro de seguranza</item>
+        <item>Non se puido sincronizar</item>
+        <item>Erro do servidor</item>
+        <item>Erro interno</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Máis recente</item>
+        <item>Máis antiga</item>
+        <item>Lista de conversas</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Mostra conversa máis recente despois de arquivar ou eliminar</item>
+        <item>Mostra conversa máis antiga despois de arquivar ou eliminar</item>
+        <item>Mostra a lista de conversas despois de arquivar ou eliminar</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Arquivo</item>
+        <item>Eliminar</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arquivo</item>
+        <item>Eliminar</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Alta</item>
+        <item>Normal</item>
+        <item>Baixa</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Non perdas outro voo.</item>
+        <item>Non perdas outro voo.</item>
+        <item>Queres engadir este voo ao teu calendario?</item>
+        <item>Obtén reservas en Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Calendar engade automaticamente reservas de voos e doutro tipo ao teu calendario.</item>
+        <item>Google Calendar engade automaticamente reservas de voos e doutro tipo ao teu calendario.</item>
+        <item>Os eventos de Gmail pódense engadir automaticamente á aplicación de Google Calendar.</item>
+        <item>Consigue que as reservas de voos, hoteis e restaurantes se engadan automaticamente.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Queres engadir esta reserva a Google Calendar?</item>
+        <item>Queres reservas automaticamente en Calendar?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Os eventos da aplicación Google Calendar de Gmail engádense automaticamente ao teu calendario.</item>
+        <item>Google Calendar engade automaticamente reservas de hoteis e doutro tipo desde o teu correo electrónico.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Recibe unha notificación a tempo para a túa comida.</item>
+        <item>Queres engadir esta reserva a Google Calendar?</item>
+        <item>Obtén reservas automaticamente en Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Calendar engade automaticamente reservas de restaurante e doutro tipo ao teu calendario.</item>
+        <item>Os eventos de Gmail pódense engadir automaticamente ao teu calendario.</item>
+        <item>Consigue que as reservas de voos, hoteis e restaurantes se engadan automaticamente.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Recibe unha notificación a tempo antes deste evento.</item>
+        <item>Queres engadir este evento a Google Calendar?</item>
+        <item>Non perdas o teu evento.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Calendar engade automaticamente eventos e reservas, como o deste correo electrónico, ao teu calendario.</item>
+        <item>Os eventos de Gmail pódense engadir automaticamente ao teu calendario.</item>
+        <item>Consigue que as reservas de eventos e doutro tipo se engadan automaticamente con Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Fai un seguimento das túas reservas nun só lugar.</item>
+        <item>Queres engadir estas reservas a Google Calendar?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Consigue que as reservas de voos, hoteis e restaurantes se engadan automaticamente a Google Calendar.</item>
+        <item>Os eventos de Gmail pódense engadir automaticamente ao teu calendario.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Moi pequena</item>
+        <item>Pequena</item>
+        <item>Normal</item>
+        <item>Grande</item>
+        <item>Moi grande</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Mostra o contido das mensaxes en letra moi pequena</item>
+        <item>Mostra o contido das mensaxes en letra pequena</item>
+        <item>Mostra o contido das mensaxes en letra de tamaño normal</item>
+        <item>Mostra o contido das mensaxes en letra grande</item>
+        <item>Mostra o contido das mensaxes en letra moi grande</item>
+    </string-array>
+</resources>

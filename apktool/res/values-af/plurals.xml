@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Kalenders is nie gedeel nie</item>
+        <item quantity="one">Kalender is nie gedeel nie</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">Konsepte</item>
+        <item quantity="one">Konsep</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Vee hierdie %1$d gesprekke uit?</item>
+        <item quantity="one">Vee hierdie gesprek uit?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Argiveer hierdie %1$d gesprekke?</item>
+        <item quantity="one">Argiveer hierdie gesprek?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Gooi konsepte van hierdie %1$d gesprekke weg?</item>
+        <item quantity="one">Gooi konsepte van hierdie gesprek weg?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Ontster tans %1$d gesprekke</item>
+        <item quantity="one">Ontster tans %1$d gesprek</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d is as strooipos aangegee en is by uitgeteken</item>
+        <item quantity="one">%1$d is as strooipos aangegee en is by uitgeteken</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> gedemp</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> gedemp</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> as strooipos aangegee</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> as strooipos aangegee</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> aangegee as nie strooipos nie</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> aangegee as nie strooipos nie</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> gemerk as onbelangrik</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> gemerk as onbelangrik</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> geargiveer</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> geargiveer</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> uitgevee</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> uitgevee</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">veranderde etikette.</item>
+        <item quantity="one">veranderde etiket.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d nuwe boodskappe</item>
+        <item quantity="one">%1$d nuwe boodskap</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Vou %1$d ouer boodskappe uit</item>
+        <item quantity="one">Vou ouer boodskap uit</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d ouer boodskappe is uitgevou</item>
+        <item quantity="one">Een ouer boodskap is uitgevou</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d nuwe boodskappe</item>
+        <item quantity="one">%1$d nuwe boodskap</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d gesprekke sal permanent uitgevee word.</item>
+        <item quantity="one">%1$d gesprek sal permanent uitgevee word.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d boodskappe</item>
+        <item quantity="one">%1$d boodskap</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d aanhegsels</item>
+        <item quantity="one">%1$d aanhegsel</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Hierdie boodskappe sal as strooipos gemerk word. Wil jy ook ophou om soortgelyke boodskappe te ontvang van hierdie &amp;lt;b>%2$d stuurders&amp;lt;/b>:%1$s</item>
+        <item quantity="one">Hierdie boodskap sal as strooipos gemerk word. Wil jy ook ophou om soortgelyke boodskappe van %1$s te ontvang?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sinkroniseer: afgelope %1$d dae</item>
+        <item quantity="one">Sinkroniseer: afgelope %1$d dag</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d dae</item>
+        <item quantity="one">Een dag</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">dae</item>
+        <item quantity="one">dag</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Afgelope %1$d dae se boodskappe sal afgelaai word wanneer gekoppel</item>
+        <item quantity="one">Afgelope dag se boodskappe sal afgelaai word wanneer gekoppel</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Let wel: Sommige ontvangers het dalk steeds nie toegang tot hierdie lêers nie. Jy sal dalk hierdie lêers vanuit Google Drive moet deel.</item>
+        <item quantity="one">Let wel: Sommige ontvangers het dalk steeds nie toegang tot hierdie lêer nie. Jy sal dalk hierdie lêer vanuit Google Drive moet deel.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Jy deel tans met ontvangers:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>wat nie in die Google Apps-organisasie is waaraan hierdie lêers behoort nie."</item>
+        <item quantity="one">Jy deel tans met ontvangers:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>wat nie in die Google Apps-organisasie is waaraan hierdie lêer behoort nie.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Jou ontvangers het dalk nie toegang tot die lêers wat jy ingevoeg het uit Drive nie. Jy sal dalk die lêers vanuit Google Drive moet deel.</item>
+        <item quantity="one">Jou ontvangers het dalk nie toegang tot die lêer wat jy ingevoeg het uit Drive nie. Jy sal dalk die lêer vanuit Google Drive moet deel.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Jou huidige e-posadresse:</item>
+        <item quantity="one">Jou huidige e-posadres:</item>
+    </plurals>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Kalendarët nuk janë shpërndarë</item>
+        <item quantity="one">Kalendari nuk është shpërndarë</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">drafte</item>
+        <item quantity="one">draft</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Të fshihen këto %1$d biseda?</item>
+        <item quantity="one">Të fshihet kjo bisedë?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Të arkivohen këto %1$d biseda?</item>
+        <item quantity="one">Të arkivohet kjo bisedë?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Të injorohen draftet nga këto %1$d biseda?</item>
+        <item quantity="one">Të injorohen draftet nga kjo bisedë?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Po heq yllin nga %1$d biseda</item>
+        <item quantity="one">Po heq yllin nga %1$d bisedë</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d u raportuan si \"postë e bezdisshme\" dhe iu anulua abonimi</item>
+        <item quantity="one">%1$d u raportua si \"postë e bezdisshme\" dhe iu anulua abonimi</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> u çaktivizuan</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> u çaktivizua</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> u raportuan si \"postë e bezdisshme\"</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> u raportua si \"postë e bezdisshme\"</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> u raportuan si \"jo postë e bezdisshme\"</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> u raportua si \"jo postë e bezdisshme\"</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> u shënuan si \"jo të rëndësishme\"</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> u shënua si \"jo i rëndësishëm\"</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> u arkivuan</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> u arkivua</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> u fshinë</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> u fshi</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Etiketa të ndryshuara.</item>
+        <item quantity="one">Etiketë e ndryshuar.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d mesazhe të reja</item>
+        <item quantity="one">%1$d mesazh i ri</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Zgjero %1$d mesazhet e vjetra</item>
+        <item quantity="one">Zgjero mesazhin e vjetër</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d mesazhe më të vjetra u zgjeruan</item>
+        <item quantity="one">Një mesazh më i vjetër u zgjerua</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d mesazhe të reja</item>
+        <item quantity="one">%1$d mesazh i ri</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d biseda do të fshihen përgjithmonë.</item>
+        <item quantity="one">%1$d bisedë do të fshihet përgjithmonë.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d mesazhe</item>
+        <item quantity="one">%1$d mesazh</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d bashkëngjitje</item>
+        <item quantity="one">%1$d bashkëngjitje</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Këto mesazhe do të shënohen si \"postë e bezdisshme\". Dëshiron të ndalosh marrjen e mesazheve të ngjashme nga këta &amp;lt;b>%2$d dërgues&amp;lt;/b>:%1$s</item>
+        <item quantity="one">Ky mesazh do të shënohet si \"postë të bezdisshme\". Dëshiron të ndalosh marrjen e mesazheve të ngjashme nga %1$s?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sinkronizo: %1$d ditët e fundit</item>
+        <item quantity="one">Sinkronizo: %1$d ditë më parë</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ditë</item>
+        <item quantity="one">një ditë</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">ditë</item>
+        <item quantity="one">ditë</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Mesazhet e %1$d ditëve të fundit do të shkarkohen kur të lidhesh në internet</item>
+        <item quantity="one">Mesazhet e ditës së fundit do të shkarkohen kur të lidhesh në internet</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">"Shënim. Disa marrës mund të mos kenë qasje ende në këta skedarë. Mund të të duhet t'i ndash skedarët brenda \"Diskut\" të Google."</item>
+        <item quantity="one">Shënim. Disa marrës mund të mos kenë qasje ende në këtë skedar. Mund të të duhet ta ndash skedarin brenda \"Diskut\" të Google.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Po i ndani me marrësit:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br> të cilët nuk janë në grupin e aplikacioneve të Google ku ndodhen skedarët."</item>
+        <item quantity="one">Po i ndan me marrësit:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>të cilët nuk janë në grupin e aplikacioneve të Google ku ndodhet skedari.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">"Marrësit e tu nuk mund të kenë qasje te skedarët që ke futur te \"Disku\". Mund të të duhet t'i ndash skedarët brenda \"Diskut\" të Google."</item>
+        <item quantity="one">Marrësit e tu nuk mund të kenë qasje te skedari që ke futur te \"Disku\". Mund të të duhet ta ndash skedarin brenda \"Diskut\" të Google.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Adresat e tua aktuale të mail-it:</item>
+        <item quantity="one">Adresa jote aktuale e mail-it:</item>
+    </plurals>
+</resources>

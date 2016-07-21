@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gmailify_success_text" style="@style/GmailifyInfoText" />
+    <Spinner android:id="@id/address_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AccountSettingsSpinner" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gmailify_success_settings_info" style="@style/GmailifyInfoText" />
+</LinearLayout>

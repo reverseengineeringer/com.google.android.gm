@@ -10,12 +10,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.Toast;
+import bua;
+import bue;
+import buj;
+import buo;
+import but;
+import bvu;
+import byu;
+import byv;
+import cfc;
+import ckk;
+import com.android.mail.browse.ConversationMessage;
 import com.android.mail.browse.MessageAttachmentTile;
-import com.android.mail.compose.ComposeAttachmentTile;
+import com.android.mail.providers.Account;
 import com.android.mail.providers.Attachment;
-import com.android.mail.utils.AttachmentUtils;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import com.android.mail.providers.Message;
+import cvl;
+import cvm;
+import cxe;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -23,166 +37,122 @@ import java.util.List;
 
 public class AttachmentTileGrid
   extends FrameLayout
-  implements AttachmentTile.AttachmentPreviewCache
+  implements byu, ckk
 {
-  private HashMap<String, AttachmentTile.AttachmentPreview> mAttachmentPreviews;
-  private List<Attachment> mAttachments;
-  private Uri mAttachmentsListUri;
-  private int mColumnCount;
-  private FragmentManager mFragmentManager;
-  private LayoutInflater mInflater;
-  private final int mTileMinSize;
+  private static final String i = cvl.a;
+  public final LayoutInflater a;
+  public final List<Attachment> b = new ArrayList();
+  public bvu c;
+  public final HashMap<String, AttachmentTile.AttachmentPreview> d;
+  public FragmentManager e;
+  public byv f;
+  public Account g;
+  public ConversationMessage h;
+  private final int j;
+  private final int k;
+  private final int l;
+  private final int m;
+  private int n;
   
   public AttachmentTileGrid(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    mInflater = LayoutInflater.from(paramContext);
-    mTileMinSize = paramContext.getResources().getDimensionPixelSize(2131427421);
-    mAttachmentPreviews = Maps.newHashMap();
+    a = LayoutInflater.from(paramContext);
+    paramContext = paramContext.getResources();
+    j = paramContext.getDimensionPixelSize(bua.d);
+    k = paramContext.getDimensionPixelSize(bua.c);
+    l = paramContext.getDimensionPixelSize(bua.e);
+    m = paramContext.getDimensionPixelSize(bua.b);
+    d = new HashMap();
   }
   
-  private void addMessageTileFromAttachment(Attachment paramAttachment, int paramInt, boolean paramBoolean)
+  public final Bitmap a(Attachment paramAttachment)
   {
-    MessageAttachmentTile localMessageAttachmentTile;
-    if (getChildCount() <= paramInt)
-    {
-      localMessageAttachmentTile = MessageAttachmentTile.inflate(mInflater, this);
-      localMessageAttachmentTile.initialize(mFragmentManager);
-      addView(localMessageAttachmentTile);
-    }
-    for (;;)
-    {
-      localMessageAttachmentTile.render(paramAttachment, mAttachmentsListUri, paramInt, this, paramBoolean);
-      return;
-      localMessageAttachmentTile = (MessageAttachmentTile)getChildAt(paramInt);
-    }
-  }
-  
-  private void onLayoutForTiles()
-  {
-    int n = getChildCount();
-    int i = 0;
-    int k = 0;
-    int m = 1;
-    int j = 0;
-    if (j < n)
-    {
-      View localView = getChildAt(j);
-      int i1 = localView.getMeasuredWidth();
-      int i2 = localView.getMeasuredHeight();
-      if ((m == 0) && (j % mColumnCount == 0))
-      {
-        i = 0;
-        k += i2;
-      }
-      for (;;)
-      {
-        localView.layout(i, k, i + i1, k + i2);
-        i += i1;
-        j += 1;
-        break;
-        m = 0;
-      }
-    }
-  }
-  
-  private void onMeasureForTiles(int paramInt)
-  {
-    int j = View.MeasureSpec.getSize(paramInt);
-    int m = getChildCount();
-    if (m == 0)
-    {
-      setMeasuredDimension(j, 0);
-      return;
-    }
-    mColumnCount = (j / mTileMinSize);
-    if (mColumnCount == 0) {
-      mColumnCount = 1;
-    }
-    int k = j / mColumnCount;
-    int n = mColumnCount;
-    paramInt = 0;
-    if (paramInt < m)
-    {
-      View localView = getChildAt(paramInt);
-      if (paramInt < j - n * k) {}
-      for (int i = 1;; i = 0)
-      {
-        localView.measure(View.MeasureSpec.makeMeasureSpec(k + i, 1073741824), View.MeasureSpec.makeMeasureSpec(k, 1073741824));
-        paramInt += 1;
-        break;
-      }
-    }
-    paramInt = (m - 1) / mColumnCount;
-    setMeasuredDimension(j, (getChildAt(0).getPaddingBottom() + k) * (paramInt + 1));
-  }
-  
-  public ComposeAttachmentTile addComposeTileFromAttachment(Attachment paramAttachment)
-  {
-    ComposeAttachmentTile localComposeAttachmentTile = ComposeAttachmentTile.inflate(mInflater, this);
-    addView(localComposeAttachmentTile);
-    localComposeAttachmentTile.render(paramAttachment, null, -1, this, false);
-    return localComposeAttachmentTile;
-  }
-  
-  public void configureGrid(FragmentManager paramFragmentManager, Uri paramUri, List<Attachment> paramList, boolean paramBoolean)
-  {
-    mFragmentManager = paramFragmentManager;
-    mAttachmentsListUri = paramUri;
-    mAttachments = paramList;
-    int i = 0;
-    paramFragmentManager = paramList.iterator();
-    while (paramFragmentManager.hasNext())
-    {
-      addMessageTileFromAttachment((Attachment)paramFragmentManager.next(), i, paramBoolean);
-      i += 1;
-    }
-  }
-  
-  public Bitmap get(Attachment paramAttachment)
-  {
-    paramAttachment = AttachmentUtils.getIdentifier(paramAttachment);
+    paramAttachment = paramAttachment.k().toString();
     if (paramAttachment != null)
     {
-      paramAttachment = (AttachmentTile.AttachmentPreview)mAttachmentPreviews.get(paramAttachment);
+      paramAttachment = (AttachmentTile.AttachmentPreview)d.get(paramAttachment);
       if (paramAttachment != null) {
-        return preview;
+        return b;
       }
     }
     return null;
   }
   
-  public ArrayList<AttachmentTile.AttachmentPreview> getAttachmentPreviews()
+  public final void a(FragmentManager paramFragmentManager, Account paramAccount, ConversationMessage paramConversationMessage, List<Attachment> paramList, boolean paramBoolean, bvu parambvu)
   {
-    return Lists.newArrayList(mAttachmentPreviews.values());
-  }
-  
-  public List<Attachment> getAttachments()
-  {
-    return mAttachments;
-  }
-  
-  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
-    onLayoutForTiles();
-  }
-  
-  protected void onMeasure(int paramInt1, int paramInt2)
-  {
-    onMeasureForTiles(paramInt1);
-  }
-  
-  public void sendAccessibilityEvent(int paramInt) {}
-  
-  public void set(Attachment paramAttachment, Bitmap paramBitmap)
-  {
-    String str = AttachmentUtils.getIdentifier(paramAttachment);
-    if (str != null) {
-      mAttachmentPreviews.put(str, new AttachmentTile.AttachmentPreview(paramAttachment, paramBitmap));
+    e = paramFragmentManager;
+    g = paramAccount;
+    h = paramConversationMessage;
+    b.clear();
+    b.addAll(paramList);
+    c = parambvu;
+    int i1 = 0;
+    paramList = paramList.iterator();
+    if (paramList.hasNext())
+    {
+      parambvu = (Attachment)paramList.next();
+      if (getChildCount() <= i1)
+      {
+        paramFragmentManager = (MessageAttachmentTile)a.inflate(bue.p, this, false);
+        FragmentManager localFragmentManager = e;
+        bvu localbvu = c;
+        a.h = localFragmentManager;
+        b = localFragmentManager;
+        d = localbvu;
+        f = f;
+        c = this;
+        addView(paramFragmentManager);
+      }
+      for (;;)
+      {
+        paramFragmentManager.a(parambvu, paramAccount, paramConversationMessage, i1, this, paramBoolean);
+        i1 += 1;
+        break;
+        paramFragmentManager = (MessageAttachmentTile)getChildAt(i1);
+      }
     }
   }
   
-  public void setAttachmentPreviews(ArrayList<AttachmentTile.AttachmentPreview> paramArrayList)
+  public final void a(MessageAttachmentTile paramMessageAttachmentTile)
+  {
+    String str = null;
+    int i1 = indexOfChild(paramMessageAttachmentTile);
+    Context localContext = getContext();
+    if (h.x == null)
+    {
+      cvm.d(i, "Viewing photos of message (%d) with %d attachments but null attachmentListUri", new Object[] { Long.valueOf(h.d), Integer.valueOf(h.c(true)) });
+      Toast.makeText(localContext, localContext.getString(buj.dC), 0).show();
+      buo.a().a("errors", "view_photo_failed", null, 0L);
+      return;
+    }
+    if (g == null)
+    {
+      paramMessageAttachmentTile = null;
+      if (g != null) {
+        break label138;
+      }
+    }
+    for (;;)
+    {
+      cfc.a(localContext, paramMessageAttachmentTile, str, h, i1);
+      return;
+      paramMessageAttachmentTile = g.c;
+      break;
+      label138:
+      str = g.e;
+    }
+  }
+  
+  public final void a(Attachment paramAttachment, Bitmap paramBitmap)
+  {
+    String str = paramAttachment.k().toString();
+    if (str != null) {
+      d.put(str, new AttachmentTile.AttachmentPreview(paramAttachment, paramBitmap));
+    }
+  }
+  
+  public final void a(ArrayList<AttachmentTile.AttachmentPreview> paramArrayList)
   {
     if (paramArrayList != null)
     {
@@ -190,10 +160,153 @@ public class AttachmentTileGrid
       while (paramArrayList.hasNext())
       {
         AttachmentTile.AttachmentPreview localAttachmentPreview = (AttachmentTile.AttachmentPreview)paramArrayList.next();
-        mAttachmentPreviews.put(attachmentIdentifier, localAttachmentPreview);
+        d.put(a, localAttachmentPreview);
       }
     }
   }
+  
+  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    int i4 = getChildCount();
+    int i2;
+    int i3;
+    AttachmentTile localAttachmentTile;
+    int i1;
+    label152:
+    int i6;
+    if (i4 != 0)
+    {
+      paramBoolean = cxe.a(this);
+      int i5 = getMeasuredWidth();
+      paramInt2 = 0;
+      paramInt1 = -getChildAt(0).getMeasuredHeight() - l;
+      i2 = 0;
+      i3 = 0;
+      paramInt3 = 0;
+      if (paramInt3 < i4)
+      {
+        localAttachmentTile = (AttachmentTile)getChildAt(paramInt3);
+        i1 = i3;
+        paramInt4 = i2;
+        if (i2 == 0)
+        {
+          i1 = i3;
+          paramInt4 = i2;
+          if (!g.j())
+          {
+            i1 = paramInt3 % n;
+            paramInt4 = 1;
+          }
+        }
+        i3 = localAttachmentTile.getMeasuredWidth();
+        i2 = localAttachmentTile.getMeasuredHeight();
+        if ((paramInt3 - i1) % n != 0) {
+          break label257;
+        }
+        if (paramBoolean)
+        {
+          paramInt2 = i5 - i3 - m;
+          i6 = getChildAt(Math.max(0, paramInt3 - n)).getMeasuredHeight();
+          int i7 = l;
+          paramInt1 += i6 + i7;
+        }
+      }
+    }
+    label257:
+    for (;;)
+    {
+      localAttachmentTile.layout(paramInt2, paramInt1, paramInt2 + i3, i2 + paramInt1);
+      i6 = l;
+      if (paramBoolean) {}
+      for (i2 = -1;; i2 = 1)
+      {
+        paramInt3 += 1;
+        paramInt2 += i2 * (i3 + i6);
+        i3 = i1;
+        i2 = paramInt4;
+        break;
+        paramInt2 = m;
+        break label152;
+      }
+      return;
+    }
+  }
+  
+  protected void onMeasure(int paramInt1, int paramInt2)
+  {
+    int i6 = View.MeasureSpec.getSize(paramInt1);
+    paramInt1 = i6 - m * 2;
+    int i7 = getChildCount();
+    if (i7 == 0)
+    {
+      setMeasuredDimension(i6, 0);
+      return;
+    }
+    paramInt2 = l + paramInt1;
+    int i8;
+    int i9;
+    int i3;
+    int i2;
+    label102:
+    AttachmentTile localAttachmentTile;
+    int i4;
+    int i1;
+    if (paramInt1 < k)
+    {
+      n = (paramInt2 / (paramInt1 + l));
+      i8 = Math.min(paramInt2 / n - l, k);
+      i9 = i8 * 55 / 100;
+      paramInt2 = 0;
+      i3 = 0;
+      i2 = 0;
+      paramInt1 = 0;
+      if (paramInt2 >= i7) {
+        break label256;
+      }
+      localAttachmentTile = (AttachmentTile)getChildAt(paramInt2);
+      if (g.j()) {
+        break label267;
+      }
+      h.setVisibility(8);
+      int i5 = Integer.MIN_VALUE;
+      i4 = i5;
+      i1 = i2;
+      if (i2 == 0)
+      {
+        i3 = paramInt2 % n;
+        i1 = 1;
+        i4 = i5;
+      }
+    }
+    for (;;)
+    {
+      localAttachmentTile.measure(View.MeasureSpec.makeMeasureSpec(i8, 1073741824), View.MeasureSpec.makeMeasureSpec(i9, i4));
+      if ((paramInt2 - i3) % n == 0) {
+        paramInt1 = localAttachmentTile.getMeasuredHeight() + l + paramInt1;
+      }
+      for (;;)
+      {
+        paramInt2 += 1;
+        i2 = i1;
+        break label102;
+        if (paramInt2 / (j + l) > 1)
+        {
+          paramInt1 = j;
+          break;
+        }
+        paramInt1 = k;
+        break;
+        label256:
+        setMeasuredDimension(i6, paramInt1);
+        return;
+      }
+      label267:
+      i4 = 1073741824;
+      i1 = i2;
+    }
+  }
+  
+  public void sendAccessibilityEvent(int paramInt) {}
 }
 
 /* Location:

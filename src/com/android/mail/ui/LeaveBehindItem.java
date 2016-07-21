@@ -1,44 +1,55 @@
 package com.android.mail.ui;
 
-import android.animation.Animator.AnimatorListener;
+import android.animation.Animator;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.Resources;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.os.Parcelable.Creator;
-import android.text.Html;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.View.MeasureSpec;
 import android.view.View.OnClickListener;
-import android.view.animation.DecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
-import com.android.mail.browse.ConversationCursor;
-import com.android.mail.browse.ConversationItemViewCoordinates;
+import buc;
+import bud;
+import buo;
+import but;
+import bwg;
+import cjy;
 import com.android.mail.providers.Account;
 import com.android.mail.providers.Conversation;
-import com.android.mail.providers.Folder;
-import com.google.common.collect.ImmutableList;
+import com.android.mail.ui.toastbar.ToastBarOperation;
+import cqj;
+import cqk;
+import hef;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class LeaveBehindItem
   extends FrameLayout
-  implements View.OnClickListener, SwipeableItemView
+  implements View.OnClickListener, cqj
 {
-  private static int sFadeInAnimationDuration = -1;
-  private static float sScrollSlop;
-  private static int sShrinkAnimationDuration = -1;
-  private Account mAccount;
-  private AnimatedAdapter mAdapter;
-  private int mAnimatedHeight = -1;
-  private boolean mAnimating;
-  private Conversation mData;
-  private boolean mFadingInText;
-  private View mSwipeableContent;
-  private TextView mText;
-  private ToastBarOperation mUndoOp;
-  private int mWidth;
-  public int position;
+  public static int o = -1;
+  private static int q = -1;
+  private static float r;
+  public ToastBarOperation a;
+  public Account b;
+  public cjy c;
+  public TextView d;
+  public View e;
+  public ImageView f;
+  public int g;
+  public Conversation h;
+  public int i;
+  public int j;
+  public boolean k;
+  public boolean l;
+  public boolean m = false;
+  public AnimatorSet n;
+  private int p = -1;
   
   public LeaveBehindItem(Context paramContext)
   {
@@ -47,195 +58,147 @@ public class LeaveBehindItem
   
   public LeaveBehindItem(Context paramContext, AttributeSet paramAttributeSet)
   {
-    this(paramContext, paramAttributeSet, -1);
+    this(paramContext, paramAttributeSet, 0);
   }
   
   public LeaveBehindItem(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    if (sShrinkAnimationDuration == -1)
+    a(paramContext);
+  }
+  
+  public static AnimatorSet a(View paramView1, View paramView2, int paramInt)
+  {
+    a(paramView1.getContext());
+    ObjectAnimator localObjectAnimator1 = ObjectAnimator.ofFloat(paramView1, "alpha", new float[] { 0.0F, 1.0F });
+    paramView1.setAlpha(0.0F);
+    paramView1 = new AnimatorSet();
+    if ((paramView2 != null) && (paramView2.getVisibility() != 8))
+    {
+      ObjectAnimator localObjectAnimator2 = ObjectAnimator.ofFloat(paramView2, "alpha", new float[] { 1.0F, 0.0F });
+      paramView2.setAlpha(1.0F);
+      paramView1.playTogether(new Animator[] { localObjectAnimator1, localObjectAnimator2 });
+    }
+    for (;;)
+    {
+      if (paramInt != 0) {
+        paramView1.setStartDelay(paramInt);
+      }
+      paramView1.setInterpolator(new LinearInterpolator());
+      paramView1.setDuration(q);
+      paramView1.start();
+      return paramView1;
+      paramView1.play(localObjectAnimator1);
+    }
+  }
+  
+  private static void a(Context paramContext)
+  {
+    if (o == -1)
     {
       paramContext = paramContext.getResources();
-      sShrinkAnimationDuration = paramContext.getInteger(2131361801);
-      sFadeInAnimationDuration = paramContext.getInteger(2131361803);
-      sScrollSlop = paramContext.getInteger(2131361822);
+      o = paramContext.getInteger(bud.B);
+      q = paramContext.getInteger(bud.m);
+      r = paramContext.getInteger(bud.r);
     }
   }
   
-  public void bindOperations(int paramInt, Account paramAccount, AnimatedAdapter paramAnimatedAdapter, ToastBarOperation paramToastBarOperation, Conversation paramConversation, Folder paramFolder)
+  public final void a()
   {
-    position = paramInt;
-    mUndoOp = paramToastBarOperation;
-    mAccount = paramAccount;
-    mAdapter = paramAnimatedAdapter;
-    setData(paramConversation);
-    mSwipeableContent = findViewById(2131755251);
-    mSwipeableContent.setOnClickListener(this);
-    mText = ((TextView)findViewById(2131755252));
-    mText.setText(Html.fromHtml(mUndoOp.getSingularDescription(getContext(), paramFolder)));
-    mText.setOnClickListener(this);
-  }
-  
-  public boolean canChildBeDismissed()
-  {
-    return true;
-  }
-  
-  public void commit()
-  {
-    ConversationCursor localConversationCursor = mAdapter.getConversationCursor();
-    if (localConversationCursor != null) {
-      localConversationCursor.delete(getContext(), ImmutableList.of(getData()));
+    a.b(getContext());
+    bwg localbwg = (bwg)c.getCursor();
+    if (localbwg != null) {
+      localbwg.a(hef.a(h), 0, null);
     }
   }
   
-  public void dismiss()
+  public final void a(int paramInt)
   {
-    if (mAdapter != null)
+    if ((!l) && (e.getAlpha() != 1.0F))
     {
-      mAdapter.fadeOutLeaveBehindItems();
-      mAdapter.notifyDataSetChanged();
+      l = true;
+      n = a(e, f, paramInt);
     }
   }
   
-  public long getConversationId()
+  public final void b()
   {
-    return getDataid;
+    if (n != null)
+    {
+      l = false;
+      n.cancel();
+    }
   }
   
-  public Conversation getData()
+  public final boolean h()
   {
-    return mData;
+    return !m;
   }
   
-  public LeaveBehindData getLeaveBehindData()
+  public final void i()
   {
-    return new LeaveBehindData(getData(), mUndoOp);
+    if (c != null)
+    {
+      buo.a().a("list_swipe", "leave_behind", null, 0L);
+      cjy localcjy = c;
+      long l1 = h.b;
+      if (i == l1) {
+        i = -1L;
+      }
+      localcjy.e();
+      c.notifyDataSetChanged();
+    }
   }
   
-  public float getMinAllowScrollDistance()
+  public final cqk l()
   {
-    return sScrollSlop;
+    return cqk.a(e);
   }
   
-  public View getSwipeableView()
+  public final float m()
   {
-    return mSwipeableContent;
+    return r;
   }
   
   public void onClick(View paramView)
   {
-    switch (paramView.getId())
+    if ((paramView.getId() == buc.fk) && (b.p != null) && (!m))
     {
-    }
-    do
-    {
-      do
+      paramView = c;
+      if (!b.isEmpty())
       {
-        return;
-      } while (mAccount.undoUri == null);
-      mAdapter.clearLeaveBehind(getConversationId());
-      mAdapter.setSwipeUndo(true);
-      paramView = mAdapter.getConversationCursor();
-    } while (paramView == null);
-    paramView.undo(getContext(), mAccount.undoUri);
+        e.addAll(b);
+        b.clear();
+      }
+      if (i != -1L)
+      {
+        e.add(Long.valueOf(i));
+        i = -1L;
+      }
+      paramView.notifyDataSetChanged();
+      paramView.a(j);
+      c.d(h.b);
+      paramView = (bwg)c.getCursor();
+      if (paramView != null) {
+        paramView.a(getContext(), b.p);
+      }
+    }
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    if (mAnimatedHeight != -1)
+    if (p != -1)
     {
-      setMeasuredDimension(mWidth, mAnimatedHeight);
+      setMeasuredDimension(i, p);
       return;
     }
-    super.onMeasure(paramInt1, paramInt2);
+    super.onMeasure(paramInt1, View.MeasureSpec.makeMeasureSpec(j, 1073741824));
   }
   
   public void setAnimatedHeight(int paramInt)
   {
-    mAnimatedHeight = paramInt;
+    p = paramInt;
     requestLayout();
-  }
-  
-  public void setData(Conversation paramConversation)
-  {
-    mData = paramConversation;
-  }
-  
-  public void showTextImmediately()
-  {
-    mFadingInText = true;
-  }
-  
-  public void startAnimation(ViewMode paramViewMode, Animator.AnimatorListener paramAnimatorListener)
-  {
-    if (!mAnimating)
-    {
-      mAnimating = true;
-      int i = ConversationItemViewCoordinates.getMinHeight(getContext(), paramViewMode);
-      setMinimumHeight(i);
-      paramViewMode = ObjectAnimator.ofInt(this, "animatedHeight", new int[] { i, 0 });
-      mAnimatedHeight = i;
-      mWidth = getMeasuredWidth();
-      mSwipeableContent.setVisibility(8);
-      paramViewMode.setInterpolator(new DecelerateInterpolator(2.0F));
-      paramViewMode.addListener(paramAnimatorListener);
-      paramViewMode.setDuration(sShrinkAnimationDuration);
-      paramViewMode.start();
-    }
-  }
-  
-  public void startFadeInAnimation()
-  {
-    if (!mFadingInText)
-    {
-      mFadingInText = true;
-      ObjectAnimator localObjectAnimator = ObjectAnimator.ofFloat(mText, "alpha", new float[] { 0.0F, 1.0F });
-      localObjectAnimator.setInterpolator(new DecelerateInterpolator(2.0F));
-      localObjectAnimator.setDuration(sFadeInAnimationDuration);
-      localObjectAnimator.start();
-    }
-  }
-  
-  public class LeaveBehindData
-    implements Parcelable
-  {
-    public final Parcelable.Creator<LeaveBehindData> CREATOR = new Parcelable.Creator()
-    {
-      public LeaveBehindItem.LeaveBehindData createFromParcel(Parcel paramAnonymousParcel)
-      {
-        return new LeaveBehindItem.LeaveBehindData(LeaveBehindItem.this, paramAnonymousParcel, null);
-      }
-      
-      public LeaveBehindItem.LeaveBehindData[] newArray(int paramAnonymousInt)
-      {
-        return new LeaveBehindItem.LeaveBehindData[paramAnonymousInt];
-      }
-    };
-    Conversation data;
-    ToastBarOperation op;
-    
-    private LeaveBehindData(Parcel paramParcel)
-    {
-      this((Conversation)paramParcel.readParcelable(null), (ToastBarOperation)paramParcel.readParcelable(null));
-    }
-    
-    public LeaveBehindData(Conversation paramConversation, ToastBarOperation paramToastBarOperation)
-    {
-      op = paramToastBarOperation;
-      data = paramConversation;
-    }
-    
-    public int describeContents()
-    {
-      return 0;
-    }
-    
-    public void writeToParcel(Parcel paramParcel, int paramInt)
-    {
-      paramParcel.writeParcelable(op, 0);
-      paramParcel.writeParcelable(data, 0);
-    }
   }
 }
 

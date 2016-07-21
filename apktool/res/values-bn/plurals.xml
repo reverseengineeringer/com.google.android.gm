@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">ক্যালেন্ডারগুলি শেয়ার করা নেই</item>
+        <item quantity="one">ক্যালেন্ডারগুলি শেয়ার করা নেই</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">খসড়াগুলি</item>
+        <item quantity="one">খসড়াগুলি</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">%1$dটি কথোপকথন মুছবেন?</item>
+        <item quantity="one">%1$dটি কথোপকথন মুছবেন?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">%1$dটি কথোপকথন সংরক্ষণাগারভুক্ত করবেন?</item>
+        <item quantity="one">%1$dটি কথোপকথন সংরক্ষণাগারভুক্ত করবেন?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">এই কথোপকথন থেকে %1$dটি খসড়া পরিত্যাগ করবেন?</item>
+        <item quantity="one">এই কথোপকথন থেকে %1$dটি খসড়া পরিত্যাগ করবেন?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$dটি কথোপকথন থেকে তারকা চিহ্ন তুলে নেওয়া হচ্ছে</item>
+        <item quantity="one">%1$dটি কথোপকথন থেকে তারকা চিহ্ন তুলে নেওয়া হচ্ছে</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$dটি স্প্যাম হিসাবে প্রতিবেদন এবং সদস্যতা রদ করা হয়েছে</item>
+        <item quantity="one">%1$dটি স্প্যাম হিসাবে প্রতিবেদন এবং সদস্যতা রদ করা হয়েছে</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;B>%1$d&amp;lt;/ B>টি নিঃশব্দ করা হয়েছে</item>
+        <item quantity="one">&amp;lt;B>%1$d&amp;lt;/ B>টি নিঃশব্দ করা হয়েছে</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>টি স্প্যাম হিসাবে প্রতিবেদন করা হয়েছে</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>টি স্প্যাম হিসাবে প্রতিবেদন করা হয়েছে</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>টি স্প্যাম নয় বলে প্রতিবেদন করা হয়েছে</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>টি স্প্যাম নয় বলে প্রতিবেদন করা হয়েছে</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>টি গুরুত্বপূর্ণ নয় বলে চিহ্নিত করা হয়েছে</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b>টি গুরুত্বপূর্ণ নয় বলে চিহ্নিত করা হয়েছে</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;B>%1$d&amp;lt;/ B>টি সংরক্ষণাগারভুক্ত করা হয়েছে</item>
+        <item quantity="one">&amp;lt;B>%1$d&amp;lt;/ B>টি সংরক্ষণাগারভুক্ত করা হয়েছে</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;B>%1$d&amp;lt;/ B>টি মুছে ফেলা হয়েছে</item>
+        <item quantity="one">&amp;lt;B>%1$d&amp;lt;/ B>টি মুছে ফেলা হয়েছে</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">পরিবর্তিত লেবেলগুলি৷</item>
+        <item quantity="one">পরিবর্তিত লেবেলগুলি৷</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$dটি নতুন বার্তা</item>
+        <item quantity="one">%1$dটি নতুন বার্তা</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$dটি পুরোনো বার্তা প্রসারিত হয়েছে</item>
+        <item quantity="one">%1$dটি পুরোনো বার্তা প্রসারিত হয়েছে</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$dটি পুরোনো বার্তা প্রসারিত হয়েছে</item>
+        <item quantity="one">%1$dটি পুরোনো বার্তা প্রসারিত হয়েছে</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$dটি নতুন বার্তা</item>
+        <item quantity="one">%1$dটি নতুন বার্তা</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$dটি কথোপকথন স্থায়ীভাবে মুছে ফেলা হবে৷</item>
+        <item quantity="one">%1$dটি কথোপকথন স্থায়ীভাবে মুছে ফেলা হবে৷</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$dটি বার্তা</item>
+        <item quantity="one">%1$dটি বার্তা</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$dটি সংযুক্তি</item>
+        <item quantity="one">%1$dটি সংযুক্তি</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">এই বার্তাগুলিকে স্প্যাম হিসাবে চিহ্নিত করা হবে৷ এছাড়াও আপনি কি এই &amp;lt;b>%2$d জন প্রেরকের&amp;lt;/b> থেকে এই একই ধরনের বার্তাগুলি আর পেতে চান না:%1$s</item>
+        <item quantity="one">এই বার্তাগুলিকে স্প্যাম হিসাবে চিহ্নিত করা হবে৷ এছাড়াও আপনি কি এই &amp;lt;b>%2$d জন প্রেরকের&amp;lt;/b> থেকে এই একই ধরনের বার্তাগুলি আর পেতে চান না:%1$s</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">সিঙ্ক করুন: বিগত %1$d দিন</item>
+        <item quantity="one">সিঙ্ক করুন: বিগত %1$d দিন</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d দিনগুলি</item>
+        <item quantity="one">%d দিনগুলি</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">দিনগুলি</item>
+        <item quantity="one">দিনগুলি</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">সংযুক্ত হলে বিগত %1$d দিনের বার্তাগুলি ডাউনলোড হবে</item>
+        <item quantity="one">সংযুক্ত হলে বিগত %1$d দিনের বার্তাগুলি ডাউনলোড হবে</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">দ্রষ্টব্য: এই ফাইলগুলিতে এখনও কিছু প্রাপকদের অ্যাক্সেস নেই৷ আপনাকে হয়তো ফাইলগুলিকে Google ড্রাইভের মধ্য থেকে শেয়ার করতে হবে৷</item>
+        <item quantity="one">দ্রষ্টব্য: এই ফাইলগুলিতে এখনও কিছু প্রাপকদের অ্যাক্সেস নেই৷ আপনাকে হয়তো ফাইলগুলিকে Google ড্রাইভের মধ্য থেকে শেয়ার করতে হবে৷</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">ড্রাইভ থেকে আপনার ঢোকানো ফাইলগুলিতে, আপনার প্রাপকদের হয়তো অ্যাক্সেস নেই৷ আপনাকে হয়তো ফাইলগুলিকে Google ড্রাইভের মধ্য থেকে শেয়ার করতে হবে৷</item>
+        <item quantity="one">ড্রাইভ থেকে আপনার ঢোকানো ফাইলগুলিতে, আপনার প্রাপকদের হয়তো অ্যাক্সেস নেই৷ আপনাকে হয়তো ফাইলগুলিকে Google ড্রাইভের মধ্য থেকে শেয়ার করতে হবে৷</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">আপনার বর্তমান ইমেল ঠিকানা:</item>
+        <item quantity="one">আপনার বর্তমান ইমেল ঠিকানা:</item>
+    </plurals>
+</resources>

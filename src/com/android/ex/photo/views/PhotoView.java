@@ -10,8 +10,7 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.drawable.BitmapDrawable;
-import android.support.v4.view.GestureDetectorCompat;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.GestureDetector.OnDoubleTapListener;
 import android.view.GestureDetector.OnGestureListener;
@@ -21,538 +20,578 @@ import android.view.ScaleGestureDetector.OnScaleGestureListener;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.View.OnClickListener;
-import com.android.ex.photo.R.color;
-import com.android.ex.photo.R.dimen;
+import android.view.ViewConfiguration;
+import bmg;
+import bmh;
+import bni;
+import bnj;
+import bnk;
+import bnl;
+import bnm;
+import pb;
+import pc;
+import qw;
+import qz;
 
 public class PhotoView
   extends View
   implements GestureDetector.OnDoubleTapListener, GestureDetector.OnGestureListener, ScaleGestureDetector.OnScaleGestureListener
 {
-  private static Paint sCropDimPaint;
-  private static Paint sCropPaint;
-  private static int sCropSize;
-  private static boolean sInitialized;
-  private static Bitmap sVideoImage;
-  private static Bitmap sVideoNotReadyImage;
-  private boolean mAllowCrop;
-  private Rect mCropRect = new Rect();
-  private int mCropSize;
-  private boolean mDoubleTapDebounce;
-  private boolean mDoubleTapToZoomEnabled = true;
-  private Matrix mDrawMatrix;
-  private BitmapDrawable mDrawable;
-  private View.OnClickListener mExternalClickListener;
-  private int mFixedHeight = -1;
-  private boolean mFullScreen;
-  private GestureDetectorCompat mGestureDetector;
-  private boolean mHaveLayout;
-  private boolean mIsDoubleTouch;
-  private Matrix mMatrix = new Matrix();
-  private float mMaxScale;
-  private float mMinScale;
-  private Matrix mOriginalMatrix = new Matrix();
-  private RotateRunnable mRotateRunnable;
-  private float mRotation;
-  private ScaleGestureDetector mScaleGetureDetector;
-  private ScaleRunnable mScaleRunnable;
-  private SnapRunnable mSnapRunnable;
-  private RectF mTempDst = new RectF();
-  private RectF mTempSrc = new RectF();
-  private boolean mTransformsEnabled;
-  private RectF mTranslateRect = new RectF();
-  private TranslateRunnable mTranslateRunnable;
-  private float[] mValues = new float[9];
-  private byte[] mVideoBlob;
-  private boolean mVideoReady;
+  private static int t;
+  private static boolean u;
+  private static int v;
+  private static Bitmap w;
+  private static Bitmap x;
+  private static Paint y;
+  private static Paint z;
+  private Matrix A;
+  private Matrix B = new Matrix();
+  private int C = -1;
+  private boolean D;
+  private byte[] E;
+  private boolean F;
+  private boolean G;
+  private Rect H = new Rect();
+  private int I;
+  private boolean J = true;
+  private boolean K;
+  private boolean L;
+  private RectF M = new RectF();
+  private float N;
+  private float O;
+  private boolean P;
+  public Drawable a;
+  public Matrix b = new Matrix();
+  public boolean c;
+  public float d;
+  public pb e;
+  public ScaleGestureDetector f;
+  public View.OnClickListener g;
+  public boolean h;
+  public bnk i;
+  public float j;
+  public float k;
+  public bnm l;
+  public bnl m;
+  public bnj n;
+  public float o;
+  public RectF p = new RectF();
+  public RectF q = new RectF();
+  public float[] r = new float[9];
+  public boolean s;
   
   public PhotoView(Context paramContext)
   {
     super(paramContext);
-    initialize();
+    e();
   }
   
   public PhotoView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    initialize();
+    e();
   }
   
   public PhotoView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    initialize();
+    e();
   }
   
-  private void configureBounds(boolean paramBoolean)
+  private final boolean a(MotionEvent paramMotionEvent)
   {
-    if ((mDrawable == null) || (!mHaveLayout)) {
-      return;
-    }
-    int j = mDrawable.getIntrinsicWidth();
-    int k = mDrawable.getIntrinsicHeight();
-    int i = getWidth();
-    int m = getHeight();
-    if (((j < 0) || (i == j)) && ((k < 0) || (m == k))) {}
-    for (i = 1;; i = 0)
-    {
-      mDrawable.setBounds(0, 0, j, k);
-      if ((paramBoolean) || ((mMinScale == 0.0F) && (mDrawable != null) && (mHaveLayout)))
+    float f5;
+    float f3;
+    float f1;
+    float f2;
+    boolean bool;
+    if ((J) && (h) && (s)) {
+      if (!K)
       {
-        generateMatrix();
-        generateScale();
+        f5 = b();
+        if (f5 > j)
+        {
+          f3 = j;
+          f1 = f3 / f5;
+          f2 = (getWidth() / 2 - q.centerX() * f1) / (1.0F - f1);
+          f1 = (getHeight() / 2 - q.centerY() * f1) / (1.0F - f1);
+          i.a(f5, f3, f2, f1);
+          bool = true;
+          label117:
+          K = false;
+        }
       }
-      if ((i == 0) && (!mMatrix.isIdentity())) {
-        break;
-      }
-      mDrawMatrix = null;
-      return;
-    }
-    mDrawMatrix = mMatrix;
-  }
-  
-  private void generateMatrix()
-  {
-    int m = mDrawable.getIntrinsicWidth();
-    int n = mDrawable.getIntrinsicHeight();
-    int i;
-    int j;
-    label40:
-    int k;
-    if (mAllowCrop)
-    {
-      i = sCropSize;
-      if (!mAllowCrop) {
-        break label102;
-      }
-      j = sCropSize;
-      if (((m >= 0) && (i != m)) || ((n >= 0) && (j != n))) {
-        break label110;
-      }
-      k = 1;
-      label64:
-      if ((k == 0) || (mAllowCrop)) {
-        break label115;
-      }
-      mMatrix.reset();
     }
     for (;;)
     {
-      mOriginalMatrix.set(mMatrix);
-      return;
-      i = getWidth();
+      s = false;
+      return bool;
+      f1 = Math.max(j, f5 * 2.0F);
+      f3 = Math.min(k, f1);
+      f2 = f3 / f5;
+      f1 = (getWidth() - q.width()) / f2;
+      f2 = (getHeight() - q.height()) / f2;
+      if (q.width() <= f1 * 2.0F) {}
+      for (f1 = q.centerX();; f1 = Math.min(Math.max(q.left + f1, paramMotionEvent.getX()), q.right - f1))
+      {
+        if (q.height() > f2 * 2.0F) {
+          break label275;
+        }
+        f4 = q.centerY();
+        f2 = f1;
+        f1 = f4;
+        break;
+      }
+      label275:
+      float f4 = Math.min(Math.max(q.top + f2, paramMotionEvent.getY()), q.bottom - f2);
+      f2 = f1;
+      f1 = f4;
       break;
-      label102:
-      j = getHeight();
-      break label40;
-      label110:
-      k = 0;
-      break label64;
-      label115:
-      mTempSrc.set(0.0F, 0.0F, m, n);
-      if (mAllowCrop) {
-        mTempDst.set(mCropRect);
+      bool = false;
+      break label117;
+      bool = false;
+    }
+  }
+  
+  private final int d()
+  {
+    if (I > 0) {
+      return I;
+    }
+    return v;
+  }
+  
+  private final void e()
+  {
+    Object localObject = getContext();
+    if (!u)
+    {
+      u = true;
+      Resources localResources = ((Context)localObject).getApplicationContext().getResources();
+      v = localResources.getDimensionPixelSize(bmh.b);
+      Paint localPaint = new Paint();
+      y = localPaint;
+      localPaint.setAntiAlias(true);
+      y.setColor(localResources.getColor(bmg.a));
+      y.setStyle(Paint.Style.FILL);
+      localPaint = new Paint();
+      z = localPaint;
+      localPaint.setAntiAlias(true);
+      z.setColor(localResources.getColor(bmg.b));
+      z.setStyle(Paint.Style.STROKE);
+      z.setStrokeWidth(localResources.getDimension(bmh.a));
+      int i1 = ViewConfiguration.get((Context)localObject).getScaledTouchSlop();
+      t = i1 * i1;
+    }
+    e = new pb((Context)localObject, this);
+    f = new ScaleGestureDetector((Context)localObject, this);
+    localObject = f;
+    P = qw.a.a(localObject);
+    i = new bnk(this);
+    l = new bnm(this);
+    m = new bnl(this);
+    n = new bnj(this);
+  }
+  
+  public final int a(float paramFloat1, float paramFloat2)
+  {
+    float f3 = 0.0F;
+    q.set(p);
+    b.mapRect(q);
+    float f1;
+    float f2;
+    label59:
+    float f4;
+    float f5;
+    label111:
+    label149:
+    label203:
+    int i1;
+    if (G)
+    {
+      f1 = H.left;
+      if (!G) {
+        break label254;
+      }
+      f2 = H.right;
+      f4 = q.left;
+      f5 = q.right;
+      if (!G) {
+        break label264;
+      }
+      f1 = Math.max(f1 - q.right, Math.min(f2 - q.left, paramFloat1));
+      f2 = f3;
+      if (G) {
+        f2 = H.top;
+      }
+      if (!G) {
+        break label315;
+      }
+      f3 = H.bottom;
+      f4 = q.top;
+      f5 = q.bottom;
+      if (!G) {
+        break label325;
+      }
+      f2 = Math.max(f2 - q.bottom, Math.min(f3 - q.top, paramFloat2));
+      b.postTranslate(f1, f2);
+      invalidate();
+      if (f1 != paramFloat1) {
+        break label382;
+      }
+      i1 = 1;
+      label227:
+      if (f2 != paramFloat2) {
+        break label388;
+      }
+    }
+    label254:
+    label264:
+    label315:
+    label325:
+    label382:
+    label388:
+    for (int i2 = 1;; i2 = 0)
+    {
+      if ((i1 == 0) || (i2 == 0)) {
+        break label394;
+      }
+      return 3;
+      f1 = 0.0F;
+      break;
+      f2 = getWidth();
+      break label59;
+      if (f5 - f4 < f2 - f1)
+      {
+        f1 += (f2 - f1 - (f4 + f5)) / 2.0F;
+        break label111;
+      }
+      f1 = Math.max(f2 - f5, Math.min(f1 - f4, paramFloat1));
+      break label111;
+      f3 = getHeight();
+      break label149;
+      if (f5 - f4 < f3 - f2)
+      {
+        f2 += (f3 - f2 - (f4 + f5)) / 2.0F;
+        break label203;
+      }
+      f2 = Math.max(f3 - f5, Math.min(f2 - f4, paramFloat2));
+      break label203;
+      i1 = 0;
+      break label227;
+    }
+    label394:
+    if (i1 != 0) {
+      return 1;
+    }
+    if (i2 != 0) {
+      return 2;
+    }
+    return 0;
+  }
+  
+  public final void a()
+  {
+    b.set(B);
+    invalidate();
+  }
+  
+  public final void a(float paramFloat1, float paramFloat2, float paramFloat3)
+  {
+    b.postRotate(-o, getWidth() / 2, getHeight() / 2);
+    paramFloat1 = Math.min(Math.max(paramFloat1, j), k * 1.5F);
+    float f1 = b();
+    if ((paramFloat1 > k) && (f1 <= k)) {
+      postDelayed(new bni(this), 600L);
+    }
+    paramFloat1 /= f1;
+    b.postScale(paramFloat1, paramFloat1, paramFloat2, paramFloat3);
+    b.postRotate(o, getWidth() / 2, getHeight() / 2);
+    invalidate();
+  }
+  
+  public final void a(boolean paramBoolean)
+  {
+    h = paramBoolean;
+    if (!h) {
+      a();
+    }
+  }
+  
+  public final float b()
+  {
+    b.getValues(r);
+    return r[0];
+  }
+  
+  public final void b(boolean paramBoolean)
+  {
+    int i5 = 0;
+    if ((a == null) || (!D)) {
+      return;
+    }
+    int i2 = a.getIntrinsicWidth();
+    int i3 = a.getIntrinsicHeight();
+    int i1 = getWidth();
+    int i4 = getHeight();
+    int i6;
+    int i7;
+    if (((i2 < 0) || (i1 == i2)) && ((i3 < 0) || (i4 == i3)))
+    {
+      i1 = 1;
+      a.setBounds(0, 0, i2, i3);
+      if ((paramBoolean) || ((j == 0.0F) && (a != null) && (D)))
+      {
+        i6 = a.getIntrinsicWidth();
+        i7 = a.getIntrinsicHeight();
+        if (!G) {
+          break label324;
+        }
+        i2 = v;
+        label137:
+        if (!G) {
+          break label332;
+        }
+        i3 = v;
+        label149:
+        if (i6 >= 0)
+        {
+          i4 = i5;
+          if (i2 != i6) {}
+        }
+        else if (i7 >= 0)
+        {
+          i4 = i5;
+          if (i3 != i7) {}
+        }
+        else
+        {
+          i4 = 1;
+        }
+        if ((i4 == 0) || (G)) {
+          break label341;
+        }
+        b.reset();
+        label202:
+        B.set(b);
+        i4 = a.getIntrinsicWidth();
+        i5 = a.getIntrinsicHeight();
+        if (!G) {
+          break label516;
+        }
+        i2 = d();
+        label243:
+        if (!G) {
+          break label524;
+        }
+        i3 = d();
+        label256:
+        if ((i4 >= i2) || (i5 >= i3) || (G)) {
+          break label533;
+        }
+      }
+    }
+    label324:
+    label332:
+    label341:
+    label494:
+    label516:
+    label524:
+    label533:
+    for (j = 1.0F;; j = b())
+    {
+      k = Math.max(j * 4.0F, 4.0F);
+      if ((i1 == 0) && (!b.isIdentity())) {
+        break label544;
+      }
+      A = null;
+      return;
+      i1 = 0;
+      break;
+      i2 = getWidth();
+      break label137;
+      i3 = getHeight();
+      break label149;
+      p.set(0.0F, 0.0F, i6, i7);
+      if (G) {
+        M.set(H);
       }
       for (;;)
       {
-        if ((m >= i) || (n >= j) || (mAllowCrop)) {
-          break label211;
+        RectF localRectF = new RectF(i2 / 2 - i6 * d / 2.0F, i3 / 2 - i7 * d / 2.0F, i2 / 2 + i6 * d / 2.0F, i3 / 2 + i7 * d / 2.0F);
+        if (!M.contains(localRectF)) {
+          break label494;
         }
-        mMatrix.setTranslate(i / 2 - m / 2, j / 2 - n / 2);
+        b.setRectToRect(p, localRectF, Matrix.ScaleToFit.CENTER);
         break;
-        mTempDst.set(0.0F, 0.0F, i, j);
+        M.set(0.0F, 0.0F, i2, i3);
       }
-      label211:
-      mMatrix.setRectToRect(mTempSrc, mTempDst, Matrix.ScaleToFit.CENTER);
+      b.setRectToRect(p, M, Matrix.ScaleToFit.CENTER);
+      break label202;
+      i2 = getWidth();
+      break label243;
+      i3 = getHeight();
+      break label256;
     }
+    label544:
+    A = b;
   }
   
-  private void generateScale()
+  public final void c()
   {
-    int k = mDrawable.getIntrinsicWidth();
-    int m = mDrawable.getIntrinsicHeight();
-    int i;
-    int j;
-    if (mAllowCrop)
-    {
-      i = getCropSize();
-      if (!mAllowCrop) {
-        break label89;
-      }
-      j = getCropSize();
-      label41:
-      if ((k >= i) || (m >= j) || (mAllowCrop)) {
-        break label97;
-      }
-    }
-    label89:
-    label97:
-    for (mMinScale = 1.0F;; mMinScale = getScale())
-    {
-      mMaxScale = Math.max(mMinScale * 8.0F, 8.0F);
-      return;
-      i = getWidth();
-      break;
-      j = getHeight();
-      break label41;
-    }
-  }
-  
-  private int getCropSize()
-  {
-    if (mCropSize > 0) {
-      return mCropSize;
-    }
-    return sCropSize;
-  }
-  
-  private float getScale()
-  {
-    mMatrix.getValues(mValues);
-    return mValues[0];
-  }
-  
-  private void initialize()
-  {
-    Context localContext = getContext();
-    if (!sInitialized)
-    {
-      sInitialized = true;
-      Resources localResources = localContext.getApplicationContext().getResources();
-      sCropSize = localResources.getDimensionPixelSize(R.dimen.photo_crop_width);
-      sCropDimPaint = new Paint();
-      sCropDimPaint.setAntiAlias(true);
-      sCropDimPaint.setColor(localResources.getColor(R.color.photo_crop_dim_color));
-      sCropDimPaint.setStyle(Paint.Style.FILL);
-      sCropPaint = new Paint();
-      sCropPaint.setAntiAlias(true);
-      sCropPaint.setColor(localResources.getColor(R.color.photo_crop_highlight_color));
-      sCropPaint.setStyle(Paint.Style.STROKE);
-      sCropPaint.setStrokeWidth(localResources.getDimension(R.dimen.photo_crop_stroke_width));
-    }
-    mGestureDetector = new GestureDetectorCompat(localContext, this, null);
-    mScaleGetureDetector = new ScaleGestureDetector(localContext, this);
-    mScaleRunnable = new ScaleRunnable(this);
-    mTranslateRunnable = new TranslateRunnable(this);
-    mSnapRunnable = new SnapRunnable(this);
-    mRotateRunnable = new RotateRunnable(this);
-  }
-  
-  private void rotate(float paramFloat, boolean paramBoolean)
-  {
-    if (paramBoolean)
-    {
-      mRotateRunnable.start(paramFloat);
-      return;
-    }
-    mRotation += paramFloat;
-    mMatrix.postRotate(paramFloat, getWidth() / 2, getHeight() / 2);
-    invalidate();
-  }
-  
-  private void scale(float paramFloat1, float paramFloat2, float paramFloat3)
-  {
-    mMatrix.postRotate(-mRotation, getWidth() / 2, getHeight() / 2);
-    paramFloat1 = Math.min(Math.max(paramFloat1, mMinScale), mMaxScale) / getScale();
-    mMatrix.postScale(paramFloat1, paramFloat1, paramFloat2, paramFloat3);
-    snap();
-    mMatrix.postRotate(mRotation, getWidth() / 2, getHeight() / 2);
-    invalidate();
-  }
-  
-  private void snap()
-  {
-    mTranslateRect.set(mTempSrc);
-    mMatrix.mapRect(mTranslateRect);
+    float f4 = 0.0F;
+    q.set(p);
+    b.mapRect(q);
     float f1;
     float f2;
-    label55:
+    label58:
     float f3;
-    float f4;
-    label96:
-    label112:
-    label128:
     float f5;
-    if (mAllowCrop)
+    label99:
+    label115:
+    label131:
+    float f6;
+    if (G)
     {
-      f1 = mCropRect.left;
-      if (!mAllowCrop) {
-        break label210;
+      f1 = H.left;
+      if (!G) {
+        break label263;
       }
-      f2 = mCropRect.right;
-      f3 = mTranslateRect.left;
-      f4 = mTranslateRect.right;
-      if (f4 - f3 >= f2 - f1) {
-        break label219;
+      f2 = H.right;
+      f3 = q.left;
+      f5 = q.right;
+      if (f5 - f3 >= f2 - f1) {
+        break label272;
       }
-      f1 += (f2 - f1 - (f4 + f3)) / 2.0F;
-      if (!mAllowCrop) {
-        break label252;
+      f1 += (f2 - f1 - (f3 + f5)) / 2.0F;
+      if (!G) {
+        break label305;
       }
-      f2 = mCropRect.top;
-      if (!mAllowCrop) {
-        break label257;
+      f2 = H.top;
+      if (!G) {
+        break label310;
       }
-      f3 = mCropRect.bottom;
-      f4 = mTranslateRect.top;
-      f5 = mTranslateRect.bottom;
-      if (f5 - f4 >= f3 - f2) {
-        break label266;
+      f3 = H.bottom;
+      f6 = q.top;
+      f5 = q.bottom;
+      if (f5 - f6 >= f3 - f2) {
+        break label319;
       }
-      f2 += (f3 - f2 - (f5 + f4)) / 2.0F;
+      f2 = (f3 - f2 - (f5 + f6)) / 2.0F + f2;
     }
     for (;;)
     {
       if ((Math.abs(f1) <= 20.0F) && (Math.abs(f2) <= 20.0F)) {
-        break label301;
+        break label352;
       }
-      mSnapRunnable.start(f1, f2);
+      bnl localbnl = m;
+      if (!e)
+      {
+        d = -1L;
+        b = f1;
+        c = f2;
+        f = false;
+        e = true;
+        a.postDelayed(localbnl, 250L);
+      }
       return;
       f1 = 0.0F;
       break;
-      label210:
+      label263:
       f2 = getWidth();
-      break label55;
-      label219:
+      break label58;
+      label272:
       if (f3 > f1)
       {
         f1 -= f3;
-        break label96;
+        break label99;
       }
-      if (f4 < f2)
+      if (f5 < f2)
       {
-        f1 = f2 - f4;
-        break label96;
+        f1 = f2 - f5;
+        break label99;
       }
       f1 = 0.0F;
-      break label96;
-      label252:
+      break label99;
+      label305:
       f2 = 0.0F;
-      break label112;
-      label257:
+      break label115;
+      label310:
       f3 = getHeight();
-      break label128;
-      label266:
-      if (f4 > f2) {
-        f2 -= f4;
-      } else if (f5 < f3) {
-        f2 = f3 - f5;
-      } else {
-        f2 = 0.0F;
+      break label131;
+      label319:
+      if (f6 > f2)
+      {
+        f2 -= f6;
+      }
+      else
+      {
+        f2 = f4;
+        if (f5 < f3) {
+          f2 = f3 - f5;
+        }
       }
     }
-    label301:
-    mMatrix.postTranslate(f1, f2);
+    label352:
+    b.postTranslate(f1, f2);
     invalidate();
   }
   
-  private boolean translate(float paramFloat1, float paramFloat2)
+  public void invalidateDrawable(Drawable paramDrawable)
   {
-    mTranslateRect.set(mTempSrc);
-    mMatrix.mapRect(mTranslateRect);
-    float f1;
-    float f2;
-    label56:
-    float f3;
-    float f4;
-    label108:
-    label125:
-    label142:
-    float f5;
-    if (mAllowCrop)
+    if (a == paramDrawable)
     {
-      f1 = mCropRect.left;
-      if (!mAllowCrop) {
-        break label231;
-      }
-      f2 = mCropRect.right;
-      f3 = mTranslateRect.left;
-      f4 = mTranslateRect.right;
-      if (!mAllowCrop) {
-        break label241;
-      }
-      f1 = Math.max(f1 - mTranslateRect.right, Math.min(f2 - mTranslateRect.left, paramFloat1));
-      if (!mAllowCrop) {
-        break label292;
-      }
-      f2 = mCropRect.top;
-      if (!mAllowCrop) {
-        break label298;
-      }
-      f3 = mCropRect.bottom;
-      f4 = mTranslateRect.top;
-      f5 = mTranslateRect.bottom;
-      if (!mAllowCrop) {
-        break label308;
-      }
-      f2 = Math.max(f2 - mTranslateRect.bottom, Math.min(f3 - mTranslateRect.top, paramFloat2));
-    }
-    for (;;)
-    {
-      mMatrix.postTranslate(f1, f2);
-      invalidate();
-      if ((f1 != paramFloat1) || (f2 != paramFloat2)) {
-        break label365;
-      }
-      return true;
-      f1 = 0.0F;
-      break;
-      label231:
-      f2 = getWidth();
-      break label56;
-      label241:
-      if (f4 - f3 < f2 - f1)
-      {
-        f1 += (f2 - f1 - (f4 + f3)) / 2.0F;
-        break label108;
-      }
-      f1 = Math.max(f2 - f4, Math.min(f1 - f3, paramFloat1));
-      break label108;
-      label292:
-      f2 = 0.0F;
-      break label125;
-      label298:
-      f3 = getHeight();
-      break label142;
-      label308:
-      if (f5 - f4 < f3 - f2) {
-        f2 += (f3 - f2 - (f5 + f4)) / 2.0F;
-      } else {
-        f2 = Math.max(f3 - f5, Math.min(f2 - f4, paramFloat2));
-      }
-    }
-    label365:
-    return false;
-  }
-  
-  public void bindPhoto(Bitmap paramBitmap)
-  {
-    boolean bool = false;
-    if (mDrawable != null)
-    {
-      if (paramBitmap == mDrawable.getBitmap()) {
-        return;
-      }
-      if ((paramBitmap == null) || ((mDrawable.getIntrinsicWidth() == paramBitmap.getWidth()) && (mDrawable.getIntrinsicHeight() == paramBitmap.getHeight()))) {
-        break label102;
-      }
-    }
-    label102:
-    for (bool = true;; bool = false)
-    {
-      mMinScale = 0.0F;
-      mDrawable = null;
-      if ((mDrawable == null) && (paramBitmap != null)) {
-        mDrawable = new BitmapDrawable(getResources(), paramBitmap);
-      }
-      configureBounds(bool);
       invalidate();
       return;
     }
-  }
-  
-  public void clear()
-  {
-    mGestureDetector = null;
-    mScaleGetureDetector = null;
-    mDrawable = null;
-    mScaleRunnable.stop();
-    mScaleRunnable = null;
-    mTranslateRunnable.stop();
-    mTranslateRunnable = null;
-    mSnapRunnable.stop();
-    mSnapRunnable = null;
-    mRotateRunnable.stop();
-    mRotateRunnable = null;
-    setOnClickListener(null);
-    mExternalClickListener = null;
-  }
-  
-  public void enableImageTransforms(boolean paramBoolean)
-  {
-    mTransformsEnabled = paramBoolean;
-    if (!mTransformsEnabled) {
-      resetTransformations();
-    }
-  }
-  
-  public boolean interceptMoveLeft(float paramFloat1, float paramFloat2)
-  {
-    if (!mTransformsEnabled) {}
-    float f;
-    do
-    {
-      return false;
-      if (mTranslateRunnable.mRunning) {
-        return true;
-      }
-      mMatrix.getValues(mValues);
-      mTranslateRect.set(mTempSrc);
-      mMatrix.mapRect(mTranslateRect);
-      paramFloat1 = getWidth();
-      paramFloat2 = mValues[2];
-      f = mTranslateRect.right - mTranslateRect.left;
-    } while ((!mTransformsEnabled) || (f <= paramFloat1) || (paramFloat2 == 0.0F));
-    return paramFloat1 >= f + paramFloat2;
-  }
-  
-  public boolean interceptMoveRight(float paramFloat1, float paramFloat2)
-  {
-    if (!mTransformsEnabled) {}
-    float f;
-    do
-    {
-      do
-      {
-        return false;
-        if (mTranslateRunnable.mRunning) {
-          return true;
-        }
-        mMatrix.getValues(mValues);
-        mTranslateRect.set(mTempSrc);
-        mMatrix.mapRect(mTranslateRect);
-        paramFloat1 = getWidth();
-        paramFloat2 = mValues[2];
-        f = mTranslateRect.right - mTranslateRect.left;
-      } while ((!mTransformsEnabled) || (f <= paramFloat1));
-      if (paramFloat2 == 0.0F) {
-        return true;
-      }
-    } while (paramFloat1 >= f + paramFloat2);
-    return true;
-  }
-  
-  public boolean isPhotoBound()
-  {
-    return mDrawable != null;
+    super.invalidateDrawable(paramDrawable);
   }
   
   public boolean onDoubleTap(MotionEvent paramMotionEvent)
   {
-    if ((mDoubleTapToZoomEnabled) && (mTransformsEnabled))
-    {
-      if (!mDoubleTapDebounce)
-      {
-        float f1 = getScale();
-        float f2 = Math.max(mMinScale, f1 * 1.5F);
-        f2 = Math.min(mMaxScale, f2);
-        mScaleRunnable.start(f1, f2, paramMotionEvent.getX(), paramMotionEvent.getY());
-      }
-      mDoubleTapDebounce = false;
+    s = true;
+    if (!P) {
+      return a(paramMotionEvent);
     }
-    return true;
+    return false;
   }
   
   public boolean onDoubleTapEvent(MotionEvent paramMotionEvent)
   {
-    return true;
+    switch (paramMotionEvent.getAction())
+    {
+    }
+    int i1;
+    int i2;
+    do
+    {
+      do
+      {
+        do
+        {
+          do
+          {
+            return false;
+          } while (!P);
+          N = paramMotionEvent.getX();
+          O = paramMotionEvent.getY();
+          return false;
+        } while (!P);
+        return a(paramMotionEvent);
+      } while ((!P) || (!s));
+      i1 = (int)(paramMotionEvent.getX() - N);
+      i2 = (int)(paramMotionEvent.getY() - O);
+    } while (i1 * i1 + i2 * i2 <= t);
+    s = false;
+    return false;
   }
   
   public boolean onDown(MotionEvent paramMotionEvent)
   {
-    if (mTransformsEnabled)
+    if (h)
     {
-      mTranslateRunnable.stop();
-      mSnapRunnable.stop();
+      l.a();
+      m.a();
     }
     return true;
   }
@@ -560,44 +599,44 @@ public class PhotoView
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    int i;
-    if (mDrawable != null)
+    int i1;
+    if (a != null)
     {
-      i = paramCanvas.getSaveCount();
+      i1 = paramCanvas.getSaveCount();
       paramCanvas.save();
-      if (mDrawMatrix != null) {
-        paramCanvas.concat(mDrawMatrix);
+      if (A != null) {
+        paramCanvas.concat(A);
       }
-      mDrawable.draw(paramCanvas);
-      paramCanvas.restoreToCount(i);
-      if (mVideoBlob != null) {
-        if (!mVideoReady) {
+      a.draw(paramCanvas);
+      paramCanvas.restoreToCount(i1);
+      if (E != null) {
+        if (!F) {
           break label224;
         }
       }
     }
     label224:
-    for (Bitmap localBitmap = sVideoImage;; localBitmap = sVideoNotReadyImage)
+    for (Bitmap localBitmap = w;; localBitmap = x)
     {
-      i = (getWidth() - localBitmap.getWidth()) / 2;
-      int j = (getHeight() - localBitmap.getHeight()) / 2;
-      paramCanvas.drawBitmap(localBitmap, i, j, null);
-      mTranslateRect.set(mDrawable.getBounds());
-      if (mDrawMatrix != null) {
-        mDrawMatrix.mapRect(mTranslateRect);
+      i1 = (getWidth() - localBitmap.getWidth()) / 2;
+      int i2 = (getHeight() - localBitmap.getHeight()) / 2;
+      paramCanvas.drawBitmap(localBitmap, i1, i2, null);
+      q.set(a.getBounds());
+      if (A != null) {
+        A.mapRect(q);
       }
-      if (mAllowCrop)
+      if (G)
       {
-        i = paramCanvas.getSaveCount();
-        paramCanvas.drawRect(0.0F, 0.0F, getWidth(), getHeight(), sCropDimPaint);
+        i1 = paramCanvas.getSaveCount();
+        paramCanvas.drawRect(0.0F, 0.0F, getWidth(), getHeight(), y);
         paramCanvas.save();
-        paramCanvas.clipRect(mCropRect);
-        if (mDrawMatrix != null) {
-          paramCanvas.concat(mDrawMatrix);
+        paramCanvas.clipRect(H);
+        if (A != null) {
+          paramCanvas.concat(A);
         }
-        mDrawable.draw(paramCanvas);
-        paramCanvas.restoreToCount(i);
-        paramCanvas.drawRect(mCropRect, sCropPaint);
+        a.draw(paramCanvas);
+        paramCanvas.restoreToCount(i1);
+        paramCanvas.drawRect(H, z);
       }
       return;
     }
@@ -605,8 +644,21 @@ public class PhotoView
   
   public boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    if (mTransformsEnabled) {
-      mTranslateRunnable.start(paramFloat1, paramFloat2);
+    if ((h) && (!i.a))
+    {
+      paramMotionEvent1 = l;
+      if (!g)
+      {
+        f = -1L;
+        b = paramFloat1;
+        c = paramFloat2;
+        paramFloat1 = (float)Math.atan2(c, b);
+        d = ((float)(Math.cos(paramFloat1) * 20000.0D));
+        e = ((float)(Math.sin(paramFloat1) * 20000.0D));
+        h = false;
+        g = true;
+        a.post(paramMotionEvent1);
+      }
     }
     return true;
   }
@@ -614,29 +666,29 @@ public class PhotoView
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    mHaveLayout = true;
+    D = true;
     paramInt1 = getWidth();
     paramInt2 = getHeight();
-    if (mAllowCrop)
+    if (G)
     {
-      mCropSize = Math.min(sCropSize, Math.min(paramInt1, paramInt2));
-      paramInt1 = (paramInt1 - mCropSize) / 2;
-      paramInt2 = (paramInt2 - mCropSize) / 2;
-      paramInt3 = mCropSize;
-      paramInt4 = mCropSize;
-      mCropRect.set(paramInt1, paramInt2, paramInt1 + paramInt3, paramInt2 + paramInt4);
+      I = Math.min(v, Math.min(paramInt1, paramInt2));
+      paramInt1 = (paramInt1 - I) / 2;
+      paramInt2 = (paramInt2 - I) / 2;
+      paramInt3 = I;
+      paramInt4 = I;
+      H.set(paramInt1, paramInt2, paramInt3 + paramInt1, paramInt4 + paramInt2);
     }
-    configureBounds(paramBoolean);
+    b(paramBoolean);
   }
   
   public void onLongPress(MotionEvent paramMotionEvent) {}
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    if (mFixedHeight != -1)
+    if (C != -1)
     {
-      super.onMeasure(paramInt1, View.MeasureSpec.makeMeasureSpec(mFixedHeight, Integer.MIN_VALUE));
-      setMeasuredDimension(getMeasuredWidth(), mFixedHeight);
+      super.onMeasure(paramInt1, View.MeasureSpec.makeMeasureSpec(C, Integer.MIN_VALUE));
+      setMeasuredDimension(getMeasuredWidth(), C);
       return;
     }
     super.onMeasure(paramInt1, paramInt2);
@@ -644,37 +696,37 @@ public class PhotoView
   
   public boolean onScale(ScaleGestureDetector paramScaleGestureDetector)
   {
-    if (mTransformsEnabled)
+    if ((h) && (!i.a))
     {
-      mIsDoubleTouch = false;
-      scale(getScale() * paramScaleGestureDetector.getScaleFactor(), paramScaleGestureDetector.getFocusX(), paramScaleGestureDetector.getFocusY());
+      L = false;
+      a(b() * paramScaleGestureDetector.getScaleFactor(), paramScaleGestureDetector.getFocusX(), paramScaleGestureDetector.getFocusY());
     }
     return true;
   }
   
   public boolean onScaleBegin(ScaleGestureDetector paramScaleGestureDetector)
   {
-    if (mTransformsEnabled)
+    if ((h) && (!i.a))
     {
-      mScaleRunnable.stop();
-      mIsDoubleTouch = true;
+      i.a();
+      L = true;
     }
     return true;
   }
   
   public void onScaleEnd(ScaleGestureDetector paramScaleGestureDetector)
   {
-    if ((mTransformsEnabled) && (mIsDoubleTouch))
+    if ((h) && (L))
     {
-      mDoubleTapDebounce = true;
-      resetTransformations();
+      K = true;
+      a();
     }
   }
   
   public boolean onScroll(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    if (mTransformsEnabled) {
-      translate(-paramFloat1, -paramFloat2);
+    if ((h) && (!i.a)) {
+      a(-paramFloat1, -paramFloat2);
     }
     return true;
   }
@@ -683,10 +735,10 @@ public class PhotoView
   
   public boolean onSingleTapConfirmed(MotionEvent paramMotionEvent)
   {
-    if ((mExternalClickListener != null) && (!mIsDoubleTouch)) {
-      mExternalClickListener.onClick(this);
+    if ((g != null) && (!L)) {
+      g.onClick(this);
     }
-    mIsDoubleTouch = false;
+    L = false;
     return true;
   }
   
@@ -697,400 +749,31 @@ public class PhotoView
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
-    if ((mScaleGetureDetector == null) || (mGestureDetector == null)) {}
+    if ((f == null) || (e == null)) {}
     do
     {
       return true;
-      mScaleGetureDetector.onTouchEvent(paramMotionEvent);
-      mGestureDetector.onTouchEvent(paramMotionEvent);
+      f.onTouchEvent(paramMotionEvent);
+      e.a.a(paramMotionEvent);
       switch (paramMotionEvent.getAction())
       {
       case 2: 
       default: 
         return true;
       }
-    } while (mTranslateRunnable.mRunning);
-    snap();
+    } while (l.g);
+    c();
     return true;
-  }
-  
-  public void resetTransformations()
-  {
-    mMatrix.set(mOriginalMatrix);
-    invalidate();
-  }
-  
-  public void setFullScreen(boolean paramBoolean1, boolean paramBoolean2)
-  {
-    if (paramBoolean1 != mFullScreen)
-    {
-      mFullScreen = paramBoolean1;
-      requestLayout();
-      invalidate();
-    }
   }
   
   public void setOnClickListener(View.OnClickListener paramOnClickListener)
   {
-    mExternalClickListener = paramOnClickListener;
+    g = paramOnClickListener;
   }
   
-  private static class RotateRunnable
-    implements Runnable
+  public boolean verifyDrawable(Drawable paramDrawable)
   {
-    private float mAppliedRotation;
-    private final PhotoView mHeader;
-    private long mLastRuntime;
-    private boolean mRunning;
-    private boolean mStop;
-    private float mTargetRotation;
-    private float mVelocity;
-    
-    public RotateRunnable(PhotoView paramPhotoView)
-    {
-      mHeader = paramPhotoView;
-    }
-    
-    public void run()
-    {
-      if (mStop) {
-        return;
-      }
-      long l2;
-      if (mAppliedRotation != mTargetRotation)
-      {
-        l2 = System.currentTimeMillis();
-        if (mLastRuntime == -1L) {
-          break label176;
-        }
-      }
-      label176:
-      for (long l1 = l2 - mLastRuntime;; l1 = 0L)
-      {
-        float f2 = mVelocity * (float)l1;
-        float f1;
-        if ((mAppliedRotation >= mTargetRotation) || (mAppliedRotation + f2 <= mTargetRotation))
-        {
-          f1 = f2;
-          if (mAppliedRotation > mTargetRotation)
-          {
-            f1 = f2;
-            if (mAppliedRotation + f2 >= mTargetRotation) {}
-          }
-        }
-        else
-        {
-          f1 = mTargetRotation - mAppliedRotation;
-        }
-        mHeader.rotate(f1, false);
-        mAppliedRotation += f1;
-        if (mAppliedRotation == mTargetRotation) {
-          stop();
-        }
-        mLastRuntime = l2;
-        if (mStop) {
-          break;
-        }
-        mHeader.post(this);
-        return;
-      }
-    }
-    
-    public void start(float paramFloat)
-    {
-      if (mRunning) {
-        return;
-      }
-      mTargetRotation = paramFloat;
-      mVelocity = (mTargetRotation / 500.0F);
-      mAppliedRotation = 0.0F;
-      mLastRuntime = -1L;
-      mStop = false;
-      mRunning = true;
-      mHeader.post(this);
-    }
-    
-    public void stop()
-    {
-      mRunning = false;
-      mStop = true;
-    }
-  }
-  
-  private static class ScaleRunnable
-    implements Runnable
-  {
-    private float mCenterX;
-    private float mCenterY;
-    private final PhotoView mHeader;
-    private boolean mRunning;
-    private float mStartScale;
-    private long mStartTime;
-    private boolean mStop;
-    private float mTargetScale;
-    private float mVelocity;
-    private boolean mZoomingIn;
-    
-    public ScaleRunnable(PhotoView paramPhotoView)
-    {
-      mHeader = paramPhotoView;
-    }
-    
-    public void run()
-    {
-      if (mStop) {
-        return;
-      }
-      long l1 = System.currentTimeMillis();
-      long l2 = mStartTime;
-      float f = mStartScale + mVelocity * (float)(l1 - l2);
-      mHeader.scale(f, mCenterX, mCenterY);
-      boolean bool2;
-      if (f != mTargetScale)
-      {
-        bool2 = mZoomingIn;
-        if (f <= mTargetScale) {
-          break label124;
-        }
-      }
-      label124:
-      for (boolean bool1 = true;; bool1 = false)
-      {
-        if (bool2 == bool1)
-        {
-          mHeader.scale(mTargetScale, mCenterX, mCenterY);
-          stop();
-        }
-        if (mStop) {
-          break;
-        }
-        mHeader.post(this);
-        return;
-      }
-    }
-    
-    public boolean start(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4)
-    {
-      if (mRunning) {
-        return false;
-      }
-      mCenterX = paramFloat3;
-      mCenterY = paramFloat4;
-      mTargetScale = paramFloat2;
-      mStartTime = System.currentTimeMillis();
-      mStartScale = paramFloat1;
-      if (mTargetScale > mStartScale) {}
-      for (boolean bool = true;; bool = false)
-      {
-        mZoomingIn = bool;
-        mVelocity = ((mTargetScale - mStartScale) / 300.0F);
-        mRunning = true;
-        mStop = false;
-        mHeader.post(this);
-        return true;
-      }
-    }
-    
-    public void stop()
-    {
-      mRunning = false;
-      mStop = true;
-    }
-  }
-  
-  private static class SnapRunnable
-    implements Runnable
-  {
-    private final PhotoView mHeader;
-    private boolean mRunning;
-    private long mStartRunTime = -1L;
-    private boolean mStop;
-    private float mTranslateX;
-    private float mTranslateY;
-    
-    public SnapRunnable(PhotoView paramPhotoView)
-    {
-      mHeader = paramPhotoView;
-    }
-    
-    public void run()
-    {
-      if (mStop) {
-        return;
-      }
-      long l = System.currentTimeMillis();
-      float f1;
-      label33:
-      float f3;
-      float f2;
-      if (mStartRunTime != -1L)
-      {
-        f1 = (float)(l - mStartRunTime);
-        if (mStartRunTime == -1L) {
-          mStartRunTime = l;
-        }
-        if (f1 < 100.0F) {
-          break label141;
-        }
-        f3 = mTranslateX;
-        f2 = mTranslateY;
-      }
-      for (;;)
-      {
-        mHeader.translate(f3, f2);
-        mTranslateX -= f3;
-        mTranslateY -= f2;
-        if ((mTranslateX == 0.0F) && (mTranslateY == 0.0F)) {
-          stop();
-        }
-        if (mStop) {
-          break;
-        }
-        mHeader.post(this);
-        return;
-        f1 = 0.0F;
-        break label33;
-        label141:
-        f2 = mTranslateX / (100.0F - f1) * 10.0F;
-        float f4 = mTranslateY / (100.0F - f1) * 10.0F;
-        if (Math.abs(f2) <= Math.abs(mTranslateX))
-        {
-          f1 = f2;
-          if (f2 != NaN.0F) {}
-        }
-        else
-        {
-          f1 = mTranslateX;
-        }
-        if (Math.abs(f4) <= Math.abs(mTranslateY))
-        {
-          f3 = f1;
-          f2 = f4;
-          if (f4 != NaN.0F) {}
-        }
-        else
-        {
-          f2 = mTranslateY;
-          f3 = f1;
-        }
-      }
-    }
-    
-    public boolean start(float paramFloat1, float paramFloat2)
-    {
-      if (mRunning) {
-        return false;
-      }
-      mStartRunTime = -1L;
-      mTranslateX = paramFloat1;
-      mTranslateY = paramFloat2;
-      mStop = false;
-      mRunning = true;
-      mHeader.postDelayed(this, 250L);
-      return true;
-    }
-    
-    public void stop()
-    {
-      mRunning = false;
-      mStop = true;
-    }
-  }
-  
-  private static class TranslateRunnable
-    implements Runnable
-  {
-    private final PhotoView mHeader;
-    private long mLastRunTime = -1L;
-    private boolean mRunning;
-    private boolean mStop;
-    private float mVelocityX;
-    private float mVelocityY;
-    
-    public TranslateRunnable(PhotoView paramPhotoView)
-    {
-      mHeader = paramPhotoView;
-    }
-    
-    public void run()
-    {
-      if (mStop) {
-        return;
-      }
-      long l = System.currentTimeMillis();
-      float f;
-      label34:
-      boolean bool;
-      if (mLastRunTime != -1L)
-      {
-        f = (float)(l - mLastRunTime) / 1000.0F;
-        bool = mHeader.translate(mVelocityX * f, mVelocityY * f);
-        mLastRunTime = l;
-        f = 1000.0F * f;
-        if (mVelocityX <= 0.0F) {
-          break label187;
-        }
-        mVelocityX -= f;
-        if (mVelocityX < 0.0F) {
-          mVelocityX = 0.0F;
-        }
-        label98:
-        if (mVelocityY <= 0.0F) {
-          break label214;
-        }
-        mVelocityY -= f;
-        if (mVelocityY < 0.0F) {
-          mVelocityY = 0.0F;
-        }
-      }
-      for (;;)
-      {
-        if (((mVelocityX == 0.0F) && (mVelocityY == 0.0F)) || (!bool))
-        {
-          stop();
-          mHeader.snap();
-        }
-        if (mStop) {
-          break;
-        }
-        mHeader.post(this);
-        return;
-        f = 0.0F;
-        break label34;
-        label187:
-        mVelocityX += f;
-        if (mVelocityX <= 0.0F) {
-          break label98;
-        }
-        mVelocityX = 0.0F;
-        break label98;
-        label214:
-        mVelocityY += f;
-        if (mVelocityY > 0.0F) {
-          mVelocityY = 0.0F;
-        }
-      }
-    }
-    
-    public boolean start(float paramFloat1, float paramFloat2)
-    {
-      if (mRunning) {
-        return false;
-      }
-      mLastRunTime = -1L;
-      mVelocityX = paramFloat1;
-      mVelocityY = paramFloat2;
-      mStop = false;
-      mRunning = true;
-      mHeader.post(this);
-      return true;
-    }
-    
-    public void stop()
-    {
-      mRunning = false;
-      mStop = true;
-    }
+    return (a == paramDrawable) || (super.verifyDrawable(paramDrawable));
   }
 }
 

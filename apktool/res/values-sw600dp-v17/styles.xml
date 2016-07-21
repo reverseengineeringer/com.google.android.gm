@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AccountsSwitcher.OwnersListItemStyle" parent="@style/AccountsSwitcher">
+        <item name="android:paddingStart">@dimen/start_horiz_padding_tablet</item>
+        <item name="android:paddingEnd">@dimen/start_horiz_padding</item>
+    </style>
+    <style name="AccountsSwitcher.AccountTextStyle" parent="@style/AccountsSwitcher">
+        <item name="android:textColor">@color/add_accounts_text_color</item>
+        <item name="android:layout_marginStart">@dimen/start_horiz_padding_tablet</item>
+    </style>
+    <style name="RichTextToolbar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/compose_rich_text_toolbar_margin_end</item>
+        <item name="android:layout_marginBottom">@dimen/compose_rich_text_toolbar_margin_bottom</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginEnd">@dimen/compose_rich_text_toolbar_margin_end</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="FolderListItemPaddingStyle">
+        <item name="android:paddingStart">@dimen/folder_list_item_padding_side_tablet</item>
+        <item name="android:paddingEnd">@dimen/folder_list_item_padding_side</item>
+    </style>
+    <style name="AccountsSwitcher.AvatarStyle.Gmail" parent="@style/AccountsSwitcher.AvatarStyle">
+        <item name="android:layout_marginStart">@dimen/start_horiz_padding_tablet</item>
+    </style>
+    <style name="CalendarPromotionActionTextDecline" parent="@style/CalendarPromotionActionText">
+        <item name="android:paddingEnd">@dimen/calendar_promotion_text_padding</item>
+        <item name="android:layout_toStartOf">@id/calendar_promotion_accept</item>
+    </style>
+</resources>

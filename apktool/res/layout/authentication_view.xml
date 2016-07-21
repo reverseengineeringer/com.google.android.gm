@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_default_text_vertical_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/authentication_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/authentication_label" style="@style/AccountSetupLabelText" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorPrimary" android:id="@id/add_authentication" android:background="?android:selectableItemBackground" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_authentication_label" android:drawablePadding="16.0dip" android:drawableStart="@drawable/ic_add_24dp" style="@style/AccountSetupSubText" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/oauth_label" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSetupSubText" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/password_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout android:id="@id/password_edit_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/MarginCompensationEditText">
+            <EditText android:id="@id/password_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/account_setup_incoming_password_label" android:inputType="textPassword" android:imeOptions="actionNext" style="@style/PasswordTextStyle" />
+        </android.support.design.widget.TextInputLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/clear_password" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_setup_delete" android:contentDescription="@string/clear_authentication_label" style="@style/ClearAuthenticationButton" />
+    </LinearLayout>
+    <CheckBox android:id="@id/show_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_password" style="@style/AccountSetupCheckBox" />
+</LinearLayout>

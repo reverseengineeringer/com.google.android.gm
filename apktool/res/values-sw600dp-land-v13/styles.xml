@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ComposeArea" parent="@style/AbstractComposeAreaWithRtl">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:maxWidth">@dimen/compose_scrollview_max_width</item>
+        <item name="android:layout_weight">70.0</item>
+    </style>
+    <style name="ConversationViewForegroundShadowStyle">
+        <item name="android:foreground">@drawable/ic_vertical_shadow_end_2dp</item>
+    </style>
+    <style name="HatsSurveyHolder">
+        <item name="android:layout_gravity">end|bottom|center</item>
+        <item name="android:layout_width">@dimen/hats_holder_width_tablet</item>
+        <item name="android:layout_margin">@dimen/hats_holder_margin_tablet</item>
+    </style>
+    <style name="WelcomeTour.Container" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="WelcomeTour.ImageArea" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">45.0</item>
+    </style>
+    <style name="WelcomeTour.ImageContainer" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">end|center</item>
+        <item name="android:layout_marginRight">@dimen/welcome_tour_image_margin_end</item>
+    </style>
+    <style name="WelcomeTour.ContentArea" parent="@style/WelcomeTour">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/welcome_tour_content_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/welcome_tour_content_padding_horizontal</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">55.0</item>
+    </style>
+</resources>

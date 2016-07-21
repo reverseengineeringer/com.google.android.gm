@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.email.view.CertificateSelector android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_default_text_vertical_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_setup_exchange_certificate_title" style="@style/AccountSetupLabelText" />
+        <TextView android:ellipsize="end" android:id="@id/certificate_alias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_setup_exchange_no_certificate" android:singleLine="true" style="@style/AccountSetupSubText" />
+    </LinearLayout>
+    <TextView android:id="@id/select_certificate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_setup_exchange_use_certificate" style="@style/SelectCertificateButton" />
+</com.android.email.view.CertificateSelector>

@@ -10,10 +10,17 @@ import android.database.MatrixCursor;
 import android.database.MatrixCursor.RowBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
-import com.google.android.gm.contentprovider.GmailAccess;
-import com.google.android.gm.contentprovider.PrivateGmailAccess;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
+import cvm;
+import cvp;
+import dip;
+import dpy;
+import dqc;
+import dqz;
+import drf;
+import dri;
+import drp;
+import hef;
+import hfd;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -22,66 +29,50 @@ import java.util.Set;
 public class PublicContentProvider
   extends ContentProvider
 {
-  private static final Set<String> VALID_PUBLIC_LABEL_PROJECTION_COLUMNS = ImmutableSet.copyOf(GmailAccess.LABEL_PROJECTION);
-  private static final UriMatcher sUrlMatcher = new UriMatcher(-1);
-  private ContentResolver mContentResolver;
+  private static final UriMatcher a;
+  private static final Set<String> b = hfd.a(dip.a);
+  private ContentResolver c;
   
   static
   {
-    sUrlMatcher.addURI("com.google.android.gm", "*/labels", 1);
-    sUrlMatcher.addURI("com.google.android.gm", "*/label/#", 2);
-    sUrlMatcher.addURI("com.google.android.gm", "*/label/*", 3);
+    UriMatcher localUriMatcher = new UriMatcher(-1);
+    a = localUriMatcher;
+    localUriMatcher.addURI("com.google.android.gm", "*/labels", 1);
+    a.addURI("com.google.android.gm", "*/label/#", 2);
+    a.addURI("com.google.android.gm", "*/label/*", 3);
   }
   
-  static void broadcastLabelNotifications(Context paramContext, String paramString, Set<Long> paramSet)
-  {
-    paramContext = paramContext.getContentResolver();
-    paramSet = paramSet.iterator();
-    while (paramSet.hasNext())
-    {
-      Long localLong = (Long)paramSet.next();
-      if (localLong != null) {
-        paramContext.notifyChange(PrivateGmailAccess.getLabelUriForId(paramString, localLong.longValue()), null, false);
-      }
-    }
-    paramContext.notifyChange(GmailAccess.getLabelsUri(paramString), null, false);
-  }
-  
-  private Cursor getCursorForLabel(String[] paramArrayOfString, MailEngine paramMailEngine, String paramString)
-  {
-    Cursor localCursor = null;
-    if (paramString != null) {
-      localCursor = paramMailEngine.getLabelQueryBuilder(paramArrayOfString).filterCanonicalName(ImmutableList.of(paramString)).showHidden(false).query();
-    }
-    return localCursor;
-  }
-  
-  private MailEngine getOrMakeMailEngine(String paramString)
-  {
-    if (TextUtils.isEmpty(paramString)) {
-      throw new IllegalArgumentException("account is empty");
-    }
-    return MailEngine.getOrMakeMailEngine(getContext(), paramString);
-  }
-  
-  private Cursor getPublicLabelCursor(String paramString, String[] paramArrayOfString, Cursor paramCursor)
+  private static Cursor a(String paramString, String[] paramArrayOfString, Cursor paramCursor)
   {
     Object localObject;
     if (paramCursor == null)
     {
-      LogUtils.d("GmailCP", "null private cursor", new Object[0]);
+      dri.b("GmailCP", "null private cursor", new Object[0]);
       localObject = null;
     }
-    MatrixCursor localMatrixCursor;
+    int i;
+    cvp localcvp;
     do
     {
       return (Cursor)localObject;
-      validateQueryProjection(paramArrayOfString);
+      if (paramArrayOfString != null)
+      {
+        j = paramArrayOfString.length;
+        i = 0;
+        while (i < j)
+        {
+          localObject = paramArrayOfString[i];
+          if (!b.contains(localObject)) {
+            throw new IllegalArgumentException("Invalid projection");
+          }
+          i += 1;
+        }
+      }
       if (paramArrayOfString == null) {
         break;
       }
-      localMatrixCursor = new MatrixCursor(paramArrayOfString, paramCursor.getCount());
-      localObject = localMatrixCursor;
+      localcvp = new cvp(paramArrayOfString, paramCursor.getCount());
+      localObject = localcvp;
     } while (!paramCursor.moveToFirst());
     int j = paramCursor.getColumnIndex("_id");
     int k = paramCursor.getColumnIndex("canonicalName");
@@ -89,15 +80,15 @@ public class PublicContentProvider
     int n = paramCursor.getColumnIndex("numConversations");
     int i1 = paramCursor.getColumnIndex("numUnreadConversations");
     int i2 = paramCursor.getColumnIndex("color");
-    label164:
+    label209:
     do
     {
-      localObject = localMatrixCursor.newRow();
+      localObject = localcvp.newRow();
       int i3 = paramCursor.getInt(j);
       String str1 = paramCursor.getString(i2);
       String str2 = paramCursor.getString(k);
       int i4 = paramArrayOfString.length;
-      int i = 0;
+      i = 0;
       if (i < i4)
       {
         String str3 = paramArrayOfString[i];
@@ -107,8 +98,8 @@ public class PublicContentProvider
         for (;;)
         {
           i += 1;
-          break label164;
-          paramArrayOfString = GmailAccess.LABEL_PROJECTION;
+          break label209;
+          paramArrayOfString = dip.a;
           break;
           if (TextUtils.equals(str3, "canonicalName")) {
             ((MatrixCursor.RowBuilder)localObject).add(str2);
@@ -119,33 +110,40 @@ public class PublicContentProvider
           } else if (TextUtils.equals(str3, "numUnreadConversations")) {
             ((MatrixCursor.RowBuilder)localObject).add(Integer.valueOf(paramCursor.getInt(i1)));
           } else if (TextUtils.equals(str3, "labelUri")) {
-            ((MatrixCursor.RowBuilder)localObject).add(PrivateGmailAccess.getLabelUriForId(paramString, i3).toString());
+            ((MatrixCursor.RowBuilder)localObject).add(dip.a(paramString, i3).toString());
           } else if (TextUtils.equals(str3, "background_color")) {
-            ((MatrixCursor.RowBuilder)localObject).add(Integer.valueOf(Label.getBackgroundColor(paramString, str2, str1)));
+            ((MatrixCursor.RowBuilder)localObject).add(Integer.valueOf(dqz.a(paramString, str2, str1)));
           } else if (TextUtils.equals(str3, "text_color")) {
-            ((MatrixCursor.RowBuilder)localObject).add(Integer.valueOf(Label.getTextColor(paramString, str2, str1)));
+            ((MatrixCursor.RowBuilder)localObject).add(Integer.valueOf(dqz.b(paramString, str2, str1)));
           }
         }
       }
     } while (paramCursor.moveToNext());
-    return localMatrixCursor;
+    return localcvp;
   }
   
-  private void validateQueryProjection(String[] paramArrayOfString)
+  private static Cursor a(String[] paramArrayOfString, drp paramdrp, String paramString)
   {
-    if (paramArrayOfString != null)
+    Cursor localCursor = null;
+    if (paramString != null) {
+      localCursor = paramdrp.b(paramArrayOfString).a(hef.a(paramString)).a(false).a();
+    }
+    return localCursor;
+  }
+  
+  public static void a(Context paramContext, String paramString, Set<Long> paramSet)
+  {
+    paramContext = paramContext.getContentResolver();
+    paramSet = paramSet.iterator();
+    while (paramSet.hasNext())
     {
-      int j = paramArrayOfString.length;
-      int i = 0;
-      while (i < j)
-      {
-        String str = paramArrayOfString[i];
-        if (!VALID_PUBLIC_LABEL_PROJECTION_COLUMNS.contains(str)) {
-          throw new IllegalArgumentException("Invalid projection");
-        }
-        i += 1;
+      Long localLong = (Long)paramSet.next();
+      if (localLong != null) {
+        paramContext.notifyChange(dip.a(paramString, localLong.longValue()), null, false);
       }
     }
+    paramSet = String.valueOf("content://com.google.android.gm/");
+    paramContext.notifyChange(Uri.parse(String.valueOf(paramSet).length() + 7 + String.valueOf(paramString).length() + paramSet + paramString + "/labels"), null, false);
   }
   
   public int delete(Uri paramUri, String paramString, String[] paramArrayOfString)
@@ -155,7 +153,7 @@ public class PublicContentProvider
   
   public String getType(Uri paramUri)
   {
-    switch (sUrlMatcher.match(paramUri))
+    switch (a.match(paramUri))
     {
     default: 
       return null;
@@ -172,119 +170,114 @@ public class PublicContentProvider
   
   public boolean onCreate()
   {
-    mContentResolver = getContext().getContentResolver();
+    c = getContext().getContentResolver();
     return true;
   }
   
   public Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    if (LogUtils.isLoggable("GmailCP", 3)) {
-      LogUtils.d("GmailCP", "PublicContentProvider.query: %s(%s, %s)", new Object[] { LogUtils.contentUriToString(paramUri), paramString1, Arrays.toString(paramArrayOfString2) });
+    Object localObject = null;
+    if (dri.a("GmailCP", 3)) {
+      dri.b("GmailCP", "PublicContentProvider.query: %s(%s, %s)", new Object[] { cvm.a(cvm.a, paramUri), paramString1, Arrays.toString(paramArrayOfString2) });
     }
     if (!TextUtils.isEmpty(paramString2)) {
       throw new IllegalArgumentException("sortOrder must be empty");
     }
-    int i = sUrlMatcher.match(paramUri);
-    String str = (String)paramUri.getPathSegments().get(0);
-    paramString1 = getOrMakeMailEngine(str);
-    int j = 1;
-    MailIndexerService.onContentProviderAccess(str);
+    int i = a.match(paramUri);
+    paramArrayOfString2 = (String)paramUri.getPathSegments().get(0);
+    if (TextUtils.isEmpty(paramArrayOfString2)) {
+      throw new IllegalArgumentException("account is empty");
+    }
+    paramString1 = drp.a(getContext(), paramArrayOfString2);
+    MailIndexerService.a(paramArrayOfString2);
     switch (i)
     {
     default: 
-      if (LogUtils.isLoggable("GmailCP", 3)) {
-        LogUtils.d("GmailCP", "Unsupported query uri: %s", new Object[] { LogUtils.contentUriToString(paramUri) });
+      if (dri.a("GmailCP", 3)) {
+        dri.b("GmailCP", "Unsupported query uri: %s", new Object[] { dri.a(paramUri) });
       }
-      paramArrayOfString1 = null;
-      i = j;
+      i = 1;
     }
-    for (;;)
+    for (paramArrayOfString1 = null;; paramArrayOfString1 = paramString1)
     {
-      if ((paramArrayOfString1 != null) && (i != 0)) {
-        paramArrayOfString1.setNotificationUri(mContentResolver, paramUri);
-      }
-      return paramArrayOfString1;
-      LogUtils.d("GmailCP", "Query for list of labels", new Object[0]);
-      paramArrayOfString2 = paramString1.getLabelQueryBuilder(Gmail.LABEL_PROJECTION).showHidden(false).query();
-      long l;
-      try
+      for (;;)
       {
-        paramString1 = getPublicLabelCursor(str, paramArrayOfString1, paramArrayOfString2);
-        paramArrayOfString1 = paramString1;
-        i = j;
-        if (paramArrayOfString2 == null) {
-          continue;
+        if ((paramArrayOfString1 != null) && (i != 0)) {
+          paramArrayOfString1.setNotificationUri(c, paramUri);
         }
-        paramArrayOfString2.close();
-        paramArrayOfString1 = paramString1;
-        i = j;
-      }
-      finally
-      {
-        if (paramArrayOfString2 != null) {
-          paramArrayOfString2.close();
-        }
-      }
-      paramArrayOfString2 = getCursorForLabel(Gmail.LABEL_PROJECTION, paramString1, paramArrayOfString2);
-      try
-      {
-        paramString1 = getPublicLabelCursor(str, paramArrayOfString1, paramArrayOfString2);
-        paramArrayOfString1 = paramString1;
-        i = j;
-        if (paramArrayOfString2 == null) {
-          continue;
-        }
-        paramArrayOfString2.close();
-        paramArrayOfString1 = paramString1;
-        i = j;
-      }
-      finally
-      {
-        if (paramArrayOfString2 != null) {
-          paramArrayOfString2.close();
-        }
-      }
-      Cursor localCursor = getCursorForLabel(Gmail.LABEL_PROJECTION, paramString1, paramString2);
-      try
-      {
-        paramString2 = getPublicLabelCursor(str, paramArrayOfString1, localCursor);
-        paramString1 = paramArrayOfString2;
-        if (localCursor != null)
+        return paramArrayOfString1;
+        dri.b("GmailCP", "Query for list of labels", new Object[0]);
+        paramString1 = paramString1.b(dpy.t).a(false).a();
+        try
         {
-          paramString1 = paramArrayOfString2;
-          if (localCursor.getCount() > 0)
+          paramArrayOfString1 = a(paramArrayOfString2, paramArrayOfString1, paramString1);
+          if (paramString1 != null)
           {
-            paramString1 = paramArrayOfString2;
-            if (localCursor.moveToFirst())
-            {
-              l = localCursor.getLong(localCursor.getColumnIndex("_id"));
-              paramString1 = Long.valueOf(l);
-            }
+            paramString1.close();
+            i = 1;
           }
         }
-        if (localCursor != null) {
-          localCursor.close();
+        finally
+        {
+          if (paramString1 != null) {
+            paramString1.close();
+          }
         }
-        paramArrayOfString1 = paramString2;
-        i = j;
-        if (paramString2 == null) {
-          continue;
+        long l = Long.parseLong((String)paramUri.getPathSegments().get(2));
+        paramString2 = X.b(l);
+        paramString1 = a(dpy.t, paramString1, paramString2);
+        try
+        {
+          paramArrayOfString1 = a(paramArrayOfString2, paramArrayOfString1, paramString1);
+          if (paramString1 != null)
+          {
+            paramString1.close();
+            i = 1;
+          }
         }
-        paramArrayOfString1 = paramString2;
-        i = j;
-        if (paramString1 == null) {
-          continue;
+        finally
+        {
+          if (paramString1 != null) {
+            paramString1.close();
+          }
         }
-        paramString2.setNotificationUri(mContentResolver, PrivateGmailAccess.getLabelUriForId(str, paramString1.longValue()));
-        i = 0;
-        paramArrayOfString1 = paramString2;
+        paramString2 = (String)paramUri.getPathSegments().get(2);
+        paramString2 = a(dpy.t, paramString1, paramString2);
+        try
+        {
+          paramString1 = a(paramArrayOfString2, paramArrayOfString1, paramString2);
+          paramArrayOfString1 = (String[])localObject;
+          if (paramString2 != null)
+          {
+            paramArrayOfString1 = (String[])localObject;
+            if (paramString2.getCount() > 0)
+            {
+              paramArrayOfString1 = (String[])localObject;
+              if (paramString2.moveToFirst())
+              {
+                l = paramString2.getLong(paramString2.getColumnIndex("_id"));
+                paramArrayOfString1 = Long.valueOf(l);
+              }
+            }
+          }
+          if (paramString2 != null) {
+            paramString2.close();
+          }
+          if ((paramString1 != null) && (paramArrayOfString1 != null))
+          {
+            paramString1.setNotificationUri(c, dip.a(paramArrayOfString2, paramArrayOfString1.longValue()));
+            i = 0;
+            paramArrayOfString1 = paramString1;
+          }
+        }
+        finally
+        {
+          if (paramString2 != null) {
+            paramString2.close();
+          }
+        }
       }
-      finally
-      {
-        if (localCursor != null) {
-          localCursor.close();
-        }
-      }
+      i = 1;
     }
   }
   

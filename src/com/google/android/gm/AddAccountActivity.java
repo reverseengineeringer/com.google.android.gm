@@ -1,53 +1,14 @@
 package com.google.android.gm;
 
-import android.accounts.Account;
-import android.app.Activity;
 import android.os.Bundle;
+import ddy;
+import dem;
+import dfd;
 
 public class AddAccountActivity
-  extends GmailBaseActivity
+  extends dfd
 {
-  private boolean mAccountCreated = false;
-  
-  private void onAccountCreated(Account[] paramArrayOfAccount)
-  {
-    mAccountCreated = true;
-    setResult(-1);
-    finish();
-  }
-  
-  private void onFailureToAddAccount()
-  {
-    setResult(0);
-    finish();
-  }
-  
-  private void waitForGmailAccount()
-  {
-    new AccountHelper(getContext()).asyncGetAccountsInfo(new AccountHelper.AccountResultsCallback()
-    {
-      public void exec(Account[] paramAnonymousArrayOfAccount)
-      {
-        if ((paramAnonymousArrayOfAccount == null) || (paramAnonymousArrayOfAccount.length == 0))
-        {
-          AccountHelper.showAddAccount(jdField_this, new AccountHelper.AddAccountCallback()
-          {
-            public void onResult(Account paramAnonymous2Account)
-            {
-              if (paramAnonymous2Account != null)
-              {
-                AddAccountActivity.this.onAccountCreated(new Account[] { paramAnonymous2Account });
-                return;
-              }
-              AddAccountActivity.this.onFailureToAddAccount();
-            }
-          });
-          return;
-        }
-        AddAccountActivity.this.onAccountCreated(paramAnonymousArrayOfAccount);
-      }
-    });
-  }
+  public boolean a = false;
   
   public void onCreate(Bundle paramBundle)
   {
@@ -57,8 +18,8 @@ public class AddAccountActivity
   public void onResume()
   {
     super.onResume();
-    if (!mAccountCreated) {
-      waitForGmailAccount();
+    if (!a) {
+      new ddy(this).a(new dem(this, this));
     }
   }
 }

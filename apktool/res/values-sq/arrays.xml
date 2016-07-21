@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Përgjigjiu</item>
+        <item>Përgjigju të gjithëve</item>
+        <item>Devijo</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Veprimi ishte i suksesshëm</item>
+        <item>Nuk ka internet</item>
+        <item>Nuk mund të identifikohej</item>
+        <item>Gabim sigurie</item>
+        <item>Nuk mund të sinkronizohet</item>
+        <item>Gabim në server</item>
+        <item>Gabim i brendshëm</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Më të rejat</item>
+        <item>Më të vjetrat</item>
+        <item>Lista e bisedave</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Shfaq bisedat më të reja pasi të arkivosh ose të fshish</item>
+        <item>Shfaq bisedat e vjetra pasi të arkivosh ose të fshish</item>
+        <item>Shfaq listën e bisedave pasi të arkivosh ose të fshish</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Arkivo</item>
+        <item>Fshi</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arkivo</item>
+        <item>Fshi</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>E lartë</item>
+        <item>Normale</item>
+        <item>E ulët</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Mos humb asnjë fluturim tjetër.</item>
+        <item>Mos humb asnjë fluturim tjetër.</item>
+        <item>Të shtohet ky fluturim në kalendarin tënd?</item>
+        <item>Merr rezervime në apl. tënd \"Kalendari i Google\".</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>\"Kalendari i Google\" shton automatikisht fluturime dhe rezervime të tjera në kalendarin tënd.</item>
+        <item>\"Kalendari i Google\" shton automatikisht fluturime dhe rezervime të tjera në kalendarin tënd.</item>
+        <item>Ngjarjet nga Gmail-i mund të shtohen automatikisht me apl. \"Kalendari i Google\".</item>
+        <item>Bëj që rezervimet e fluturimit, hotelit dhe restorantit të shtohen automatikisht.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Të shtohet ky rezervim në apl. \"Kalendari i Google\"?</item>
+        <item>Dëshiron që rezervimet të shtohen automatikisht te apl. \"Kalendari\"?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Me apl. \"Kalendari i Google\", ngjarjet nga Gmail-i shtohen automatikisht në kalendarin tënd.</item>
+        <item>\"Kalendari i Google\" shton automatikisht rezervimet e hoteleve etj. nga mail-i yt.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Merr njoftim në kohë për vaktin tënd.</item>
+        <item>Të shtohet ky rezervim në apl. \"Kalendari i Google\"?</item>
+        <item>Merr automatikisht rezervime në apl. tënd \"Kalendari i Google\".</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>\"Kalendari i Google\" shton automatikisht rezervime restoranti etj. në kalendarin tënd.</item>
+        <item>Ngjarjet nga Gmail-i mund të shtohen automatikisht në kalendarin tënd</item>
+        <item>Bëj që rezervimet e fluturimit, hotelit dhe restorantit të shtohen automatikisht.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Merr njoftim në kohë përpara kësaj ngjarjeje.</item>
+        <item>Të shtohet kjo ngjarje në apl. \"Kalendari i Google\"?</item>
+        <item>Mos e humb ngjarjen.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>\"Kalendari i Google\" shton automatikisht ngjarje dhe rezervime në kalendarin tënd, sikurse ajo në këtë mail.</item>
+        <item>Ngjarjet nga Gmail-i mund të shtohen automatikisht në kalendarin tënd</item>
+        <item>Bëj që ngjarjet dhe rezervimet e tjera të shtohen automatikisht nëpërmjet apl. \"Kalendari i Google\".</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Gjurmo rezervimet e tua, në një vend të vetëm.</item>
+        <item>Të shtohen këto rezervime në apl. \"Kalendari i Google\"?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Bëj që rezervimet e fluturimit, hotelit dhe restorantit të shtohen automatikisht te apl. yt \"Kalendari i Google\".</item>
+        <item>Ngjarjet nga Gmail-i mund të shtohen automatikisht në kalendarin tënd</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Shumë e vogël</item>
+        <item>E vogël</item>
+        <item>Normale</item>
+        <item>E madhe</item>
+        <item>E madhe</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Shfaqi përmbajtjet e mesazheve në tekst të vogël</item>
+        <item>Shfaq përmbajtjet e mesazheve në tekst të vogël</item>
+        <item>Shfaq përmbajtjet e mesazheve në tekst me madhësi normale</item>
+        <item>Shfaq përmbajtjet e mesazheve në tekst të madh</item>
+        <item>Shfaq përmbajtjet e mesazheve në tekst të madh</item>
+    </string-array>
+</resources>

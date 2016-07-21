@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Хуанлинуудыг хуваалцаагүй байна</item>
+        <item quantity="one">Хуанлиг хуваалцаагүй байна</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">Нооргууд</item>
+        <item quantity="one">Ноорог</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Эдгээр %1$d харилцааг устгах уу?</item>
+        <item quantity="one">Энэ харилцааг устгах уу?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Эдгээр %1$d харилцааг архивлах уу?</item>
+        <item quantity="one">Энэ харилцааг архивлах уу?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Эдгээр %1$d харилцаанаас нооргуудыг хэрэгсэхгүй болгох уу?</item>
+        <item quantity="one">Энэ харилцаанаас нооргуудыг хэрэгсэхгүй болгох уу?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d харилцаануудыг тэмдэггүй болгож байна</item>
+        <item quantity="one">%1$d харилцааг тэмдэггүй болгож байна</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d-г спам гэж мэдээлсэн бөгөөд бүртгэлийг цуцалсан</item>
+        <item quantity="one">%1$d-г спам гэж мэдээлсэн бөгөөд бүртгэлийг цуцалсан</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> чимээгүй болсон</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> чимээгүй болсон</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> спам гэж мэдүүлэгдсэн</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> спам гэж мэдүүлэгдсэн</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> спам биш гэж мэдүүлэгдсэн</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> спам биш гэж мэдүүлэгдсэн</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> чухал биш гэж тэмдэглэгдсэн</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> чухал биш гэж тэмдэглэгдсэн</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> архивлагдсан</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> архивлагдсан</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> устсан</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> устсан</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Өөрчлөгдсөн шошго.</item>
+        <item quantity="one">Өөрчлөгдсөн шошго.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d шинэ зурвасууд</item>
+        <item quantity="one">%1$d шинэ зурвас</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d хуучин зурвасуудыг өргөтгөх</item>
+        <item quantity="one">Хуучин зурвасыг өргөтгөх</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Өргөтгөсөн %1$d хуучин зурвасууд</item>
+        <item quantity="one">Нэг хуучин зурвасыг өргөтгөсөн</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d шинэ зурвасууд</item>
+        <item quantity="one">%1$d шинэ зурвас</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d харилцаанууд нь бүрмөсөн устгагдах болно.</item>
+        <item quantity="one">%1$d харилцаа нь бүрмөсөн устгагдах болно.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d зурвасууд</item>
+        <item quantity="one">%1$d зурвас</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d хавсралтууд</item>
+        <item quantity="one">%1$d хавсралт</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Эдгээр зурвасыг спам гэж тэмдэглэх болно. Та эдгээр&amp;lt;b>%2$d илгээгчээс&amp;lt;/b> төстэй зурвасууд хүлээж авахгүй юу?:%1$s</item>
+        <item quantity="one">Энэ зурвасыг спам гэж тэмдэглэх болно. Та %1$s-с төстэй зурвасууд хүлээж авахгүй юу?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Зэрэгцүүлэн хуулах: Сүүлийн %1$d өдрүүд</item>
+        <item quantity="one">Зэрэгцүүлэн хуулах: Сүүлийн %1$d өдөр</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d өдрүүд</item>
+        <item quantity="one">Нэг өдөр</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Өдрүүд</item>
+        <item quantity="one">Өдөр</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Холбогдсон үед хамгийн сүүлийн %1$d өдрүүдийн зурвасууд татагдах болно</item>
+        <item quantity="one">Холбогдсон үед хамгийн сүүлийн 1 өдрийн зурвасууд татагдах болно</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Тэмдэглэл: Зарим хүлээн авагч одоо ч гэсэн эдгээр файлуудад хандах боломжгүй байж болох юм. Та Google Драйв дотроос эдгээр файлуудыг хуваалцах хэрэгтэй байж болно.</item>
+        <item quantity="one">Тэмдэглэл: Зарим хүлээн авагч одоо ч гэсэн энэ файлд хандах боломжгүй байж болох юм. Та Google Драйв дотроос файлыг хуваалцах хэрэгтэй байж болно.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Та энэ файлыг эзэмшдэг Google апп-ын байгууллагад байдаггүй дараах хүлээн авагчтай хуваалцаж байна:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>."</item>
+        <item quantity="one">Та энэ файлыг эзэмшдэг Google апп-ын байгууллагад байдаггүй дараах хүлээн авагчтай хуваалцаж байна:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Таны Драйваас оруулсан эдгээр файлуудад таны хүлээн авагч хандаж чадахгүй байж болно. Та Google Драйв дотроос файлуудыг хуваалцах хэрэгтэй байж болно.</item>
+        <item quantity="one">Таны Драйваас оруулсан файлд таны хүлээн авагч хандаж чадахгүй байж болно. Та Google Драйв дотроос файлыг хуваалцах хэрэгтэй байж болно.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Таны одоогийн и-мэйл хаяг:</item>
+        <item quantity="one">Таны одоогийн имэйл хаяг:</item>
+    </plurals>
+</resources>

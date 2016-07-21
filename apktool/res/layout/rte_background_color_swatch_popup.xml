@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/background_color_swatch" style="@style/PopupWindowContentView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/swatch_white" android:background="@drawable/rte_swatch_button_white" android:contentDescription="@string/rte_swatch_button_white" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/swatch_tinted_red" android:background="@drawable/rte_swatch_button_tinted_red" android:contentDescription="@string/rte_swatch_button_tinted_red" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/swatch_tinted_blue" android:background="@drawable/rte_swatch_button_tinted_blue" android:contentDescription="@string/rte_swatch_button_tinted_blue" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/swatch_tinted_green" android:background="@drawable/rte_swatch_button_tinted_green" android:contentDescription="@string/rte_swatch_button_tinted_green" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/swatch_tinted_yellow" android:background="@drawable/rte_swatch_button_tinted_yellow" android:contentDescription="@string/rte_swatch_button_tinted_yellow" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/swatch_tinted_gray" android:background="@drawable/rte_swatch_button_tinted_gray" android:contentDescription="@string/rte_swatch_button_tinted_gray" style="@style/PopupRadioButton" />
+</RadioGroup>

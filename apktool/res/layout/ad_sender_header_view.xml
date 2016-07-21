@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.ads.AdSenderHeaderView android:orientation="vertical" android:background="@color/conversation_view_overlay_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/conversation_view_border" />
+    <LinearLayout android:background="@color/message_header_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ConversationViewPaddingStyle">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/sender_image" android:layout_width="@dimen/contact_image_width" android:layout_height="@dimen/contact_image_height" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:scaleType="centerCrop" style="@style/AdSenderImageStyle" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/sender_name" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/AdSenderNameStyle" />
+            <TextView android:textColor="@color/conversation_view_text_color_link_blue" android:id="@id/ad_visible_url" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/AdVisibleUrlStyle" />
+        </LinearLayout>
+        <com.android.mail.browse.StarView android:layout_gravity="center_vertical" android:id="@id/star_ad" android:src="@drawable/star" style="@style/MessageHeaderActionButtonStyle" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/forward_ad" android:src="@drawable/ic_forward_24dp" android:contentDescription="@string/forward" style="@style/MessageHeaderActionButtonStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/app_install_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AppInstallAdBar">
+        <include android:id="@id/app_rating_and_logo" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/app_rating_and_logo_view" />
+        <Button android:id="@id/app_install_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AdAppInstallButton" />
+    </LinearLayout>
+</com.google.android.gm.ads.AdSenderHeaderView>

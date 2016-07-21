@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="suw_preference_recycler_view">@layout/suw_preference_recycler_view_header</item>
+    <item type="layout" name="suw_preference_template">@layout/suw_preference_template_header</item>
+    <item type="layout" name="suw_recycler_template">@layout/suw_recycler_template_header</item>
+    <item type="layout" name="suw_recycler_template_short">@layout/suw_recycler_template_header_collapsed</item>
+    <item type="layout" name="suw_glif_preference_template">@layout/suw_glif_blank_template_compact</item>
+    <item type="layout" name="suw_glif_recycler_template">@layout/suw_glif_recycler_template_compact</item>
+    <item type="layout" name="suw_template">@layout/suw_template_header</item>
+    <item type="layout" name="suw_template_short">@layout/suw_template_header_collapsed</item>
+    <item type="layout" name="suw_list_template">@layout/suw_list_template_header</item>
+    <item type="layout" name="suw_list_template_short">@layout/suw_list_template_header_collapsed</item>
+    <item type="layout" name="suw_no_scroll_template">@layout/suw_no_scroll_template_header</item>
+    <item type="layout" name="suw_no_scroll_template_short">@layout/suw_no_scroll_template_header_collapsed</item>
+    <item type="layout" name="suw_glif_template">@layout/suw_glif_template_compact</item>
+    <item type="layout" name="suw_glif_list_template">@layout/suw_glif_list_template_compact</item>
+    <item type="layout" name="suw_glif_blank_template">@layout/suw_glif_blank_template_compact</item>
+    <item type="layout" name="wc_compose" />
+    <item type="layout" name="ces_alert_dialog_body" />
+    <item type="layout" name="ces_alert_dialog_title" />
+    <item type="layout" name="ces_details_item" />
+    <item type="layout" name="ces_details" />
+    <item type="layout" name="ces_details_title" />
+    <item type="layout" name="fz_message_security" />
+    <item type="layout" name="lc_create" />
+    <item type="layout" name="srs_template" />
+    <item type="layout" name="srs_option_item" />
+</resources>

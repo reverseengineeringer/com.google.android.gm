@@ -3,12 +3,14 @@ package com.android.mail.browse;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import bzo;
+import bzp;
 
 public class ScrollIndicatorsView
   extends View
-  implements ScrollNotifier.ScrollListener
+  implements bzp
 {
-  private ScrollNotifier mSource;
+  public bzo a;
   
   public ScrollIndicatorsView(Context paramContext)
   {
@@ -20,45 +22,39 @@ public class ScrollIndicatorsView
     super(paramContext, paramAttributeSet);
   }
   
-  protected int computeHorizontalScrollExtent()
-  {
-    return mSource.computeHorizontalScrollExtent();
-  }
-  
-  protected int computeHorizontalScrollOffset()
-  {
-    return mSource.computeHorizontalScrollOffset();
-  }
-  
-  protected int computeHorizontalScrollRange()
-  {
-    return mSource.computeHorizontalScrollRange();
-  }
-  
-  protected int computeVerticalScrollExtent()
-  {
-    return mSource.computeVerticalScrollExtent();
-  }
-  
-  protected int computeVerticalScrollOffset()
-  {
-    return mSource.computeVerticalScrollOffset();
-  }
-  
-  protected int computeVerticalScrollRange()
-  {
-    return mSource.computeVerticalScrollRange();
-  }
-  
-  public void onNotifierScroll(int paramInt1, int paramInt2)
+  public final void a(int paramInt)
   {
     awakenScrollBars();
   }
   
-  public void setSourceView(ScrollNotifier paramScrollNotifier)
+  protected int computeHorizontalScrollExtent()
   {
-    mSource = paramScrollNotifier;
-    mSource.addScrollListener(this);
+    return a.computeHorizontalScrollExtent();
+  }
+  
+  protected int computeHorizontalScrollOffset()
+  {
+    return a.computeHorizontalScrollOffset();
+  }
+  
+  protected int computeHorizontalScrollRange()
+  {
+    return a.computeHorizontalScrollRange();
+  }
+  
+  protected int computeVerticalScrollExtent()
+  {
+    return a.computeVerticalScrollExtent();
+  }
+  
+  protected int computeVerticalScrollOffset()
+  {
+    return a.computeVerticalScrollOffset();
+  }
+  
+  protected int computeVerticalScrollRange()
+  {
+    return a.computeVerticalScrollRange();
   }
 }
 

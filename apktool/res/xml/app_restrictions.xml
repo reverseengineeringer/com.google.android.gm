@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <restriction android:description="@string/app_restrictions_email_address_description" android:title="@string/app_restrictions_email_address_title" android:key="email_address" />
+    <restriction android:description="@string/app_restrictions_exchange_host_description" android:title="@string/app_restrictions_exchange_host_title" android:key="exchange_host" />
+    <restriction android:description="@string/app_restrictions_exchange_username_description" android:title="@string/app_restrictions_exchange_username_title" android:key="exchange_username" />
+    <restriction android:description="@string/app_restrictions_exchange_device_id_description" android:title="@string/app_restrictions_exchange_device_id_title" android:key="exchange_device_id" />
+    <restriction android:description="@string/app_restrictions_exchange_ssl_required_description" android:title="@string/app_restrictions_exchange_ssl_required_title" android:key="exchange_ssl_required" android:defaultValue="true" />
+    <restriction android:description="@string/app_restrictions_exchange_trust_all_certificates_description" android:title="@string/app_restrictions_exchange_trust_all_certificates_title" android:key="exchange_trust_all_certificates" android:defaultValue="false" />
+    <restriction android:description="@string/app_restrictions_exchange_login_certificate_alias_description" android:title="@string/app_restrictions_exchange_login_certificate_alias_title" android:key="exchange_login_certificate_alias" />
+    <restriction android:description="@string/app_restrictions_default_signature_description" android:title="@string/app_restrictions_default_signature_title" android:key="default_signature" />
+    <restriction android:description="@string/app_restrictions_default_exchange_sync_window_description" android:title="@string/app_restrictions_default_exchange_sync_window_title" android:key="default_exchange_sync_window" android:defaultValue="3" />
+</restrictions>

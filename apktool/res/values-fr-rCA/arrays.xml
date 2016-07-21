@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Répondre</item>
+        <item>Répondre à tous</item>
+        <item>Transférer</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Réussite</item>
+        <item>Aucune connexion</item>
+        <item>Connexion impossible</item>
+        <item>Erreur liée à la sécurité</item>
+        <item>Synchronisation impossible</item>
+        <item>Erreur du serveur</item>
+        <item>Erreur interne</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Plus récente</item>
+        <item>Plus ancienne</item>
+        <item>Liste des conversations</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Afficher conversations récentes après archivage ou suppress.</item>
+        <item>Afficher conversations anciennes après archiv. ou suppress.</item>
+        <item>Afficher liste conversations après archivage ou suppress.</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Archiver</item>
+        <item>Supprimer</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archiver</item>
+        <item>Supprimer</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Élevée</item>
+        <item>Normale</item>
+        <item>Faible</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Ne manquez plus jamais un vol.</item>
+        <item>Ne manquez plus jamais un vol.</item>
+        <item>Ajouter ce vol à votre agenda?</item>
+        <item>Affichez vos réservations dans Google Agenda.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>"Google Agenda ajoute automagiquement vos vols et d'autres réservations à votre agenda."</item>
+        <item>"Google Agenda ajoute automatiquement vos vols et d'autres réservations à votre agenda."</item>
+        <item>"Les événements de Gmail peuvent être ajoutés automatiquement avec l'application Google Agenda."</item>
+        <item>"Faites ajouter automatiquement vos réservations de vol, d'hôtel et de restaurant."</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Ajouter cette réservation à Google Agenda?</item>
+        <item>Ajouter automatiquement vos réservations à votre agenda?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>"Avec l'application Google Agenda, les événements de Gmail sont automatiquement ajoutés à votre agenda."</item>
+        <item>"Google Agenda ajoute automatiquement vos hôtels et d'autres réservations à partir de votre courriel."</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Recevez une notification opportune pour votre repas.</item>
+        <item>Ajouter cette réservation à Google Agenda?</item>
+        <item>Obtenez vos réservations automatiquement dans Google Agenda.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>"Google Agenda ajoute automatiquement vos restaurants et d'autres réservations à votre agenda."</item>
+        <item>Les événements de Gmail peuvent être ajoutés automatiquement à votre agenda.</item>
+        <item>"Faites ajouter automatiquement vos réservations de vol, d'hôtel et de restaurant."</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Recevez une notification opportune avant cet événement.</item>
+        <item>Ajouter cet événement à Google Agenda?</item>
+        <item>Ne manquez pas votre événement.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Agenda ajoute automatiquement des événements et des réservations, comme dans ce courriel, à votre agenda.</item>
+        <item>Les événements de Gmail peuvent être ajoutés automatiquement à votre agenda.</item>
+        <item>"Faites ajouter automatiquement des événements et d'autres réservations avec Google Agenda."</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Suivez vos réservations dans un seul endroit.</item>
+        <item>Ajouter ces réservations à Google Agenda?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>"Faites ajouter automatiquement vos réservations de vol, d'hôtel et de restaurant à Google Agenda."</item>
+        <item>Les événements de Gmail peuvent être ajoutés automatiquement à votre agenda.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Très petite</item>
+        <item>Petite</item>
+        <item>Normale</item>
+        <item>Grande</item>
+        <item>Très grande</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Afficher le contenu des messages en tout petit</item>
+        <item>Afficher le contenu des messages en petit</item>
+        <item>Afficher le contenu des messages en taille normale</item>
+        <item>Afficher le contenu des messages en grand</item>
+        <item>Afficher le contenu des messages en très grand</item>
+    </string-array>
+</resources>

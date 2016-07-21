@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Хариулах</item>
+        <item>Бүгдэд хариу илгээх</item>
+        <item>Дамжуулах</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Амжилттай</item>
+        <item>Холбогдоогүй</item>
+        <item>Нэвтэрч чадсангүй</item>
+        <item>Аюулгүй байдлын алдаа</item>
+        <item>Синк хийж чадсангүй</item>
+        <item>Сервэрийн алдаа</item>
+        <item>Дотоод Алдаа</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Шинэ</item>
+        <item>Хуучин</item>
+        <item>Харилцааны жагсаалт</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Архивлах буюу устгасны дараа харилцааг хэзээ ч харуулахгүй</item>
+        <item>Архивлах буюу устгасны дараа хуучин харилцааг харуулах</item>
+        <item>Архивлах буюу устгасны дараа харилцааны жагсаалтыг харуулах</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Архивлах</item>
+        <item>Устгах</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Архивлах</item>
+        <item>Устгах</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Их</item>
+        <item>Жирийн</item>
+        <item>Бага</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Дахиж нислэгээс хоцрох аюулгүй боллоо.</item>
+        <item>Дахиж нислэгээс хоцрох аюулгүй боллоо.</item>
+        <item>Энэ нислэгийг таны календарьт нэмэх үү?</item>
+        <item>Өөрийн Google Календарьт захиалгаа оруулаарай.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Хуанли нислэг болон бусад захиалгыг таны хуанлид шууд нэмнэ.</item>
+        <item>Google Хуанли нислэг болон бусад захиалгыг таны хуанлид шууд нэмнэ.</item>
+        <item>Gmail дотроос үйл явдлуудыг Google Хуанли апп ашиглан шууд нэмж болно.</item>
+        <item>Нислэг, зочид буудал болон рестораны захиалгыг автоматаар нэмээрэй.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Энэ захиалгыг Google Календарьт нэмэх үү?</item>
+        <item>Захиалгуудыг таны Календарьт автоматаар нэмэх үү?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Google Хуанли апп ашиглан Gmail дотроос үйл явдлууд таны хуанлид шууд нэмэгдэнэ.</item>
+        <item>Google Хуанли зочид буудал болон бусад захиалгыг таны имэйлээс шууд нэмнэ.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Хоолны цаг болсон тухай мэдэгдлийг яг цагт нь аваарай.</item>
+        <item>Энэ захиалгыг Google Календарьт нэмэх үү?</item>
+        <item>Өөрийн Google Календарьт захиалгаа оруулаарай.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Хуанли ресторан болон бусад захиалгыг таны хуанлид шууд нэмнэ.</item>
+        <item>Gmail дотроос үйл явдлуудыг таны календарьт автоматаар нэмж болно.</item>
+        <item>Нислэг, зочид буудал болон рестораны захиалгыг автоматаар нэмээрэй.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Энэ үйл явдлын тухай мэдэгдлийг яг цагт нь аваарай.</item>
+        <item>Энэ үйл явдлыг Google Календарьт нэмэх үү?</item>
+        <item>Үйл явдлаас хоцрох аюулгүй боллоо.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Хуанли нь энэ имэйлд байхтай ижил үйл явдал болон захиалгыг шууд нэмнэ.</item>
+        <item>Gmail дотроос үйл явдлуудыг таны календарьт автоматаар нэмж болно.</item>
+        <item>Үйл явдал болон бусад захиалгыг Google Хуанли ашиглан шууд нэмээрэй.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Өөрийн захиалгуудыг нэг дороос мөшгих боломжтой.</item>
+        <item>Энэ захиалгыг Google Календарьт нэмэх үү?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Нислэг, зочид буудал болон рестораны захиалгыг таны Google Календарьт автоматаар нэмнэ.</item>
+        <item>Gmail дотроос үйл явдлуудыг таны календарьт автоматаар нэмж болно.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Өчүүхэн</item>
+        <item>Жижиг</item>
+        <item>Энгийн</item>
+        <item>Том</item>
+        <item>Том</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Зурвасын агуулгыг жижиг хэмжээтэй текстээр харуулах</item>
+        <item>Зурвасын агуулгыг жижиг хэмжээтэй текстээр харуулах</item>
+        <item>Зурвасын агуулгыг энгийн хэмжээтэй текстээр харуулах</item>
+        <item>Зурвасын агуулгыг том хэмжээтэй текстээр харуулах</item>
+        <item>Зурвасын агуулгыг маш том хэмжээтэй текстээр харуулах</item>
+    </string-array>
+</resources>

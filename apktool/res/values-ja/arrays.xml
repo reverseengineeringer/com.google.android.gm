@@ -6,17 +6,13 @@
         <item>転送</item>
     </string-array>
     <string-array name="sync_status">
-        <item>完了</item>
-        <item>接続できません。</item>
-        <item>ログインできませんでした。</item>
+        <item>成功</item>
+        <item>接続なし</item>
+        <item>ログインできませんでした</item>
         <item>セキュリティエラー</item>
-        <item>同期できませんでした。</item>
+        <item>同期できませんでした</item>
+        <item>サーバーエラー</item>
         <item>内部エラー</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>システム</item>
-        <item>よく使うフォルダ</item>
-        <item>すべてのラベル</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>次</item>
@@ -28,15 +24,66 @@
         <item>アーカイブまたは削除の後に古いスレッドを表示する</item>
         <item>アーカイブまたは削除の後にスレッドリストを表示する</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>影響なし</item>
-        <item>アーカイブまたは削除</item>
-        <item>常に削除</item>
+    <string-array name="prefEntries_removal_action">
+        <item>アーカイブ</item>
+        <item>削除</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>影響なし</item>
-        <item>受信トレイ: スレッドをアーカイブ。 通常のラベル: 現在のラベルを削除。 システムラベル（例: すべてのメール、送信済み）: スレッドを削除。</item>
-        <item>常にスレッドを削除</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>アーカイブ</item>
+        <item>削除</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>高</item>
+        <item>標準</item>
+        <item>低</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>フライトに遅れないために</item>
+        <item>フライトに遅れないために</item>
+        <item>カレンダーにこのフライトを追加しますか？</item>
+        <item>Googleカレンダーに予約を追加しよう</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Googleカレンダーでは、フライトやその他の予約がカレンダーに自動的に追加されます。</item>
+        <item>Googleカレンダーでは、フライトやその他の予約がカレンダーに自動的に追加されます。</item>
+        <item>Googleカレンダーアプリを使用すれば、Gmailからの予定が自動的に追加されます。</item>
+        <item>フライト、ホテル、レストランの予約を自動的に追加できます。</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Googleカレンダーにこの予約を追加しますか？</item>
+        <item>カレンダーに予約を自動的に追加するには</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Googleカレンダーアプリを使用すれば、Gmailからの予定がカレンダーに自動的に追加されます。</item>
+        <item>Googleカレンダーでは、メールからホテルやその他の予約が自動的に追加されます。</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>予約したレストランの通知をタイムリーに受け取ろう</item>
+        <item>Googleカレンダーにこの予約を追加しますか？</item>
+        <item>Googleカレンダーに予約を自動的に追加しよう</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Googleカレンダーでは、レストランやその他の予約がカレンダーに自動的に追加されます。</item>
+        <item>Gmailからの予定はカレンダーに自動的に追加されます。</item>
+        <item>フライト、ホテル、レストランの予約を自動的に追加できます。</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>この予定の前にタイムリーな通知を受け取ろう</item>
+        <item>Googleカレンダーにこの予定を追加しますか？</item>
+        <item>予定に遅れないために</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Googleカレンダーでは、このメールに記載されているような予定や予約がカレンダーに自動的に追加されます。</item>
+        <item>Gmailからの予定はカレンダーに自動的に追加されます。</item>
+        <item>Googleカレンダーを使用すると、予定やその他の予約を自動的に追加できます。</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>予約をまとめて管理しよう</item>
+        <item>Googleカレンダーに予約を追加しますか？</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>フライト、ホテル、レストランの予約をGoogleカレンダーに自動的に追加できます。</item>
+        <item>Gmailからの予定はカレンダーに自動的に追加されます。</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>極小</item>
@@ -51,15 +98,5 @@
         <item>メッセージ本文を標準の文字サイズで表示する</item>
         <item>メッセージ本文を大きい文字で表示する</item>
         <item>メッセージ本文を極大の文字で表示する</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>画面の上部にメールの操作を常に表示する</item>
-        <item>縦向きの画面の上部にのみメールの操作を表示する</item>
-        <item>メールのヘッダー以外にはメールの操作を表示しない</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>常に表示</item>
-        <item>縦向きでのみ表示</item>
-        <item>表示しない</item>
     </string-array>
 </resources>

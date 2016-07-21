@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.TextInputLayout android:id="@id/account_email_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSetupEditText">
+        <EditText android:id="@id/account_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/account_setup_basics_email_label" android:inputType="textEmailAddress" style="@style/SetupTextStyle" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView android:id="@id/manual_setup" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_setup_basics_manual_setup_action" style="@style/AccountSetupTextAction" />
+    <TextView android:id="@id/app_hint" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_hint_text" style="@style/AccountSetupInfoText" />
+</LinearLayout>

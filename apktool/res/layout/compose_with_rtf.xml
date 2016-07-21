@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/ComposeAreaWrapper"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/wait_fragment" />
+    <com.google.android.apps.work.common.richedittext.RichTextToolbar android:id="@id/rich_text_toolbar" android:visibility="gone" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@style/RichTextToolbar" />
+    <ScrollView android:orientation="vertical" android:id="@id/compose" android:paddingLeft="@dimen/compose_wrapper_side_padding" android:paddingRight="@dimen/compose_wrapper_side_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/rich_text_toolbar">
+        <LinearLayout android:paddingTop="@dimen/compose_wrapper_top_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+            <LinearLayout android:orientation="vertical" android:id="@id/content" style="@style/ComposeArea">
+                <include layout="@layout/compose_from" />
+                <include layout="@layout/compose_recipients" />
+                <include layout="@layout/compose_subject" />
+                <include layout="@layout/compose_rich_body" />
+                <include layout="@layout/pntg_propose_time_view" />
+                <com.android.mail.ui.ComposeAttachmentTileGrid android:id="@id/attachment_tile_grid" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" android:animateLayoutChanges="true" />
+                <com.android.mail.compose.QuotedTextView android:id="@id/quoted_text_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <View android:id="@id/composearea_tap_trap_bottom" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

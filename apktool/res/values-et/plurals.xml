@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Kalendreid ei jagata</item>
+        <item quantity="one">Kalendrit ei jagata</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">Mustandid</item>
+        <item quantity="one">Mustand</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Kas kustutada need %1$d meilivestlust?</item>
+        <item quantity="one">Kas kustutada see meilivestlus?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Kas arhiivida need %1$d meilivestlust?</item>
+        <item quantity="one">Kas arhiivida see meilivestlus?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Kas loobuda nendest %1$d meilivestluse mustandist?</item>
+        <item quantity="one">Kas loobuda selle meilivestluse mustanditest?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Tärni eemaldamine %1$d meilivestluselt.</item>
+        <item quantity="one">Tärni eemaldamine %1$d meilivestluselt</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d üksuse puhul teavitati rämpspostist ja tühistati tellimus</item>
+        <item quantity="one">%1$d üksuse puhul teavitati rämpspostist ja tühistati tellimus</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> summutati</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> summutati</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> märgiti rämpspostiks</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> märgiti rämpspostiks</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> puhul teatati, et tegemist pole rämpspostiga</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> puhul teatati, et tegemist pole rämpspostiga</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> märgiti ebaoluliseks</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> märgiti ebaoluliseks</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> arhiiviti</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arhiiviti</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> kustutati</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> kustutati</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Silte on muudetud.</item>
+        <item quantity="one">Silti on muudetud.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d uut kirja</item>
+        <item quantity="one">%1$d uus kiri</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Laienda %1$d vanemat kirja</item>
+        <item quantity="one">Laienda vanem kiri</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Laiendati %1$d vanemat kirja</item>
+        <item quantity="one">Laiendati üks vanem kiri</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d uut kirja</item>
+        <item quantity="one">%1$d uus kiri</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d meilivestlust kustutatakse jäädavalt.</item>
+        <item quantity="one">%1$d meilivestlus kustutatakse jäädavalt.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d kirja</item>
+        <item quantity="one">%1$d kiri</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d manust</item>
+        <item quantity="one">%1$d manus</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Need kirjad märgitakse rämpspostiks. Kas te ei soovi enam nendelt &amp;lt;b>%2$d saatjalt sarnaseid kirju saada?&amp;lt;/b>:%1$s</item>
+        <item quantity="one">See kiri märgitakse rämpspostiks. Kas te ei soovi enam saatjalt %1$s sarnaseid kirju saada?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sünkroonimine: viimased %1$d päeva</item>
+        <item quantity="one">Sünkroonimine: viimane %1$d päev</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d päeva</item>
+        <item quantity="one">Üks päev</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Päevad</item>
+        <item quantity="one">Päev</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Viimase %1$d päeva kirjad laaditakse ühenduse loomisel alla</item>
+        <item quantity="one">Viimase 1 päeva kirjad laaditakse ühenduse loomisel alla</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">"Märkus. Mõnel saajal ei pruugi ikka olla juurdepääsu nendele failidele. Peate võib-olla jagama faile Google Drive'is."</item>
+        <item quantity="one">"Märkus. Mõnel saajal ei pruugi ikka olla juurdepääsu sellele failile. Peate võib-olla jagama faili Google Drive'is."</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Jagate saajatega:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>, kes ei kuulu Google Appsi organisatsiooni, kellele need failid kuuluvad."</item>
+        <item quantity="one">Jagate saajatega:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>, kes ei kuulu Google Appsi organisatsiooni, kellele see fail kuulub.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">"Saajatel ei pruugi olla juurdepääsu Drive'ist sisestatud failidele. Peate võib-olla jagama faile Google Drive'is."</item>
+        <item quantity="one">"Saajatel ei pruugi olla juurdepääsu Drive'ist sisestatud failile. Peate võib-olla jagama faili Google Drive'is."</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Teie praegused e-posti aadressid:</item>
+        <item quantity="one">Teie praegune e-posti aadress:</item>
+    </plurals>
+</resources>

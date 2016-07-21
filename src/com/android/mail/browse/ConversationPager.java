@@ -7,6 +7,8 @@ import android.util.AttributeSet;
 public class ConversationPager
   extends ViewPager
 {
+  public boolean i;
+  
   public ConversationPager(Context paramContext)
   {
     this(paramContext, null);
@@ -15,6 +17,13 @@ public class ConversationPager
   public ConversationPager(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
+  }
+  
+  public void requestLayout()
+  {
+    if (!i) {
+      super.requestLayout();
+    }
   }
 }
 

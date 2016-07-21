@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/headline" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_outgoing_headline" style="@style/AccountSettingsHeadline" />
+    <include layout="@layout/error_text_view" />
+    <Switch android:id="@id/account_require_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_default_text_vertical_spacing" android:text="@string/account_setup_outgoing_require_login_label" />
+    <TextView android:id="@id/account_username_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_username_label" style="@style/AccountSetupLabelText" />
+    <EditText android:id="@id/account_username" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" style="@style/AccountSetupEditText" />
+    <com.android.email.activity.setup.AuthenticationView android:id="@id/authentication_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_smtp_server_label" style="@style/AccountSetupLabelText" />
+    <EditText android:id="@id/account_server" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textUri" style="@style/AccountSetupEditText" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_port_label" style="@style/AccountSetupLabelText" />
+    <EditText android:id="@id/account_port" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" style="@style/AccountSetupEditText" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_security_label" style="@style/AccountSetupLabelText" />
+    <Spinner android:id="@id/account_security_type" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSettingsSpinner" />
+</LinearLayout>

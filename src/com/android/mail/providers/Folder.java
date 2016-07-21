@@ -1,297 +1,393 @@
 package com.android.mail.providers;
 
 import android.content.Context;
-import android.content.CursorLoader;
+import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Paint;
-import android.graphics.drawable.PaintDrawable;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
 import android.net.Uri;
 import android.net.Uri.Builder;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
+import android.os.Parcelable.ClassLoaderCreator;
 import android.text.TextUtils;
-import android.view.View;
+import android.util.StateSet;
 import android.widget.ImageView;
-import com.android.mail.utils.Utils;
-import com.google.common.base.Objects;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import bub;
+import buj;
+import ccx;
+import ccz;
+import cgi;
+import cgj;
+import chh;
+import cus;
+import cvl;
+import cvm;
+import hbc;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Folder
   implements Parcelable, Comparable<Folder>
 {
-  public static final Parcelable.Creator<Folder> CREATOR = new Parcelable.Creator()
-  {
-    public Folder createFromParcel(Parcel paramAnonymousParcel)
-    {
-      return new Folder(paramAnonymousParcel);
-    }
-    
-    public Folder[] newArray(int paramAnonymousInt)
-    {
-      return new Folder[paramAnonymousInt];
-    }
-  };
-  public static final Collection<Folder> EMPTY = ;
-  private static final Pattern FOLDERS_SPLIT_REGEX;
-  private static final Pattern SPLITTER_REGEX = Pattern.compile("\\^\\*\\^");
-  public String bgColor;
-  public int capabilities;
-  public Uri childFoldersListUri;
-  public Uri conversationListUri;
-  public String fgColor;
-  public boolean hasChildren;
-  public String hierarchicalDesc;
-  public long iconResId;
-  public int id;
-  public int lastSyncResult;
-  public Uri loadMoreUri;
-  public String name;
-  public Folder parent;
-  public Uri refreshUri;
-  public int syncStatus;
-  public int syncWindow;
-  public int totalCount;
-  public int type;
-  public int unreadCount;
-  public Uri uri;
+  private static final String A;
+  public static final Parcelable.ClassLoaderCreator<Folder> CREATOR = new cgj();
+  private static final int[] D = { 16843518 };
+  public static final ccx<Folder> y;
+  @Deprecated
+  private static final Pattern z = Pattern.compile("\\^\\*\\^");
+  private int B;
+  private int C;
+  public int a;
+  public String b;
+  public cus c;
+  public String d;
+  public int e;
+  public boolean f;
+  public int g;
+  public Uri h;
+  public Uri i;
+  public int j;
+  public int k;
+  public int l;
+  public Uri m;
+  public int n;
+  public int o;
+  public int p;
+  public int q;
+  public String r;
+  public String s;
+  public Uri t;
+  public String u;
+  public Uri v;
+  public long w;
+  public String x;
   
   static
   {
-    FOLDERS_SPLIT_REGEX = Pattern.compile("\\^\\*\\*\\^");
+    A = cvl.a;
+    y = new cgi();
   }
   
   private Folder()
   {
-    name = "Uninitialized!";
+    d = "Uninitialized!";
+  }
+  
+  public Folder(int paramInt1, String paramString1, Uri paramUri1, String paramString2, int paramInt2, boolean paramBoolean, int paramInt3, Uri paramUri2, Uri paramUri3, int paramInt4, int paramInt5, int paramInt6, Uri paramUri4, int paramInt7, int paramInt8, int paramInt9, int paramInt10, String paramString3, String paramString4, Uri paramUri5, String paramString5, Uri paramUri6, long paramLong, String paramString6)
+  {
+    a = paramInt1;
+    b = paramString1;
+    c = new cus(paramUri1);
+    d = paramString2;
+    e = paramInt2;
+    f = paramBoolean;
+    g = paramInt3;
+    h = paramUri2;
+    i = paramUri3;
+    j = paramInt4;
+    k = paramInt5;
+    l = paramInt6;
+    m = paramUri4;
+    n = paramInt7;
+    o = paramInt8;
+    p = paramInt9;
+    q = paramInt10;
+    r = paramString3;
+    s = paramString4;
+    if (!TextUtils.isEmpty(paramString3)) {
+      B = Integer.parseInt(paramString3);
+    }
+    if (!TextUtils.isEmpty(paramString4)) {
+      C = Integer.parseInt(paramString4);
+    }
+    t = paramUri5;
+    u = paramString5;
+    w = paramLong;
+    v = paramUri6;
+    x = paramString6;
   }
   
   public Folder(Cursor paramCursor)
   {
-    id = paramCursor.getInt(0);
-    uri = Uri.parse(paramCursor.getString(1));
-    name = paramCursor.getString(2);
-    capabilities = paramCursor.getInt(4);
-    if (paramCursor.getInt(3) == 1)
+    a = paramCursor.getInt(0);
+    b = paramCursor.getString(1);
+    c = new cus(Uri.parse(paramCursor.getString(2)));
+    d = paramCursor.getString(3);
+    e = paramCursor.getInt(5);
+    if (paramCursor.getInt(4) == 1)
     {
-      hasChildren = bool;
-      syncWindow = paramCursor.getInt(5);
-      localObject = paramCursor.getString(6);
-      if (TextUtils.isEmpty((CharSequence)localObject)) {
-        break label310;
-      }
-      localObject = Uri.parse((String)localObject);
-      label101:
-      conversationListUri = ((Uri)localObject);
+      f = bool;
+      g = paramCursor.getInt(6);
       localObject = paramCursor.getString(7);
-      if ((!hasChildren) || (TextUtils.isEmpty((CharSequence)localObject))) {
-        break label315;
+      if (TextUtils.isEmpty((CharSequence)localObject)) {
+        break label461;
       }
       localObject = Uri.parse((String)localObject);
-      label134:
-      childFoldersListUri = ((Uri)localObject);
-      unreadCount = paramCursor.getInt(8);
-      totalCount = paramCursor.getInt(9);
-      localObject = paramCursor.getString(10);
-      if (TextUtils.isEmpty((CharSequence)localObject)) {
-        break label320;
+      label124:
+      h = ((Uri)localObject);
+      localObject = paramCursor.getString(8);
+      if ((!f) || (TextUtils.isEmpty((CharSequence)localObject))) {
+        break label467;
       }
       localObject = Uri.parse((String)localObject);
-      label184:
-      refreshUri = ((Uri)localObject);
-      syncStatus = paramCursor.getInt(11);
-      lastSyncResult = paramCursor.getInt(12);
-      type = paramCursor.getInt(13);
-      iconResId = paramCursor.getLong(14);
-      bgColor = paramCursor.getString(15);
-      fgColor = paramCursor.getString(16);
-      localObject = paramCursor.getString(17);
+      label162:
+      i = ((Uri)localObject);
+      j = paramCursor.getInt(9);
+      k = paramCursor.getInt(10);
+      l = paramCursor.getInt(11);
+      localObject = paramCursor.getString(12);
       if (TextUtils.isEmpty((CharSequence)localObject)) {
-        break label325;
+        break label473;
+      }
+      localObject = Uri.parse((String)localObject);
+      label229:
+      m = ((Uri)localObject);
+      n = paramCursor.getInt(13);
+      o = paramCursor.getInt(14);
+      p = paramCursor.getInt(15);
+      q = paramCursor.getInt(16);
+      r = paramCursor.getString(18);
+      s = paramCursor.getString(19);
+      if (!TextUtils.isEmpty(r)) {
+        B = Integer.parseInt(r);
+      }
+      if (!TextUtils.isEmpty(s)) {
+        C = Integer.parseInt(s);
+      }
+      localObject = paramCursor.getString(20);
+      if (TextUtils.isEmpty((CharSequence)localObject)) {
+        break label479;
+      }
+      localObject = Uri.parse((String)localObject);
+      label374:
+      t = ((Uri)localObject);
+      u = paramCursor.getString(21);
+      w = paramCursor.getLong(22);
+      localObject = paramCursor.getString(23);
+      if (localObject != null) {
+        break label485;
       }
     }
-    label310:
-    label315:
-    label320:
-    label325:
-    for (Object localObject = Uri.parse((String)localObject);; localObject = null)
+    label461:
+    label467:
+    label473:
+    label479:
+    label485:
+    for (Object localObject = Uri.EMPTY;; localObject = Uri.parse((String)localObject))
     {
-      loadMoreUri = ((Uri)localObject);
-      hierarchicalDesc = paramCursor.getString(18);
-      parent = null;
+      v = ((Uri)localObject);
+      int i1 = paramCursor.getColumnIndex("unreadSenders");
+      if (i1 == -1) {
+        break label495;
+      }
+      x = paramCursor.getString(i1);
       return;
       bool = false;
       break;
       localObject = null;
-      break label101;
+      break label124;
       localObject = null;
-      break label134;
+      break label162;
       localObject = null;
-      break label184;
+      break label229;
+      localObject = null;
+      break label374;
     }
+    label495:
+    x = null;
   }
   
-  public Folder(Parcel paramParcel)
+  public Folder(Parcel paramParcel, ClassLoader paramClassLoader)
   {
-    id = paramParcel.readInt();
-    uri = ((Uri)paramParcel.readParcelable(null));
-    name = paramParcel.readString();
-    capabilities = paramParcel.readInt();
+    a = paramParcel.readInt();
+    b = paramParcel.readString();
+    c = new cus((Uri)paramParcel.readParcelable(paramClassLoader));
+    d = paramParcel.readString();
+    e = paramParcel.readInt();
     if (paramParcel.readInt() == 1) {}
     for (boolean bool = true;; bool = false)
     {
-      hasChildren = bool;
-      syncWindow = paramParcel.readInt();
-      conversationListUri = ((Uri)paramParcel.readParcelable(null));
-      childFoldersListUri = ((Uri)paramParcel.readParcelable(null));
-      unreadCount = paramParcel.readInt();
-      totalCount = paramParcel.readInt();
-      refreshUri = ((Uri)paramParcel.readParcelable(null));
-      syncStatus = paramParcel.readInt();
-      lastSyncResult = paramParcel.readInt();
-      type = paramParcel.readInt();
-      iconResId = paramParcel.readLong();
-      bgColor = paramParcel.readString();
-      fgColor = paramParcel.readString();
-      loadMoreUri = ((Uri)paramParcel.readParcelable(null));
-      hierarchicalDesc = paramParcel.readString();
-      parent = ((Folder)paramParcel.readParcelable(null));
+      f = bool;
+      g = paramParcel.readInt();
+      h = ((Uri)paramParcel.readParcelable(paramClassLoader));
+      i = ((Uri)paramParcel.readParcelable(paramClassLoader));
+      j = paramParcel.readInt();
+      k = paramParcel.readInt();
+      l = paramParcel.readInt();
+      m = ((Uri)paramParcel.readParcelable(paramClassLoader));
+      n = paramParcel.readInt();
+      o = paramParcel.readInt();
+      p = paramParcel.readInt();
+      q = paramParcel.readInt();
+      r = paramParcel.readString();
+      s = paramParcel.readString();
+      if (!TextUtils.isEmpty(r)) {
+        B = Integer.parseInt(r);
+      }
+      if (!TextUtils.isEmpty(s)) {
+        C = Integer.parseInt(s);
+      }
+      t = ((Uri)paramParcel.readParcelable(paramClassLoader));
+      u = paramParcel.readString();
+      v = ((Uri)paramParcel.readParcelable(paramClassLoader));
+      w = paramParcel.readLong();
+      v = ((Uri)paramParcel.readParcelable(paramClassLoader));
+      x = paramParcel.readString();
       return;
     }
   }
   
-  public static CursorLoader forSearchResults(Account paramAccount, String paramString, Context paramContext)
+  public static ccz<Folder> a(Account paramAccount, boolean paramBoolean, String paramString1, String paramString2, Context paramContext)
   {
-    if (searchUri != null)
+    if (paramBoolean)
     {
-      paramAccount = searchUri.buildUpon();
-      paramAccount.appendQueryParameter("query", paramString);
-      return new CursorLoader(paramContext, paramAccount.build(), UIProvider.FOLDERS_PROJECTION, null, null, null);
+      localObject1 = paramContext.getString(buj.dj);
+      if (TextUtils.isEmpty((CharSequence)localObject1)) {}
     }
-    return null;
+    for (Object localObject1 = Uri.parse((String)localObject1).buildUpon();; localObject1 = null)
+    {
+      Object localObject2 = localObject1;
+      if (localObject1 == null)
+      {
+        localObject2 = localObject1;
+        if (l != null) {
+          localObject2 = l.buildUpon();
+        }
+      }
+      if (localObject2 == null) {
+        return null;
+      }
+      ((Uri.Builder)localObject2).appendQueryParameter("query", paramString1);
+      ((Uri.Builder)localObject2).appendQueryParameter("query_identifier", paramString2);
+      return new ccz(paramContext, ((Uri.Builder)localObject2).build(), chh.i, y);
+    }
   }
   
-  public static Folder fromString(String paramString)
+  @Deprecated
+  public static Folder a(String paramString)
   {
     boolean bool = true;
     if (TextUtils.isEmpty(paramString)) {
       return null;
     }
     Folder localFolder = new Folder();
-    paramString = TextUtils.split(paramString, SPLITTER_REGEX);
-    if (paramString.length < 20) {
+    int i1 = paramString.indexOf("^*^");
+    if (i1 != -1)
+    {
+      i1 = Integer.valueOf(paramString.substring(0, i1)).intValue();
+      paramString = TextUtils.split(paramString, z);
+      if (paramString.length < 20)
+      {
+        cvm.e(A, "split.length %d", new Object[] { Integer.valueOf(paramString.length) });
+        return null;
+      }
+    }
+    else
+    {
       return null;
     }
-    id = Integer.parseInt(paramString[0]);
-    uri = getValidUri(paramString[1]);
-    name = paramString[2];
+    a = i1;
+    c = new cus(b(paramString[1]));
+    d = paramString[2];
     if (Integer.parseInt(paramString[3]) != 0) {}
     for (;;)
     {
-      hasChildren = bool;
-      capabilities = Integer.parseInt(paramString[4]);
-      syncWindow = Integer.parseInt(paramString[5]);
-      conversationListUri = getValidUri(paramString[6]);
-      childFoldersListUri = getValidUri(paramString[7]);
-      unreadCount = Integer.parseInt(paramString[8]);
-      totalCount = Integer.parseInt(paramString[9]);
-      refreshUri = getValidUri(paramString[10]);
-      syncStatus = Integer.parseInt(paramString[11]);
-      lastSyncResult = Integer.parseInt(paramString[12]);
-      type = Integer.parseInt(paramString[13]);
-      iconResId = Integer.parseInt(paramString[14]);
-      bgColor = paramString[15];
-      fgColor = paramString[16];
-      loadMoreUri = getValidUri(paramString[17]);
-      hierarchicalDesc = paramString[18];
-      parent = fromString(paramString[19]);
+      f = bool;
+      e = Integer.parseInt(paramString[4]);
+      g = Integer.parseInt(paramString[5]);
+      h = b(paramString[6]);
+      i = b(paramString[7]);
+      k = Integer.parseInt(paramString[8]);
+      l = Integer.parseInt(paramString[9]);
+      m = b(paramString[10]);
+      n = Integer.parseInt(paramString[11]);
+      o = Integer.parseInt(paramString[12]);
+      p = Integer.parseInt(paramString[13]);
+      q = Integer.parseInt(paramString[14]);
+      r = paramString[15];
+      s = paramString[16];
+      if (!TextUtils.isEmpty(r)) {
+        B = Integer.parseInt(r);
+      }
+      if (!TextUtils.isEmpty(s)) {
+        C = Integer.parseInt(s);
+      }
+      t = b(paramString[17]);
+      u = paramString[18];
+      v = b(paramString[19]);
+      x = null;
       return localFolder;
       bool = false;
     }
   }
   
-  public static Folder getDeficientDisplayOnlyFolder(Cursor paramCursor)
+  public static HashMap<Uri, Folder> a(List<Folder> paramList)
   {
-    Folder localFolder = newUnsafeInstance();
-    id = paramCursor.getInt(0);
-    uri = Utils.getValidUri(paramCursor.getString(1));
-    unreadCount = paramCursor.getInt(8);
-    conversationListUri = Utils.getValidUri(paramCursor.getString(6));
-    type = paramCursor.getInt(13);
-    capabilities = paramCursor.getInt(4);
-    bgColor = paramCursor.getString(15);
-    name = paramCursor.getString(2);
-    return localFolder;
+    HashMap localHashMap = new HashMap();
+    paramList = paramList.iterator();
+    while (paramList.hasNext())
+    {
+      Folder localFolder = (Folder)paramList.next();
+      localHashMap.put(c.a(), localFolder);
+    }
+    return localHashMap;
   }
   
-  public static ArrayList<Folder> getFoldersArray(String paramString)
+  public static void a(Folder paramFolder, ImageView paramImageView)
   {
-    if (TextUtils.isEmpty(paramString))
-    {
-      paramString = null;
-      return paramString;
+    if (paramImageView == null) {
+      return;
     }
-    ArrayList localArrayList = new ArrayList();
-    String[] arrayOfString = TextUtils.split(paramString, FOLDERS_SPLIT_REGEX);
-    int j = arrayOfString.length;
-    int i = 0;
+    int i1 = q;
+    if ((i1 == bub.w) && (f)) {
+      i1 = bub.af;
+    }
     for (;;)
     {
-      paramString = localArrayList;
-      if (i >= j) {
-        break;
+      if (i1 > 0)
+      {
+        Drawable localDrawable1 = paramImageView.getResources().getDrawable(i1);
+        if (localDrawable1 != null)
+        {
+          if (paramFolder.a(16384))
+          {
+            localDrawable1.mutate().setColorFilter(paramFolder.b(16777215), PorterDuff.Mode.MULTIPLY);
+            paramFolder = localDrawable1;
+          }
+          for (;;)
+          {
+            paramImageView.setImageDrawable(paramFolder);
+            return;
+            paramFolder = new StateListDrawable();
+            Drawable localDrawable2 = paramImageView.getResources().getDrawable(i1);
+            localDrawable2.mutate().setColorFilter(-16777216, PorterDuff.Mode.MULTIPLY);
+            paramFolder.addState(D, localDrawable2);
+            paramFolder.addState(StateSet.WILD_CARD, localDrawable1);
+          }
+        }
+        paramImageView.setImageDrawable(null);
+        return;
       }
-      paramString = fromString(arrayOfString[i]);
-      if (paramString != null) {
-        localArrayList.add(paramString);
-      }
-      i += 1;
+      cvm.e(cvm.a, "No icon returned for folder %s", new Object[] { paramFolder });
+      return;
     }
   }
   
-  public static String getSerializedFolderString(Collection<Folder> paramCollection)
+  public static boolean a(int paramInt1, int paramInt2)
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    int i = 0;
-    Iterator localIterator = paramCollection.iterator();
-    while (localIterator.hasNext())
-    {
-      localStringBuilder.append(toString((Folder)localIterator.next()));
-      if (i < paramCollection.size()) {
-        localStringBuilder.append("^**^");
-      }
-      i += 1;
-    }
-    return localStringBuilder.toString();
+    return (paramInt1 & paramInt2) != 0;
   }
   
-  public static final String[] getUriArray(ArrayList<Folder> paramArrayList)
+  public static boolean a(Folder paramFolder)
   {
-    if ((paramArrayList == null) || (paramArrayList.size() == 0))
-    {
-      paramArrayList = new String[0];
-      return paramArrayList;
-    }
-    String[] arrayOfString = new String[paramArrayList.size()];
-    int i = 0;
-    Iterator localIterator = paramArrayList.iterator();
-    for (;;)
-    {
-      paramArrayList = arrayOfString;
-      if (!localIterator.hasNext()) {
-        break;
-      }
-      arrayOfString[i] = nexturi.toString();
-      i += 1;
-    }
+    return (paramFolder == null) || (Uri.EMPTY.equals(v));
   }
   
-  private static Uri getValidUri(String paramString)
+  private static Uri b(String paramString)
   {
     if (TextUtils.isEmpty(paramString)) {
       return null;
@@ -299,153 +395,130 @@ public class Folder
     return Uri.parse(paramString);
   }
   
-  public static HashMap<Uri, Folder> hashMapForFolders(ArrayList<Folder> paramArrayList)
+  public static String[] b(List<Folder> paramList)
   {
-    HashMap localHashMap = new HashMap();
-    paramArrayList = paramArrayList.iterator();
-    while (paramArrayList.hasNext())
-    {
-      Folder localFolder = (Folder)paramArrayList.next();
-      localHashMap.put(uri, localFolder);
+    if ((paramList == null) || (paramList.size() == 0)) {
+      return new String[0];
     }
-    return localHashMap;
+    String[] arrayOfString = new String[paramList.size()];
+    paramList = paramList.iterator();
+    int i1 = 0;
+    while (paramList.hasNext())
+    {
+      arrayOfString[i1] = nextc.toString();
+      i1 += 1;
+    }
+    return arrayOfString;
   }
   
-  public static Folder newUnsafeInstance()
+  private final String c()
   {
-    return new Folder();
+    if ((b != null) && (b.length() > 0) && (b.charAt(0) == '^')) {
+      return b;
+    }
+    return "unknown";
   }
   
-  public static void setFolderBlockColor(Folder paramFolder, View paramView)
+  public static boolean e(int paramInt)
   {
-    if (paramView == null) {
-      return;
-    }
-    int i;
-    if (!TextUtils.isEmpty(bgColor))
-    {
-      i = 1;
-      if (i == 0) {
-        break label63;
-      }
-    }
-    label63:
-    for (int j = Integer.parseInt(bgColor);; j = 0)
-    {
-      if (j == Utils.getDefaultFolderBackgroundColor(paramView.getContext())) {
-        i = 0;
-      }
-      if (i != 0) {
-        break label68;
-      }
-      paramView.setBackgroundDrawable(null);
-      paramView.setVisibility(8);
-      return;
-      i = 0;
-      break;
-    }
-    label68:
-    paramFolder = new PaintDrawable();
-    paramFolder.getPaint().setColor(j);
-    paramView.setBackgroundDrawable(paramFolder);
-    paramView.setVisibility(0);
+    return (paramInt & 0x2000) != 0;
   }
   
-  public static void setIcon(Folder paramFolder, ImageView paramImageView)
+  public final boolean a()
   {
-    if (paramImageView == null) {
-      return;
-    }
-    long l = iconResId;
-    if (l > 0L)
-    {
-      paramImageView.setImageResource((int)l);
-      paramImageView.setVisibility(0);
-      return;
-    }
-    paramImageView.setVisibility(4);
+    return !d(1);
   }
   
-  public static String toString(Folder paramFolder)
+  public final boolean a(int paramInt)
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append(id);
-    localStringBuilder.append("^*^");
-    localStringBuilder.append(uri);
-    localStringBuilder.append("^*^");
-    localStringBuilder.append(name);
-    localStringBuilder.append("^*^");
-    int i;
+    return (e & paramInt) != 0;
+  }
+  
+  public final int b(int paramInt)
+  {
+    if (!TextUtils.isEmpty(r)) {
+      paramInt = B;
+    }
+    return paramInt;
+  }
+  
+  public final String b()
+  {
+    if (d(8192)) {
+      return "all_inboxes";
+    }
     String str;
-    if (hasChildren)
+    if (d(1024))
     {
-      i = 1;
-      localStringBuilder.append(i);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(capabilities);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(syncWindow);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(conversationListUri);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(childFoldersListUri);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(unreadCount);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(totalCount);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(refreshUri);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(syncStatus);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(lastSyncResult);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(type);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(iconResId);
-      localStringBuilder.append("^*^");
-      str = bgColor;
-      if (str == null) {
-        break label378;
+      str = String.valueOf(c());
+      if (str.length() != 0) {
+        return "inbox_section:".concat(str);
       }
-      label278:
-      localStringBuilder.append(str);
-      localStringBuilder.append("^*^");
-      str = fgColor;
-      if (str == null) {
-        break label385;
-      }
-      label301:
-      localStringBuilder.append(str);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(loadMoreUri);
-      localStringBuilder.append("^*^");
-      localStringBuilder.append(hierarchicalDesc);
-      localStringBuilder.append("^*^");
-      if (parent == null) {
-        break label392;
-      }
-      localStringBuilder.append(toString(parent));
+      return new String("inbox_section:");
     }
-    for (;;)
+    if (d(8194))
     {
-      return localStringBuilder.toString();
-      i = 0;
-      break;
-      label378:
-      str = "";
-      break label278;
-      label385:
-      str = "";
-      break label301;
-      label392:
-      localStringBuilder.append("");
+      str = String.valueOf(c());
+      if (str.length() != 0) {
+        return "inbox:".concat(str);
+      }
+      return new String("inbox:");
     }
+    if (d(4)) {
+      return "draft";
+    }
+    if (a(128)) {
+      return "important";
+    }
+    if (d(8)) {
+      return "outbox";
+    }
+    if (d(16)) {
+      return "sent";
+    }
+    if (d(64)) {
+      return "spam";
+    }
+    if (d(128)) {
+      return "starred";
+    }
+    if (d(16384)) {
+      return "flagged";
+    }
+    if (d(32)) {
+      return "trash";
+    }
+    if (d(2048)) {
+      return "unread";
+    }
+    if (d(4096)) {
+      return "search";
+    }
+    if (d(512)) {
+      return "all_mail";
+    }
+    if (a())
+    {
+      str = String.valueOf(c());
+      if (str.length() != 0) {
+        return "other:".concat(str);
+      }
+      return new String("other:");
+    }
+    return "user_folder";
   }
   
-  public int compareTo(Folder paramFolder)
+  public final int c(int paramInt)
   {
-    return name.compareToIgnoreCase(name);
+    if (!TextUtils.isEmpty(s)) {
+      paramInt = C;
+    }
+    return paramInt;
+  }
+  
+  public final boolean d(int paramInt)
+  {
+    return a(p, paramInt);
   }
   
   public int describeContents()
@@ -458,104 +531,76 @@ public class Folder
     if ((paramObject == null) || (!(paramObject instanceof Folder))) {
       return false;
     }
-    return Objects.equal(uri, uri);
-  }
-  
-  public int getBackgroundColor(int paramInt)
-  {
-    if (TextUtils.isEmpty(bgColor)) {
-      return paramInt;
-    }
-    return Integer.parseInt(bgColor);
-  }
-  
-  public int getForegroundColor(int paramInt)
-  {
-    if (TextUtils.isEmpty(fgColor)) {
-      return paramInt;
-    }
-    return Integer.parseInt(fgColor);
+    return hbc.a(c, c);
   }
   
   public int hashCode()
   {
-    if (uri == null) {
+    if (c == null) {
       return 0;
     }
-    return uri.hashCode();
+    return c.hashCode();
   }
   
-  public boolean isDraft()
+  public String toString()
   {
-    return type == 2;
-  }
-  
-  public boolean isImportantOnly()
-  {
-    return supportsCapability(1024);
-  }
-  
-  public boolean isInitialized()
-  {
-    return (name != "Uninitialized!") && (conversationListUri != null) && (!"null".equals(conversationListUri.toString()));
-  }
-  
-  public boolean isProviderFolder()
-  {
-    return type != 0;
-  }
-  
-  public boolean isSyncInProgress()
-  {
-    return UIProvider.SyncStatus.isSyncInProgress(syncStatus);
-  }
-  
-  public boolean isTrash()
-  {
-    return type == 5;
-  }
-  
-  public boolean isViewAll()
-  {
-    return type == 9;
-  }
-  
-  public boolean supportsCapability(int paramInt)
-  {
-    return (capabilities & paramInt) != 0;
-  }
-  
-  public final boolean wasSyncSuccessful()
-  {
-    return (lastSyncResult & 0xF) == 0;
+    StringBuilder localStringBuilder = new StringBuilder(super.toString());
+    localStringBuilder.append("{id=");
+    localStringBuilder.append(a);
+    if (cvm.a(A, 3))
+    {
+      localStringBuilder.append(", uri=");
+      localStringBuilder.append(c);
+      localStringBuilder.append(", name=");
+      localStringBuilder.append(d);
+      localStringBuilder.append(", count=");
+      localStringBuilder.append(l);
+    }
+    localStringBuilder.append("}");
+    return localStringBuilder.toString();
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeInt(id);
-    paramParcel.writeParcelable(uri, 0);
-    paramParcel.writeString(name);
-    paramParcel.writeInt(capabilities);
-    if (hasChildren) {}
+    paramParcel.writeInt(a);
+    paramParcel.writeString(b);
+    Uri localUri;
+    if (c != null)
+    {
+      localUri = c.b;
+      paramParcel.writeParcelable(localUri, 0);
+      paramParcel.writeString(d);
+      paramParcel.writeInt(e);
+      if (!f) {
+        break label231;
+      }
+    }
+    label231:
     for (paramInt = 1;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);
-      paramParcel.writeInt(syncWindow);
-      paramParcel.writeParcelable(conversationListUri, 0);
-      paramParcel.writeParcelable(childFoldersListUri, 0);
-      paramParcel.writeInt(unreadCount);
-      paramParcel.writeInt(totalCount);
-      paramParcel.writeParcelable(refreshUri, 0);
-      paramParcel.writeInt(syncStatus);
-      paramParcel.writeInt(lastSyncResult);
-      paramParcel.writeInt(type);
-      paramParcel.writeLong(iconResId);
-      paramParcel.writeString(bgColor);
-      paramParcel.writeString(fgColor);
-      paramParcel.writeParcelable(loadMoreUri, 0);
-      paramParcel.writeString(hierarchicalDesc);
-      paramParcel.writeParcelable(parent, 0);
+      paramParcel.writeInt(g);
+      paramParcel.writeParcelable(h, 0);
+      paramParcel.writeParcelable(i, 0);
+      paramParcel.writeInt(j);
+      paramParcel.writeInt(k);
+      paramParcel.writeInt(l);
+      paramParcel.writeParcelable(m, 0);
+      paramParcel.writeInt(n);
+      paramParcel.writeInt(o);
+      paramParcel.writeInt(p);
+      paramParcel.writeInt(q);
+      paramParcel.writeString(r);
+      paramParcel.writeString(s);
+      paramParcel.writeParcelable(t, 0);
+      paramParcel.writeString(u);
+      paramParcel.writeParcelable(v, 0);
+      paramParcel.writeLong(w);
+      paramParcel.writeParcelable(v, 0);
+      paramParcel.writeString(x);
       return;
+      localUri = null;
+      break;
     }
   }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/RecipientComposeFieldLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ComposeFieldContentWithEndButton">
+        <TextView android:id="@id/from_label" android:text="@string/from" android:contentDescription="@string/from" style="@style/ComposeHeading" />
+        <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:id="@id/spinner_from_content" android:background="@android:color/transparent" android:visibility="gone" style="@style/RecipientComposeFieldLayout">
+                <com.android.mail.compose.FromAddressSpinner android:id="@id/from_picker" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/static_from_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/from_account_name" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/ComposeFromTextViewStyle" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <View style="@style/DefaultDividerStyle" />
+</LinearLayout>

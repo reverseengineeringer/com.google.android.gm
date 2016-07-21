@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/hats_survey_promo" android:padding="@dimen/hats_promo_card_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/hats_survey_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/hats_promo_card_padding" android:text="@string/hats_survey_promo_text" style="@style/HatsText.PromoText" />
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/hats_dismiss_button" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_thanks" style="@style/HatsText.PromoButton.Dismiss.WithMargin" />
+        <Button android:id="@id/hats_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hats_survey_promo_action_text" style="@style/HatsText.PromoButton.Action" />
+    </LinearLayout>
+</LinearLayout>

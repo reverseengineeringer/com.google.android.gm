@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/status_bar_latest_event_content" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="top" android:layout_gravity="fill_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@android:dimen/notification_large_icon_height">
+        <TextView android:textSize="16.0sp" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/description_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/UndoNotificationDescriptionStyle" />
+        <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/UndoNotificationTextStyle" />
+    </LinearLayout>
+</FrameLayout>

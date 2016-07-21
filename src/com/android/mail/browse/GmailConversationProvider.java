@@ -1,9 +1,11 @@
 package com.android.mail.browse;
 
+import bwm;
+
 public class GmailConversationProvider
-  extends ConversationCursor.ConversationProvider
+  extends bwm
 {
-  protected String getAuthority()
+  protected final String a()
   {
     return "com.google.android.gm2.conversation.provider";
   }

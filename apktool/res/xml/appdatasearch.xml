@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppDataSearch xmlns:search="http://schemas.android.com/apk/res-auto">
+    <Corpus search:corpusId="messages" search:corpusVersion="1" search:contentProviderUri="content://gmail-appindexing/appdatasearch" search:trimmable="true" search:schemaOrgType="EmailMessage" search:semanticallySearchable="true" search:perAccountTemplate="true">
+        <Section search:sectionId="from_address" search:sectionFormat="rfc822" search:schemaOrgProperty="author" />
+        <Section search:sectionId="to_addresses" search:sectionFormat="rfc822" search:schemaOrgProperty="recipient" />
+        <Section search:sectionId="subject" search:schemaOrgProperty="about" />
+        <Section search:sectionId="body" search:sectionFormat="html" search:schemaOrgProperty="text" />
+        <Section search:sectionId="conversation" search:noIndex="true" />
+        <Section search:sectionId="message_id" search:noIndex="true" />
+        <Section search:sectionId="permalink" search:schemaOrgProperty="url" />
+        <Section search:sectionId="date" search:noIndex="true" search:schemaOrgProperty="receivedTime" />
+        <IMECorpus search:sourceClass="email" search:userInputTag="^f" search:toAddressesSection="to_addresses">
+            <IMESection search:sectionId="from_address" />
+            <IMESection search:sectionId="to_addresses" />
+            <IMESection search:sectionId="subject" />
+            <IMESection search:sectionId="body" />
+        </IMECorpus>
+    </Corpus>
+</AppDataSearch>

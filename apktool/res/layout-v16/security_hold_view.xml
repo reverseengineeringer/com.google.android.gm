@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/security_hold_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/security_hold_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_warning_56dp" />
+    <TextView android:textSize="@dimen/security_hold_view_text_size" android:textColor="#ff212121" android:gravity="center" android:id="@id/security_hold_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:maxWidth="@dimen/security_hold_text_width" android:textAllCaps="true" android:fontFamily="sans-serif-light" />
+    <TextView android:textSize="@dimen/security_hold_view_text_size" android:textColor="@color/text_color_blue" android:gravity="center" android:id="@id/security_hold_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:text="@string/update_security_text" android:fontFamily="sans-serif-light" />
+</LinearLayout>

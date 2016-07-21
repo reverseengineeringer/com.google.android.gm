@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/icr_agenda_time" android:layout_width="@dimen/inline_calendar_rsvp_agenda_time_width" android:layout_height="wrap_content" style="@style/Rsvp.Agenda.Time" />
+    <TextView android:id="@id/icr_agenda_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Rsvp.Agenda" />
+</LinearLayout>

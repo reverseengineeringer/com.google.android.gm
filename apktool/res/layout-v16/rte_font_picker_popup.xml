@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:gravity="start" android:orientation="vertical" android:id="@id/font_picker" style="@style/PopupWindowContentView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/font_serif" android:text="@string/rte_font_picker_button_serif" android:contentDescription="@string/rte_font_picker_button_serif" android:fontFamily="serif" style="@style/FontPickerRadioButton" />
+    <RadioButton android:id="@id/font_condensed" android:text="@string/rte_font_picker_button_condensed" android:contentDescription="@string/rte_font_picker_button_condensed" android:fontFamily="sans-serif-condensed" style="@style/FontPickerRadioButton" />
+    <RadioButton android:id="@id/font_default" android:text="@string/rte_font_picker_button_default" android:contentDescription="@string/rte_font_picker_button_default" android:fontFamily="sans-serif" style="@style/FontPickerRadioButton" />
+</RadioGroup>

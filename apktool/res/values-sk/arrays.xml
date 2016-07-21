@@ -2,41 +2,88 @@
 <resources>
     <string-array name="compose_modes">
         <item>Odpovedať</item>
-        <item>Odpov. všetkým</item>
-        <item>Poslať ďalej</item>
+        <item>Odp. všetkým</item>
+        <item>Preposlať</item>
     </string-array>
     <string-array name="sync_status">
         <item>Úspech</item>
-        <item>Žiadne pripojenie.</item>
-        <item>Nepodarilo sa prihlásiť.</item>
-        <item>Chyba zabezpečenia.</item>
-        <item>Nepodarilo sa synchronizovať.</item>
+        <item>Bez pripojenia</item>
+        <item>Nepodarilo sa prihlásiť</item>
+        <item>Chyba zabezpečenia</item>
+        <item>Nepodarilo sa synchronizovať</item>
+        <item>Chyba servera</item>
         <item>Interná chyba</item>
     </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Systém</item>
-        <item>Často používané</item>
-        <item>Všetky menovky</item>
-    </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Novšie</item>
-        <item>Staršie</item>
+        <item>Novšia konverzácia</item>
+        <item>Staršia konverzácia</item>
         <item>Zoznam konverzácií</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
-        <item>Zobraziť novšie konverzácie po archivácii alebo odstránení</item>
-        <item>Zobraziť staršie konverzácie po archivácii alebo odstránení</item>
-        <item>Zobraziť zoznam konverzácií po archivácii alebo odstránení</item>
+        <item>Po odstránení alebo archivácii zobraziť novšiu konverzáciu</item>
+        <item>Po odstránení alebo archivácii zobraziť staršiu konverzáciu</item>
+        <item>Po archivácii alebo odstránení zobraziť zoznam konverzácií</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Žiadny účinok</item>
-        <item>Archivuje alebo odstráni</item>
-        <item>Vždy odstráni</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archivovať</item>
+        <item>Odstrániť</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Žiadny účinok</item>
-        <item>Doručená pošta: archivuje konverzáciu. Bežné menovky: odstráni aktuálnu menovku. Systémové menovky ako sú Všetka pošta alebo Odoslané: odstráni konverzáciu.</item>
-        <item>Vždy odstráni konverzáciu</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archivovať</item>
+        <item>Odstrániť</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Vysoká</item>
+        <item>Normálna</item>
+        <item>Nízka</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Nezmeškajte už žiaden let</item>
+        <item>Nezmeškajte už žiaden let</item>
+        <item>Chcete tento let pridať do kalendára?</item>
+        <item>Pridajte si rezervácie do Kalendára Google</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Kalendár Google automaticky pridáva lety a iné rezervácie do vášho kalendára.</item>
+        <item>Kalendár Google automaticky pridáva lety a iné rezervácie do vášho kalendára.</item>
+        <item>Udalosti z Gmailu sa môžu automaticky pridávať do aplikácie Kalendár Google.</item>
+        <item>Pridávajte automaticky rezervácie letov, hotelov a rezervácie v reštauráciách.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Chcete pridať túto rezerváciu do Kalendára Google?</item>
+        <item>Chcete mať rezervácie automaticky v Kalendári?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>S aplikáciou Kalendár Google sa udalosti z Gmailu automaticky pridávajú do kalendára.</item>
+        <item>Kalendár Google automaticky pridáva rezervácie hotelov a ďalšie rezervácie z vašej pošty.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Dostávajte včasné upozornenia na rezervácie v reštauráciách</item>
+        <item>Chcete pridať túto rezerváciu do Kalendára Google?</item>
+        <item>Pridávajte rezervácie automaticky do Kalendára Google</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Kalendár Google automaticky pridáva rezervácie v reštauráciách a iné rezervácie do vášho kalendára.</item>
+        <item>Udalosti z Gmailu sa môžu automaticky pridávať do vášho kalendára.</item>
+        <item>Pridávajte automaticky rezervácie letov, hotelov a rezervácie v reštauráciách.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Dostávajte včasné upozornenia pred udalosťou</item>
+        <item>Chcete pridať túto udalosť do Kalendára Google?</item>
+        <item>Nezmeškajte žiadnu udalosť</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Kalendár Google vám do kalendára automaticky pridáva udalosti a rezervácie podobné ako v tejto správe.</item>
+        <item>Udalosti z Gmailu sa môžu automaticky pridávať do vášho kalendára.</item>
+        <item>Pridávajte udalosti a iné rezervácie automaticky do Kalendára Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Sledujte všetky rezervácie na jednom mieste</item>
+        <item>Chcete pridať tieto rezervácie do Kalendára Google?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Pridávajte rezervácie letov, hotelov a rezervácie v reštauráciách automaticky do Kalendára Google.</item>
+        <item>Udalosti z Gmailu sa môžu automaticky pridávať do vášho kalendára.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Veľmi malé</item>
@@ -51,15 +98,5 @@
         <item>Zobraziť obsah správ písmom normálnej veľkosti</item>
         <item>Zobraziť obsah správ veľkým písmom</item>
         <item>Zobraziť obsah správ veľmi veľkým písmom</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Vždy zobrazovať akcie správ v hornej časti obrazovky</item>
-        <item>Zobrazovať akcie správ len v hornej časti obrazovky, ktorá je otočená na výšku</item>
-        <item>Nezobrazovať akcie správ mimo hlavičky správy</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Vždy zobrazovať</item>
-        <item>Zobraziť len na výšku</item>
-        <item>Nezobrazovať</item>
     </string-array>
 </resources>

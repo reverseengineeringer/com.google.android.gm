@@ -3,24 +3,20 @@
     <string-array name="compose_modes">
         <item>Odgovori</item>
         <item>Odgovori vsem</item>
-        <item>Posreduj</item>
+        <item>Naprej</item>
     </string-array>
     <string-array name="sync_status">
         <item>Uspešno</item>
-        <item>Ni povezave.</item>
-        <item>Prijava ni mogoča.</item>
-        <item>Varnostna napaka.</item>
-        <item>Sinhroniziranje ni mogoče.</item>
+        <item>Ni povezave</item>
+        <item>Prijava ni uspela</item>
+        <item>Varnostna napaka</item>
+        <item>Sinhroniziranje ni mogoče</item>
+        <item>Napaka strežnika</item>
         <item>Notranja napaka</item>
     </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistem</item>
-        <item>Pogosto uporab.</item>
-        <item>Vse oznake</item>
-    </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Novejše</item>
-        <item>Starejše</item>
+        <item>Novejši</item>
+        <item>Starejši</item>
         <item>Seznam pogovorov</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
@@ -28,22 +24,73 @@
         <item>Pokaži starejši pogovor po arhiviranju ali brisanju</item>
         <item>Pokaži seznam pogovorov po arhiviranju ali brisanju</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Nima učinka</item>
-        <item>Arhivira ali izbriše</item>
-        <item>Vedno izbriše</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arhiviraj</item>
+        <item>Izbriši</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Nima učinka</item>
-        <item>Mapa Prejeto: arhivira pogovor. Redne oznake: odstrani trenutno oznako. Sistemske oznake, na primer Vsa pošta ali Poslano: izbriše pogovor.</item>
-        <item>Vedno izbriše pogovor</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arhiviranje</item>
+        <item>Brisanje</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Visoka</item>
+        <item>Običajna</item>
+        <item>Nizka</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Nikoli več ne zamudite leta.</item>
+        <item>Nikoli več ne zamudite leta.</item>
+        <item>Želite dodati ta let v koledar?</item>
+        <item>Prejemajte rezervacije v Google Koledar.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Koledar samodejno doda lete in druge rezervacije v koledar.</item>
+        <item>Google Koledar samodejno doda lete in druge rezervacije v koledar.</item>
+        <item>Aplikacija Google Koledar samodejno doda dogodke iz Gmaila.</item>
+        <item>Samodejno prejemajte lete ter rezervacije hotelskih sob in miz v restavraciji v koledar.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Želite dodati to rezervacijo v Google Koledar?</item>
+        <item>Želite, da se rezervacije samodejno dodajajo v Koledar?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Aplikacija Google Koledar samodejno doda dogodke iz Gmaila v koledar.</item>
+        <item>Google Koledar samodejno doda rezervacije hotelskih sob in druge rezervacije iz vaše e-pošte.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Pravočasno prejmite obvestilo o obroku.</item>
+        <item>Želite dodati to rezervacijo v Google Koledar?</item>
+        <item>Samodejno prejemajte rezervacije v Google Koledar.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Koledar samodejno doda rezervacije mize v restavraciji in druge rezervacije v koledar.</item>
+        <item>Dogodki iz Gmaila se lahko samodejno dodajajo v koledar.</item>
+        <item>Samodejno prejemajte lete ter rezervacije hotelskih sob in miz v restavraciji v koledar.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Prejmite pravočasno obvestilo pred tem dogodkom.</item>
+        <item>Želite dodati ta dogodek v Google Koledar?</item>
+        <item>Ne zamudite dogodka.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Koledar samodejno doda dogodke in rezervacije, npr. iz tega e-poštnega sporočila, v koledar.</item>
+        <item>Dogodki iz Gmaila se lahko samodejno dodajajo v koledar.</item>
+        <item>Samodejno prejemajte dogodke in druge rezervacije v Google Koledar.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Spremljajte svoje rezervacije na enem mestu.</item>
+        <item>Želite dodati te rezervacije v Google Koledar?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Samodejno prejemajte lete ter rezervacije hotelskih sob in miz v restavraciji v Google Koledar.</item>
+        <item>Dogodki iz Gmaila se lahko samodejno dodajajo v koledar.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Drobna</item>
-        <item>Majhna</item>
+        <item>Mala</item>
         <item>Običajna</item>
         <item>Velika</item>
-        <item>Velikanska</item>
+        <item>Zelo velika</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Prikaži vsebino sporočil z drobno pisavo</item>
@@ -51,15 +98,5 @@
         <item>Prikaži vsebino sporočil v običajni pisavi</item>
         <item>Prikaži vsebino sporočil z veliko pisavo</item>
         <item>Prikaži vsebino sporočil z zelo veliko pisavo</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Na vrhu zaslona vedno pokaži dejanja sporočil</item>
-        <item>Dejanja sporočil pokaži na vrhu zaslona samo v pokončnem načinu</item>
-        <item>Ne prikaži dejanj za sporočila zunaj glave sporočila</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Vedno pokaži</item>
-        <item>Pokaži samo v pokončnem načinu</item>
-        <item>Ne pokaži</item>
     </string-array>
 </resources>

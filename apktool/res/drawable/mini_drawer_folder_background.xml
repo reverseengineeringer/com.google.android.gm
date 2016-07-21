@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <shape>
+            <corners android:radius="2.0dip" />
+            <solid android:color="@color/mini_drawer_activated_background_color" />
+        </shape>
+    </item>
+    <item android:drawable="@android:color/transparent" />
+</selector>

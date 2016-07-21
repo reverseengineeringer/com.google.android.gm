@@ -3,20 +3,16 @@
     <string-array name="compose_modes">
         <item>Svar</item>
         <item>Svar alle</item>
-        <item>Fremover</item>
+        <item>Videresend</item>
     </string-array>
     <string-array name="sync_status">
         <item>Fullført</item>
-        <item>Ingen tilkobling.</item>
-        <item>Påloggingen mislyktes.</item>
-        <item>Sikkerhetsfeil.</item>
-        <item>Synkroniseringen mislyktes.</item>
+        <item>Ingen forbindelse.</item>
+        <item>Kan ikke logge på</item>
+        <item>Sikkerhetsfeil</item>
+        <item>Kan ikke synkronisere</item>
+        <item>Tjenerfeil</item>
         <item>Intern feil</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>System</item>
-        <item>Ofte brukt</item>
-        <item>Alle etikettene</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Nyere</item>
@@ -28,38 +24,79 @@
         <item>Vis eldre samtaler etter at du har arkivert eller slettet</item>
         <item>Vis samtaleliste etter at du har arkivert eller slettet</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Er ikke aktivert</item>
-        <item>Arkiverer eller sletter</item>
-        <item>Sletter alltid</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arkivér</item>
+        <item>Slett</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Er ikke aktivert</item>
-        <item>Innboks: arkivér samtale. Vanlige etiketter: fjern gjeldende etikett. Systemetiketter (som All e-post eller Sendt): slett samtalen.</item>
-        <item>Sletter alltid samtalen</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arkivér</item>
+        <item>Slett</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Høy</item>
+        <item>Normal</item>
+        <item>Lav</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Kom deg med på flyet hver gang.</item>
+        <item>Kom deg med på flyet hver gang.</item>
+        <item>Vil du legge til denne flyvningen i kalenderen din?</item>
+        <item>Se flybestillinger på Google-kalenderen din.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Kalender legger automagisk til flyvninger og andre bestillinger i kalenderen din.</item>
+        <item>Google Kalender legger automatisk til flyvninger og andre bestillinger i kalenderen din.</item>
+        <item>Aktiviteter fra Gmail kan legges til automatisk med Google Kalender-appen.</item>
+        <item>Få fly-, rom- og bordbestillinger lagt til automatisk.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Vil du legge til denne bestillingen i Google Kalender?</item>
+        <item>Vil du få bestillinger lagt til automatisk i kalenderen din?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Med Google Kalender-appen blir aktiviteter fra Gmail automatisk lagt til i kalenderen din.</item>
+        <item>Google Kalender legger automatisk til hoteller og andre bestillinger fra e-postene dine.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Få et varsel om bordbestillingen din til riktig tid.</item>
+        <item>Vil du legge til denne bestillingen i Google Kalender?</item>
+        <item>Få bestillinger automatisk på Google-kalenderen din.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Kalender legger automatisk til bordbestillinger og andre bestillinger i kalenderen din.</item>
+        <item>Aktiviteter fra Gmail kan legges til automatisk i kalenderen din.</item>
+        <item>Få fly-, rom- og bordbestillinger lagt til automatisk.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Få et varsel om denne aktiviteten til riktig tid.</item>
+        <item>Vil du legge til denne aktiviteten i Google Kalender?</item>
+        <item>Ikke gå glipp av aktiviteten din.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Kalender legger automatisk til aktiviteter og bestillinger, som den i denne e-posten, i kalenderen din.</item>
+        <item>Aktiviteter fra Gmail kan legges til automatisk i kalenderen din.</item>
+        <item>Få aktiviteter og bestillinger lagt til automatisk med Google Kalender.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Hold styr på bestillingene dine på ett sted.</item>
+        <item>Vil du legge til disse bestillingene i Google Kalender?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Få fly-, rom- og bordbestillinger automatisk lagt til i Google-kalenderen din.</item>
+        <item>Aktiviteter fra Gmail kan legges til automatisk i kalenderen din.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Bitteliten</item>
         <item>Liten</item>
-        <item>Normal</item>
+        <item>Vanlig</item>
         <item>Stor</item>
         <item>Kjempestor</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Vis innholdet i e-poster med bitteliten skriftstørrelse</item>
         <item>Vis innholdet i e-poster med liten skriftstørrelse</item>
-        <item>Vis innholdet i meldinger med normal skriftstørrelse</item>
+        <item>Vis innholdet i e-poster med vanlig skriftstørrelse</item>
         <item>Vis innholdet i e-poster med stor skriftstørrelse</item>
         <item>Vis innholdet i e-poster med kjempestor skriftstørrelse</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Vis alltid meldingshandlinger øverst på skjermen</item>
-        <item>Vis kun meldingalternativer øverst på skjermen når rotert til stående</item>
-        <item>Ikke vis e-postalternativer utenfor e-postoverskriften</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Vis alltid</item>
-        <item>Kun stående visning</item>
-        <item>Ikke vis</item>
     </string-array>
 </resources>

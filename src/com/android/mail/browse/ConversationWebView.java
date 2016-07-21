@@ -8,38 +8,34 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
-import android.webkit.WebView;
-import com.android.mail.utils.LogTag;
-import com.android.mail.utils.LogUtils;
+import android.webkit.WebSettings;
+import bud;
+import bxy;
+import byl;
+import bzo;
+import bzp;
+import cvl;
+import cvm;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 public class ConversationWebView
-  extends WebView
-  implements ScrollNotifier
+  extends byl
+  implements bzo
 {
-  private static final String LOG_TAG = ;
-  private Bitmap mBitmap;
-  private int mCachedContentHeight;
-  private Canvas mCanvas;
-  private final float mDensity;
-  private boolean mHandlingTouch;
-  private final Runnable mNotifyPageRenderedInHardwareLayer = new Runnable()
-  {
-    public void run()
-    {
-      ConversationWebView.access$002(ConversationWebView.this, false);
-      ConversationWebView.this.destroyBitmap();
-      invalidate();
-    }
-  };
-  private final Set<ScrollNotifier.ScrollListener> mScrollListeners = new CopyOnWriteArraySet();
-  private ContentSizeChangeListener mSizeChangeListener;
-  private boolean mUseSoftwareLayer;
-  private final int mViewportWidth;
-  private boolean mVisible;
-  private final int mWebviewInitialDelay;
+  private static final String m = cvl.a;
+  public final int a;
+  public boolean b;
+  public boolean c;
+  public final Runnable d = new bxy(this);
+  public final int e;
+  boolean f;
+  private Bitmap h;
+  private Canvas i;
+  private final float j;
+  private final Set<bzp> k = new CopyOnWriteArraySet();
+  private boolean l;
   
   public ConversationWebView(Context paramContext)
   {
@@ -50,109 +46,72 @@ public class ConversationWebView
   {
     super(paramContext, paramAttributeSet);
     paramContext = getResources();
-    mViewportWidth = paramContext.getInteger(2131361829);
-    mWebviewInitialDelay = paramContext.getInteger(2131361836);
-    mDensity = getDisplayMetricsdensity;
+    e = paramContext.getInteger(bud.g);
+    a = paramContext.getInteger(bud.J);
+    j = getDisplayMetricsdensity;
   }
   
-  private void destroyBitmap()
+  public final int a(int paramInt)
   {
-    if (mBitmap != null)
+    return (int)((getWidth() - paramInt * 2) / j);
+  }
+  
+  public final void a()
+  {
+    if (h != null)
     {
-      mBitmap.recycle();
-      mBitmap = null;
-      mCanvas = null;
+      h = null;
+      i = null;
     }
   }
   
-  public void addScrollListener(ScrollNotifier.ScrollListener paramScrollListener)
+  public final void a(bzp parambzp)
   {
-    mScrollListeners.add(paramScrollListener);
+    k.add(parambzp);
   }
   
-  public int computeHorizontalScrollExtent()
+  public final float b()
   {
-    return super.computeHorizontalScrollExtent();
+    if (getSettings().getLoadWithOverviewMode()) {
+      return getWidth() / e;
+    }
+    return j;
   }
   
-  public int computeHorizontalScrollOffset()
+  public final int b(int paramInt)
   {
-    return super.computeHorizontalScrollOffset();
+    return (int)(paramInt / b());
   }
   
-  public int computeHorizontalScrollRange()
+  public final int c(int paramInt)
   {
-    return super.computeHorizontalScrollRange();
-  }
-  
-  public int computeVerticalScrollExtent()
-  {
-    return super.computeVerticalScrollExtent();
-  }
-  
-  public int computeVerticalScrollOffset()
-  {
-    return super.computeVerticalScrollOffset();
-  }
-  
-  public int computeVerticalScrollRange()
-  {
-    return super.computeVerticalScrollRange();
+    return (int)Math.ceil(paramInt / b() - b(paramInt));
   }
   
   public void destroy()
   {
-    destroyBitmap();
-    removeCallbacks(mNotifyPageRenderedInHardwareLayer);
+    a();
+    removeCallbacks(d);
     super.destroy();
-  }
-  
-  public float getInitialScale()
-  {
-    return mDensity;
-  }
-  
-  public int getViewportWidth()
-  {
-    return mViewportWidth;
-  }
-  
-  public void invalidate()
-  {
-    super.invalidate();
-    if (mSizeChangeListener != null)
-    {
-      int i = getContentHeight();
-      if (i != mCachedContentHeight)
-      {
-        mCachedContentHeight = i;
-        mSizeChangeListener.onHeightChange(i);
-      }
-    }
-  }
-  
-  public boolean isHandlingTouch()
-  {
-    return mHandlingTouch;
   }
   
   public void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    if ((!mUseSoftwareLayer) || (!mVisible) || (getWidth() <= 0) || (getHeight() <= 0) || (mBitmap == null)) {}
+    if ((!b) || (!c) || (getWidth() <= 0) || (getHeight() <= 0) || (h == null)) {}
     try
     {
-      mBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.RGB_565);
-      mCanvas = new Canvas(mBitmap);
-      if (mBitmap != null)
+      h = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.RGB_565);
+      i = new Canvas(h);
+      if (h != null)
       {
-        int i = getScrollX();
-        int j = getScrollY();
-        mCanvas.save();
-        mCanvas.translate(-i, -j);
-        super.onDraw(mCanvas);
-        mCanvas.restore();
-        paramCanvas.drawBitmap(mBitmap, i, j, null);
+        int n = getScrollX();
+        int i1 = getScrollY();
+        i.save();
+        i.translate(-n, -i1);
+        super.onDraw(i);
+        i.restore();
+        paramCanvas.drawBitmap(h, n, i1, null);
       }
       return;
     }
@@ -160,74 +119,42 @@ public class ConversationWebView
     {
       for (;;)
       {
-        mBitmap = null;
-        mCanvas = null;
-        mUseSoftwareLayer = false;
+        h = null;
+        i = null;
+        b = false;
       }
-    }
-  }
-  
-  public void onRenderComplete()
-  {
-    if (mUseSoftwareLayer) {
-      postDelayed(mNotifyPageRenderedInHardwareLayer, mWebviewInitialDelay);
     }
   }
   
   protected void onScrollChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
-    Iterator localIterator = mScrollListeners.iterator();
+    Iterator localIterator = k.iterator();
     while (localIterator.hasNext()) {
-      ((ScrollNotifier.ScrollListener)localIterator.next()).onNotifierScroll(paramInt1, paramInt2);
+      ((bzp)localIterator.next()).a(paramInt2);
     }
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
+    boolean bool = false;
     switch (paramMotionEvent.getActionMasked())
     {
     }
     for (;;)
     {
-      return super.onTouchEvent(paramMotionEvent);
-      mHandlingTouch = true;
+      if ((l) || (super.onTouchEvent(paramMotionEvent))) {
+        bool = true;
+      }
+      return bool;
+      f = true;
       continue;
-      LogUtils.d(LOG_TAG, "WebView disabling intercepts: POINTER_DOWN", new Object[0]);
+      cvm.b(m, "WebView disabling intercepts: POINTER_DOWN", new Object[0]);
       requestDisallowInterceptTouchEvent(true);
       continue;
-      mHandlingTouch = false;
+      f = false;
+      l = false;
     }
-  }
-  
-  public void onUserVisibilityChanged(boolean paramBoolean)
-  {
-    mVisible = paramBoolean;
-  }
-  
-  public int screenPxToWebPx(int paramInt)
-  {
-    return (int)(paramInt / getInitialScale());
-  }
-  
-  public float screenPxToWebPxError(int paramInt)
-  {
-    return paramInt / getInitialScale() - screenPxToWebPx(paramInt);
-  }
-  
-  public void setContentSizeChangeListener(ContentSizeChangeListener paramContentSizeChangeListener)
-  {
-    mSizeChangeListener = paramContentSizeChangeListener;
-  }
-  
-  public void setUseSoftwareLayer(boolean paramBoolean)
-  {
-    mUseSoftwareLayer = paramBoolean;
-  }
-  
-  public static abstract interface ContentSizeChangeListener
-  {
-    public abstract void onHeightChange(int paramInt);
   }
 }
 

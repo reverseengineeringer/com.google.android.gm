@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" android:state_pressed="false" android:drawable="@drawable/rte_swatch_button_tinted_red_off_inset" />
+    <item android:state_checked="true" android:state_pressed="false" android:drawable="@drawable/rte_swatch_button_tinted_red_on_inset" />
+    <item android:state_checked="false" android:state_pressed="true" android:drawable="@drawable/rte_swatch_button_tinted_red_off_inset_pressed" />
+    <item android:state_checked="true" android:state_pressed="true" android:drawable="@drawable/rte_swatch_button_tinted_red_on_inset_pressed" />
+</selector>

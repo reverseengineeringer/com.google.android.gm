@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.browse.calendar.RsvpHeaderView android:orientation="vertical" android:paddingLeft="@dimen/inline_calendar_rsvp_padding" android:paddingTop="20.0dip" android:paddingRight="@dimen/inline_calendar_rsvp_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:foreground="?selectableItemBackground" app:cardBackgroundColor="@color/inline_calendar_rsvp_header_bg">
+        <android.support.v7.widget.GridLayout android:id="@id/icr_header_card" android:layout_width="fill_parent" android:layout_height="wrap_content" app:rowCount="4" app:columnCount="4">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/icr_date_block" android:background="@color/inline_calendar_rsvp_date_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="64.0dip" app:layout_row="0" app:layout_rowSpan="4" app:layout_column="0" app:layout_gravity="fill_vertical">
+                <TextView android:textSize="12.0sp" android:textColor="@color/inline_calendar_rsvp_date_color" android:id="@id/icr_month_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/inline_calendar_rsvp_header_vertical_margin" />
+                <TextView android:textSize="30.0sp" android:textColor="@color/inline_calendar_rsvp_date_color" android:id="@id/icr_day_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/inline_calendar_rsvp_header_vertical_margin" />
+            </LinearLayout>
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_color_black" android:id="@id/icr_subject_title" android:paddingLeft="@dimen/inline_calendar_rsvp_action_padding" android:paddingRight="@dimen/inline_calendar_rsvp_action_padding" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/inline_calendar_rsvp_header_vertical_margin" android:layout_marginBottom="@dimen/inline_calendar_rsvp_header_vertical_padding" android:singleLine="true" app:layout_row="0" app:layout_column="1" app:layout_columnSpan="3" app:layout_columnWeight="1.0" app:layout_gravity="fill" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_color_grey" android:id="@id/icr_subtitle" android:paddingLeft="@dimen/inline_calendar_rsvp_action_padding" android:paddingRight="@dimen/inline_calendar_rsvp_action_padding" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="@dimen/inline_calendar_rsvp_header_vertical_margin" app:layout_row="1" app:layout_column="1" app:layout_columnSpan="3" app:layout_columnWeight="1.0" app:layout_gravity="fill" />
+            <TextView android:id="@id/icr_add" android:text="@string/icr_add" app:layout_row="2" app:layout_column="1" style="@style/Rsvp.ActionButton.Styled" />
+            <TextView android:id="@id/icr_action_accept" android:text="@string/message_invite_accept" app:layout_row="3" app:layout_column="1" style="@style/Rsvp.ActionButton.Styled" />
+            <TextView android:id="@id/icr_action_tentative" android:text="@string/message_invite_tentative" app:layout_row="3" app:layout_column="2" style="@style/Rsvp.ActionButton.Styled" />
+            <TextView android:id="@id/icr_action_decline" android:text="@string/message_invite_decline" app:layout_row="3" app:layout_column="3" style="@style/Rsvp.ActionButton.Styled.Decline" />
+        </android.support.v7.widget.GridLayout>
+    </android.support.v7.widget.CardView>
+    <LinearLayout android:id="@id/icr_time" style="@style/Rsvp.Item">
+        <ImageView android:src="@drawable/quantum_ic_schedule_grey600_24" android:contentDescription="@string/icr_time_description" style="@style/Rsvp.Icon" />
+        <TextView android:id="@id/icr_time_text" style="@style/Rsvp.Body.Text" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/icr_location" style="@style/Rsvp.Item">
+        <ImageView android:src="@drawable/quantum_ic_location_on_grey600_24" android:contentDescription="@string/icr_location_description" style="@style/Rsvp.Icon" />
+        <TextView android:id="@id/icr_location_text" style="@style/Rsvp.Body.Text" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/icr_attendees" style="@style/Rsvp.Item">
+        <ImageView android:src="@drawable/quantum_ic_people_grey600_24" android:contentDescription="@string/icr_attendees_description" style="@style/Rsvp.Icon" />
+        <TextView android:ellipsize="end" android:id="@id/icr_attendees_text" android:maxLines="3" style="@style/Rsvp.Body.Text" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/icr_agenda" style="@style/Rsvp.Item">
+        <ImageView android:src="@drawable/quantum_ic_timely_grey600_24" android:contentDescription="@string/icr_agenda_description" style="@style/Rsvp.Icon" />
+        <com.android.mail.browse.calendar.RsvpAgendaView android:orientation="vertical" android:id="@id/icr_agenda_text" style="@style/Rsvp.Body" />
+    </LinearLayout>
+</com.android.mail.browse.calendar.RsvpHeaderView>

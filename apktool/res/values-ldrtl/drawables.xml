@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="ic_prev">@drawable/ic_next_24dp</item>
+</resources>

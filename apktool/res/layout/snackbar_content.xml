@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/snack_bar_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toastbar_singleline_view" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/snackbar_multiline" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SnackBar">
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/multiline_description_text" android:paddingTop="@dimen/snack_bar_multiline_margin_vertical" android:paddingBottom="@dimen/snack_bar_multiline_margin_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/SnackBar.Text" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/multiline_action_text" android:paddingTop="@dimen/snack_bar_multiline_margin_vertical" android:paddingBottom="@dimen/snack_bar_multiline_margin_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SnackBar.Text.Action" />
+    </LinearLayout>
+</LinearLayout>

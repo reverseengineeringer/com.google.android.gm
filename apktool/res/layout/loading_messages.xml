@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/loading_view" android:background="@color/loading_messages_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/loading_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_empty_mail_big" />
+    <TextView android:textSize="@dimen/empty_view_text_size" android:textColor="#80000000" android:id="@id/loading_text" android:layout_width="@dimen/empty_view_text_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/empty_view_space" android:text="@string/getting_messages" />
+    <com.android.mail.ui.ButteryProgressBar android:layout_width="@dimen/empty_view_text_width" android:layout_height="@dimen/progress_bar_height" android:layout_marginTop="@dimen/empty_view_space" />
+</LinearLayout>

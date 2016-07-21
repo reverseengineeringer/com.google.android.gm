@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="done_label">Гатова</string>
+    <string name="hour_picker_description">Кругавы паўзунок гадзiннай стрэлкi</string>
+    <string name="minute_picker_description">Кругавы паўзунок хвiлiннай стрэлкi</string>
+    <string name="select_hours">Выберыце гадзіны</string>
+    <string name="select_minutes">Выберыце хвіліны</string>
+    <string name="day_picker_description">Сетка дзён памесячна</string>
+    <string name="year_picker_description">Спiс гадоў</string>
+    <string name="select_day">Выберыце месяц і дзень</string>
+    <string name="select_year">Выберыце год</string>
+    <string name="item_is_selected">Выбраны элемент %1$s</string>
+    <string name="deleted_key">Выдалена: %1$s</string>
+    <string name="suw_next_button_label">Далей</string>
+    <string name="suw_back_button_label">Назад</string>
+    <string name="suw_more_button_label">Яшчэ</string>
+    <string name="photo_view_count" formatted="false">%d з %d</string>
+    <string name="retry">Паўтарыць спробу</string>
+    <string name="failed">Не атрымалася загрузіць выяву</string>
+    <string name="titles" formatted="false">%s, %s</string>
+    <string name="more_string">+%1$d</string>
+    <string name="copy_email">Скапіраваць адрас электроннай пошты</string>
+    <string name="copy_number">Скапіраваць нумар тэлефона</string>
+    <string name="action_label">Вярнуцца</string>
+    <string name="accessbility_suggestion_dropdown_opened">Прапановы кантактаў адкрыты</string>
+    <string name="dropdown_delete_button_desc">Выдаліць %s з атрымальнікаў</string>
+    <string name="chips_action_copy">Капіраваць</string>
+    <string name="chips_action_cancel">Скасаваць</string>
+    <string name="add_account">Дадаць уліковы запіс</string>
+    <string name="manage_accounts">Кіраваць уліковымі запісамі</string>
+    <string name="sign_in">Увайсцi</string>
+    <string name="show_account_list">Паказаць уліковыя запісы</string>
+    <string name="hide_account_list">Схаваць уліковыя запісы</string>
+    <string name="account_item">Пераключыцца на %1$s</string>
+    <string name="selected_account">Вы ўвайшлі ў %1$s</string>
+    <string name="account_list">Спіс уліковых запісаў</string>
+</resources>

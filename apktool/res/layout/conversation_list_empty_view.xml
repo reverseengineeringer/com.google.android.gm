@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.ConversationListEmptyView android:gravity="center" android:orientation="vertical" android:id="@id/empty_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/empty_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:gravity="center" android:id="@id/empty_text" android:layout_width="@dimen/empty_view_text_width" android:layout_height="wrap_content" style="@style/EmptyConversationViewStyle" />
+    <TextView android:gravity="center" android:id="@id/query_suggestion" android:visibility="gone" android:layout_width="@dimen/empty_view_text_width" android:layout_height="wrap_content" style="@style/EmptyConversationViewStyle" />
+</com.android.mail.ui.ConversationListEmptyView>

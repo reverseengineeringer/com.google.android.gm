@@ -1,216 +1,577 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item type="id" name="analytics_visual_element_view_tag" />
+    <item type="id" name="item_touch_helper_previous_elevation" />
+    <item type="id" name="home" />
+    <item type="id" name="up" />
+    <item type="id" name="action_bar_spinner" />
+    <item type="id" name="action_bar_activity_content" />
+    <item type="id" name="split_action_bar" />
+    <item type="id" name="action_menu_divider" />
+    <item type="id" name="action_menu_presenter" />
+    <item type="id" name="progress_circular" />
+    <item type="id" name="progress_horizontal" />
+    <item type="id" name="view_offset_helper" />
+    <item type="id" name="avatar_recents_one" />
+    <item type="id" name="wc_body" />
+    <item type="id" name="wc_respond_inline_button" />
+    <item type="id" name="ces_details_summary" />
+    <item type="id" name="ces_icon" />
+    <item type="id" name="ces_dialog_message" />
+    <item type="id" name="ces_details_item_icon" />
+    <item type="id" name="ces_details_item_name" />
+    <item type="id" name="ces_details_item_destination" />
+    <item type="id" name="ces_details_item_message" />
+    <item type="id" name="ces_details_item_avatar" />
+    <item type="id" name="ces_details_listview" />
+    <item type="id" name="encryption_setting" />
+    <item type="id" name="encryption_setting_enhanced" />
+    <item type="id" name="encryption_setting_standard" />
+    <item type="id" name="pnt_event_not_found" />
+    <item type="id" name="t4_list" />
+    <item type="id" name="t4_list_section_title_text" />
+    <item type="id" name="t4_list_t4_done_checkbox" />
+    <item type="id" name="t4_list_t4_subject" />
+    <item type="id" name="t4_list_t4_high_priority" />
+    <item type="id" name="t4_list_t4_low_priority" />
+    <item type="id" name="t4_list_t4_recurrence" />
+    <item type="id" name="t4_list_t4_reminder_set" />
+    <item type="id" name="t4_list_t4_body" />
+    <item type="id" name="t4_list_t4_due_date" />
+    <item type="id" name="t4_list_t4_foreground" />
+    <item type="id" name="label_name" />
+    <item type="id" name="lc_name_wrapper" />
+    <item type="id" name="more_options" />
+    <item type="id" name="nest_label" />
+    <item type="id" name="parent_folder" />
     <item type="id" name="folder" />
     <item type="id" name="personal_level" />
     <item type="id" name="reply_state" />
-    <item type="id" name="manage_folders_item" />
-    <item type="id" name="attachment_name" />
-    <item type="id" name="attachment_thumbnail" />
-    <item type="id" name="newer" />
-    <item type="id" name="older" />
-    <item type="id" name="content">false</item>
-    <item type="id" name="logo">false</item>
-    <item type="id" name="version">false</item>
-    <item type="id" name="copyright">false</item>
-    <item type="id" name="feedback">false</item>
-    <item type="id" name="report_problem">false</item>
-    <item type="id" name="report_problem_desc">false</item>
-    <item type="id" name="about_desc">false</item>
-    <item type="id" name="licenses">false</item>
-    <item type="id" name="privacy_policy">false</item>
-    <item type="id" name="account_spinner_color">false</item>
-    <item type="id" name="abd_account_unread">false</item>
-    <item type="id" name="abd_account_first">false</item>
-    <item type="id" name="abd_account_second">false</item>
-    <item type="id" name="abd_folder_color">false</item>
-    <item type="id" name="abd_folder_unread">false</item>
-    <item type="id" name="abd_folder_first">false</item>
-    <item type="id" name="abd_folder_second">false</item>
-    <item type="id" name="account_spinner_header_account">false</item>
-    <item type="id" name="anchor">false</item>
-    <item type="id" name="dropdown">false</item>
-    <item type="id" name="account">false</item>
-    <item type="id" name="header">false</item>
-    <item type="id" name="footer">false</item>
-    <item type="id" name="account_unread">false</item>
-    <item type="id" name="account_spinner_container">false</item>
-    <item type="id" name="account_first">false</item>
-    <item type="id" name="account_second">false</item>
-    <item type="id" name="description_icon">false</item>
-    <item type="id" name="description_text">false</item>
-    <item type="id" name="action_button">false</item>
-    <item type="id" name="separator">false</item>
-    <item type="id" name="action_icon">false</item>
-    <item type="id" name="action_text">false</item>
-    <item type="id" name="folder_layout">false</item>
-    <item type="id" name="folders">false</item>
-    <item type="id" name="conversation_subject">false</item>
-    <item type="id" name="account_spinner">false</item>
-    <item type="id" name="thumbnail">false</item>
-    <item type="id" name="attachment_size">false</item>
-    <item type="id" name="remove_attachment">false</item>
-    <item type="id" name="attachment_tile_image">false</item>
-    <item type="id" name="attachment_default_image">false</item>
-    <item type="id" name="background">false</item>
-    <item type="id" name="cc_content">false</item>
-    <item type="id" name="cc_label">false</item>
-    <item type="id" name="cc">false</item>
-    <item type="id" name="bcc_content">false</item>
-    <item type="id" name="bcc_label">false</item>
-    <item type="id" name="bcc">false</item>
-    <item type="id" name="folder_parent_icon">false</item>
-    <item type="id" name="folder_box">false</item>
+    <item type="id" name="contact_image" />
+    <item type="id" name="move_folder" />
+    <item type="id" name="animating_thread_list_item" />
+    <item type="id" name="conversation_promotion" />
+    <item type="id" name="report_spam_unsubscribe" />
+    <item type="id" name="report_spam_mute" />
+    <item type="id" name="updating_mailbox" />
+    <item type="id" name="local_context_action_star_flag" />
+    <item type="id" name="srs_next_button" />
+    <item type="id" name="srs_actionable_text" />
+    <item type="id" name="srs_optional_divider" />
+    <item type="id" name="google_option" />
+    <item type="id" name="personal_option" />
+    <item type="id" name="exchange_option" />
+    <item type="id" name="edit_settings_option" />
+    <item type="id" name="not_now_option" />
+    <item type="id" name="calendar_icon" />
+    <item type="id" name="fix_permissions_spinner_2" />
+    <item type="id" name="feedback_menu_item" />
+    <item type="id" name="privacy_policy_menu_item" />
+    <item type="id" name="open_source_menu_item" />
+    <item type="id" name="terms_of_service_menu_item" />
+    <item type="id" name="invisible_quick_contact" />
+    <item type="id" name="action_bar_title">false</item>
+    <item type="id" name="action_bar_subtitle">false</item>
+    <item type="id" name="action_mode_close_button">false</item>
+    <item type="id" name="activity_chooser_view_content">false</item>
+    <item type="id" name="expand_activities_button">false</item>
+    <item type="id" name="image">false</item>
+    <item type="id" name="default_activity_button">false</item>
+    <item type="id" name="list_item">false</item>
+    <item type="id" name="icon">false</item>
+    <item type="id" name="title">false</item>
+    <item type="id" name="buttonPanel">false</item>
+    <item type="id" name="spacer">false</item>
+    <item type="id" name="parentPanel">false</item>
+    <item type="id" name="topPanel">false</item>
+    <item type="id" name="title_template">false</item>
+    <item type="id" name="alertTitle">false</item>
+    <item type="id" name="contentPanel">false</item>
+    <item type="id" name="scrollIndicatorUp">false</item>
+    <item type="id" name="scrollView">false</item>
+    <item type="id" name="textSpacerNoButtons">false</item>
+    <item type="id" name="scrollIndicatorDown">false</item>
+    <item type="id" name="customPanel">false</item>
+    <item type="id" name="custom">false</item>
+    <item type="id" name="expanded_menu">false</item>
+    <item type="id" name="checkbox">false</item>
+    <item type="id" name="shortcut">false</item>
+    <item type="id" name="radio">false</item>
+    <item type="id" name="action_bar_root">false</item>
+    <item type="id" name="action_mode_bar_stub">false</item>
+    <item type="id" name="action_mode_bar">false</item>
+    <item type="id" name="decor_content_parent">false</item>
+    <item type="id" name="action_bar_container">false</item>
+    <item type="id" name="action_bar">false</item>
+    <item type="id" name="action_context_bar">false</item>
+    <item type="id" name="edit_query">false</item>
+    <item type="id" name="search_bar">false</item>
+    <item type="id" name="search_badge">false</item>
+    <item type="id" name="search_button">false</item>
+    <item type="id" name="search_edit_frame">false</item>
+    <item type="id" name="search_mag_icon">false</item>
+    <item type="id" name="search_plate">false</item>
+    <item type="id" name="search_src_text">false</item>
+    <item type="id" name="search_close_btn">false</item>
+    <item type="id" name="submit_area">false</item>
+    <item type="id" name="search_go_btn">false</item>
+    <item type="id" name="search_voice_btn">false</item>
+    <item type="id" name="select_dialog_listview">false</item>
+    <item type="id" name="account_credentials_fragment_container">false</item>
+    <item type="id" name="avatar_container">false</item>
+    <item type="id" name="avatar">false</item>
+    <item type="id" name="avatar_badge">false</item>
+    <item type="id" name="account_address">false</item>
+    <item type="id" name="accounts_list">false</item>
+    <item type="id" name="cancel_button">false</item>
+    <item type="id" name="root">false</item>
+    <item type="id" name="account_display_name">false</item>
+    <item type="id" name="checkmark">false</item>
+    <item type="id" name="clickable_area">false</item>
+    <item type="id" name="account_server_settings_container">false</item>
+    <item type="id" name="cancel">false</item>
+    <item type="id" name="done">false</item>
+    <item type="id" name="account_settings_quick_responses_list">false</item>
+    <item type="id" name="empty_view">false</item>
+    <item type="id" name="setup_fragment_container">false</item>
+    <item type="id" name="account_email_wrapper">false</item>
+    <item type="id" name="account_email">false</item>
+    <item type="id" name="manual_setup">false</item>
+    <item type="id" name="app_hint">false</item>
+    <item type="id" name="error_message">false</item>
+    <item type="id" name="error_options">false</item>
+    <item type="id" name="password_wrapper">false</item>
+    <item type="id" name="regular_password">false</item>
+    <item type="id" name="show_password">false</item>
+    <item type="id" name="client_certificate_selector">false</item>
+    <item type="id" name="headline">false</item>
+    <item type="id" name="account_username">false</item>
+    <item type="id" name="authentication_view">false</item>
+    <item type="id" name="account_server_wrapper">false</item>
+    <item type="id" name="account_server">false</item>
+    <item type="id" name="account_port">false</item>
+    <item type="id" name="account_security_type">false</item>
+    <item type="id" name="account_delete_policy_label">false</item>
+    <item type="id" name="account_delete_policy">false</item>
+    <item type="id" name="imap_path_prefix_wrapper">false</item>
+    <item type="id" name="imap_path_prefix">false</item>
+    <item type="id" name="last_added_account">false</item>
+    <item type="id" name="account_options_instructions">false</item>
+    <item type="id" name="account_options">false</item>
+    <item type="id" name="view_email_addresses">false</item>
+    <item type="id" name="add_google_account_instructions">false</item>
+    <item type="id" name="logo_landing_header">false</item>
+    <item type="id" name="logo_landing_header_addresses">false</item>
+    <item type="id" name="added_addresses">false</item>
+    <item type="id" name="error_label">false</item>
+    <item type="id" name="providers_list">false</item>
+    <item type="id" name="account_setup_provider_item_separator">false</item>
+    <item type="id" name="account_setup_provider_item">false</item>
+    <item type="id" name="provider_logo">false</item>
+    <item type="id" name="provider_name">false</item>
+    <item type="id" name="setup_fragment_content">false</item>
+    <item type="id" name="account_description">false</item>
+    <item type="id" name="display_name_wrapper">false</item>
+    <item type="id" name="display_name">false</item>
+    <item type="id" name="oauth_view">false</item>
+    <item type="id" name="container">false</item>
+    <item type="id" name="account_check_frequency">false</item>
+    <item type="id" name="account_sync_window_label">false</item>
+    <item type="id" name="account_sync_window">false</item>
+    <item type="id" name="account_notify">false</item>
+    <item type="id" name="account_sync_contacts">false</item>
+    <item type="id" name="account_sync_calendar">false</item>
+    <item type="id" name="account_sync_email">false</item>
+    <item type="id" name="account_background_attachments">false</item>
+    <item type="id" name="account_require_login">false</item>
+    <item type="id" name="account_username_label">false</item>
+    <item type="id" name="progress_status">false</item>
+    <item type="id" name="protocol_options">false</item>
+    <item type="id" name="host">false</item>
+    <item type="id" name="nav_container">false</item>
+    <item type="id" name="selected_account_container">false</item>
+    <item type="id" name="accounts_wrapper">false</item>
+    <item type="id" name="account_switcher_view">false</item>
     <item type="id" name="unread">false</item>
-    <item type="id" name="name">false</item>
-    <item type="id" name="description">false</item>
-    <item type="id" name="compose">false</item>
-    <item type="id" name="compose_scrollview">false</item>
-    <item type="id" name="attachments">false</item>
-    <item type="id" name="quoted_text_view">false</item>
-    <item type="id" name="composearea_tap_trap_bottom">false</item>
-    <item type="id" name="wait">false</item>
-    <item type="id" name="to_content">false</item>
-    <item type="id" name="to_label">false</item>
-    <item type="id" name="to">false</item>
-    <item type="id" name="add_cc_bcc">false</item>
-    <item type="id" name="cc_bcc_wrapper">false</item>
-    <item type="id" name="subject_wrapper">false</item>
+    <item type="id" name="app_install_bottom_button_bar">false</item>
+    <item type="id" name="app_install_bottom_button">false</item>
+    <item type="id" name="ad_header">false</item>
+    <item type="id" name="ad_badge">false</item>
+    <item type="id" name="ad_subject">false</item>
+    <item type="id" name="ad_info">false</item>
+    <item type="id" name="ad_wta_reason">false</item>
+    <item type="id" name="sender_image">false</item>
+    <item type="id" name="sender_name">false</item>
+    <item type="id" name="ad_visible_url">false</item>
+    <item type="id" name="star_ad">false</item>
+    <item type="id" name="forward_ad">false</item>
+    <item type="id" name="app_install_bar">false</item>
+    <item type="id" name="app_rating_and_logo">false</item>
+    <item type="id" name="app_install_button">false</item>
+    <item type="id" name="ad_teaser_dismiss_survey_privacy_policy">false</item>
+    <item type="id" name="ad_teaser_dismiss_survey_title">false</item>
+    <item type="id" name="ad_teaser_item">false</item>
+    <item type="id" name="senders">false</item>
+    <item type="id" name="info_icon">false</item>
+    <item type="id" name="star">false</item>
     <item type="id" name="subject">false</item>
-    <item type="id" name="add_photo_attachment">false</item>
-    <item type="id" name="compose_wrapper">false</item>
-    <item type="id" name="attachment_tile">false</item>
-    <item type="id" name="attachment_tile_close_button">false</item>
+    <item type="id" name="snippet">false</item>
+    <item type="id" name="swipeable_content">false</item>
+    <item type="id" name="ad_teaser_leave_behind">false</item>
+    <item type="id" name="ad_teaser_leave_behind_description_text">false</item>
+    <item type="id" name="ad_teaser_leave_behind_action_text">false</item>
+    <item type="id" name="ad_wta_reason_text">false</item>
+    <item type="id" name="ad_control_ads_like_this">false</item>
+    <item type="id" name="manage_accounts_icon">false</item>
+    <item type="id" name="add_account_text">false</item>
+    <item type="id" name="dismiss_separator">false</item>
+    <item type="id" name="dismiss_button">false</item>
+    <item type="id" name="description_learn_more">false</item>
+    <item type="id" name="change_in_settings">false</item>
+    <item type="id" name="app_rating">false</item>
+    <item type="id" name="app_rating_star_0">false</item>
+    <item type="id" name="app_rating_star_1">false</item>
+    <item type="id" name="app_rating_star_2">false</item>
+    <item type="id" name="app_rating_star_3">false</item>
+    <item type="id" name="app_rating_star_4">false</item>
+    <item type="id" name="app_rating_count">false</item>
+    <item type="id" name="google_play_logo">false</item>
+    <item type="id" name="attachment_tile_thumbnail">false</item>
+    <item type="id" name="attachment_tile_icon">false</item>
     <item type="id" name="attachment_tile_title">false</item>
     <item type="id" name="attachment_tile_subtitle">false</item>
+    <item type="id" name="attachment_tile_save">false</item>
+    <item type="id" name="attachment_tile_save_to_cloud">false</item>
+    <item type="id" name="attachment_tile_remove">false</item>
+    <item type="id" name="authentication_header">false</item>
+    <item type="id" name="add_authentication">false</item>
+    <item type="id" name="oauth_label">false</item>
+    <item type="id" name="password_edit_wrapper">false</item>
+    <item type="id" name="password_edit">false</item>
+    <item type="id" name="clear_password">false</item>
+    <item type="id" name="offscreen_avatar">false</item>
+    <item type="id" name="crossfade_avatar_recents_one">false</item>
+    <item type="id" name="avatar_recents_one_image">false</item>
+    <item type="id" name="avatar_recents_one_unread_count">false</item>
+    <item type="id" name="crossfade_avatar_recents_two">false</item>
+    <item type="id" name="avatar_recents_two">false</item>
+    <item type="id" name="avatar_recents_two_image">false</item>
+    <item type="id" name="avatar_recents_two_unread_count">false</item>
+    <item type="id" name="promo_icon">false</item>
+    <item type="id" name="promo_title">false</item>
+    <item type="id" name="promo_body">false</item>
+    <item type="id" name="promo_actions_single_line">false</item>
+    <item type="id" name="promo_action_negative_single_line">false</item>
+    <item type="id" name="promo_action_positive_single_line">false</item>
+    <item type="id" name="promo_actions_multi_line">false</item>
+    <item type="id" name="promo_action_positive_multi_line">false</item>
+    <item type="id" name="promo_action_negative_multi_line">false</item>
+    <item type="id" name="cc_content">false</item>
+    <item type="id" name="cc_dropdown_anchor">false</item>
+    <item type="id" name="cc_heading">false</item>
+    <item type="id" name="cc">false</item>
+    <item type="id" name="bcc_content">false</item>
+    <item type="id" name="bcc_dropdown_anchor">false</item>
+    <item type="id" name="bcc_heading">false</item>
+    <item type="id" name="bcc">false</item>
+    <item type="id" name="webview">false</item>
+    <item type="id" name="change_address_progress">false</item>
+    <item type="id" name="owner">false</item>
+    <item type="id" name="setup_addresses_change_address_status">false</item>
+    <item type="id" name="chip_autocomplete_top_divider">false</item>
+    <item type="id" name="chip_person_wrapper">false</item>
+    <item type="id" name="chip_permission_wrapper">false</item>
+    <item type="id" name="chip_autocomplete_bottom_divider">false</item>
+    <item type="id" name="chip_permission_bottom_divider">false</item>
+    <item type="id" name="chip_indicator_text">false</item>
+    <item type="id" name="certificate_alias">false</item>
+    <item type="id" name="select_certificate">false</item>
+    <item type="id" name="compose">false</item>
+    <item type="id" name="content">false</item>
     <item type="id" name="attachment_tile_grid">false</item>
-    <item type="id" name="attachment_bar_list">false</item>
+    <item type="id" name="quoted_text_view">false</item>
+    <item type="id" name="composearea_tap_trap_bottom">false</item>
+    <item type="id" name="attachment_tile">false</item>
     <item type="id" name="body_wrapper">false</item>
     <item type="id" name="body">false</item>
+    <item type="id" name="from_label">false</item>
     <item type="id" name="spinner_from_content">false</item>
     <item type="id" name="from_picker">false</item>
     <item type="id" name="static_from_content">false</item>
     <item type="id" name="from_account_name">false</item>
     <item type="id" name="mode">false</item>
+    <item type="id" name="current_time">false</item>
+    <item type="id" name="proposed_time">false</item>
     <item type="id" name="compose_recipients_wrapper">false</item>
-    <item type="id" name="senders">false</item>
-    <item type="id" name="paperclip">false</item>
+    <item type="id" name="to_content">false</item>
+    <item type="id" name="to_heading">false</item>
+    <item type="id" name="to">false</item>
+    <item type="id" name="add_cc_bcc">false</item>
+    <item type="id" name="compose_to_dropdown_anchor">false</item>
+    <item type="id" name="cc_bcc_wrapper">false</item>
+    <item type="id" name="subject_content">false</item>
+    <item type="id" name="message_priority_icon">false</item>
+    <item type="id" name="message_security_icon">false</item>
+    <item type="id" name="rich_text_toolbar">false</item>
+    <item type="id" name="calendar_promotion_title">false</item>
+    <item type="id" name="calendar_promotion_text">false</item>
+    <item type="id" name="calendar_promotion_decline">false</item>
+    <item type="id" name="calendar_promotion_accept">false</item>
+    <item type="id" name="footer_buttons">false</item>
+    <item type="id" name="reply_button">false</item>
+    <item type="id" name="reply_all_button">false</item>
+    <item type="id" name="forward_button">false</item>
+    <item type="id" name="conversation_footer_canned_responses">false</item>
+    <item type="id" name="canned_response_1">false</item>
+    <item type="id" name="canned_response_2">false</item>
+    <item type="id" name="canned_response_3">false</item>
+    <item type="id" name="conversation_item_frame">false</item>
+    <item type="id" name="priority">false</item>
+    <item type="id" name="senders_decoration">false</item>
+    <item type="id" name="personal_indicator">false</item>
     <item type="id" name="date">false</item>
-    <item type="id" name="checkmark">false</item>
-    <item type="id" name="star">false</item>
-    <item type="id" name="between_chrome">false</item>
-    <item type="id" name="empty_view">false</item>
-    <item type="id" name="network_error">false</item>
-    <item type="id" name="error_text">false</item>
-    <item type="id" name="error_action_button">false</item>
+    <item type="id" name="attachment">false</item>
+    <item type="id" name="folders">false</item>
+    <item type="id" name="swipe_refresh_widget">false</item>
+    <item type="id" name="conversation_list_parent_frame">false</item>
+    <item type="id" name="conversation_list_view">false</item>
+    <item type="id" name="recycler_list_view">false</item>
+    <item type="id" name="conversation_list_loading_view">false</item>
+    <item type="id" name="empty_icon">false</item>
+    <item type="id" name="empty_text">false</item>
+    <item type="id" name="query_suggestion">false</item>
     <item type="id" name="loading">false</item>
     <item type="id" name="load_more">false</item>
-    <item type="id" name="conversation_list_header">false</item>
     <item type="id" name="background_view">false</item>
     <item type="id" name="loading_progress">false</item>
-    <item type="id" name="attachment_icon">false</item>
-    <item type="id" name="attachment_title">false</item>
-    <item type="id" name="attachment_subtitle">false</item>
-    <item type="id" name="attachment_progress">false</item>
-    <item type="id" name="overflow">false</item>
-    <item type="id" name="cancel_attachment">false</item>
-    <item type="id" name="attachment_push_state">false</item>
-    <item type="id" name="attachment_tile_text_container">false</item>
-    <item type="id" name="attachment_tile_push_state">false</item>
-    <item type="id" name="details_collapsed_content">false</item>
-    <item type="id" name="recipients_summary">false</item>
-    <item type="id" name="date_summary">false</item>
-    <item type="id" name="details_expanded_content">false</item>
-    <item type="id" name="date_heading">false</item>
-    <item type="id" name="date_value">false</item>
-    <item type="id" name="from_row">false</item>
-    <item type="id" name="from_heading">false</item>
-    <item type="id" name="from_value">false</item>
-    <item type="id" name="replyto_row">false</item>
-    <item type="id" name="replyto_heading">false</item>
-    <item type="id" name="replyto_value">false</item>
-    <item type="id" name="to_row">false</item>
-    <item type="id" name="to_heading">false</item>
-    <item type="id" name="to_value">false</item>
-    <item type="id" name="cc_row">false</item>
-    <item type="id" name="cc_heading">false</item>
-    <item type="id" name="cc_value">false</item>
-    <item type="id" name="bcc_row">false</item>
-    <item type="id" name="bcc_heading">false</item>
-    <item type="id" name="bcc_value">false</item>
-    <item type="id" name="details_expander">false</item>
-    <item type="id" name="attachments_header_text">false</item>
-    <item type="id" name="attachments_header_bar">false</item>
+    <item type="id" name="attachments">false</item>
+    <item type="id" name="view_entire_message_prompt">false</item>
+    <item type="id" name="message_header_border">false</item>
     <item type="id" name="upper_header">false</item>
-    <item type="id" name="details_bottom_border">false</item>
+    <item type="id" name="header_extra_content">false</item>
+    <item type="id" name="details_expanded_content">false</item>
+    <item type="id" name="from_heading">false</item>
+    <item type="id" name="from_details">false</item>
+    <item type="id" name="replyto_heading">false</item>
+    <item type="id" name="replyto_details">false</item>
+    <item type="id" name="to_details">false</item>
+    <item type="id" name="cc_details">false</item>
+    <item type="id" name="bcc_details">false</item>
+    <item type="id" name="date_heading">false</item>
+    <item type="id" name="date_details">false</item>
+    <item type="id" name="priority_heading">false</item>
+    <item type="id" name="priority_details">false</item>
+    <item type="id" name="show_security_details">false</item>
+    <item type="id" name="ces_heading">false</item>
+    <item type="id" name="ces_details">false</item>
     <item type="id" name="invite_title">false</item>
     <item type="id" name="invite_calendar_view">false</item>
     <item type="id" name="accept">false</item>
     <item type="id" name="tentative">false</item>
     <item type="id" name="decline">false</item>
-    <item type="id" name="show_pictures">false</item>
-    <item type="id" name="show_pictures_icon">false</item>
     <item type="id" name="show_pictures_text">false</item>
-    <item type="id" name="show_pics_bottom_border">false</item>
-    <item type="id" name="spam_warning">false</item>
-    <item type="id" name="spam_warning_icon">false</item>
     <item type="id" name="spam_warning_text">false</item>
-    <item type="id" name="spam_warning_link">false</item>
-    <item type="id" name="spam_warning_bottom_border">false</item>
-    <item type="id" name="left_spacer">false</item>
-    <item type="id" name="photo">false</item>
-    <item type="id" name="photo_spacer">false</item>
+    <item type="id" name="warning_stripe">false</item>
+    <item type="id" name="warning_icon">false</item>
+    <item type="id" name="warning_text">false</item>
     <item type="id" name="draft">false</item>
-    <item type="id" name="right_spacer">false</item>
+    <item type="id" name="edit_draft">false</item>
     <item type="id" name="reply">false</item>
     <item type="id" name="reply_all">false</item>
-    <item type="id" name="edit_draft">false</item>
+    <item type="id" name="overflow">false</item>
     <item type="id" name="forward">false</item>
+    <item type="id" name="contact_badge">false</item>
     <item type="id" name="title_container">false</item>
     <item type="id" name="upper_date">false</item>
-    <item type="id" name="attachment">false</item>
-    <item type="id" name="sender_name">false</item>
-    <item type="id" name="presence">false</item>
-    <item type="id" name="sender_email">false</item>
-    <item type="id" name="conversation_pane">false</item>
+    <item type="id" name="recipient_summary_container">false</item>
+    <item type="id" name="recipient_summary">false</item>
+    <item type="id" name="send_date">false</item>
+    <item type="id" name="hide_details">false</item>
+    <item type="id" name="email_snippet">false</item>
+    <item type="id" name="conversation_pager">false</item>
+    <item type="id" name="conversation_tip_swipeable_content">false</item>
+    <item type="id" name="conversation_tip_icon1">false</item>
+    <item type="id" name="conversation_tip_text">false</item>
+    <item type="id" name="dismiss_icon">false</item>
+    <item type="id" name="new_message_notification_bar">false</item>
+    <item type="id" name="snackbar_main_content">false</item>
     <item type="id" name="conversation_container">false</item>
-    <item type="id" name="webview">false</item>
+    <item type="id" name="conversation_webview">false</item>
     <item type="id" name="conversation_topmost_overlay">false</item>
-    <item type="id" name="snap_header">false</item>
     <item type="id" name="scroll_indicators">false</item>
+    <item type="id" name="animation_view">false</item>
+    <item type="id" name="border">false</item>
     <item type="id" name="conversation_header">false</item>
+    <item type="id" name="subject_and_folder_view">false</item>
+    <item type="id" name="conversation_header_star">false</item>
     <item type="id" name="spinner_account_name">false</item>
     <item type="id" name="spinner_account_address">false</item>
+    <item type="id" name="date_picker_header">false</item>
+    <item type="id" name="day_picker_selected_date_layout">false</item>
+    <item type="id" name="date_picker_month_and_day">false</item>
+    <item type="id" name="date_picker_month">false</item>
+    <item type="id" name="date_picker_day">false</item>
+    <item type="id" name="date_picker_year">false</item>
+    <item type="id" name="animator">false</item>
     <item type="id" name="day_picker">false</item>
     <item type="id" name="day">false</item>
-    <item type="id" name="text1">false</item>
-    <item type="id" name="text2">false</item>
-    <item type="id" name="progress_circular">false</item>
-    <item type="id" name="label">false</item>
-    <item type="id" name="chat">false</item>
-    <item type="id" name="important">false</item>
-    <item type="id" name="color_block">false</item>
+    <item type="id" name="clear_webview_cache">false</item>
+    <item type="id" name="clear_migration_state">false</item>
+    <item type="id" name="debug_force_one_minute_refresh">false</item>
+    <item type="id" name="debug_enable_strict_mode">false</item>
+    <item type="id" name="debug_enable_all_inboxes">false</item>
+    <item type="id" name="debug_enable_rv">false</item>
+    <item type="id" name="debug_enable_motion_drawer">false</item>
+    <item type="id" name="debug_enable_webview_compose">false</item>
+    <item type="id" name="debug_enable_account_setup_logo_landing">false</item>
+    <item type="id" name="debug_allow_non_system_partner_provider_app">false</item>
+    <item type="id" name="touch_outside">false</item>
+    <item type="id" name="design_bottom_sheet">false</item>
+    <item type="id" name="snackbar_text">false</item>
+    <item type="id" name="snackbar_action">false</item>
+    <item type="id" name="navigation_header_container">false</item>
+    <item type="id" name="design_navigation_view">false</item>
+    <item type="id" name="design_menu_item_text">false</item>
+    <item type="id" name="design_menu_item_action_area_stub">false</item>
+    <item type="id" name="design_menu_item_action_area">false</item>
+    <item type="id" name="device_id_label">false</item>
+    <item type="id" name="device_id">false</item>
     <item type="id" name="progress">false</item>
-    <item type="id" name="content_pane">false</item>
-    <item type="id" name="cancel">false</item>
-    <item type="id" name="gview">false</item>
-    <item type="id" name="text">false</item>
-    <item type="id" name="indentation">false</item>
-    <item type="id" name="label_box">false</item>
-    <item type="id" name="checkbox">false</item>
-    <item type="id" name="title">false</item>
-    <item type="id" name="label_sync_for_widget_text">false</item>
-    <item type="id" name="label_sync_for_widget_confirm">false</item>
-    <item type="id" name="label_list_pane">false</item>
-    <item type="id" name="labels">false</item>
-    <item type="id" name="search_layout">false</item>
-    <item type="id" name="mailbox_name">false</item>
-    <item type="id" name="notification_msg">false</item>
-    <item type="id" name="new_message_notification_bar">false</item>
-    <item type="id" name="new_message_description">false</item>
+    <item type="id" name="drawer_footer_image">false</item>
+    <item type="id" name="drawer_footer_text">false</item>
+    <item type="id" name="dummy_placeholder">false</item>
+    <item type="id" name="empty_trash_spam_text">false</item>
+    <item type="id" name="empty_trash_spam_action">false</item>
+    <item type="id" name="setup_error_label">false</item>
+    <item type="id" name="eas_oof_inside_domain_header">false</item>
+    <item type="id" name="eas_oof_inside_domain_message">false</item>
+    <item type="id" name="eas_oof_outside_domain_switch">false</item>
+    <item type="id" name="eas_oof_outside_domain_content">false</item>
+    <item type="id" name="eas_oof_outside_domain_message">false</item>
+    <item type="id" name="eas_oof_send_to_only_contacts">false</item>
+    <item type="id" name="radio_group">false</item>
     <item type="id" name="first_button">false</item>
-    <item type="id" name="one_pane_root">false</item>
+    <item type="id" name="first_button_extras">false</item>
+    <item type="id" name="second_button_divider">false</item>
+    <item type="id" name="second_button">false</item>
+    <item type="id" name="second_button_extras">false</item>
+    <item type="id" name="last_button">false</item>
+    <item type="id" name="fix_permissions_info_icon">false</item>
+    <item type="id" name="fix_permissions_spinner">false</item>
+    <item type="id" name="fix_permissions_extra_text">false</item>
+    <item type="id" name="fix_permissions_does_not_fix_everything_text">false</item>
+    <item type="id" name="optional_space">false</item>
+    <item type="id" name="compose_button">false</item>
     <item type="id" name="toast_bar">false</item>
+    <item type="id" name="nested_folder_space">false</item>
+    <item type="id" name="folder_icon">false</item>
+    <item type="id" name="folder_content_wrapper">false</item>
+    <item type="id" name="name">false</item>
+    <item type="id" name="unseen">false</item>
+    <item type="id" name="mini_drawer">false</item>
+    <item type="id" name="header_text">false</item>
+    <item type="id" name="folder_teaser_row">false</item>
+    <item type="id" name="nested_folder_icon">false</item>
+    <item type="id" name="text_layout">false</item>
+    <item type="id" name="folder_textView">false</item>
+    <item type="id" name="senders_textView">false</item>
+    <item type="id" name="unread_count_textView">false</item>
+    <item type="id" name="unseen_count_textView">false</item>
+    <item type="id" name="content_pane">false</item>
+    <item type="id" name="avatar_recents_unread_count">false</item>
+    <item type="id" name="checkbox_send_to_contacts">false</item>
+    <item type="id" name="checkbox_send_to_domain">false</item>
+    <item type="id" name="gmailify_about">false</item>
+    <item type="id" name="address_list">false</item>
+    <item type="id" name="gmailify_add_account">false</item>
+    <item type="id" name="gmailify_content">false</item>
+    <item type="id" name="gmailify_password_text">false</item>
+    <item type="id" name="gmailify_password">false</item>
+    <item type="id" name="gmailify_progress_text">false</item>
+    <item type="id" name="gmailify_target_text">false</item>
+    <item type="id" name="gmailify_accounts">false</item>
+    <item type="id" name="gmailify_choose_another_gmail_account">false</item>
+    <item type="id" name="google_tos">false</item>
+    <item type="id" name="address_picker">false</item>
+    <item type="id" name="gmailify_unlink_text">false</item>
+    <item type="id" name="gmailify_unlink_radiogroup">false</item>
+    <item type="id" name="gmailify_unlink_emails_keep_radio">false</item>
+    <item type="id" name="gmailify_unlink_emails_delete_radio">false</item>
+    <item type="id" name="gmailify_unlink_button">false</item>
+    <item type="id" name="gmailify_error_container">false</item>
+    <item type="id" name="survey_holder">false</item>
+    <item type="id" name="hats_survey_container">false</item>
+    <item type="id" name="hats_survey_promo">false</item>
+    <item type="id" name="hats_survey_text">false</item>
+    <item type="id" name="hats_dismiss_button">false</item>
+    <item type="id" name="hats_action_button">false</item>
+    <item type="id" name="hats_survey_thank_you">false</item>
+    <item type="id" name="help_fragment">false</item>
+    <item type="id" name="icr_agenda_time">false</item>
+    <item type="id" name="icr_agenda_title">false</item>
+    <item type="id" name="icr_header_card">false</item>
+    <item type="id" name="icr_date_block">false</item>
+    <item type="id" name="icr_month_header">false</item>
+    <item type="id" name="icr_day_header">false</item>
+    <item type="id" name="icr_subject_title">false</item>
+    <item type="id" name="icr_subtitle">false</item>
+    <item type="id" name="icr_add">false</item>
+    <item type="id" name="icr_action_accept">false</item>
+    <item type="id" name="icr_action_tentative">false</item>
+    <item type="id" name="icr_action_decline">false</item>
+    <item type="id" name="icr_time">false</item>
+    <item type="id" name="icr_time_text">false</item>
+    <item type="id" name="icr_location">false</item>
+    <item type="id" name="icr_location_text">false</item>
+    <item type="id" name="icr_attendees">false</item>
+    <item type="id" name="icr_attendees_text">false</item>
+    <item type="id" name="icr_agenda">false</item>
+    <item type="id" name="icr_agenda_text">false</item>
+    <item type="id" name="icr_show_agenda">false</item>
+    <item type="id" name="license">false</item>
+    <item type="id" name="license_activity_scrollview">false</item>
+    <item type="id" name="license_activity_textview">false</item>
+    <item type="id" name="license_list">false</item>
+    <item type="id" name="loading_view">false</item>
+    <item type="id" name="loading_icon">false</item>
+    <item type="id" name="loading_text">false</item>
+    <item type="id" name="search_actionbar_view">false</item>
+    <item type="id" name="search_actionbar_back_button">false</item>
+    <item type="id" name="search_actionbar_query_text">false</item>
+    <item type="id" name="search_overlay_suggestion_list">false</item>
+    <item type="id" name="search_actionbar_ending_button">false</item>
+    <item type="id" name="mail_toolbar">false</item>
+    <item type="id" name="actionbar_custom_view">false</item>
+    <item type="id" name="actionbar_title">false</item>
+    <item type="id" name="actionbar_search_button">false</item>
+    <item type="id" name="mailbox_name">false</item>
+    <item type="id" name="manage_accounts_text">false</item>
+    <item type="id" name="mailed_by">false</item>
+    <item type="id" name="signed_by">false</item>
+    <item type="id" name="image_view">false</item>
+    <item type="id" name="nested_folder_container">false</item>
+    <item type="id" name="show_more_folders_row">false</item>
+    <item type="id" name="show_more_folders_icon">false</item>
+    <item type="id" name="show_more_folders_textView">false</item>
+    <item type="id" name="show_more_folders_count_textView">false</item>
+    <item type="id" name="action0">false</item>
+    <item type="id" name="cancel_action">false</item>
+    <item type="id" name="status_bar_latest_event_content">false</item>
+    <item type="id" name="media_actions">false</item>
+    <item type="id" name="action_divider">false</item>
+    <item type="id" name="line1">false</item>
+    <item type="id" name="time">false</item>
+    <item type="id" name="chronometer">false</item>
+    <item type="id" name="line3">false</item>
+    <item type="id" name="text">false</item>
+    <item type="id" name="info">false</item>
+    <item type="id" name="end_padder">false</item>
+    <item type="id" name="OffsetTextPreference_textView">false</item>
+    <item type="id" name="drawer_container">false</item>
+    <item type="id" name="conversation_list_place_holder">false</item>
     <item type="id" name="photo_activity_root_view">false</item>
+    <item type="id" name="photo_activity_background">false</item>
+    <item type="id" name="photo_activity_temporary_image">false</item>
     <item type="id" name="photo_view_pager">false</item>
     <item type="id" name="photopage_bottom_control_panorama">false</item>
     <item type="id" name="photo_view">false</item>
@@ -218,109 +579,276 @@
     <item type="id" name="photo_preview_image">false</item>
     <item type="id" name="indeterminate_progress">false</item>
     <item type="id" name="determinate_progress">false</item>
-    <item type="id" name="empty_text">false</item>
     <item type="id" name="retry_button">false</item>
+    <item type="id" name="pnt_fetch_progress_bar">false</item>
+    <item type="id" name="pnt_fetch_result">false</item>
+    <item type="id" name="pnt_comment">false</item>
+    <item type="id" name="pnt_header_card">false</item>
+    <item type="id" name="pnt_subject_title">false</item>
+    <item type="id" name="pnt_proposed_time_string">false</item>
+    <item type="id" name="pnt_original_time_string">false</item>
+    <item type="id" name="pnt_action_accept">false</item>
+    <item type="id" name="pnt_action_show_event">false</item>
+    <item type="id" name="pnt_action_find_a_time">false</item>
+    <item type="id" name="pnt_retry_card">false</item>
+    <item type="id" name="pnt_action_retry">false</item>
+    <item type="id" name="pnt_event_details_string">false</item>
+    <item type="id" name="propose_time_view">false</item>
+    <item type="id" name="quick_response_text">false</item>
+    <item type="id" name="line_item">false</item>
+    <item type="id" name="quick_responses">false</item>
+    <item type="id" name="quick_responses_empty_view">false</item>
     <item type="id" name="quoted_text_area">false</item>
     <item type="id" name="upper_quotedtext_divider_bar">false</item>
     <item type="id" name="quoted_text_button_bar">false</item>
-    <item type="id" name="quoted_text_row">false</item>
     <item type="id" name="hide_quoted_text">false</item>
-    <item type="id" name="hide_quoted_text_label">false</item>
     <item type="id" name="respond_inline_button">false</item>
     <item type="id" name="divider_bar">false</item>
     <item type="id" name="quoted_text_web_view">false</item>
+    <item type="id" name="radio_button">false</item>
+    <item type="id" name="option_title">false</item>
+    <item type="id" name="option_subtitle">false</item>
+    <item type="id" name="report_spam_dialog_message">false</item>
+    <item type="id" name="report_spam_dialog_learn_more">false</item>
+    <item type="id" name="background_color_swatch">false</item>
+    <item type="id" name="swatch_white">false</item>
+    <item type="id" name="swatch_tinted_red">false</item>
+    <item type="id" name="swatch_tinted_blue">false</item>
+    <item type="id" name="swatch_tinted_green">false</item>
+    <item type="id" name="swatch_tinted_yellow">false</item>
+    <item type="id" name="swatch_tinted_gray">false</item>
+    <item type="id" name="font_picker">false</item>
+    <item type="id" name="font_serif">false</item>
+    <item type="id" name="font_condensed">false</item>
+    <item type="id" name="font_default">false</item>
+    <item type="id" name="radio_group_swatch">false</item>
+    <item type="id" name="btn_default">false</item>
+    <item type="id" name="btn_red">false</item>
+    <item type="id" name="btn_blue">false</item>
+    <item type="id" name="btn_green">false</item>
+    <item type="id" name="btn_yellow">false</item>
+    <item type="id" name="btn_gray">false</item>
+    <item type="id" name="toolbar_formatting">false</item>
+    <item type="id" name="toolbar_separator">false</item>
+    <item type="id" name="btn_close">false</item>
+    <item type="id" name="horizontal_scroll_view">false</item>
+    <item type="id" name="btn_bold">false</item>
+    <item type="id" name="btn_italic">false</item>
+    <item type="id" name="btn_underline">false</item>
+    <item type="id" name="btn_strikethrough">false</item>
+    <item type="id" name="btn_foreground_color">false</item>
+    <item type="id" name="btn_background_color">false</item>
+    <item type="id" name="paragraph_formatting">false</item>
+    <item type="id" name="btn_bulleted_list">false</item>
+    <item type="id" name="btn_align_left">false</item>
+    <item type="id" name="btn_align_center">false</item>
+    <item type="id" name="btn_align_right">false</item>
+    <item type="id" name="btn_font">false</item>
+    <item type="id" name="btn_reset">false</item>
     <item type="id" name="search_status_view">false</item>
     <item type="id" name="search_status_text_view">false</item>
     <item type="id" name="search_result_count_view">false</item>
+    <item type="id" name="search_overlay_item_icon">false</item>
+    <item type="id" name="search_overlay_item_text">false</item>
+    <item type="id" name="search_overlay_view">false</item>
+    <item type="id" name="search_overlay_scrim">false</item>
+    <item type="id" name="welcome_box">false</item>
+    <item type="id" name="social_item">false</item>
+    <item type="id" name="promo_item">false</item>
+    <item type="id" name="notification_item">false</item>
+    <item type="id" name="group_item">false</item>
+    <item type="id" name="change_category_box">false</item>
     <item type="id" name="scroll_view">false</item>
     <item type="id" name="conv_header">false</item>
     <item type="id" name="message_header">false</item>
     <item type="id" name="message_footer">false</item>
+    <item type="id" name="security_hold_view">false</item>
+    <item type="id" name="security_hold_icon">false</item>
+    <item type="id" name="security_hold_text">false</item>
+    <item type="id" name="security_hold_button">false</item>
+    <item type="id" name="account_switcher_lib_view_wrapper">false</item>
+    <item type="id" name="offscreen_cover_photo">false</item>
+    <item type="id" name="cover_photo">false</item>
+    <item type="id" name="scrim">false</item>
+    <item type="id" name="account_list_wrapper">false</item>
+    <item type="id" name="account_text">false</item>
+    <item type="id" name="offscreen_text">false</item>
+    <item type="id" name="offscreen_account_display_name">false</item>
+    <item type="id" name="offscreen_account_address">false</item>
+    <item type="id" name="account_list_button">false</item>
+    <item type="id" name="setup_addresses_fragment">false</item>
+    <item type="id" name="illustration">false</item>
+    <item type="id" name="setup_addresses_title">false</item>
+    <item type="id" name="setup_addresses_list">false</item>
+    <item type="id" name="setup_addresses_add_another">false</item>
+    <item type="id" name="action_done">false</item>
     <item type="id" name="folder_text">false</item>
+    <item type="id" name="sign_in">false</item>
     <item type="id" name="folder_name">false</item>
+    <item type="id" name="snackbar_multiline">false</item>
+    <item type="id" name="multiline_description_text">false</item>
+    <item type="id" name="multiline_action_text">false</item>
     <item type="id" name="super_collapsed_block">false</item>
-    <item type="id" name="super_collapsed_background">false</item>
-    <item type="id" name="super_collapsed_icon">false</item>
-    <item type="id" name="super_collapsed_count">false</item>
-    <item type="id" name="super_collapsed_label">false</item>
-    <item type="id" name="swipeable_content">false</item>
-    <item type="id" name="undo_descriptionview">false</item>
-    <item type="id" name="undo_separator">false</item>
-    <item type="id" name="undo_icon">false</item>
+    <item type="id" name="super_collapsed_text">false</item>
+    <item type="id" name="super_collapsed_progress">false</item>
+    <item type="id" name="survey_container">false</item>
+    <item type="id" name="hats_cover">false</item>
+    <item type="id" name="suw_pattern_bg">false</item>
+    <item type="id" name="suw_layout_content">false</item>
+    <item type="id" name="suw_layout_icon">false</item>
+    <item type="id" name="suw_layout_title">false</item>
+    <item type="id" name="suw_layout_progress_stub">false</item>
+    <item type="id" name="suw_layout_progress">false</item>
+    <item type="id" name="suw_recycler_view">false</item>
+    <item type="id" name="suw_layout_navigation_bar">false</item>
+    <item type="id" name="suw_scroll_view">false</item>
+    <item type="id" name="suw_items_icon_container">false</item>
+    <item type="id" name="suw_items_icon">false</item>
+    <item type="id" name="suw_items_title">false</item>
+    <item type="id" name="suw_items_summary">false</item>
+    <item type="id" name="suw_items_switch">false</item>
+    <item type="id" name="suw_layout_decor">false</item>
+    <item type="id" name="suw_navbar_back">false</item>
+    <item type="id" name="suw_navbar_more">false</item>
+    <item type="id" name="suw_navbar_next">false</item>
+    <item type="id" name="progress_bar">false</item>
+    <item type="id" name="suw_bottom_scroll_view">false</item>
+    <item type="id" name="suw_layout_header">false</item>
+    <item type="id" name="swipe_image">false</item>
+    <item type="id" name="undo_description_text">false</item>
     <item type="id" name="undo_text">false</item>
     <item type="id" name="sync_window_upgrade_text">false</item>
     <item type="id" name="sync_window_upgrade_confirm">false</item>
-    <item type="id" name="done">false</item>
+    <item type="id" name="time_display">false</item>
+    <item type="id" name="center_view">false</item>
+    <item type="id" name="hour_space">false</item>
+    <item type="id" name="separator">false</item>
+    <item type="id" name="hours">false</item>
+    <item type="id" name="minutes_space">false</item>
+    <item type="id" name="minutes">false</item>
+    <item type="id" name="ampm_hitspace">false</item>
+    <item type="id" name="ampm_label">false</item>
+    <item type="id" name="time_picker_dialog">false</item>
+    <item type="id" name="time_display_background">false</item>
+    <item type="id" name="time_picker">false</item>
+    <item type="id" name="line">false</item>
+    <item type="id" name="done_button">false</item>
+    <item type="id" name="description_text">false</item>
+    <item type="id" name="action_text">false</item>
     <item type="id" name="two_pane_activity">false</item>
+    <item type="id" name="drawer">false</item>
     <item type="id" name="conversation_list_pane">false</item>
-    <item type="id" name="conversation_list_copy">false</item>
-    <item type="id" name="label_settings_pane">false</item>
-    <item type="id" name="undo_button">false</item>
-    <item type="id" name="progress_spinner">false</item>
+    <item type="id" name="conversation_frame">false</item>
+    <item type="id" name="conversation_pane">false</item>
+    <item type="id" name="conversation_pane_no_message_view">false</item>
+    <item type="id" name="miscellaneous_pane">false</item>
+    <item type="id" name="vacation_responder_switch">false</item>
+    <item type="id" name="vacation_responder_main_content">false</item>
+    <item type="id" name="start_date_selector">false</item>
+    <item type="id" name="start_date">false</item>
+    <item type="id" name="end_date_selector">false</item>
+    <item type="id" name="end_date">false</item>
+    <item type="id" name="action_cancel">false</item>
+    <item type="id" name="canonical_type">false</item>
+    <item type="id" name="wait">false</item>
     <item type="id" name="wait_for_sync_title">false</item>
     <item type="id" name="manual_sync">false</item>
     <item type="id" name="change_sync_settings">false</item>
-    <item type="id" name="wait_for_sync_wrapper">false</item>
+    <item type="id" name="welcome_tour_pager">false</item>
+    <item type="id" name="welcome_tour_bottom_bar">false</item>
+    <item type="id" name="welcome_tour_skip">false</item>
+    <item type="id" name="welcome_tour_circle_page_indicator">false</item>
+    <item type="id" name="welcome_tour_done">false</item>
+    <item type="id" name="welcome_tour_next">false</item>
+    <item type="id" name="welcome_tour_got_it">false</item>
+    <item type="id" name="welcome_tour_promotion">false</item>
+    <item type="id" name="gmail_logo">false</item>
+    <item type="id" name="welcome_tour_title">false</item>
+    <item type="id" name="welcome_tour_text">false</item>
     <item type="id" name="widget_header">false</item>
-    <item type="id" name="widget_icon">false</item>
     <item type="id" name="widget_folder">false</item>
-    <item type="id" name="widget_account">false</item>
-    <item type="id" name="widget_unread_count">false</item>
     <item type="id" name="widget_compose">false</item>
-    <item type="id" name="conversation_list">false</item>
     <item type="id" name="widget_configuration">false</item>
+    <item type="id" name="conversation_list">false</item>
+    <item type="id" name="empty_conversation_list">false</item>
     <item type="id" name="widget_folder_not_synced">false</item>
-    <item type="id" name="widget_conversation">false</item>
-    <item type="id" name="widget_unread_background">false</item>
-    <item type="id" name="widget_read_background">false</item>
+    <item type="id" name="widget_conversation_list_item">false</item>
+    <item type="id" name="widget_background">false</item>
+    <item type="id" name="widget_priority">false</item>
+    <item type="id" name="widget_senders">false</item>
+    <item type="id" name="widget_attachment">false</item>
+    <item type="id" name="widget_date">false</item>
+    <item type="id" name="widget_subject">false</item>
+    <item type="id" name="widget_snippet">false</item>
+    <item type="id" name="labels">false</item>
     <item type="id" name="widget_folder_0">false</item>
     <item type="id" name="widget_folder_1">false</item>
     <item type="id" name="widget_folder_2">false</item>
-    <item type="id" name="widget_attachment_and_date">false</item>
-    <item type="id" name="widget_attachment">false</item>
-    <item type="id" name="widget_date">false</item>
-    <item type="id" name="widget_senders">false</item>
-    <item type="id" name="widget_subject">false</item>
     <item type="id" name="widget_loading">false</item>
-    <item type="id" name="loading_text">false</item>
-    <item type="id" name="about_fragment">false</item>
+    <item type="id" name="month_text_view">false</item>
+    <item type="id" name="add_account_header">false</item>
+    <item type="id" name="settings">false</item>
+    <item type="id" name="help_info_menu_item">false</item>
+    <item type="id" name="delete_ad">false</item>
+    <item type="id" name="add_attachment">false</item>
+    <item type="id" name="add_file_attachment">false</item>
+    <item type="id" name="add_photo_attachment">false</item>
+    <item type="id" name="add_cloud_attachment">false</item>
     <item type="id" name="send">false</item>
-    <item type="id" name="add_video_attachment">false</item>
+    <item type="id" name="compose_contact_picker">false</item>
     <item type="id" name="save">false</item>
     <item type="id" name="discard">false</item>
-    <item type="id" name="settings">false</item>
-    <item type="id" name="feedback_menu_item">false</item>
-    <item type="id" name="help_info_menu_item">false</item>
+    <item type="id" name="set_priority">false</item>
     <item type="id" name="archive">false</item>
     <item type="id" name="remove_folder">false</item>
     <item type="id" name="delete">false</item>
     <item type="id" name="discard_drafts">false</item>
-    <item type="id" name="change_folder">false</item>
+    <item type="id" name="discard_outbox">false</item>
     <item type="id" name="inside_conversation_unread">false</item>
+    <item type="id" name="move_to">false</item>
+    <item type="id" name="change_folders">false</item>
+    <item type="id" name="move_to_inbox">false</item>
     <item type="id" name="mark_important">false</item>
     <item type="id" name="mark_not_important">false</item>
+    <item type="id" name="unsubscribe">false</item>
     <item type="id" name="mute">false</item>
+    <item type="id" name="print_all">false</item>
+    <item type="id" name="show_original">false</item>
     <item type="id" name="report_spam">false</item>
     <item type="id" name="mark_not_spam">false</item>
-    <item type="id" name="report_phishing">false</item>
-    <item type="id" name="search">false</item>
-    <item type="id" name="refresh">false</item>
-    <item type="id" name="folder_options">false</item>
-    <item type="id" name="show_all_folders">false</item>
+    <item type="id" name="toggle_read_unread">false</item>
+    <item type="id" name="toggle_drawer">false</item>
+    <item type="id" name="empty_trash">false</item>
+    <item type="id" name="empty_spam">false</item>
     <item type="id" name="read">false</item>
+    <item type="id" name="refresh">false</item>
+    <item type="id" name="search">false</item>
     <item type="id" name="remove_star">false</item>
-    <item type="id" name="label_options">false</item>
-    <item type="id" name="preferences">false</item>
-    <item type="id" name="preview_attachment">false</item>
-    <item type="id" name="save_attachment">false</item>
-    <item type="id" name="download_again">false</item>
+    <item type="id" name="insert_quick_response_menu_item">false</item>
+    <item type="id" name="mail_context_menu_id">false</item>
+    <item type="id" name="copy_mail_context_menu_id">false</item>
+    <item type="id" name="print_message">false</item>
+    <item type="id" name="manage_accounts_menu_item">false</item>
+    <item type="id" name="clear_search_history_menu_item">false</item>
+    <item type="id" name="clear_picture_approvals_menu_item">false</item>
+    <item type="id" name="view_app_url">false</item>
+    <item type="id" name="print_dialog">false</item>
+    <item type="id" name="copyright_information">false</item>
+    <item type="id" name="privacy_policy">false</item>
+    <item type="id" name="add_star">false</item>
+    <item type="id" name="block_sender">false</item>
+    <item type="id" name="unblock_sender">false</item>
+    <item type="id" name="report_rendering_problem">false</item>
+    <item type="id" name="report_rendering_improvement">false</item>
     <item type="id" name="photo_view_menu_group">false</item>
     <item type="id" name="menu_save">false</item>
     <item type="id" name="menu_save_all">false</item>
+    <item type="id" name="save_to_cloud">false</item>
     <item type="id" name="menu_share">false</item>
     <item type="id" name="menu_share_all">false</item>
-    <item type="id" name="add_account">false</item>
-    <item type="id" name="mailboxes">false</item>
+    <item type="id" name="menu_print">false</item>
+    <item type="id" name="menu_download_again">false</item>
+    <item type="id" name="create_new">false</item>
     <item type="id" name="PHONE_MENU">false</item>
     <item type="id" name="dial_context_menu_id">false</item>
     <item type="id" name="sms_context_menu_id">false</item>
@@ -328,7 +856,6 @@
     <item type="id" name="copy_phone_context_menu_id">false</item>
     <item type="id" name="EMAIL_MENU">false</item>
     <item type="id" name="email_context_menu_id">false</item>
-    <item type="id" name="copy_mail_context_menu_id">false</item>
     <item type="id" name="GEO_MENU">false</item>
     <item type="id" name="map_context_menu_id">false</item>
     <item type="id" name="copy_geo_context_menu_id">false</item>
@@ -336,5 +863,6 @@
     <item type="id" name="open_context_menu_id">false</item>
     <item type="id" name="copy_link_context_menu_id">false</item>
     <item type="id" name="share_link_context_menu_id">false</item>
-    <item type="id" name="HELP_FEEDBACK_GROUP">false</item>
+    <item type="id" name="IMAGE_MENU">false</item>
+    <item type="id" name="view_image_context_menu_id">false</item>
 </resources>

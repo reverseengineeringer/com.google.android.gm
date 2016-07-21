@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="number_of_attachments">
-        <item quantity="other">%d liitettä</item>
-        <item quantity="one">%d liite</item>
-    </plurals>
-    <plurals name="move_conversation">
-        <item quantity="other">Siirrä %1$d keskustelua</item>
-        <item quantity="one">Siirrä keskustelu</item>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Kalentereita ei ole jaettu.</item>
+        <item quantity="one">Kalenteria ei ole jaettu.</item>
     </plurals>
     <plurals name="draft">
         <item quantity="other">Luonnokset</item>
@@ -24,109 +20,77 @@
         <item quantity="other">Hylätäänkö näiden %1$d keskustelun luonnokset?</item>
         <item quantity="one">Hylätäänkö tämän keskustelun luonnokset?</item>
     </plurals>
-    <plurals name="conversation_marking_read">
-        <item quantity="other">Merkitään %1$d keskustelua luetuiksi.</item>
-        <item quantity="one">Merkitään %1$d keskustelu luetuksi.</item>
-    </plurals>
-    <plurals name="conversation_marking_unread">
-        <item quantity="other">Merkitään %1$d keskustelua lukemattomiksi.</item>
-        <item quantity="one">Merkitään %1$d keskustelu lukemattomaksi.</item>
-    </plurals>
-    <plurals name="conversation_starring">
-        <item quantity="other">Merkitään %1$d keskustelua tähdellä.</item>
-        <item quantity="one">Merkitään %1$d keskustelu tähdellä.</item>
-    </plurals>
     <plurals name="conversation_unstarred">
         <item quantity="other">Poistetaan tähti %1$d keskustelusta.</item>
         <item quantity="one">Poistetaan tähti %1$d keskustelusta.</item>
     </plurals>
-    <plurals name="conversation_unknown_operation">
-        <item quantity="other">%1$d keskustelua odottaa toimenpiteitä.</item>
-        <item quantity="one">%1$d keskustelu odottaa toimenpiteitä.</item>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d ilmoitettiin roskapostiksi ja tilaus peruttiin.</item>
+        <item quantity="one">%1$d ilmoitettiin roskapostiksi ja tilaus peruttiin.</item>
     </plurals>
     <plurals name="conversation_muted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ohitettu.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ohitettu.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ohitettiin.</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ohitettiin.</item>
     </plurals>
     <plurals name="conversation_spammed">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty roskapostiksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty roskapostiksi.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkittiin roskapostiksi.</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkittiin roskapostiksi.</item>
     </plurals>
     <plurals name="conversation_not_spam">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty muuksi kuin roskapostiksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty muuksi kuin roskapostiksi.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkittiin muuksi kuin roskapostiksi.</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkittiin muuksi kuin roskapostiksi.</item>
     </plurals>
     <plurals name="conversation_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty ei-tärkeäksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty ei-tärkeäksi.</item>
-    </plurals>
-    <plurals name="conversation_phished">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty tietojenkalasteluksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty tietojenkalasteluksi.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkittiin ei-tärkeäksi.</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkittiin ei-tärkeäksi.</item>
     </plurals>
     <plurals name="conversation_archived">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> arkistoitu.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arkistoitu.</item>
-    </plurals>
-    <plurals name="conversation_moved_to_inbox">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> siirretty postilaatikkoon.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> siirretty postilaatikkoon.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> arkistoitiin.</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arkistoitiin.</item>
     </plurals>
     <plurals name="conversation_deleted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> poistettu.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> poistettu.</item>
-    </plurals>
-    <plurals name="conversation_marked_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty tärkeiksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty tärkeäksi.</item>
-    </plurals>
-    <plurals name="conversation_marked_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty ei-tärkeiksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty ei-tärkeäksi.</item>
-    </plurals>
-    <plurals name="conversation_marked_read">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty luetuiksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty luetuksi.</item>
-    </plurals>
-    <plurals name="conversation_marked_unread">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> merkitty lukemattomiksi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> merkitty lukemattomaksi.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> poistettiin.</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> poistettiin.</item>
     </plurals>
     <plurals name="conversation_folder_changed">
-        <item quantity="other">Tunnisteet muutettu.</item>
-        <item quantity="one">Tunniste muutettu.</item>
+        <item quantity="other">Tunnisteet muutettiin.</item>
+        <item quantity="one">Tunniste muutettiin.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d uutta viestiä</item>
+        <item quantity="one">%1$d uusi viesti</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Laajenna %1$d vanhaa viestiä</item>
+        <item quantity="one">Laajenna vanha viesti</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d vanhaa viestiä laajennettiin.</item>
+        <item quantity="one">Yksi vanha viesti laajennettiin.</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d uutta viestiä</item>
+        <item quantity="one">%1$d uusi viesti</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d keskustelua poistetaan pysyvästi.</item>
+        <item quantity="one">%1$d keskustelu poistetaan pysyvästi.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d viestiä</item>
+        <item quantity="one">%1$d viesti</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d liitettä</item>
+        <item quantity="one">%1$d liite</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Nämä viestit merkitään roskapostiksi. Haluatko myös jatkossa estää vastaavien viestien vastaanottamisen seuraavilta &amp;lt;b>%2$d lähettäjiltä&amp;lt;/b>:%1$s?</item>
+        <item quantity="one">Tämä viesti merkitään roskapostiksi. Haluatko myös jatkossa estää sellaisten vastaavien viestien vastaanottamisen, joiden lähettäjä on %1$s?</item>
     </plurals>
     <plurals name="sync_recent">
-        <item quantity="other">Synkronoi edelliset %1$d päivää</item>
-        <item quantity="one">Synkronoi edellinen %1$d päivä</item>
-    </plurals>
-    <plurals name="confirm_discard_conversation">
-        <item quantity="other">Hylätäänkö nämä %1$d luonnosta?</item>
-        <item quantity="one">Hylätäänkö tämä luonnos?</item>
-    </plurals>
-    <plurals name="conversation_muting">
-        <item quantity="other">Ohitetaan %1$d keskustelua.</item>
-        <item quantity="one">Ohitetaan %1$d keskustelu.</item>
-    </plurals>
-    <plurals name="conversation_spamming">
-        <item quantity="other">Tehdään %1$d keskustelusta roskaposti-ilmoitus.</item>
-        <item quantity="one">Tehdään %1$d keskustelusta roskaposti-ilmoitus.</item>
-    </plurals>
-    <plurals name="conversation_archiving">
-        <item quantity="other">Arkistoidaan %1$d keskustelua.</item>
-        <item quantity="one">Arkistoidaan %1$d keskustelu.</item>
-    </plurals>
-    <plurals name="conversation_deleting">
-        <item quantity="other">Poistetaan %1$d keskustelua.</item>
-        <item quantity="one">Poistetaan %1$d keskustelu.</item>
-    </plurals>
-    <plurals name="conversation_unstarring">
-        <item quantity="other">Poistetaan tähti %1$d keskustelusta.</item>
-        <item quantity="one">Poistetaan tähti %1$d keskustelusta.</item>
-    </plurals>
-    <plurals name="conversation_label_changed">
-        <item quantity="other">Tunnisteet muutettu</item>
-        <item quantity="one">Tunniste muutettu</item>
+        <item quantity="other">Synkronoi %1$d edellistä päivää.</item>
+        <item quantity="one">Synkronoi %1$d edellinen päivä.</item>
     </plurals>
     <plurals name="sync_duration">
         <item quantity="other">%d päivää</item>
@@ -134,14 +98,27 @@
     </plurals>
     <plurals name="title_day_dialog_content">
         <item quantity="other">päivää</item>
-        <item quantity="one">Päivä</item>
-    </plurals>
-    <plurals name="notify_attachment_error">
-        <item quantity="other">Ei voitu näyttää liitetiedostoa tilistä %s</item>
-        <item quantity="one">Liitettä ei voitu näyttää</item>
+        <item quantity="one">päivä</item>
     </plurals>
     <plurals name="sync_messages_partial_description">
-        <item quantity="other">Viimeisen %1$d päivän viestit ladataan, kun yhteys on käytössä.</item>
-        <item quantity="one">Edellisen päivän viestit ladataan, kun yhteys on käytössä.</item>
+        <item quantity="other">%1$d edellisen päivän viestit ladataan, kun yhteys on käytössä.</item>
+        <item quantity="one">Yhden edellisen päivän viestit ladataan, kun yhteys on käytössä.</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Huomaa: Kaikilla vastaanottajilla ei ehkä vieläkään ole käyttöoikeuksia näihin tiedostoihin. Sinun on ehkä jaettava nämä tiedostot Google Drivessa.</item>
+        <item quantity="one">Huomaa: Kaikilla vastaanottajilla ei ehkä vieläkään ole käyttöoikeutta tähän tiedostoon. Sinun on ehkä jaettava tämä tiedosto Google Drivessa.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Jaat vastaanottajille &amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>, jotka eivät ole Google Apps -organisaatiossa, jolle nämä tiedostot kuuluvat."</item>
+        <item quantity="one">Jaat vastaanottajille &amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>, jotka eivät ole Google Apps -organisaatiossa, jolle tiedosto kuuluu.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Vastaanottajilla ei ehkä ole käyttöoikeuksia Drivesta lisäämiisi tiedostoihin. Sinun on ehkä jaettava tiedostot Google Drivessa.</item>
+        <item quantity="one">Vastaanottajilla ei ehkä ole käyttöoikeutta Drivesta lisäämääsi tiedostoon. Sinun on ehkä jaettava tiedosto Google Drivessa.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Nykyiset sähköpostiosoitteesi:</item>
+        <item quantity="one">Nykyinen sähköpostiosoitteesi:</item>
     </plurals>
 </resources>

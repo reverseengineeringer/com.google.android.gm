@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Təqvimlər paylaşılmayıb</item>
+        <item quantity="one">Təqvim paylaşılmayıb</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">Qaralamalar</item>
+        <item quantity="one">Qaralama</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Bu %1$d söhbət silinsin?</item>
+        <item quantity="one">Bu söhbət silinsin?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Bu %1$d söhbət arxivləşdirilsin?</item>
+        <item quantity="one">Bu söhbət arxivləşdirilsin?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Qaralamalar bu %1$d söhbətdən atılsın?</item>
+        <item quantity="one">Qaralamalar bu söhbətdən atılsın?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d söhbətdən ulduz silinir.</item>
+        <item quantity="one">%1$d söhbətdən ulduz silinir.</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d spam kimi bildirilib və abunəlikdən çıxarılıb</item>
+        <item quantity="one">%1$d spam kimi bildirilib və abunəlikdən çıxarılıb</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> susduruldu</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> susduruldu</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> spam kimi bildirildi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> spam kimi bildirildi</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> qeyri-spam kimi bildirildi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> qeyri-spam kimi bildirildi</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> önəmsiz kimi qeyd olundu</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> önəmsiz kimi qeyd olundu</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> arxivləndi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> arxivləndi</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> silindi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> silindi</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Dəyişmiş etiketlər</item>
+        <item quantity="one">Dəyişmiş etiket.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d yeni mesaj</item>
+        <item quantity="one">%1$d yeni mesaj</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d köhnə mesajı genişləndirin</item>
+        <item quantity="one">Köhnə mesajı genişləndirin</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d köhnə mesaj genişləndi</item>
+        <item quantity="one">Bir köhnə mesaj genişləndi</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d yeni mesaj</item>
+        <item quantity="one">%1$d yeni mesaj</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d söhbət həmişəlik silinəcək.</item>
+        <item quantity="one">%1$d söhbət həmişəlik silinəcək.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d mesaj</item>
+        <item quantity="one">%1$d mesaj</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d qoşma</item>
+        <item quantity="one">%1$d qoşma</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Bu mesajlar spam olaraq qeyd olunacaq. Bu &amp;lt;b>%2$d göndərən&amp;lt;/b>:%1$s şəxslərdən oxşar mesajları almağı dayandırmaq istəyirsiniz?</item>
+        <item quantity="one">Bu mesaj spam olaraq qeyd olunacaq. %1$s adlı şəxsdən oxşar mesajları almağı dayandırmaq istəyirsiniz?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sinx: Son %1$d gün</item>
+        <item quantity="one">Sinx: Son %1$d gün</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">Bir gün</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Günlər</item>
+        <item quantity="one">Gün</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Son %1$d günün mesajı bağlantı zamanı endiriləcək</item>
+        <item quantity="one">Son 1 günün mesajı bağlantı zamanı endiriləcək</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Qeyd: Bəzi alıcıların hələ də bu fayllara girişi olmaya bilər. Bu faylları Google Disk daxilindən paylaşmalısınız.</item>
+        <item quantity="one">Qeyd: Bəzi alıcıların hələ də bu fayla girişi olmaya bilər. Bu faylı Google Disk daxilindən paylaşmalısınız.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Bu faylların aid olduğu Google Tətbiq təşkilatında olmayan şəxslərlə paylaşırsınız:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>"</item>
+        <item quantity="one">Bu faylın aid olduğu Google Tətbiq təşkilatında olmayan şəxslərlə paylaşırsınız:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br></item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Diskdən daxil etdiyiniz fayllara alıcılarınızın girişi olmaya bilər. Faylları Google Disk daxilindən paylaşmalısınız</item>
+        <item quantity="one">Diskdən daxil etdiyiniz fayla alıcılarınızın girişi olmaya bilər. Faylı Google Disk daxilindən paylaşmalısınız</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Cari e-poçt ünvanlarınız:</item>
+        <item quantity="one">Cari e-poçtunuz:</item>
+    </plurals>
+</resources>

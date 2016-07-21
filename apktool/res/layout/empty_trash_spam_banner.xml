@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.teasers.EmptyTrashSpamBanner android:orientation="vertical" android:background="@color/empty_trash_spam_banner_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/empty_trash_spam_banner_text_size" android:textColor="@color/empty_trash_spam_banner_text" android:id="@id/empty_trash_spam_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/empty_trash_spam_banner_text_spacing" />
+    <Button android:textSize="@dimen/empty_trash_spam_banner_text_size" android:textColor="@color/empty_trash_spam_banner_text" android:layout_gravity="end" android:id="@id/empty_trash_spam_action" android:background="?selectableItemBackground" android:padding="@dimen/empty_trash_spam_banner_action_inner_spacing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/empty_trash_spam_banner_action_outer_spacing" android:layout_marginRight="@dimen/empty_trash_spam_banner_action_outer_spacing" android:layout_marginBottom="@dimen/empty_trash_spam_banner_action_outer_spacing" android:minHeight="@dimen/empty_trash_spam_banner_action_min_height" android:text="@string/empty_trash_banner_action" android:textAllCaps="true" style="@style/Widget.AppCompat.Button" />
+    <View style="@style/ConversationListDividerStyle" />
+</com.android.mail.ui.teasers.EmptyTrashSpamBanner>

@@ -3,8 +3,7 @@ package com.android.mail.ui;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import com.android.mail.utils.LogUtils;
-import com.android.mail.utils.Utils;
+import cvm;
 
 public class FolderListLayout
   extends FrameLayout
@@ -21,20 +20,14 @@ public class FolderListLayout
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    LogUtils.d("MailBlankFragment", "FolderListLayout(%s).onLayout() called", new Object[] { this });
+    cvm.b("MailBlankFragment", "FolderListLayout(%s).onLayout() called", new Object[] { this });
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    LogUtils.d("MailBlankFragment", "FolderListLayout(%s).onMeasure() called", new Object[] { this });
+    cvm.b("MailBlankFragment", "FolderListLayout(%s).onMeasure() called", new Object[] { this });
     super.onMeasure(paramInt1, paramInt2);
-  }
-  
-  public void requestLayout()
-  {
-    Utils.checkRequestLayout(this);
-    super.requestLayout();
   }
 }
 

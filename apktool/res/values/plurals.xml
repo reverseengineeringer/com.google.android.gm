@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="number_of_attachments">
-        <item quantity="other">%d attachments</item>
-        <item quantity="one">%d attachment</item>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Calendars are not shared</item>
+        <item quantity="one">Calendar is not shared</item>
     </plurals>
-    <plurals name="move_conversation">
-        <item quantity="other">Move %1$d conversations</item>
-        <item quantity="one">Move conversation</item>
-    </plurals>
+    <item type="plurals" name="ces_dialog_message" />
+    <item type="plurals" name="ces_details_header_message" />
     <plurals name="draft">
         <item quantity="other">Drafts</item>
         <item quantity="one">Draft</item>
@@ -24,109 +22,77 @@
         <item quantity="other">Discard drafts from these %1$d conversations?</item>
         <item quantity="one">Discard drafts from this conversation?</item>
     </plurals>
-    <plurals name="conversation_marking_read">
-        <item quantity="other">Marking %1$d conversations read.</item>
-        <item quantity="one">Marking %1$d conversation read.</item>
-    </plurals>
-    <plurals name="conversation_marking_unread">
-        <item quantity="other">Marking %1$d conversations unread.</item>
-        <item quantity="one">Marking %1$d conversation unread.</item>
-    </plurals>
-    <plurals name="conversation_starring">
-        <item quantity="other">Starring %1$d conversations.</item>
-        <item quantity="one">Starring %1$d conversation.</item>
-    </plurals>
     <plurals name="conversation_unstarred">
-        <item quantity="other">Unstarring %1$d conversations.</item>
-        <item quantity="one">Unstarring %1$d conversation.</item>
+        <item quantity="other">Unstarring %1$d conversations</item>
+        <item quantity="one">Unstarring %1$d conversation</item>
     </plurals>
-    <plurals name="conversation_unknown_operation">
-        <item quantity="other">Waiting for operation on %1$d conversations.</item>
-        <item quantity="one">Waiting for operation on %1$d conversation.</item>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d reported as spam and unsubscribed</item>
+        <item quantity="one">%1$d reported as spam and unsubscribed</item>
     </plurals>
     <plurals name="conversation_muted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> muted.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> muted.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> muted</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> muted</item>
     </plurals>
     <plurals name="conversation_spammed">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> reported as spam.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> reported as spam.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> reported as spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> reported as spam</item>
     </plurals>
     <plurals name="conversation_not_spam">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> reported as not spam.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> reported as not spam.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> reported as not spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> reported as not spam</item>
     </plurals>
     <plurals name="conversation_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marked not important.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marked not important.</item>
-    </plurals>
-    <plurals name="conversation_phished">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> reported as phishing.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> reported as phishing.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marked not important</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marked not important</item>
     </plurals>
     <plurals name="conversation_archived">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> archived.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> archived.</item>
-    </plurals>
-    <plurals name="conversation_moved_to_inbox">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> moved to the Inbox.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> moved to the Inbox.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> archived</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> archived</item>
     </plurals>
     <plurals name="conversation_deleted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> deleted.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> deleted.</item>
-    </plurals>
-    <plurals name="conversation_marked_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marked important.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marked important.</item>
-    </plurals>
-    <plurals name="conversation_marked_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marked not important.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marked not important.</item>
-    </plurals>
-    <plurals name="conversation_marked_read">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marked read.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marked read.</item>
-    </plurals>
-    <plurals name="conversation_marked_unread">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> marked unread.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> marked unread.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> deleted</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> deleted</item>
     </plurals>
     <plurals name="conversation_folder_changed">
         <item quantity="other">Changed labels.</item>
         <item quantity="one">Changed label.</item>
     </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d new messages</item>
+        <item quantity="one">%1$d new message</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Expand %1$d older messages</item>
+        <item quantity="one">Expand older message</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Expanded %1$d older messages</item>
+        <item quantity="one">One older message expanded</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d new messages</item>
+        <item quantity="one">%1$d new message</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d conversations will be permanently deleted.</item>
+        <item quantity="one">%1$d conversation will be permanently deleted.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d messages</item>
+        <item quantity="one">%1$d message</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d attachments</item>
+        <item quantity="one">%1$d attachment</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">These messages will be marked as spam. Would you also like to stop receiving similar messages from these &amp;lt;b>%2$d senders&amp;lt;/b>:%1$s</item>
+        <item quantity="one">This message will be marked as spam. Would you also like to stop receiving similar messages from %1$s?</item>
+    </plurals>
     <plurals name="sync_recent">
         <item quantity="other">Sync: Last %1$d days</item>
         <item quantity="one">Sync: Last %1$d day</item>
-    </plurals>
-    <plurals name="confirm_discard_conversation">
-        <item quantity="other">Discard these %1$d drafts?</item>
-        <item quantity="one">Discard this draft?</item>
-    </plurals>
-    <plurals name="conversation_muting">
-        <item quantity="other">Muting %1$d conversations.</item>
-        <item quantity="one">Muting %1$d conversation.</item>
-    </plurals>
-    <plurals name="conversation_spamming">
-        <item quantity="other">Reporting %1$d conversations as spam.</item>
-        <item quantity="one">Reporting %1$d conversation as spam.</item>
-    </plurals>
-    <plurals name="conversation_archiving">
-        <item quantity="other">Archiving %1$d conversations.</item>
-        <item quantity="one">Archiving %1$d conversation.</item>
-    </plurals>
-    <plurals name="conversation_deleting">
-        <item quantity="other">Deleting %1$d conversations.</item>
-        <item quantity="one">Deleting %1$d conversation.</item>
-    </plurals>
-    <plurals name="conversation_unstarring">
-        <item quantity="other">Unstarring %1$d conversations.</item>
-        <item quantity="one">Unstarring %1$d conversation.</item>
-    </plurals>
-    <plurals name="conversation_label_changed">
-        <item quantity="other">Changed labels.</item>
-        <item quantity="one">Changed label.</item>
     </plurals>
     <plurals name="sync_duration">
         <item quantity="other">%d days</item>
@@ -136,12 +102,25 @@
         <item quantity="other">Days</item>
         <item quantity="one">Day</item>
     </plurals>
-    <plurals name="notify_attachment_error">
-        <item quantity="other">"Couldn't show attachment%s"</item>
-        <item quantity="one">"Couldn't show attachment"</item>
-    </plurals>
     <plurals name="sync_messages_partial_description">
         <item quantity="other">Last %1$d days of messages will download when connected</item>
         <item quantity="one">Last 1 day of messages will download when connected</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Note: Some recipients may still not have access to these files. You may need to share these files from within Google Drive.</item>
+        <item quantity="one">Note: Some recipients may still not have access to this file. You may need to share this file from within Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"You're sharing with recipients:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>who are not in the Google Apps organization that these files belong to."</item>
+        <item quantity="one">"You're sharing with recipients:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>who are not in the Google Apps organization that this file belongs to."</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Your recipients may not have access to the files you inserted from Drive. You may need to share the files from within Google Drive.</item>
+        <item quantity="one">Your recipients may not have access to the file you inserted from Drive. You may need to share the file from within Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Your current email addresses:</item>
+        <item quantity="one">Your current email address:</item>
     </plurals>
 </resources>

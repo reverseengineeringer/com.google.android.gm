@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Partekatu gabe daude egutegiak</item>
+        <item quantity="one">Partekatu gabe dago egutegia</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">Zirriborroak</item>
+        <item quantity="one">Zirriborroa</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">%1$d elkarrizketa hauek ezabatu nahi dituzu?</item>
+        <item quantity="one">Elkarrizketa ezabatu nahi duzu?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">%1$d elkarrizketa hauek artxibatu nahi dituzu?</item>
+        <item quantity="one">Elkarrizketa artxibatu nahi duzu?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">%1$d elkarrizketa hauen zirriborroak baztertu nahi dituzu?</item>
+        <item quantity="one">Elkarrizketaren zirriborroak baztertu nahi dituzu?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d elkarrizketari izarra kentzen</item>
+        <item quantity="one">%1$d elkarrizketari izarra kentzen</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d spam gisa markatu dira eta harpidetza kendu da</item>
+        <item quantity="one">%1$d spam gisa markatu dira eta harpidetza kendu da</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ezkutatu dira</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ezkutatu da</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> spama direla jakinarazi da</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> spama dela jakinarazi da</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> spama ez direla jakinarazi da</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> spama ez dela jakinarazi da</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> garrantzirik gabeko gisa markatu dira</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> garrantzirik gabeko gisa markatu da</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> artxibatu dira</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> artxibatu da</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ezabatu dira</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ezabatu da</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Etiketak aldatu dira.</item>
+        <item quantity="one">Etiketa aldatu da.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d mezu berri</item>
+        <item quantity="one">%1$d mezu berri</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Zabaldu %1$d mezu zaharrago</item>
+        <item quantity="one">Zabaldu mezu zaharragoa</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d mezu zaharrago zabaldu dira</item>
+        <item quantity="one">Mezu zaharrago bat zabaldu da</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d mezu berri</item>
+        <item quantity="one">%1$d mezu berri</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d elkarrizketa betiko ezabatuko dira.</item>
+        <item quantity="one">%1$d elkarrizketa betiko ezabatuko da.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d mezu</item>
+        <item quantity="one">%1$d mezu</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d eranskin</item>
+        <item quantity="one">%1$d eranskin</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Spam gisa markatuko dira mezu hauek. Halaber, &amp;lt;b>%2$d igorle&amp;lt;/b> hauen antzeko mezuak jasotzeari utzi nahi diozu: %1$s?</item>
+        <item quantity="one">Spam gisa markatuko da mezu hau. Halaber, %1$s igorlearen antzeko mezuak jasotzeari utzi nahi diozu?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Sinkronizazioa: azken %1$d egunetakoak</item>
+        <item quantity="one">Sinkronizazioa: azken %1$d egunekoak</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d egun</item>
+        <item quantity="one">Egun bat</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">egun</item>
+        <item quantity="one">egun</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Konektatzean, azken %1$d egunetako mezuak deskargatuko dira</item>
+        <item quantity="one">Konektatzean, azken eguneko mezuak deskargatuko dira</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Oharra: agian zenbait hartzailek ez dute izango fitxategietarako sarbiderik oraindik. Beharbada fitxategiak Google Drive-tik partekatu beharko dituzu.</item>
+        <item quantity="one">Oharra: agian zenbait hartzailek ez dute izango fitxategirako sarbiderik oraindik. Beharbada fitxategia Google Drive-tik partekatu beharko duzu.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br> hartzaileekin partekatzen ari zara fitxategiak, eta horiek ez dira fitxategien jabe den Google Apps erakundekoak."</item>
+        <item quantity="one">&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br> hartzaileekin partekatzen ari zara fitxategia, eta horiek ez dira fitxategiaren jabe den Google Apps erakundekoak.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Agian hartzaileak ezin izango dira sartu Drive-tik txertatutako fitxategietan. Beharbada fitxategiak Google Drive-tik partekatu beharko dituzu.</item>
+        <item quantity="one">Agian hartzaileak ezin izango dira sartu Drive-tik txertatutako fitxategian. Beharbada fitxategia Google Drive-tik partekatu beharko duzu.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Uneko helbide elektronikoak:</item>
+        <item quantity="one">Uneko helbide elektronikoa:</item>
+    </plurals>
+</resources>

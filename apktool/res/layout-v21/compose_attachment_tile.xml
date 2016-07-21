@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.compose.ComposeAttachmentTile android:id="@id/attachment_tile" android:background="@drawable/attachment_tile_background" android:padding="@dimen/attachment_tile_background_padding" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/attachment_tile_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/attachment_tile_body" />
+</com.android.mail.compose.ComposeAttachmentTile>

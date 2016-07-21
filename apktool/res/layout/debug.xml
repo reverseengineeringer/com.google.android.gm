@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/clear_webview_cache" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_clear_webview_cache" />
+    <Button android:id="@id/clear_migration_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_clear_migration_state" />
+    <CheckBox android:id="@id/debug_force_one_minute_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_force_one_minute_refresh_label" />
+    <CheckBox android:id="@id/debug_enable_strict_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_enable_strict_mode_label" />
+    <CheckBox android:id="@id/debug_enable_all_inboxes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_enable_all_inboxes" />
+    <CheckBox android:id="@id/debug_enable_rv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_enable_rv_label" />
+    <CheckBox android:id="@id/debug_enable_motion_drawer" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_enable_motion_drawer" />
+    <CheckBox android:id="@id/debug_enable_webview_compose" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_enable_webview_compose" />
+    <CheckBox android:id="@id/debug_enable_account_setup_logo_landing" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_enable_account_setup_logo_landing" />
+    <CheckBox android:id="@id/debug_allow_non_system_partner_provider_app" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_allow_non_system_partner_provider_app" />
+</LinearLayout>

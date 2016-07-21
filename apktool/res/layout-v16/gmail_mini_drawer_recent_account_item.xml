@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="@dimen/mini_drawer_account_padding" android:clipChildren="false" android:clipToPadding="false" style="@style/MiniDrawerAccountStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/avatar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/mini_drawer_avatar_margin" />
+    <TextView android:textSize="10.0sp" android:textColor="@color/text_color_black" android:gravity="center" android:layout_gravity="start|bottom|center" android:id="@id/avatar_recents_unread_count" android:background="@drawable/unread_count_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-light" />
+</FrameLayout>

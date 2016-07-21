@@ -1,9 +1,9 @@
 package com.google.android.gm.widget;
 
-import com.android.mail.widget.BaseGmailWidgetProvider;
+import cxg;
 
 public class GmailWidgetProvider
-  extends BaseGmailWidgetProvider
+  extends cxg
 {}
 
 /* Location:

@@ -11,7 +11,7 @@ public class AccountsChangedReceiver
   {
     if ("android.accounts.LOGIN_ACCOUNTS_CHANGED".equals(paramIntent.getAction()))
     {
-      paramIntent.setClass(paramContext, MailIntentService.class);
+      paramIntent.setClass(paramContext, GmailIntentService.class);
       paramContext.startService(paramIntent);
     }
   }

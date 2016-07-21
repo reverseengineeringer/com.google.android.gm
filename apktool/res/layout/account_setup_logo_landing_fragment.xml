@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/logo_landing_header" android:paddingLeft="@dimen/setup_logo_landing_header_horizontal_padding" android:paddingRight="@dimen/setup_logo_landing_header_horizontal_padding" android:paddingBottom="@dimen/setup_logo_landing_header_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/logo_landing_header_addresses" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_logo_landing_header_inner_vertical_margin" android:layout_marginBottom="@dimen/setup_logo_landing_header_inner_vertical_margin">
+            <TextView android:id="@id/added_addresses" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SetupTextStyle" />
+            <TextView android:textColor="@color/account_setup_action_text_color" android:id="@id/view_email_addresses" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/view_email_addresses_label" style="@style/SetupTextStyle" />
+        </LinearLayout>
+        <TextView android:textColor="@color/setup_warning_color" android:id="@id/error_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_logo_landing_header_inner_vertical_margin" android:layout_marginBottom="@dimen/setup_logo_landing_header_inner_vertical_margin" style="@style/SetupTextStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/providers_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

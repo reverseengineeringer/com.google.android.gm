@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.ads.AppRatingAndLogoView android:gravity="start|center" android:id="@id/app_rating_and_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/app_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/app_rating_height">
+        <ImageView android:id="@id/app_rating_star_0" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/app_rating_star_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/app_rating_star_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/app_rating_star_3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/app_rating_star_4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@id/app_rating_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ad_app_rating_count_side_margin" android:layout_marginRight="@dimen/ad_app_rating_count_side_margin" />
+    </LinearLayout>
+    <ImageView android:id="@id/google_play_logo" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="@dimen/app_rating_height" android:src="@drawable/google_play_logo_18dp" android:scaleType="center" android:contentDescription="@string/google_play_logo" />
+</com.google.android.gm.ads.AppRatingAndLogoView>

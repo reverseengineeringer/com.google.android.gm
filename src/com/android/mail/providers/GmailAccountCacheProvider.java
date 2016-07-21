@@ -2,19 +2,30 @@ package com.android.mail.providers;
 
 import android.content.Context;
 import android.content.Intent;
-import com.google.android.gm.AddAccountActivity;
+import cgr;
+import com.android.exchange.service.EasService;
+import com.google.android.gm.welcome.WelcomeTourActivity;
+import cuh;
 
 public class GmailAccountCacheProvider
-  extends MailAppProvider
+  extends cgr
 {
-  protected String getAuthority()
+  protected final Intent a(Context paramContext)
+  {
+    paramContext = new Intent(paramContext, WelcomeTourActivity.class);
+    paramContext.putExtra("tour-highest-version-seen", -1);
+    return paramContext;
+  }
+  
+  protected final String a()
   {
     return "com.google.android.gm2.accountcache";
   }
   
-  protected Intent getNoAccountsIntent(Context paramContext)
+  public boolean onCreate()
   {
-    return new Intent(paramContext, AddAccountActivity.class);
+    cuh.a(getContext(), EasService.class.getName());
+    return super.onCreate();
   }
 }
 

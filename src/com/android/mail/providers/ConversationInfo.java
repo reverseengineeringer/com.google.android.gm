@@ -1,132 +1,124 @@
 package com.android.mail.providers;
 
-import android.text.TextUtils;
-import com.google.common.base.Objects;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.os.Parcelable.Creator;
+import cgc;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
-import java.util.regex.Pattern;
 
 public class ConversationInfo
+  implements Parcelable
 {
-  private static Pattern MESSAGE_CONV_SPLITTER_REGEX = Pattern.compile("\\^\\*\\*\\^");
-  private static Pattern MESSAGE_SPLITTER_REGEX = Pattern.compile("\\^\\*\\*\\*\\^");
-  public static String SPLITTER = "^*^";
-  private static Pattern SPLITTER_REGEX = Pattern.compile("\\^\\*\\^");
-  public int draftCount;
-  public String firstSnippet;
-  public String firstUnreadSnippet;
-  public String lastSnippet;
-  public int messageCount;
-  public final ArrayList<MessageInfo> messageInfos = new ArrayList();
+  public static final Parcelable.Creator<ConversationInfo> CREATOR = new cgc();
+  public final ArrayList<ParticipantInfo> a;
+  public int b;
+  public int c;
+  public String d;
+  public String e;
   
-  public ConversationInfo() {}
-  
-  public ConversationInfo(int paramInt1, int paramInt2, String paramString1, String paramString2, String paramString3)
+  public ConversationInfo()
   {
-    set(paramInt1, paramInt2, paramString1, paramString2, paramString3);
+    a = new ArrayList();
   }
   
-  public static ConversationInfo fromString(String paramString)
+  public ConversationInfo(int paramInt)
   {
-    if (TextUtils.isEmpty(paramString)) {}
-    do
-    {
+    b = paramInt;
+    a = new ArrayList(paramInt);
+  }
+  
+  public ConversationInfo(Parcel paramParcel)
+  {
+    b = paramParcel.readInt();
+    c = paramParcel.readInt();
+    d = paramParcel.readString();
+    e = paramParcel.readString();
+    a = paramParcel.createTypedArrayList(ParticipantInfo.CREATOR);
+  }
+  
+  public static ConversationInfo a(byte[] paramArrayOfByte)
+  {
+    if (paramArrayOfByte == null) {
       return null;
-      paramString = TextUtils.split(paramString, MESSAGE_CONV_SPLITTER_REGEX);
-    } while (paramString.length < 2);
-    ConversationInfo localConversationInfo = parseConversation(paramString[0]);
-    parseMessages(localConversationInfo, paramString[1]);
-    return localConversationInfo;
+    }
+    Parcel localParcel = Parcel.obtain();
+    localParcel.unmarshall(paramArrayOfByte, 0, paramArrayOfByte.length);
+    localParcel.setDataPosition(0);
+    paramArrayOfByte = (ConversationInfo)CREATOR.createFromParcel(localParcel);
+    localParcel.recycle();
+    return paramArrayOfByte;
   }
   
-  private static String getMessageInfoString(ConversationInfo paramConversationInfo)
+  public final void a(ParticipantInfo paramParticipantInfo)
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    int i = 0;
-    Iterator localIterator = messageInfos.iterator();
-    while (localIterator.hasNext())
+    a.add(paramParticipantInfo);
+  }
+  
+  public final boolean a(boolean paramBoolean)
+  {
+    Iterator localIterator = a.iterator();
+    boolean bool2 = false;
+    if (localIterator.hasNext())
     {
-      localStringBuilder.append(MessageInfo.toString((MessageInfo)localIterator.next()));
-      if (i < messageInfos.size() - 1) {
-        localStringBuilder.append("^***^");
+      ParticipantInfo localParticipantInfo = (ParticipantInfo)localIterator.next();
+      if (d != paramBoolean) {
+        d = paramBoolean;
       }
-      i += 1;
+      for (boolean bool1 = true;; bool1 = false)
+      {
+        bool2 = bool1 | bool2;
+        break;
+      }
     }
-    return localStringBuilder.toString();
-  }
-  
-  private static ConversationInfo parseConversation(String paramString)
-  {
-    paramString = TextUtils.split(paramString, SPLITTER_REGEX);
-    return new ConversationInfo(Integer.parseInt(paramString[0]), Integer.parseInt(paramString[1]), paramString[2], paramString[3], paramString[4]);
-  }
-  
-  private static void parseMessages(ConversationInfo paramConversationInfo, String paramString)
-  {
-    paramString = TextUtils.split(paramString, MESSAGE_SPLITTER_REGEX);
-    int j = paramString.length;
-    int i = 0;
-    while (i < j)
-    {
-      paramConversationInfo.addMessage(MessageInfo.fromString(paramString[i]));
-      i += 1;
+    if ((b > 0) && (paramBoolean)) {
+      d = e;
     }
+    return bool2;
   }
   
-  public static String toString(ConversationInfo paramConversationInfo)
+  public final byte[] a()
   {
-    if (paramConversationInfo == null) {
-      return null;
-    }
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append(messageCount);
-    localStringBuilder.append(SPLITTER);
-    localStringBuilder.append(draftCount);
-    localStringBuilder.append(SPLITTER);
-    localStringBuilder.append(firstSnippet);
-    localStringBuilder.append(SPLITTER);
-    localStringBuilder.append(firstUnreadSnippet);
-    localStringBuilder.append(SPLITTER);
-    localStringBuilder.append(lastSnippet);
-    localStringBuilder.append("^**^");
-    localStringBuilder.append(getMessageInfoString(paramConversationInfo));
-    return localStringBuilder.toString();
+    Parcel localParcel = Parcel.obtain();
+    writeToParcel(localParcel, 0);
+    byte[] arrayOfByte = localParcel.marshall();
+    localParcel.recycle();
+    return arrayOfByte;
   }
   
-  public void addMessage(MessageInfo paramMessageInfo)
+  public int describeContents()
   {
-    messageInfos.add(paramMessageInfo);
+    return 0;
   }
   
   public int hashCode()
   {
-    return Objects.hashCode(new Object[] { Integer.valueOf(messageCount), Integer.valueOf(draftCount), messageInfos, firstSnippet, lastSnippet, firstUnreadSnippet });
+    return Arrays.hashCode(new Object[] { Integer.valueOf(b), Integer.valueOf(c), a, d, e });
   }
   
-  public boolean markRead(boolean paramBoolean)
+  public String toString()
   {
-    boolean bool = false;
-    Iterator localIterator = messageInfos.iterator();
-    while (localIterator.hasNext()) {
-      bool |= ((MessageInfo)localIterator.next()).markRead(paramBoolean);
-    }
-    if (paramBoolean)
-    {
-      firstSnippet = lastSnippet;
-      return bool;
-    }
-    firstSnippet = firstUnreadSnippet;
-    return bool;
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("[ConversationInfo object: messageCount = ");
+    localStringBuilder.append(b);
+    localStringBuilder.append(", draftCount = ");
+    localStringBuilder.append(c);
+    localStringBuilder.append(", firstUnreadSnippet= ");
+    localStringBuilder.append(d);
+    localStringBuilder.append(", participants = ");
+    localStringBuilder.append(a.toString());
+    localStringBuilder.append("]");
+    return localStringBuilder.toString();
   }
   
-  public void set(int paramInt1, int paramInt2, String paramString1, String paramString2, String paramString3)
+  public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    messageInfos.clear();
-    messageCount = paramInt1;
-    draftCount = paramInt2;
-    firstSnippet = paramString1;
-    firstUnreadSnippet = paramString2;
-    lastSnippet = paramString3;
+    paramParcel.writeInt(b);
+    paramParcel.writeInt(c);
+    paramParcel.writeString(d);
+    paramParcel.writeString(e);
+    paramParcel.writeTypedList(a);
   }
 }
 

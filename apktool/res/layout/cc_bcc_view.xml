@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:id="@id/cc_content" android:visibility="gone" android:layout_alignParentTop="true" android:alpha="0.0" style="@style/RecipientComposeFieldLayout">
-        <LinearLayout android:gravity="center_vertical" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <TextView android:id="@id/cc_label" android:text="@string/cc" android:contentDescription="@string/cc" style="@style/RecipientComposeHeading" />
-            <com.android.ex.chips.RecipientEditTextView android:id="@id/cc" android:contentDescription="@string/cc" style="@style/RecipientEditTextViewStyle" />
+    <LinearLayout android:id="@id/cc_content" android:visibility="gone" android:alpha="0.0" style="@style/RecipientComposeFieldLayout">
+        <LinearLayout android:id="@id/cc_dropdown_anchor" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ComposeFieldContent">
+            <TextView android:id="@id/cc_heading" android:text="@string/cc" android:contentDescription="@string/cc" style="@style/ComposeHeading" />
+            <com.android.ex.chips.RecipientEditTextView android:id="@id/cc" android:dropDownAnchor="@id/cc_dropdown_anchor" style="@style/RecipientEditTextViewStyle" />
         </LinearLayout>
-        <View style="@style/RecipientComposeFieldSpacer" />
+        <View style="@style/DefaultDividerStyle" />
     </LinearLayout>
-    <LinearLayout android:id="@id/bcc_content" android:visibility="gone" android:layout_below="@id/cc_content" android:alpha="0.0" style="@style/RecipientComposeFieldLayout">
-        <LinearLayout android:gravity="center_vertical" android:addStatesFromChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <TextView android:id="@id/bcc_label" android:text="@string/bcc" android:contentDescription="@string/bcc" style="@style/RecipientComposeHeading" />
-            <com.android.ex.chips.RecipientEditTextView android:id="@id/bcc" android:contentDescription="@string/bcc" style="@style/RecipientEditTextViewStyle" />
+    <LinearLayout android:id="@id/bcc_content" android:visibility="gone" android:alpha="0.0" style="@style/RecipientComposeFieldLayout">
+        <LinearLayout android:id="@id/bcc_dropdown_anchor" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ComposeFieldContent">
+            <TextView android:id="@id/bcc_heading" android:text="@string/bcc" android:contentDescription="@string/bcc" style="@style/ComposeHeading" />
+            <com.android.ex.chips.RecipientEditTextView android:id="@id/bcc" android:dropDownAnchor="@id/bcc_dropdown_anchor" style="@style/RecipientEditTextViewStyle" />
         </LinearLayout>
-        <View style="@style/RecipientComposeFieldSpacer" />
+        <View style="@style/DefaultDividerStyle" />
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

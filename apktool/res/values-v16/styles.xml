@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SuwNavBarButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/suw_navbar_text_size</item>
+        <item name="android:textColor">?suwNavBarTextColor</item>
+        <item name="android:background">?suwNavBarButtonBackground</item>
+        <item name="android:paddingLeft">@dimen/suw_navbar_button_padding_sides</item>
+        <item name="android:paddingRight">@dimen/suw_navbar_button_padding_sides</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:drawablePadding">@dimen/suw_navbar_button_drawable_padding</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="TextAppearance.SuwDescription.Light" parent="@style/TextAppearance.SuwDescription">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="SendersAppearanceReadStyle">
+        <item name="android:textColor">@color/senders_text_color</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="SubjectAppearanceReadStyle">
+        <item name="android:textColor">@color/subject_text_color_read</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="MarginCompensationEditText" parent="@style/SetupTextStyle">
+        <item name="android:layout_marginLeft">@dimen/setup_edit_text_margin_side</item>
+        <item name="android:layout_marginRight">@dimen/setup_edit_text_margin_side</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="EmptyConversationViewStyle">
+        <item name="android:textSize">@dimen/empty_view_text_size</item>
+        <item name="android:textColor">@color/text_color_grey</item>
+        <item name="android:layout_marginTop">@dimen/empty_view_space</item>
+        <item name="android:fontFamily">sans_serif_light</item>
+    </style>
+    <style name="PasswordTextStyle" parent="@style/SetupTextStyle">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="AbstractCalendarPromotionTitle">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff212121</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20.0dip</item>
+        <item name="android:fontFamily">@string/calendar_promotion_font_medium</item>
+    </style>
+    <style name="AbstractCalendarPromotionText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff212121</item>
+        <item name="android:paddingTop">@dimen/calendar_promotion_summary_padding</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@string/calendar_promotion_font_regular</item>
+    </style>
+    <style name="CalendarPromotionActionText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:padding">16.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@string/calendar_promotion_font_regular</item>
+    </style>
+    <style name="CalendarPromotionActionTextAccept" parent="@style/CalendarPromotionActionText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@string/calendar_promotion_font_medium</item>
+    </style>
+</resources>

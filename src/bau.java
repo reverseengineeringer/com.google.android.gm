@@ -1,0 +1,11 @@
+import java.util.Comparator;
+
+final class bau
+  implements Comparator<bav>
+{}
+
+/* Location:
+ * Qualified Name:     bau
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

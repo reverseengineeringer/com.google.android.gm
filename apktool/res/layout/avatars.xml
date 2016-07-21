@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="start|center|top" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/offscreen_avatar" android:layout_alignParentTop="true" style="@style/AccountsSwitcher.AvatarStyle.Gmail" />
+    <FrameLayout android:id="@id/avatar_container" android:layout_alignParentTop="true" style="@style/AccountsSwitcher.AvatarStyle.Gmail">
+        <ImageView android:id="@id/avatar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/avatar_badge" style="@style/AccountsSwitcher.AvatarBadge" />
+    </FrameLayout>
+    <ImageView android:id="@id/crossfade_avatar_recents_one" android:visibility="gone" android:layout_alignParentTop="true" style="@style/AccountsSwitcher.RecentsOneStyle" />
+    <FrameLayout android:id="@id/avatar_recents_one" android:focusable="true" android:src="@drawable/avatar_placeholder" android:layout_alignParentTop="true" style="@style/AccountsSwitcher.RecentsOneStyle.Gmail">
+        <ImageView android:id="@id/avatar_recents_one_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/AccountsSwitcher.RecentsImageStyle" />
+        <include android:id="@id/avatar_recents_one_unread_count" layout="@layout/avatar_unread_count" />
+    </FrameLayout>
+    <ImageView android:id="@id/crossfade_avatar_recents_two" android:visibility="gone" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true" style="@style/AccountsSwitcher.RecentsTwoStyle" />
+    <FrameLayout android:id="@id/avatar_recents_two" android:focusable="true" android:src="@drawable/avatar_placeholder" android:layout_alignParentTop="true" android:layout_alignWithParentIfMissing="true" style="@style/AccountsSwitcher.RecentsTwoStyle.Gmail">
+        <ImageView android:id="@id/avatar_recents_two_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/AccountsSwitcher.RecentsImageStyle" />
+        <include android:id="@id/avatar_recents_two_unread_count" layout="@layout/avatar_unread_count" />
+    </FrameLayout>
+</RelativeLayout>

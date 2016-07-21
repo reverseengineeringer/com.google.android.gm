@@ -9,12 +9,15 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
+import buc;
+import bud;
+import bue;
 
 public class CcBccView
   extends RelativeLayout
 {
-  private final View mBcc;
-  private final View mCc;
+  private final View a;
+  private final View b;
   
   public CcBccView(Context paramContext)
   {
@@ -23,81 +26,74 @@ public class CcBccView
   
   public CcBccView(Context paramContext, AttributeSet paramAttributeSet)
   {
-    this(paramContext, paramAttributeSet, -1);
+    this(paramContext, paramAttributeSet, 0);
   }
   
   public CcBccView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    LayoutInflater.from(paramContext).inflate(2130968594, this);
-    mCc = findViewById(2131755060);
-    mBcc = findViewById(2131755063);
+    LayoutInflater.from(paramContext).inflate(bue.c, this);
+    a = findViewById(buc.S);
+    b = findViewById(buc.K);
   }
   
-  private void animate(Boolean paramBoolean, boolean paramBoolean1, boolean paramBoolean2)
+  public final void a(boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3)
   {
-    int i = getResources().getInteger(2131361797);
-    paramBoolean = ObjectAnimator.ofFloat(mBcc, "alpha", new float[] { 0.0F, 1.0F });
-    paramBoolean.setDuration(i);
-    if (!paramBoolean2)
-    {
-      ObjectAnimator localObjectAnimator = ObjectAnimator.ofFloat(mCc, "alpha", new float[] { 0.0F, 1.0F });
-      localObjectAnimator.setDuration(i);
-      AnimatorSet localAnimatorSet = new AnimatorSet();
-      ((AnimatorSet)localAnimatorSet).playTogether(new Animator[] { localObjectAnimator, paramBoolean });
-      paramBoolean = localAnimatorSet;
-    }
-    for (;;)
-    {
-      paramBoolean.start();
-      return;
-    }
-  }
-  
-  public boolean isBccVisible()
-  {
-    return mBcc.getVisibility() == 0;
-  }
-  
-  public boolean isCcVisible()
-  {
-    return mCc.getVisibility() == 0;
-  }
-  
-  public void show(boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3)
-  {
-    int j = 0;
-    boolean bool = mCc.isShown();
-    View localView = mCc;
+    int j = 8;
+    boolean bool = a.isShown();
+    Object localObject = a;
+    int i;
     if (paramBoolean2)
     {
       i = 0;
-      localView.setVisibility(i);
-      localView = mBcc;
-      if (!paramBoolean3) {
-        break label76;
+      ((View)localObject).setVisibility(i);
+      localObject = b;
+      i = j;
+      if (paramBoolean3) {
+        i = 0;
       }
-    }
-    label76:
-    for (int i = j;; i = 8)
-    {
-      localView.setVisibility(i);
+      ((View)localObject).setVisibility(i);
       if (!paramBoolean1) {
-        break label83;
+        break label191;
       }
-      animate(Boolean.valueOf(paramBoolean2), paramBoolean3, bool);
+      i = getResources().getInteger(bud.n);
+      localObject = ObjectAnimator.ofFloat(b, "alpha", new float[] { 0.0F, 1.0F });
+      ((ObjectAnimator)localObject).setDuration(i);
+      if (bool) {
+        break label188;
+      }
+      ObjectAnimator localObjectAnimator = ObjectAnimator.ofFloat(a, "alpha", new float[] { 0.0F, 1.0F });
+      localObjectAnimator.setDuration(i);
+      AnimatorSet localAnimatorSet = new AnimatorSet();
+      ((AnimatorSet)localAnimatorSet).playTogether(new Animator[] { localObjectAnimator, localObject });
+      localObject = localAnimatorSet;
+    }
+    label188:
+    for (;;)
+    {
+      ((Animator)localObject).start();
       return;
       i = 8;
       break;
     }
-    label83:
+    label191:
     if (paramBoolean2) {
-      mCc.setAlpha(1.0F);
+      a.setAlpha(1.0F);
     }
     if (paramBoolean3) {
-      mBcc.setAlpha(1.0F);
+      b.setAlpha(1.0F);
     }
     requestLayout();
+  }
+  
+  public final boolean a()
+  {
+    return a.getVisibility() == 0;
+  }
+  
+  public final boolean b()
+  {
+    return b.getVisibility() == 0;
   }
 }
 

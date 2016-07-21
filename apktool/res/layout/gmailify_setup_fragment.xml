@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="start" android:id="@id/gmailify_target_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GmailifyInfoText" />
+    <FrameLayout android:id="@id/gmailify_accounts" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <TextView android:id="@id/gmailify_choose_another_gmail_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gmailify_choose_gmail_account" style="@style/SetupTextStyle.Link" />
+    <TextView android:id="@id/google_tos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/google_terms_of_service" style="@style/SetupTextStyle.Link" />
+</LinearLayout>

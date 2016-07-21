@@ -7,20 +7,16 @@
     </string-array>
     <string-array name="sync_status">
         <item>Izpildīta veiksmīgi</item>
-        <item>Nav savienojuma.</item>
-        <item>Neizdevās pierakstīties.</item>
-        <item>Drošības kļūda.</item>
-        <item>Neizdevās sinhronizēt.</item>
-        <item>Iekšējā kļūda</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistēma</item>
-        <item>Biežāk izmant.</item>
-        <item>Visas iezīmes</item>
+        <item>Nav savienojuma</item>
+        <item>Nevarēja pierakstīties</item>
+        <item>Drošības kļūda</item>
+        <item>Nevarēja sinhronizēt</item>
+        <item>Servera kļūda</item>
+        <item>Iekšēja kļūda</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Jaunāka</item>
-        <item>Vecāka</item>
+        <item>Jaunākas</item>
+        <item>Vecākas</item>
         <item>Sarunu saraksts</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
@@ -28,38 +24,79 @@
         <item>Rādīt vecāku sarunu pēc arhivēšanas vai dzēšanas</item>
         <item>Rādīt sarunu sarakstu pēc arhivēšanas vai dzēšanas</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Nedarbojas</item>
-        <item>Arhivē vai dzēš</item>
-        <item>Vienmēr dzēš</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arhivēt</item>
+        <item>Dzēst</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Nedarbojas</item>
-        <item>Iesūtne: arhivē sarunu. Parastās iezīmes: noņem pašreiz. iezīmi. Sistēmas iezīmes, piem., Visas vēstules vai Nosūtne: dzēš sarunu.</item>
-        <item>Vienmēr dzēš sarunu</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arhivēt</item>
+        <item>Dzēst</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Augsta</item>
+        <item>Parasta</item>
+        <item>Zema</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Nepalaidiet garām nevienu lidojumu!</item>
+        <item>Nepalaidiet garām nevienu lidojumu!</item>
+        <item>Vai pievienot šo lidojumu kalendāram?</item>
+        <item>Saņemiet rezervācijas datus savā Google kalendārā.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Lietotnē Google kalendārs lidojumu un citas rezervācijas tiek automātiski pievienotas jūsu kalendāram.</item>
+        <item>Lietotnē Google kalendārs lidojumu un citas rezervācijas tiek automātiski pievienotas jūsu kalendāram.</item>
+        <item>Pasākumus no Gmail var pievienot automātiski, izmantojot lietotni Google kalendārs.</item>
+        <item>Iestatiet, lai lidojumu, viesnīcu un restorānu rezervācijas tiktu pievienotas automātiski.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Vai pievienot šo rezervāciju Google kalendāram?</item>
+        <item>Vai automātiski rādīt rezervācijas jūsu kalendārā?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Izmantojot lietotni Google kalendārs, pasākumi no Gmail tiek automātiski pievienoti jūsu kalendāram.</item>
+        <item>Google kalendārā tiek automātiski pievienotas viesnīcu un citas rezervācijas no jūsu e-pasta.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Saņemiet savlaicīgu paziņojumu par savu maltīti.</item>
+        <item>Vai pievienot šo rezervāciju Google kalendāram?</item>
+        <item>Automātiski saņemiet rezervācijas savā Google kalendārā.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Lietotnē Google kalendārs restorānu un citas rezervācijas tiek automātiski pievienotas jūsu kalendāram.</item>
+        <item>Pasākumus no Gmail var automātiski pievienot jūsu kalendāram.</item>
+        <item>Iestatiet, lai lidojumu, viesnīcu un restorānu rezervācijas tiktu pievienotas automātiski.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Saņemiet savlaicīgu paziņojumu par šo pasākumu.</item>
+        <item>Vai pievienot šo pasākumu Google kalendāram?</item>
+        <item>Nepalaidiet garām šo pasākumu.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google kalendārā pasākumi un rezervācijas (piemēram, no šī e-pasta) tiek automātiski pievienotas jūsu kalendāram.</item>
+        <item>Pasākumus no Gmail var automātiski pievienot jūsu kalendāram.</item>
+        <item>Iestatiet, lai pasākumi un rezervācijas tiktu automātiski pievienotas Google kalendārā.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Izsekojiet savas rezervācijas vienuviet.</item>
+        <item>Vai pievienot šīs rezervācijas Google kalendāram?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Iestatiet, lai lidojumu, viesnīcu un restorānu rezervācijas tiktu automātiski pievienotas jūsu Google kalendāram.</item>
+        <item>Pasākumus no Gmail var automātiski pievienot jūsu kalendāram.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
-        <item>Niecīgs</item>
-        <item>Mazs</item>
+        <item>Sīks</item>
+        <item>Neliels</item>
         <item>Parasts</item>
         <item>Liels</item>
         <item>Milzīgs</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Parādīt ziņojumu saturu, izmantojot sīka izmēra tekstu</item>
-        <item>Parādīt ziņojumu saturu, izmantojot maza izmēra tekstu</item>
-        <item>Parādīt ziņojumu saturu, izmantojot normāla izmēra tekstu</item>
+        <item>Parādīt ziņojumu saturu, izmantojot neliela izmēra tekstu</item>
+        <item>Parādīt ziņojumu saturu, izmantojot parasta izmēra tekstu</item>
         <item>Parādīt ziņojumu saturu, izmantojot liela izmēra tekstu</item>
         <item>Parādīt ziņojumu saturu, izmantojot milzīga izmēra tekstu</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Vienmēr rādīt darbības ar ziņojumiem ekrāna augšdaļā</item>
-        <item>Rādīt darbības ar ziņojumiem tikai ekrāna augšdaļā, kad ierīce pagriezta portreta režīmā</item>
-        <item>Nerādīt darbības ar ziņojumiem ārpus ziņojuma galvenes</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Vienmēr rādīt</item>
-        <item>Rādīt tikai portreta režīmā</item>
-        <item>Nerādīt</item>
     </string-array>
 </resources>

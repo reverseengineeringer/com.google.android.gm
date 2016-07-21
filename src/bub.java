@@ -1,0 +1,100 @@
+public final class bub
+{
+  public static final int A = 2130837705;
+  public static final int B = 2130837707;
+  public static final int C = 2130837708;
+  public static final int D = 2130837709;
+  public static final int E = 2130837712;
+  public static final int F = 2130837713;
+  public static final int G = 2130837714;
+  public static final int H = 2130837715;
+  public static final int I = 2130837716;
+  public static final int J = 2130837717;
+  public static final int K = 2130837720;
+  public static final int L = 2130837721;
+  public static final int M = 2130837722;
+  public static final int N = 2130837723;
+  public static final int O = 2130837724;
+  public static final int P = 2130837725;
+  public static final int Q = 2130837726;
+  public static final int R = 2130837728;
+  public static final int S = 2130837729;
+  public static final int T = 2130837730;
+  public static final int U = 2130837731;
+  public static final int V = 2130837735;
+  public static final int W = 2130837737;
+  public static final int X = 2130837738;
+  public static final int Y = 2130837739;
+  public static final int Z = 2130837740;
+  public static final int a = 2130837589;
+  public static final int aA = 2130837827;
+  public static final int aB = 2130837828;
+  public static final int aC = 2130837829;
+  public static final int aD = 2130837835;
+  public static final int aE = 2130837848;
+  public static final int aF = 2130838058;
+  public static final int aG = 2130837853;
+  public static final int aH = 2130837855;
+  public static final int aI = 2130837856;
+  public static final int aJ = 2130837857;
+  public static final int aK = 2130837859;
+  public static final int aL = 2130838035;
+  public static final int aM = 2130838055;
+  public static final int aa = 2130837741;
+  public static final int ab = 2130837742;
+  public static final int ac = 2130837743;
+  public static final int ad = 2130837744;
+  public static final int ae = 2130837745;
+  public static final int af = 2130837746;
+  public static final int ag = 2130837749;
+  public static final int ah = 2130837759;
+  public static final int ai = 2130837760;
+  public static final int aj = 2130837765;
+  public static final int ak = 2130837774;
+  public static final int al = 2130837775;
+  public static final int am = 2130837776;
+  public static final int an = 2130837777;
+  public static final int ao = 2130837780;
+  public static final int ap = 2130837781;
+  public static final int aq = 2130837786;
+  public static final int ar = 2130837787;
+  public static final int as = 2130837796;
+  public static final int at = 2130837797;
+  public static final int au = 2130837799;
+  public static final int av = 2130837800;
+  public static final int aw = 2130837801;
+  public static final int ax = 2130837802;
+  public static final int ay = 2130837803;
+  public static final int az = 2130837826;
+  public static final int b = 2130837590;
+  public static final int c = 2130837620;
+  public static final int d = 2130837621;
+  public static final int e = 2130837629;
+  public static final int f = 2130837630;
+  public static final int g = 2130837631;
+  public static final int h = 2130837651;
+  public static final int i = 2130837652;
+  public static final int j = 2130837654;
+  public static final int k = 2130837656;
+  public static final int l = 2130837659;
+  public static final int m = 2130837660;
+  public static final int n = 2130837661;
+  public static final int o = 2130837662;
+  public static final int p = 2130837667;
+  public static final int q = 2130837668;
+  public static final int r = 2130837669;
+  public static final int s = 2130837670;
+  public static final int t = 2130837671;
+  public static final int u = 2130837672;
+  public static final int v = 2130837674;
+  public static final int w = 2130837680;
+  public static final int x = 2130837682;
+  public static final int y = 2130837693;
+  public static final int z = 2130837700;
+}
+
+/* Location:
+ * Qualified Name:     bub
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

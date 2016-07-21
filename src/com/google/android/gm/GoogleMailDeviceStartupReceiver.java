@@ -5,21 +5,21 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import com.google.android.gm.provider.LogUtils;
+import dri;
 
 public class GoogleMailDeviceStartupReceiver
   extends BroadcastReceiver
 {
-  private static final ComponentName sComponentName = new ComponentName("com.google.android.gm", "com.google.android.gm.GoogleMailDeviceStartupReceiver");
+  private static final ComponentName a = new ComponentName("com.google.android.gm", "com.google.android.gm.GoogleMailDeviceStartupReceiver");
   
-  public static void enableReceiver(Context paramContext)
+  public static void a(Context paramContext)
   {
-    paramContext.getPackageManager().setComponentEnabledSetting(sComponentName, 1, 1);
+    paramContext.getPackageManager().setComponentEnabledSetting(a, 1, 1);
   }
   
   public void onReceive(Context paramContext, Intent paramIntent)
   {
-    LogUtils.v("Gmail", "Received intent %s", new Object[] { paramIntent });
+    dri.a(dri.a, "Received intent %s", new Object[] { paramIntent });
     paramIntent.setClass(paramContext, GoogleMailSwitchService.class);
     paramContext.startService(paramIntent);
   }

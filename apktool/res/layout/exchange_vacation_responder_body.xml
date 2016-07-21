@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/eas_oof_inside_domain_header" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VacationResponderDisplayText" />
+    <EditText android:id="@id/eas_oof_inside_domain_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VacationResponderMessageField" />
+    <View style="@style/DefaultDividerStyle" />
+    <android.support.v7.widget.SwitchCompat android:id="@id/eas_oof_outside_domain_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VacationResponderDisplayText" />
+    <LinearLayout android:orientation="vertical" android:id="@id/eas_oof_outside_domain_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/eas_oof_outside_domain_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/VacationResponderMessageField" />
+        <View style="@style/DefaultDividerStyle" />
+        <CheckedTextView android:id="@id/eas_oof_send_to_only_contacts" android:text="@string/send_to_contacts_text" style="@style/TextCheckBox" />
+    </LinearLayout>
+</LinearLayout>

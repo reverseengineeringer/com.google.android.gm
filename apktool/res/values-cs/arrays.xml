@@ -3,20 +3,16 @@
     <string-array name="compose_modes">
         <item>Odpovědět</item>
         <item>Odpovědět všem</item>
-        <item>Předat dál</item>
+        <item>Přeposlat</item>
     </string-array>
     <string-array name="sync_status">
         <item>Podařilo se</item>
-        <item>Žádné připojení.</item>
-        <item>Přihlášení se nezdařilo.</item>
-        <item>Chyba zabezpečení.</item>
-        <item>Chyba synchronizace.</item>
+        <item>Žádné připojení</item>
+        <item>Přihlášení se nezdařilo</item>
+        <item>Chyba zabezpečení</item>
+        <item>Synchronizace se nezdařila</item>
+        <item>Chyba serveru</item>
         <item>Interní chyba</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Systém</item>
-        <item>Často používané</item>
-        <item>Všechny štítky</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Novější</item>
@@ -28,15 +24,66 @@
         <item>Po archivaci či smazání zobrazit starší konverzaci</item>
         <item>Po archivaci či smazání zobrazit seznam konverzací</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Žádná funkce</item>
-        <item>Archivovat nebo smazat</item>
-        <item>Vždy smazat</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archivovat</item>
+        <item>Smazat</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Žádná funkce</item>
-        <item>Doručená pošta: archivuje konverzaci. Běžné štítky: odstraní aktuální štítek. Systémové štítky jako Všechny zprávy nebo Odeslaná pošta: smaže konverzaci.</item>
-        <item>Vždy odstranit konverzaci</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archivovat</item>
+        <item>Smazat</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Vysoká</item>
+        <item>Normální</item>
+        <item>Nízká</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Nezmeškejte žádný let.</item>
+        <item>Nezmeškejte žádný let.</item>
+        <item>Přidat tento let do vašeho kalendáře?</item>
+        <item>Nechte si rezervace přidávat do Kalendáře Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Kalendář Google automaticky přidává rezervace letů a dalších věcí do vašeho kalendáře.</item>
+        <item>Kalendář Google automaticky přidává rezervace letů a dalších věcí do vašeho kalendáře.</item>
+        <item>V aplikaci Kalendář Google mohou být události z Gmailu přidávány automaticky.</item>
+        <item>Nechte si rezervace letů, hotelů nebo restaurací přidávat automaticky.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Přidat tuto rezervaci do Kalendáře Google?</item>
+        <item>Chcete si rezervace automaticky přidávat do Kalendáře?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>V aplikaci Kalendář Google jsou události z Gmailu automaticky přidávány do vašeho kalendáře.</item>
+        <item>Kalendář Google automaticky přidává rezervace hotelů a dalších věcí z vašich e-mailů.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Nechte si včas poslat oznámení o tomto jídle.</item>
+        <item>Přidat tuto rezervaci do Kalendáře Google?</item>
+        <item>Nechte rezervace automaticky přidávat do Kalendáře Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Kalendář Google automaticky přidává rezervace restaurací a dalších věcí do vašeho kalendáře.</item>
+        <item>Události z Gmailu mohou být automaticky přidávány do vašeho kalendáře.</item>
+        <item>Nechte si rezervace letů, hotelů nebo restaurací přidávat automaticky.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Nechte si včas poslat oznámení o této události.</item>
+        <item>Přidat tuto událost do Kalendáře Google?</item>
+        <item>Nezmeškejte tuto událost.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Kalendář Google automaticky přidává rezervace a události, jako je ta v tomto e-mailu, do vašeho kalendáře.</item>
+        <item>Události z Gmailu mohou být automaticky přidávány do vašeho kalendáře.</item>
+        <item>Nechte si události a jiné rezervace přidávat automaticky do svého Kalendáře Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Všechny rezervace můžete mít na jednom místě.</item>
+        <item>Přidat tyto rezervace do Kalendáře Google?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Nechte si rezervace letů, hotelů nebo restaurací přidávat automaticky do svého Kalendáře Google.</item>
+        <item>Události z Gmailu mohou být automaticky přidávány do vašeho kalendáře.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Velmi malý</item>
@@ -51,15 +98,5 @@
         <item>Zobrazit obsah zpráv středně velkým písmem</item>
         <item>Zobrazit obsah zpráv velkým písmem</item>
         <item>Zobrazit obsah zpráv velmi velkým písmem</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Vždy zobrazovat akce zpráv v horní části obrazovky</item>
-        <item>Zobrazovat akce zpráv v horní části obrazovky jen v případě, kdy je natočena na výšku</item>
-        <item>Nezobrazovat akce zpráv mimo záhlaví zprávy</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Vždy zobrazovat</item>
-        <item>Zobrazit pouze v režimu na výšku</item>
-        <item>Nezobrazovat</item>
     </string-array>
 </resources>

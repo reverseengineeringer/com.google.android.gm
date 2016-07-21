@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.ads.AdTeaserView android:background="@color/list_ad_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/swipeable_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ad_teaser_leave_behind" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/ad_teaser_min_height">
+            <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/ad_teaser_leave_behind_description_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="3" android:layout_weight="1.0" style="@style/AdLeaveBehindDescriptionStyle" />
+            <TextView android:gravity="center_vertical" android:id="@id/ad_teaser_leave_behind_action_text" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/AdLeaveBehindActionStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.gm.ads.AdTeaserView>

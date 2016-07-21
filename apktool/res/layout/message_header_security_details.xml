@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/alert_dialog_padding" android:paddingTop="@dimen/alert_dialog_top_padding" android:paddingRight="@dimen/alert_dialog_padding" android:paddingBottom="@dimen/alert_dialog_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/mailed_by" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.AppCompat.Subhead" />
+    <TextView android:id="@id/signed_by" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.AppCompat.Subhead" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ces_details" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/ces_heading" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ces_heading" style="@style/TextAppearance.AppCompat.Subhead" />
+        <include layout="@layout/ces_indicator" />
+        <TextView android:id="@id/ces_details_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextAppearance.AppCompat.Subhead" />
+    </LinearLayout>
+</LinearLayout>

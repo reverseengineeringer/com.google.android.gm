@@ -2,64 +2,101 @@
 <resources>
     <string-array name="compose_modes">
         <item>Responder</item>
-        <item>Responder a todos</item>
+        <item>Resp. a todos</item>
         <item>Encaminhar</item>
     </string-array>
     <string-array name="sync_status">
         <item>Êxito</item>
-        <item>Sem ligação.</item>
+        <item>Sem ligação</item>
         <item>Não foi possível iniciar sessão.</item>
         <item>Erro de segurança</item>
-        <item>Não foi possível sincronizar.</item>
-        <item>Erro Interno</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistema</item>
-        <item>Utiliz. Freq.</item>
-        <item>Todas as Etiq.</item>
+        <item>Não foi possível sincronizar</item>
+        <item>Erro do servidor</item>
+        <item>Erro interno</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Mais recente</item>
-        <item>Mais antiga</item>
-        <item>Lista de conversações</item>
+        <item>Mais recentes</item>
+        <item>Mais antigos</item>
+        <item>Lista de conversas</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
         <item>Mostrar conversa mais recente após arquivar ou eliminar.</item>
         <item>Mostrar conversa mais antiga após arquivar ou eliminar.</item>
         <item>Mostrar lista de conversas após arquivar ou eliminar.</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Não tem efeito</item>
-        <item>Arquiva ou elimina</item>
-        <item>Eliminar sempre</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arquivar</item>
+        <item>Eliminar</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Não tem efeito</item>
-        <item>Caixa de entrada: arquiva conversação. Etiquetas normais: remove etiqueta atual. Etiquetas de sistema tais como Todo o correio ou Enviado: elimina conversação.</item>
-        <item>Elimina sempre conversação</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arquivar</item>
+        <item>Eliminar</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Alta</item>
+        <item>Média</item>
+        <item>Baixa</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Não perca mais nenhum voo.</item>
+        <item>Não perca mais nenhum voo.</item>
+        <item>Pretende adicionar este voo ao seu calendário?</item>
+        <item>Obtenha reservas no seu Calendário Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>O Calendário Google adiciona automaticamente voos e outras reservas ao seu calendário.</item>
+        <item>O Calendário Google adiciona automaticamente voos e outras reservas ao seu calendário.</item>
+        <item>Os eventos do Gmail podem ser automaticamente adicionados com a aplicação Calendário Google.</item>
+        <item>Obtenha reservas de voos, hotéis e restaurantes adicionados automaticamente.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Pretende adicionar esta reserva ao Calendário Google?</item>
+        <item>Pretende ter automaticamente reservas no Calendário Google?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Com a aplicação Calendário Google, os eventos do Gmail são automaticamente adicionados ao seu calendário.</item>
+        <item>O Calendário Google adiciona automaticamente hotéis e outras reservas a partir do seu email.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Receba uma notificação atempada para a sua refeição.</item>
+        <item>Pretende adicionar esta reserva ao Calendário Google?</item>
+        <item>Obtenha automaticamente reservas no seu Calendário Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>O Calendário Google adiciona automaticamente reservas em restaurantes e outras reservas ao seu calendário.</item>
+        <item>Os eventos do Gmail podem ser automaticamente adicionados ao seu calendário.</item>
+        <item>Obtenha reservas de voos, hotéis e restaurantes adicionados automaticamente.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Receba uma notificação atempada antes deste evento.</item>
+        <item>Pretende adicionar este evento ao Calendário Google?</item>
+        <item>Não perca o seu evento.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>O Calendário Google adiciona automaticamente eventos e reservas, como a que consta deste email, ao seu calendário.</item>
+        <item>Os eventos do Gmail podem ser automaticamente adicionados ao seu calendário.</item>
+        <item>Eventos e outras reservas são adicionados automaticamente com o Calendário Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Controle as suas reservas num único lugar.</item>
+        <item>Pretende adicionar estas reservas ao Calendário Google?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Obtenha reservas de voos, hotéis e restaurantes adicionados automaticamente ao seu Calendário Google.</item>
+        <item>Os eventos do Gmail podem ser automaticamente adicionados ao seu calendário.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Muito pequeno</item>
         <item>Pequeno</item>
-        <item>Normal</item>
+        <item>Médio</item>
         <item>Grande</item>
-        <item>Muito grande</item>
+        <item>Enorme</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
-        <item>Mostrar conteúdo das mensagens em texto de tamanho muito pequeno</item>
+        <item>Mostrar conteúdo de mensagens em texto de tamanho mt pequeno</item>
         <item>Mostrar conteúdo das mensagens em texto de tamanho pequeno</item>
         <item>Mostrar conteúdo das mensagens em texto de tamanho normal</item>
         <item>Mostrar conteúdo das mensagens em texto de tamanho grande</item>
-        <item>Mostrar conteúdo das mensagens em texto de tamanho muito grande</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Mostrar sempre ações de mensagens na parte superior do ecrã</item>
-        <item>Mostrar apenas ações de mensagens na parte superior do ecrã ao rodar para modo de retrato</item>
-        <item>Não mostrar ações de mensagens fora do cabeçalho das mensagens</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Mostrar sempre</item>
-        <item>Mostrar apenas em modo de retrato</item>
-        <item>Não mostrar</item>
+        <item>Mostrar conteúdo de mensagens em texto de tamanho mt grande</item>
     </string-array>
 </resources>

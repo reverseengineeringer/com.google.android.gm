@@ -3,9 +3,9 @@ package com.google.android.gm;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import com.android.mail.utils.AccountUtils;
 import com.google.android.gm.ui.FolderSelectionActivityGmail;
 import com.google.android.gm.ui.MailboxSelectionActivityGmail;
+import ctl;
 
 public class CreateShortcutActivityGmail
   extends Activity
@@ -13,7 +13,7 @@ public class CreateShortcutActivityGmail
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    paramBundle = AccountUtils.getSyncingAccounts(this);
+    paramBundle = ctl.a(this);
     Intent localIntent = getIntent();
     if ((paramBundle != null) && (paramBundle.length == 1))
     {

@@ -1,0 +1,10 @@
+public final class axm
+{
+  public static final String[] a = { "9798-M-DSA-SHA1", "9798-M-ECDSA-SHA1", "9798-M-RSA-SHA1-ENC", "9798-U-DSA-SHA1", "9798-U-ECDSA-SHA1", "9798-U-RSA-SHA1-ENC", "ANONYMOUS", "CRAM-MD5", "CRAM-SHA1", "CRAM-SHA256", "DIGEST-MD5", "EAP-AES128", "EAP-AES128-PLUS", "EXTERNAL", "GS2-KRB5", "GS2-KRB5-PLUS", "GSS-SPNEGO", "GSSAPI", "KERBEROS_V4", "KERBEROS_V5", "LOGIN", "NMAS_AUTHEN", "NMAS_LOGIN", "NMAS-SAMBA-AUTH", "NTLM", "OAUTH", "OAUTH2", "OPENID20", "OTP", "PLAIN", "SAML20", "SCRAM-SHA-1", "SCRAM-SHA-1-PLUS", "SECURID", "SKEY", "SPNEGO", "SPNEGO-PLUS", "XOAUTH", "XOAUTH2" };
+}
+
+/* Location:
+ * Qualified Name:     axm
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

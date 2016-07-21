@@ -3,7 +3,7 @@ package com.google.android.gm;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.google.android.gm.provider.LogUtils;
+import dri;
 
 public class GmailReceiver
   extends BroadcastReceiver
@@ -11,13 +11,14 @@ public class GmailReceiver
   public void onReceive(Context paramContext, Intent paramIntent)
   {
     String str = paramIntent.getAction();
+    dri.b("GmailReceiver", "RECEIVED %s", new Object[] { str });
     if ("com.android.mail.action.update_notification".equals(str))
     {
-      paramIntent.setClass(paramContext, MailIntentService.class);
+      paramIntent.setClass(paramContext, GmailIntentService.class);
       paramContext.startService(paramIntent);
       return;
     }
-    LogUtils.d("Gmail", "RECEIVED %s", new Object[] { str });
+    dri.b("GmailReceiver", "UNHANDLED %s", new Object[] { str });
   }
 }
 

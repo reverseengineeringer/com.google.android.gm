@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:orderingFromXml="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:persistent="false" android:entries="@array/inboxTypeEntries" android:title="@string/preferences_inbox_type_title" android:key="inbox-type" android:order="0" android:defaultValue="@string/inboxTypeDefaultValue" android:entryValues="@array/inboxTypeEntryValues" />
+    <PreferenceScreen android:title="@string/preferences_inbox_categories_title" android:key="inbox-categories" android:order="1" android:fragment="com.google.android.gm.preference.InboxSectionsPreferenceFragment" />
+    <CheckBoxPreference android:title="@string/preferences_notifications_enable" android:key="notifications-enabled" android:order="2" android:defaultValue="true" />
+    <PreferenceScreen android:title="@string/preferences_manage_inbox_label_title" android:key="inbox-settings" android:order="3" android:dependency="notifications-enabled" />
+    <EditTextPreference android:singleLine="false" android:title="@string/preferences_signature_title" android:key="signature" android:order="4" android:dialogTitle="@string/preferences_signature_dialog_title" />
+    <PreferenceScreen android:title="@string/preferences_vacation_responder_title" android:key="vacation-responder" android:order="5" />
+    <PreferenceCategory android:title="@string/account_settings_data_usage" android:key="data-usage" android:order="6">
+        <CheckBoxPreference android:title="@string/preferences_sync_status" android:key="sync_status" android:defaultValue="true" />
+        <com.google.android.gm.preference.IntegerPickerPreference android:title="@string/settings_number_of_days" android:key="number-picker" />
+        <PreferenceScreen android:title="@string/preferences_manage_labels_title" android:key="manage-labels" />
+        <CheckBoxPreference android:title="@string/preference_prefetch_attachments_title" android:key="prefetch-attachments" android:summary="@string/preference_prefetch_attachments_summary" android:defaultValue="true" />
+        <ListPreference android:entries="@array/showImagesEntries" android:title="@string/preference_show_images_title" android:key="show-images-in-cv" android:entryValues="@array/showImagesValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/g6y_settings_title" android:key="gmailify" android:order="7">
+        <Preference android:selectable="false" android:key="gmailify-address" />
+        <CheckBoxPreference android:title="@string/g6y_settings_default_address_title" android:key="gmailify-default-address" />
+        <PreferenceScreen android:title="@string/g6y_setting_unlink_title" android:key="gmailify-unlink" />
+        <Preference android:title="@string/g6y_setting_last_sync_title" android:key="gmailify-last-sync" />
+    </PreferenceCategory>
+</PreferenceScreen>

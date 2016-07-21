@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/attachment_tile_background_padding" android:top="@dimen/attachment_tile_background_padding" android:right="@dimen/attachment_tile_background_padding" android:bottom="@dimen/attachment_tile_background_padding">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/attachment_tile_radius" />
+            <solid android:color="@color/attachment_bg_color" />
+        </shape>
+    </item>
+</layer-list>

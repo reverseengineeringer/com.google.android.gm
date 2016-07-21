@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/body_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ComposeFieldLayout"
+<RelativeLayout android:id="@id/body_wrapper" style="@style/ComposeFieldLayout"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditText android:id="@id/body" android:hint="@string/body_hint" style="@style/ComposeBodyView" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ComposeFieldContent">
+        <com.android.mail.compose.BodyView android:id="@id/body" android:background="@null" android:hint="@string/body_hint" style="@style/ComposeBodyView" />
+    </LinearLayout>
 </RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/title_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/message_header_text_margin_top" android:layout_weight="1.0" style="@style/MessageUpperHeaderTextStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/upper_date" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_alignBaseline="@id/sender_name" style="@style/MessageHeaderUpperDateStyle" />
+    <ImageView android:id="@id/attachment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:src="@drawable/quantum_ic_attachment_grey600_18" android:layout_toLeftOf="@id/upper_date" android:layout_toStartOf="@id/upper_date" style="@style/AttachmentIconStyle" />
+    <TextView android:id="@id/sender_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/attachment" android:layout_toStartOf="@id/attachment" style="@style/MessageSenderNameStyle" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/recipient_summary_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/sender_name">
+        <include layout="@layout/ces_indicator" />
+        <TextView android:ellipsize="end" android:id="@id/recipient_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MessageHeaderSubtitleStyle" />
+    </LinearLayout>
+    <TextView android:id="@id/send_date" android:background="?android:selectableItemBackground" android:paddingBottom="@dimen/message_header_margin_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/recipient_summary_container" style="@style/MessageHeaderSubtitleStyle" />
+    <TextView android:textColor="@color/conversation_view_text_color_link_blue" android:id="@id/hide_details" android:background="?android:selectableItemBackground" android:paddingBottom="@dimen/message_header_margin_bottom" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hide_details" android:layout_below="@id/recipient_summary_container" style="@style/MessageHeaderSubtitleStyle" />
+    <TextView android:id="@id/email_snippet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_below="@id/sender_name" style="@style/MessageHeaderSnippetStyle" />
+</RelativeLayout>

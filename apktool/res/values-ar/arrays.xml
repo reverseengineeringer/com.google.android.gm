@@ -6,20 +6,16 @@
         <item>إعادة توجيه</item>
     </string-array>
     <string-array name="sync_status">
-        <item>تم بنجاح</item>
-        <item>لا يتوفر اتصال.</item>
-        <item>تعذر تسجيل الدخول.</item>
-        <item>خطأ أمنى.</item>
+        <item>نجاح</item>
+        <item>ليس هناك اتصال</item>
+        <item>تعذر تسجيل الدخول</item>
+        <item>خطأ أمني</item>
         <item>تعذرت المزامنة</item>
+        <item>خطأ في الخادم</item>
         <item>خطأ داخلي</item>
     </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>النظام</item>
-        <item>مستخدمة بشكل متكرر</item>
-        <item>جميع التصنيفات</item>
-    </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>أحدث</item>
+        <item>الأحدث</item>
         <item>أقدم</item>
         <item>قائمة المحادثات</item>
     </string-array>
@@ -28,38 +24,79 @@
         <item>عرض المحادثة الأقدم بعد الأرشفة أو الحذف</item>
         <item>عرض قائمة المحادثات بعد الأرشفة أو الحذف</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>بدون تأثير</item>
-        <item>الأرشفة أو الحذف</item>
-        <item>الحذف دائمًا</item>
+    <string-array name="prefEntries_removal_action">
+        <item>وضع في الأرشيف</item>
+        <item>حذف</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>بدون تأثير</item>
-        <item>صندوق الوارد: أرشفة المحادثة. التصنيفات العادية: إزالة التصنيف الحالي. تصنيفات النظام مثل \"كل البريد\" أو \"المرسلة\": حذف المحادثة.</item>
-        <item>حذف المحادثة دائمًا</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>وضع في الأرشيف</item>
+        <item>حذف</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>مرتفعة</item>
+        <item>عادية</item>
+        <item>منخفضة</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>لا تفوت رحلة طيران أخرى.</item>
+        <item>لا تفوت رحلة طيران أخرى.</item>
+        <item>هل تريد إضافة رحلة الطيران هذه إلى تقويمك؟</item>
+        <item>‏الحصول على حجوزات على تقويم Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>‏يضيف تقويم Google حجوزات رحلات الطيران والحجوزات الأخرى تلقائيًا إلى تقويمك.</item>
+        <item>‏يضيف تقويم Google حجوزات رحلات الطيران والحجوزات الأخرى تلقائيًا إلى تقويمك.</item>
+        <item>‏يمكن إضافة أحداث من Gmail تلقائيًا من خلال تطبيق تقويم Google.</item>
+        <item>تمتع بإضافة حجوزات رحلات الطيران والفنادق والمطاعم تلقائيًا.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>‏هل تريد إضافة هذا الحجز إلى تقويم Google؟</item>
+        <item>هل تريد الحجوزات تلقائيًا على تقويمك؟</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>‏من خلال تطبيق تقويم Google، يتم إضافة الأحداث من Gmail تلقائيًا إلى تقويمك.</item>
+        <item>‏يضيف تقويم Google حجوزات الفنادق والحجوزات الأخرى تلقائيًا من بريدك الإلكتروني.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>تمتع بتنبيه في الوقت المناسب لتناول وجبتك.</item>
+        <item>‏هل تريد إضافة هذا الحجز إلى تقويم Google؟</item>
+        <item>‏احصل على الحجوزات تلقائيًا على تقويم Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>‏يضيف تقويم Google حجوزات المطاعم والحجوزات الأخرى تلقائيًا إلى تقويمك.</item>
+        <item>‏يمكن إضافة أحداث من Gmail تلقائيًا إلى تقويمك.</item>
+        <item>تمتع بإضافة حجوزات رحلات الطيران والفنادق والمطاعم تلقائيًا.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>تمتع بتنبيه في وقت مناسب قبل هذا الحدث.</item>
+        <item>‏هل تريد إضافة هذا الحدث إلى تقويم Google؟</item>
+        <item>لا تفوت الحدث.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>‏يضيف تقويم Google الأحداث والحجوزات تلقائيًا، مثل تلك الموجودة في هذه الرسالة الإلكترونية، إلى تقويمك.</item>
+        <item>‏يمكن إضافة أحداث من Gmail تلقائيًا إلى تقويمك.</item>
+        <item>‏تمتع بإضافة الأحداث والحجوزات الأخرى تلقائيًا من خلال تقويم Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>تتبع حجوزاتك في مكان واحد.</item>
+        <item>‏هل تريد إضافة هذه الحجوزات إلى تقويم Google؟</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>‏تمتع بإضافة حجوزات رحلات الطيران والفنادق والمطاعم تلقائيًا إلى تقويمك في Google.</item>
+        <item>‏يمكن إضافة أحداث من Gmail تلقائيًا إلى تقويمك.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
-        <item>صغير جدًا</item>
+        <item>صغيرة جدًا</item>
         <item>صغير</item>
         <item>عادي</item>
         <item>كبير</item>
         <item>ضخم</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
-        <item>عرض محتوى الرسائل في نص حجمه صغير جدًا</item>
+        <item>عرض محتوى الرسائل في نص بحجم صغير جدًا</item>
         <item>عرض محتوى الرسائل في نص بحجم صغير</item>
         <item>عرض محتوى الرسائل في نص حجمه عادي</item>
         <item>عرض محتوى الرسائل في نص حجمه كبير</item>
         <item>عرض محتوى الرسائل في نص حجمه ضخم</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>عرض إجراءات الرسائل أعلى الشاشة دومًا</item>
-        <item>عرض إجراءات الرسائل أعلى الشاشة عند التدوير إلى الوضع العمودي فقط</item>
-        <item>عدم عرض إجراءات الرسائل خارج رأس الرسالة</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>عرض دومًا</item>
-        <item>عرض عموديًا فقط</item>
-        <item>عدم العرض</item>
     </string-array>
 </resources>

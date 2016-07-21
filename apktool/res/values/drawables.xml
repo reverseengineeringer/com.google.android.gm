@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="unread_count_background">@drawable/ic_ac_unread_badge_10dp</item>
+    <item type="drawable" name="attachment_tile_background">@drawable/ic_attachment_shadow_1dp</item>
+    <item type="drawable" name="ic_arrow_back_24dp_with_rtl">@drawable/ic_arrow_back_24dp</item>
+    <item type="drawable" name="ic_arrow_back_wht_24dp_with_rtl">@drawable/ic_arrow_back_wht_24dp</item>
+    <item type="drawable" name="ic_next">@drawable/ic_next_24dp</item>
+    <item type="drawable" name="play_highlight_overlay_action_button">@drawable/play_highlight_button_overlay</item>
+    <item type="drawable" name="play_overlay_round_pressed_dark">@drawable/play_highlight_round_overlay_pressed_blue</item>
+    <item type="drawable" name="quantum_ic_text_format_white_24" />
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="quantum_ic_more_horiz_grey600_24" />
+    <item type="drawable" name="quantum_ic_lock_open_googred_18" />
+    <item type="drawable" name="quantum_ic_event_available_grey600_24" />
+    <item type="drawable" name="quantum_ic_check_box_black_24" />
+    <item type="drawable" name="quantum_ic_check_box_outline_blank_black_24" />
+    <item type="drawable" name="exchange_logo" />
+    <item type="drawable" name="google_logo" />
+    <item type="drawable" name="outlook_logo" />
+    <item type="drawable" name="yahoo_logo" />
+    <item type="drawable" name="yahoo_logo_v2" />
+    <item type="drawable" name="quantum_ic_email_grey600_24" />
+    <item type="drawable" name="account_list_background">@drawable/nonfolder_item</item>
+</resources>

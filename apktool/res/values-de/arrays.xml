@@ -8,35 +8,82 @@
     <string-array name="sync_status">
         <item>Erfolgreich</item>
         <item>Keine Verbindung</item>
-        <item>Anmeldung nicht möglich</item>
+        <item>Anmeldung war nicht möglich</item>
         <item>Sicherheitsfehler</item>
-        <item>Synchronisierung nicht möglich</item>
+        <item>Synchronisierung konnte nicht durchgeführt werden</item>
+        <item>Serverfehler</item>
         <item>Interner Fehler</item>
     </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>System</item>
-        <item>Häufig genutzt</item>
-        <item>Alle Labels</item>
-    </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Neuere</item>
-        <item>Ältere</item>
+        <item>Neuer</item>
+        <item>Älter</item>
         <item>Konversationsliste</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
-        <item>Neuere Konversation nach Löschen oder Archivieren anzeigen</item>
-        <item>Ältere Konversation nach Löschen oder Archivieren anzeigen</item>
-        <item>Konversationsliste nach Löschen oder Archivieren anzeigen</item>
+        <item>Nach dem Löschen oder Archivieren neuere Konversation anzeigen</item>
+        <item>Nach dem Löschen oder Archivieren ältere Konversation anzeigen</item>
+        <item>Nach dem Löschen oder Archivieren Konversationsliste anzeigen</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Hat keine Auswirkung</item>
-        <item>Archiviert oder löscht</item>
-        <item>Löscht immer</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archivieren</item>
+        <item>Löschen</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Hat keine Auswirkung</item>
-        <item>Posteingang: archiviert Konversation. Normale Labels: entfernt aktuelles Label. System-Labels wie \"Alle E-Mails\" oder \"Gesendet\": löscht Konversation</item>
-        <item>Löscht Konversation immer</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archivieren</item>
+        <item>Löschen</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Hoch</item>
+        <item>Mittel</item>
+        <item>Niedrig</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Keinen Flug mehr verpassen</item>
+        <item>Keinen Flug mehr verpassen</item>
+        <item>Diesen Flug zu Ihrem Kalender hinzufügen?</item>
+        <item>Reservierungen in Ihrem Google Kalender anzeigen lassen</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Kalender fügt automatisch Flüge und andere Reservierungen zu Ihrem Kalender hinzu.</item>
+        <item>Google Kalender fügt automatisch Flüge und andere Reservierungen zu Ihrem Kalender hinzu.</item>
+        <item>Ereignisse aus Gmail können mit der Google Kalender App automatisch hinzugefügt werden.</item>
+        <item>Reservierungen für Flüge, Hotels und Restaurants automatisch hinzufügen lassen.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Reservierung automatisch zu Google Kalender hinzufügen?</item>
+        <item>Reservierungen automatisch in Ihrem Kalender anzeigen?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Mit der Google Kalender App werden Ereignisse aus Gmail automatisch zu Ihrem Kalender hinzugefügt.</item>
+        <item>Google Kalender fügt Hotel- und andere Reservierungen aus Ihren E-Mails automatisch hinzu.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Rechtzeitig an Restaurantbesuche erinnern lassen</item>
+        <item>Reservierung automatisch zu Google Kalender hinzufügen?</item>
+        <item>Reservierungen automatisch in Kalender anzeigen lassen</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Kalender fügt Restaurant- und andere Reservierungen zu Ihrem Kalender hinzu.</item>
+        <item>Ereignisse aus Gmail können automatisch zu Ihrem Kalender hinzugefügt werden.</item>
+        <item>Reservierungen für Flüge, Hotels und Restaurants automatisch hinzufügen lassen.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Rechtzeitig an dieses Ereignis erinnern lassen</item>
+        <item>Dieses Ereignis zu Google Kalender hinzufügen?</item>
+        <item>Kein Ereignis mehr verpassen</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Kalender fügt Ereignisse und Reservierungen, z. B. aus dieser E-Mail, zu Ihrem Kalender hinzu.</item>
+        <item>Ereignisse aus Gmail können automatisch zu Ihrem Kalender hinzugefügt werden.</item>
+        <item>Ereignisse und andere Reservierungen automatisch zu Google Kalender hinzufügen lassen.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Reservierungen an einer zentralen Stelle im Blick haben</item>
+        <item>Diese Reservierungen zu Google Kalender hinzufügen?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Reservierungen für Flüge, Hotels und Restaurants automatisch zu Google Kalender hinzufügen lassen.</item>
+        <item>Ereignisse aus Gmail können automatisch zu Ihrem Kalender hinzugefügt werden.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Sehr klein</item>
@@ -51,15 +98,5 @@
         <item>Inhalt von Nachrichten in normal großer Schrift anzeigen</item>
         <item>Inhalt von E-Mails in großer Schrift anzeigen</item>
         <item>Inhalt von E-Mails in sehr großer Schrift anzeigen</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>E-Mail-Aktionen immer oben im Bildschirm anzeigen</item>
-        <item>E-Mail-Aktionen nur im Hochformat oben auf dem Bildschirm anzeigen</item>
-        <item>E-Mail-Aktionen nicht außerhalb der Kopfzeile anzeigen</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Immer anzeigen</item>
-        <item>Nur im Hochformat anzeigen</item>
-        <item>Nicht anzeigen</item>
     </string-array>
 </resources>

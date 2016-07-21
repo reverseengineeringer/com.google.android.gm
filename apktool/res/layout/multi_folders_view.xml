@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/folders" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight"
+<LinearLayout android:layout_gravity="center_vertical" android:id="@id/folders" android:layout_width="fill_parent" android:layout_height="@dimen/single_folder_list_item_height" android:minHeight="?android:listPreferredItemHeight"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBox android:id="@id/checkbox" style="@style/FolderSelectionItemStyle" />
-    <View android:id="@id/color_block" style="@style/FolderColorBoxStyle" />
-</RelativeLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/folder_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" style="@style/SingleFolderListIconStyle" />
+    <CheckedTextView android:gravity="center_vertical" android:id="@id/checkbox" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/MultiFolderSelectionItemStyle" />
+</LinearLayout>

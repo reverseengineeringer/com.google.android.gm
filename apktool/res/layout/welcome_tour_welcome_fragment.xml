@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/WelcomeTour.Container">
+        <FrameLayout style="@style/WelcomeTour.ImageArea">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WelcomeTour.ImageContainer">
+                <ImageView android:id="@id/gmail_logo" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_oobe_gmail_logo" android:contentDescription="@null" style="@style/WelcomeTour.Image" />
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout style="@style/WelcomeTour.ContentArea">
+            <TextView android:id="@id/welcome_tour_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/welcome_tour_welcome_new_title" style="@style/WelcomeTour.Text.Title.Aligned" />
+            <TextView android:id="@id/welcome_tour_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcome_tour_text_padding_size" android:text="@string/welcome_tour_welcome_new_text" style="@style/WelcomeTour.Text.Aligned" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

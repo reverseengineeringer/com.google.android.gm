@@ -2,41 +2,88 @@
 <resources>
     <string-array name="compose_modes">
         <item>Yanıtla</item>
-        <item>Yanıtı tüm alıcılara gönder</item>
+        <item>Tümünü yanıtla</item>
         <item>Yönlendir</item>
     </string-array>
     <string-array name="sync_status">
         <item>Başarılı</item>
-        <item>Bağlantı yok.</item>
-        <item>Oturum açılamadı.</item>
-        <item>Güvenlik hatası.</item>
-        <item>Senkronize edilemedi.</item>
+        <item>Bağlantı yok</item>
+        <item>Oturum açılamadı</item>
+        <item>Güvenlik hatası</item>
+        <item>Senkronize edilemedi</item>
+        <item>Sunucu Hatası</item>
         <item>Dahili Hata</item>
     </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistem</item>
-        <item>Sık Kullanılanlar</item>
-        <item>Tüm Etiketler</item>
-    </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Daha yeni</item>
-        <item>Daha eski</item>
-        <item>İleti dizisi listesi</item>
+        <item>Daha yeniye</item>
+        <item>Daha eskiye</item>
+        <item>İleti dizisi listesine</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
-        <item>Arşivledikten veya sildikten sonra yeni ileti dizisini göster</item>
-        <item>Arşivledikten veya sildikten sonra eski ileti dizisini göster</item>
-        <item>Arşivledikten veya sildikten sonra ileti dizisi listesini göster</item>
+        <item>Arşivledikten veya sildikten sonra yeni ileti dizisini göstr</item>
+        <item>Arşivledikten veya sildikten sonra eski ileti dizisini göstr</item>
+        <item>Arşivledikten veya sildikten sonra ileti dizisi listesi gstr</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Etkisi yok</item>
-        <item>Arşivler veya siler</item>
-        <item>Her zaman siler</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arşivle</item>
+        <item>Sil</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Etkisi yok</item>
-        <item>Gelen kutusu: ileti dizisini arşivler. Normal etiketler: mevcut etiketi kaldırır. Tüm posta veya Gönderilenler gibi sistem etiketleri: ileti dizisini siler.</item>
-        <item>İleti dizisini her zaman siler</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arşivle</item>
+        <item>Sil</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Yüksek</item>
+        <item>Normal</item>
+        <item>Düşük</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Uçuşlarınızın hiçbirini kaçırmayın.</item>
+        <item>Uçuşlarınızın hiçbirini kaçırmayın.</item>
+        <item>Bu uçuş, takviminize eklensin mi?</item>
+        <item>"Rezervasyonlarınız Google Takvim'e eklensin."</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Takvim, uçuş ve diğer rezervasyonlarınızı otomatik olarak takviminize ekler.</item>
+        <item>Google Takvim, uçuş ve diğer rezervasyonlarınızı otomatik olarak takviminize ekler.</item>
+        <item>"Google Takvim uygulaması sayesinde Gmail'den etkinlikler otomatik olarak eklenebilir."</item>
+        <item>Uçuş, otel ve restoran rezervasyonlarınız otomatik olarak eklensin.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>"Bu rezervasyon Google Takvim'e eklensin mi?"</item>
+        <item>Rezervasyonlar otomatik olarak Takviminize eklensin mi?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>"Google Takvim uygulaması sayesinde Gmail'den etkinlikler otomatik olarak takviminize eklenir."</item>
+        <item>Google Takvim, e-postalarınızdaki otel rezervasyonlarını ve diğer rezervasyonları otomatik olarak ekler.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Yemeğinizi zamanında hatırlatan bir bildirim alın.</item>
+        <item>"Bu rezervasyon Google Takvim'e eklensin mi?"</item>
+        <item>"Rezervasyonlarınız Google Takvim'e otomatik olarak eklensin."</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Takvim, restoran ve diğer rezervasyonlarınızı otomatik olarak takviminize ekler.</item>
+        <item>"Gmail'den etkinlikler otomatik olarak takviminize eklenebilir."</item>
+        <item>Uçuş, otel ve restoran rezervasyonlarınız otomatik olarak eklensin.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Bu etkinliği zamanında hatırlatan bir bildirim alın.</item>
+        <item>"Bu etkinlik Google Takvim'e eklensin mi?"</item>
+        <item>Etkinliğinizi kaçırmayın.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Takvim, bu e-postadaki gibi etkinlikleri ve rezervasyonları otomatik olarak takviminize ekler.</item>
+        <item>"Gmail'den etkinlikler otomatik olarak takviminize eklenebilir."</item>
+        <item>Google Takvim ile, etkinlikler ve diğer rezervasyonlar otomatik olarak eklensin.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Rezervasyonlarınızı tek bir yerden takip edin.</item>
+        <item>"Bu rezervasyonlar Google Takvim'e eklensin mi?"</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Uçuş, otel ve restoran rezervasyonları otomatik olarak Google Takviminize eklensin.</item>
+        <item>"Gmail'den etkinlikler otomatik olarak takviminize eklenebilir."</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Çok Küçük</item>
@@ -51,15 +98,5 @@
         <item>İletilerin içeriğini normal boyutlu metin ile görüntüle</item>
         <item>İletilerin içeriğini büyük boyutlu metin ile görüntüle</item>
         <item>İletilerin içeriğini çok büyük boyutlu metin ile görüntüle</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>İleti işlemlerini her zaman ekranın üst kısmında göster</item>
-        <item>İleti işlemlerini yalnızca dikey tutulduğunda ekranın üst kısmında göster</item>
-        <item>İleti işlemlerini iletinin üstbilgisi dışında gösterme</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Her zaman göster</item>
-        <item>Yalnızca dikey tutulduğunda göster</item>
-        <item>Gösterme</item>
     </string-array>
 </resources>

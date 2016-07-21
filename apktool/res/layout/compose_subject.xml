@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_below="@id/cc_bcc_wrapper" style="@style/ComposeFieldLayout"
+<LinearLayout style="@style/RecipientComposeFieldLayout"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.mail.compose.EnterSubject android:id="@id/subject" style="@style/ComposeSubjectView" />
-</RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/subject_content" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ComposeFieldContent">
+        <com.android.mail.compose.EnterSubject android:id="@id/subject" android:layout_width="0.0dip" android:layout_weight="1.0" style="@style/ComposeSubjectView" />
+        <ImageView android:id="@id/message_priority_icon" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:contentDescription="@string/message_priority" style="@style/ComposeSubjectIcon" />
+        <ImageView android:id="@id/message_security_icon" android:visibility="gone" android:contentDescription="@string/ces_compose_subject_icon_content_description" style="@style/ComposeSubjectIcon" />
+    </LinearLayout>
+    <View style="@style/DefaultDividerStyle" />
+</LinearLayout>

@@ -2,11 +2,12 @@ package com.google.android.gm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import cbg;
 
 public class AutoSendActivity
-  extends com.android.mail.compose.AutoSendActivity
+  extends cbg
 {
-  public void onCreate(Bundle paramBundle)
+  protected void onCreate(Bundle paramBundle)
   {
     Intent localIntent = getIntent();
     if ((localIntent.getExtras() != null) && (localIntent.getExtras().containsKey("com.google.android.gm.extra.ACCOUNT"))) {

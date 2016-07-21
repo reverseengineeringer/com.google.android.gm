@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/view_app_url" android:title="@string/view_app_page" android:showAsAction="never" />
+    <item android:id="@id/print_dialog" android:title="@string/print_dialog" android:alphabeticShortcut="@string/trigger_print_char" android:showAsAction="never" />
+    <item android:id="@id/copyright_information" android:title="@string/copyright_information" android:showAsAction="never" />
+    <item android:id="@id/privacy_policy" android:title="@string/privacy_policy" android:showAsAction="never" />
+</menu>

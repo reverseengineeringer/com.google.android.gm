@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.email.view.SlidingSetupWizardLayout android:layout="@layout/suw_template_short" android:layout_width="fill_parent" android:layout_height="fill_parent" app:suwHeaderText="@string/account_setup_options_headline" style="@style/SetupWizardHeaderStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/setup_fragment_content" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSetupFragmentContainer" />
+    </ScrollView>
+</com.android.email.view.SlidingSetupWizardLayout>

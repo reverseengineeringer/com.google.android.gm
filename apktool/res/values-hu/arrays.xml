@@ -2,21 +2,17 @@
 <resources>
     <string-array name="compose_modes">
         <item>Válasz</item>
-        <item>Válasz mindenk.</item>
+        <item>Válasz mindnek</item>
         <item>Továbbítás</item>
     </string-array>
     <string-array name="sync_status">
         <item>Sikerült</item>
-        <item>Nincs kapcsolat.</item>
-        <item>A bejelentkezés sikertelen.</item>
+        <item>Nincs kapcsolat</item>
+        <item>Sikertelen bejelentkezés</item>
         <item>Biztonsági hiba</item>
-        <item>A szinkronizálás sikertelen.</item>
+        <item>Sikertelen szinkronizálás</item>
+        <item>Szerverhiba</item>
         <item>Belső hiba</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Rendszer</item>
-        <item>Gyakori</item>
-        <item>Összes címke</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Újabb</item>
@@ -28,15 +24,66 @@
         <item>Régebbi beszélgetés megjelenítése archiválás/törlés után</item>
         <item>Beszélgetéslista megjelenítése archiválás/törlés után</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Nincs hatása</item>
-        <item>Archiválja vagy törli</item>
-        <item>Mindig törli</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archiválás</item>
+        <item>Törlés</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Nincs hatása</item>
-        <item>Beérkezett üzenetek: archiválja a beszélgetést. Gyakori címkék: eltávolítja az aktuális címkét. A „Minden levél\" vagy „Elküldött\" rendszercímkékhez hasonló címkék: törli a beszélgetést</item>
-        <item>Mindig törli a beszélgetést</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archiválás</item>
+        <item>Törlés</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Magas</item>
+        <item>Normál</item>
+        <item>Alacsony</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Ne késsen le több repülőt.</item>
+        <item>Ne késsen le több repülőt.</item>
+        <item>Hozzáadja ezt a repülőjáratot naptárához?</item>
+        <item>Foglalásait hozzáadhatja a Google Naptárhoz.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>A Google Naptár automatikusan fel tudja venni a repülőjáratokat és egyéb foglalásokat naptárába.</item>
+        <item>A Google Naptár automatikusan hozzáadja a repülőjáratokat és egyéb foglalásokat naptárához.</item>
+        <item>A Gmailből származó események automatikusan hozzáadhatók a Google Naptár alkalmazáshoz.</item>
+        <item>A repülőjáratokra szóló, szállodai és éttermi foglalások automatikusan felvehetők.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Hozzáadja ezt a foglalást a Google Naptárhoz?</item>
+        <item>Szeretné automatikusan felvenni a foglalásokat a naptárába?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>A Google Naptár alkalmazással a Gmailből származó események automatikusan hozzáadhatók naptárához.</item>
+        <item>A Google Naptár automatikusan hozzáadja a szállodai és egyéb foglalásokat e-mailjeiből.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Időben értesítést kaphat asztalfoglalásáról.</item>
+        <item>Hozzáadja ezt a foglalást a Google Naptárhoz?</item>
+        <item>Foglalásai automatikusan bekerülhetnek a Google Naptárba.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>A Google Naptár automatikusan hozzáadja az asztal- és egyéb foglalásokat naptárához.</item>
+        <item>A Gmailből származó események automatikusan hozzáadhatók naptárához.</item>
+        <item>A repülőjáratokra szóló, szállodai és éttermi foglalások automatikusan felvehetők.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Időben értesítést kaphat erről az eseményről.</item>
+        <item>Hozzáadja az eseményt a Google Naptárhoz?</item>
+        <item>Ne késse le eseményeit.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>A Google Naptár automatikusan felveszi a naptárba az ebben az e-mailben találhatóhoz hasonló eseményeit és foglalásait.</item>
+        <item>A Gmailből származó események automatikusan hozzáadhatók naptárához.</item>
+        <item>A Google Naptárral az események és foglalások automatikusan hozzáadhatók.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Kövesse foglalásait egy helyen.</item>
+        <item>Hozzáadja ezeket a foglalásokat a Google Naptárhoz?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>A repülőjáratokra szóló, szállodai és éttermi foglalások automatikusan hozzáadhatók Google Naptárához.</item>
+        <item>A Gmailből származó események automatikusan hozzáadhatók naptárához.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Apró</item>
@@ -51,15 +98,5 @@
         <item>Üzenetek tartalmának megjelenítése normál méretű szövegként</item>
         <item>Üzenetek tartalmának megjelenítése nagy méretű szövegként</item>
         <item>Üzenetek tartalmának megjelenítése óriás méretű szövegként</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Az üzenetműveletek mindig a képernyő tetején jelenjenek meg</item>
-        <item>A műveletek csak álló tájolásnál jelenjenek meg a képernyő tetején</item>
-        <item>Ne jelenjenek meg az üzenetműveletek az üzenet fejlécén kívül</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Mindig látszik</item>
-        <item>Megjelenítés csak álló tájolásban</item>
-        <item>Ne jelenjen meg</item>
     </string-array>
 </resources>

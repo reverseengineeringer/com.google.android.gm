@@ -1,368 +1,567 @@
 package com.android.mail.providers;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
-import android.text.SpannableStringBuilder;
+import android.os.Parcelable.ClassLoaderCreator;
 import android.text.TextUtils;
-import com.google.common.collect.ImmutableList;
+import buj;
+import bwg;
+import ccx;
+import cga;
+import cgb;
+import cvl;
+import cvm;
+import hef;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 public class Conversation
   implements Parcelable
 {
-  public static final Parcelable.Creator<Conversation> CREATOR = new Parcelable.Creator()
-  {
-    public Conversation createFromParcel(Parcel paramAnonymousParcel)
-    {
-      return new Conversation(paramAnonymousParcel, null);
-    }
-    
-    public Conversation[] newArray(int paramAnonymousInt)
-    {
-      return new Conversation[paramAnonymousInt];
-    }
-  };
-  public static final Collection<Conversation> EMPTY = ;
-  public static final Uri MOVE_CONVERSATIONS_URI = Uri.parse("content://moveconversations");
-  public Uri accountUri;
-  private ArrayList<Folder> cachedDisplayableFolders;
-  private ArrayList<Folder> cachedRawFolders;
-  public int color;
-  public int convFlags;
-  public Uri conversationBaseUri;
-  public ConversationInfo conversationInfo;
-  public long dateMs;
-  public boolean hasAttachments;
-  public long id;
-  public boolean isRemote;
-  public transient boolean localDeleteOnUpdate;
-  public Uri messageListUri;
-  public boolean muted;
-  private int numDrafts;
-  private int numMessages;
-  public int personalLevel;
-  public boolean phishing;
-  public transient int position;
-  public int priority;
-  private String rawFolders;
-  public boolean read;
+  public static final Parcelable.ClassLoaderCreator<Conversation> CREATOR;
+  public static final ccx<Conversation> F = new cgb();
+  private static String I;
+  private static final Collection<Conversation> J;
+  private static final Bundle K;
+  private static final Bundle L;
+  public static final String a = cvl.a;
+  public int A;
+  public final boolean B;
   @Deprecated
-  public String senders;
-  public int sendingState;
-  @Deprecated
-  public String snippet;
-  public boolean spam;
-  public boolean starred;
-  public String subject;
-  public Uri uri;
-  private transient boolean viewed;
+  public transient int C;
+  public transient boolean D;
+  public transient boolean E;
+  private final int G;
+  private int H;
+  public final long b;
+  public final Uri c;
+  public final String d;
+  public final long e;
+  public final boolean f;
+  public final Uri g;
+  public final int h;
+  public int i;
+  public boolean j;
+  public boolean k;
+  public boolean l;
+  public int m = 1;
+  public FolderList n;
+  public int o;
+  public final int p;
+  public final boolean q;
+  public final boolean r;
+  public final Uri s;
+  public final ConversationInfo t;
+  public final Uri u;
+  public final boolean v;
+  public final long w;
+  public final int x;
+  public final String y;
+  public final String z;
   
-  public Conversation() {}
+  static
+  {
+    J = Collections.emptyList();
+    CREATOR = new cga();
+    Bundle localBundle = new Bundle(2);
+    L = localBundle;
+    localBundle.putBoolean("rawFolders", true);
+    L.putInt("options", 1);
+    localBundle = new Bundle(2);
+    K = localBundle;
+    localBundle.putBoolean("conversationInfo", true);
+    K.putInt("options", 1);
+  }
   
   public Conversation(Cursor paramCursor)
   {
-    Object localObject1;
-    if (paramCursor != null)
+    if (paramCursor == null) {
+      throw new IllegalArgumentException("Creating conversation from null cursor");
+    }
+    b = paramCursor.getLong(0);
+    c = Uri.parse(paramCursor.getString(1));
+    e = paramCursor.getLong(6);
+    Object localObject1 = paramCursor.getString(3);
+    if (localObject1 == null)
     {
-      id = paramCursor.getLong(0);
-      uri = Uri.parse(paramCursor.getString(1));
-      dateMs = paramCursor.getLong(6);
-      subject = paramCursor.getString(3);
-      if (subject == null) {
-        subject = "";
-      }
+      d = "";
       if (paramCursor.getInt(7) == 0) {
-        break label450;
+        break label579;
       }
       bool1 = true;
-      hasAttachments = bool1;
+      label98:
+      f = bool1;
       localObject1 = paramCursor.getString(2);
       if (TextUtils.isEmpty((CharSequence)localObject1)) {
-        break label455;
+        break label584;
       }
       localObject1 = Uri.parse((String)localObject1);
-      label116:
-      messageListUri = ((Uri)localObject1);
-      sendingState = paramCursor.getInt(10);
-      priority = paramCursor.getInt(11);
+      label127:
+      g = ((Uri)localObject1);
+      h = paramCursor.getInt(10);
+      i = paramCursor.getInt(11);
       if (paramCursor.getInt(12) == 0) {
-        break label461;
+        break label590;
       }
       bool1 = true;
-      label159:
-      read = bool1;
+      label170:
+      j = bool1;
       if (paramCursor.getInt(13) == 0) {
-        break label466;
+        break label595;
       }
       bool1 = true;
-      label177:
-      starred = bool1;
-      rawFolders = paramCursor.getString(14);
-      convFlags = paramCursor.getInt(15);
-      personalLevel = paramCursor.getInt(16);
-      if (paramCursor.getInt(17) == 0) {
-        break label471;
+      label188:
+      k = bool1;
+      if (paramCursor.getInt(14) == 0) {
+        break label600;
       }
       bool1 = true;
-      label231:
-      spam = bool1;
+      label206:
+      l = bool1;
+      if (!(paramCursor instanceof bwg)) {
+        break label605;
+      }
+      localObject1 = ((bwg)paramCursor).a(15);
+      if ((localObject1 == null) || (localObject1.length <= 0)) {
+        break label605;
+      }
+      localObject1 = FolderList.a((byte[])localObject1);
+      label247:
+      n = ((FolderList)localObject1);
+      o = paramCursor.getInt(16);
+      p = paramCursor.getInt(17);
       if (paramCursor.getInt(18) == 0) {
-        break label476;
+        break label657;
       }
       bool1 = true;
-      label249:
-      phishing = bool1;
-      if (paramCursor.getInt(19) == 0) {
-        break label481;
+      label290:
+      q = bool1;
+      if (paramCursor.getInt(20) == 0) {
+        break label662;
       }
       bool1 = true;
-      label267:
-      muted = bool1;
-      color = paramCursor.getInt(20);
-      localObject1 = paramCursor.getString(21);
+      label308:
+      r = bool1;
+      G = paramCursor.getInt(21);
+      localObject1 = paramCursor.getString(22);
       if (TextUtils.isEmpty((CharSequence)localObject1)) {
-        break label486;
+        break label667;
       }
       localObject1 = Uri.parse((String)localObject1);
-      label309:
-      accountUri = ((Uri)localObject1);
-      position = -1;
-      localDeleteOnUpdate = false;
-      conversationInfo = ConversationInfo.fromString(paramCursor.getString(5));
-      String str = paramCursor.getString(23);
+      label350:
+      s = ((Uri)localObject1);
+      C = -1;
+      D = false;
+      if (!(paramCursor instanceof bwg)) {
+        break label673;
+      }
+      localObject1 = ((bwg)paramCursor).a(5);
+      if ((localObject1 == null) || (localObject1.length <= 0)) {
+        break label673;
+      }
+      localObject1 = ConversationInfo.a((byte[])localObject1);
+      label401:
+      t = ((ConversationInfo)localObject1);
+      if (t == null) {
+        cvm.f(a, "Null conversation info from cursor", new Object[0]);
+      }
+      String str = paramCursor.getString(24);
       localObject1 = localObject2;
       if (!TextUtils.isEmpty(str)) {
         localObject1 = Uri.parse(str);
       }
-      conversationBaseUri = ((Uri)localObject1);
-      if (conversationInfo == null)
-      {
-        snippet = paramCursor.getString(4);
-        senders = emptyIfNull(paramCursor.getString(22));
-        numMessages = paramCursor.getInt(8);
-        numDrafts = paramCursor.getInt(9);
-      }
-      if (paramCursor.getInt(24) == 0) {
-        break label492;
+      u = ((Uri)localObject1);
+      if (paramCursor.getInt(25) == 0) {
+        break label724;
       }
     }
-    label450:
-    label455:
-    label461:
-    label466:
-    label471:
-    label476:
-    label481:
-    label486:
-    label492:
+    label579:
+    label584:
+    label590:
+    label595:
+    label600:
+    label605:
+    label657:
+    label662:
+    label667:
+    label673:
+    label724:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      isRemote = bool1;
+      v = bool1;
+      w = paramCursor.getLong(26);
+      x = paramCursor.getInt(27);
+      H = paramCursor.getInt(28);
+      y = paramCursor.getString(29);
+      z = paramCursor.getString(30);
+      m = paramCursor.getInt(31);
+      A = paramCursor.getInt(32);
+      B = false;
       return;
-      bool1 = false;
+      d = ((String)localObject1);
       break;
+      bool1 = false;
+      break label98;
       localObject1 = null;
-      break label116;
+      break label127;
       bool1 = false;
-      break label159;
+      break label170;
       bool1 = false;
-      break label177;
+      break label188;
       bool1 = false;
-      break label231;
+      break label206;
+      localObject1 = paramCursor.respond(L);
+      if (((Bundle)localObject1).containsKey("rawFolders"))
+      {
+        localObject1 = (FolderList)((Bundle)localObject1).getParcelable("rawFolders");
+        break label247;
+      }
+      localObject1 = FolderList.a(paramCursor.getBlob(15));
+      break label247;
       bool1 = false;
-      break label249;
+      break label290;
       bool1 = false;
-      break label267;
+      break label308;
       localObject1 = null;
-      break label309;
+      break label350;
+      localObject1 = paramCursor.respond(K);
+      if (((Bundle)localObject1).containsKey("conversationInfo"))
+      {
+        localObject1 = (ConversationInfo)((Bundle)localObject1).getParcelable("conversationInfo");
+        break label401;
+      }
+      localObject1 = ConversationInfo.a(paramCursor.getBlob(5));
+      break label401;
     }
   }
   
-  private Conversation(Parcel paramParcel)
+  public Conversation(Parcel paramParcel, ClassLoader paramClassLoader)
   {
-    id = paramParcel.readLong();
-    uri = ((Uri)paramParcel.readParcelable(null));
-    subject = paramParcel.readString();
-    dateMs = paramParcel.readLong();
-    snippet = paramParcel.readString();
+    b = paramParcel.readLong();
+    c = ((Uri)paramParcel.readParcelable(null));
+    d = paramParcel.readString();
+    e = paramParcel.readLong();
     if (paramParcel.readInt() != 0)
     {
       bool1 = true;
-      hasAttachments = bool1;
-      messageListUri = ((Uri)paramParcel.readParcelable(null));
-      senders = emptyIfNull(paramParcel.readString());
-      numMessages = paramParcel.readInt();
-      numDrafts = paramParcel.readInt();
-      sendingState = paramParcel.readInt();
-      priority = paramParcel.readInt();
+      f = bool1;
+      g = ((Uri)paramParcel.readParcelable(null));
+      h = paramParcel.readInt();
+      i = paramParcel.readInt();
       if (paramParcel.readInt() == 0) {
-        break label286;
+        break label324;
       }
       bool1 = true;
-      label128:
-      read = bool1;
+      label99:
+      j = bool1;
       if (paramParcel.readInt() == 0) {
-        break label291;
+        break label329;
       }
       bool1 = true;
-      label142:
-      starred = bool1;
-      rawFolders = paramParcel.readString();
-      convFlags = paramParcel.readInt();
-      personalLevel = paramParcel.readInt();
+      label113:
+      k = bool1;
       if (paramParcel.readInt() == 0) {
-        break label296;
+        break label334;
       }
       bool1 = true;
-      label180:
-      spam = bool1;
+      label127:
+      l = bool1;
+      n = ((FolderList)paramParcel.readParcelable(paramClassLoader));
+      o = paramParcel.readInt();
+      p = paramParcel.readInt();
       if (paramParcel.readInt() == 0) {
-        break label301;
+        break label339;
       }
       bool1 = true;
-      label194:
-      phishing = bool1;
+      label169:
+      q = bool1;
       if (paramParcel.readInt() == 0) {
-        break label306;
+        break label344;
       }
       bool1 = true;
-      label208:
-      muted = bool1;
-      color = paramParcel.readInt();
-      accountUri = ((Uri)paramParcel.readParcelable(null));
-      position = -1;
-      localDeleteOnUpdate = false;
-      conversationInfo = ConversationInfo.fromString(paramParcel.readString());
-      conversationBaseUri = ((Uri)paramParcel.readParcelable(null));
+      label183:
+      r = bool1;
+      G = paramParcel.readInt();
+      s = ((Uri)paramParcel.readParcelable(null));
+      C = -1;
+      D = false;
+      t = ((ConversationInfo)paramParcel.readParcelable(paramClassLoader));
+      u = ((Uri)paramParcel.readParcelable(null));
       if (paramParcel.readInt() == 0) {
-        break label311;
+        break label349;
       }
     }
-    label286:
-    label291:
-    label296:
-    label301:
-    label306:
-    label311:
+    label324:
+    label329:
+    label334:
+    label339:
+    label344:
+    label349:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      isRemote = bool1;
+      v = bool1;
+      w = paramParcel.readLong();
+      x = paramParcel.readInt();
+      H = paramParcel.readInt();
+      y = paramParcel.readString();
+      z = paramParcel.readString();
+      m = paramParcel.readInt();
+      A = paramParcel.readInt();
+      B = false;
       return;
       bool1 = false;
       break;
       bool1 = false;
-      break label128;
+      break label99;
       bool1 = false;
-      break label142;
+      break label113;
       bool1 = false;
-      break label180;
+      break label127;
       bool1 = false;
-      break label194;
+      break label169;
       bool1 = false;
-      break label208;
+      break label183;
     }
   }
   
-  private void clearCachedFolders()
+  public Conversation(Conversation paramConversation)
   {
-    cachedRawFolders = null;
-    cachedDisplayableFolders = null;
+    if (paramConversation == null) {
+      throw new IllegalArgumentException("Copying null conversation");
+    }
+    b = b;
+    c = c;
+    e = e;
+    d = d;
+    f = f;
+    g = g;
+    h = h;
+    i = i;
+    j = j;
+    k = k;
+    l = l;
+    n = n;
+    o = o;
+    p = p;
+    q = q;
+    r = r;
+    G = G;
+    s = s;
+    C = C;
+    D = D;
+    t = t;
+    u = u;
+    v = v;
+    w = w;
+    x = x;
+    H = H;
+    y = y;
+    z = z;
+    m = m;
+    A = A;
+    B = false;
   }
   
-  public static final boolean contains(Collection<Conversation> paramCollection, Conversation paramConversation)
+  public static String a(Context paramContext, String paramString1, String paramString2)
   {
-    boolean bool = true;
+    String str;
+    if (TextUtils.isEmpty(paramString2)) {
+      str = paramContext.getString(buj.dn);
+    }
+    do
+    {
+      return str;
+      str = paramString2;
+    } while (TextUtils.isEmpty(paramString1));
+    if (I == null) {
+      I = paramContext.getString(buj.K);
+    }
+    return String.format(I, new Object[] { paramString1, paramString2 });
+  }
+  
+  public static String a(Collection<Conversation> paramCollection)
+  {
+    int i1 = paramCollection.size();
+    StringBuilder localStringBuilder = new StringBuilder(26 + i1 + " conversations:");
+    paramCollection = paramCollection.iterator();
+    i1 = 0;
+    while (paramCollection.hasNext())
+    {
+      Object localObject = (Conversation)paramCollection.next();
+      i1 += 1;
+      localObject = String.valueOf(((Conversation)localObject).toString());
+      localStringBuilder.append(String.valueOf(localObject).length() + 20 + "      " + i1 + ": " + (String)localObject + "\n");
+    }
+    return localStringBuilder.toString();
+  }
+  
+  public static Collection<Conversation> a(Conversation paramConversation)
+  {
+    if (paramConversation == null) {
+      return J;
+    }
+    return hef.a(paramConversation);
+  }
+  
+  public static boolean a(Collection<Conversation> paramCollection, Conversation paramConversation)
+  {
     if ((paramCollection == null) || (paramCollection.size() <= 0)) {
-      bool = false;
+      return false;
     }
-    while (paramConversation == null) {
-      return bool;
+    if (paramConversation == null) {
+      return true;
     }
-    long l = id;
+    long l1 = b;
     paramCollection = paramCollection.iterator();
     while (paramCollection.hasNext()) {
-      if (l == nextid) {
+      if (l1 == nextb) {
         return true;
       }
     }
     return false;
   }
   
-  public static Conversation create(long paramLong1, Uri paramUri1, String paramString1, long paramLong2, String paramString2, boolean paramBoolean1, Uri paramUri2, String paramString3, int paramInt1, int paramInt2, int paramInt3, int paramInt4, boolean paramBoolean2, boolean paramBoolean3, String paramString4, int paramInt5, int paramInt6, boolean paramBoolean4, boolean paramBoolean5, boolean paramBoolean6, Uri paramUri3, ConversationInfo paramConversationInfo, Uri paramUri4, boolean paramBoolean7)
+  public final String a(String paramString)
   {
-    Conversation localConversation = new Conversation();
-    id = paramLong1;
-    uri = paramUri1;
-    subject = paramString1;
-    dateMs = paramLong2;
-    snippet = paramString2;
-    hasAttachments = paramBoolean1;
-    messageListUri = paramUri2;
-    senders = emptyIfNull(paramString3);
-    numMessages = paramInt1;
-    numDrafts = paramInt2;
-    sendingState = paramInt3;
-    priority = paramInt4;
-    read = paramBoolean2;
-    starred = paramBoolean3;
-    rawFolders = paramString4;
-    convFlags = paramInt5;
-    personalLevel = paramInt6;
-    spam = paramBoolean4;
-    phishing = paramBoolean5;
-    muted = paramBoolean6;
-    color = 0;
-    accountUri = paramUri3;
-    conversationInfo = paramConversationInfo;
-    conversationBaseUri = paramUri4;
-    isRemote = paramBoolean7;
-    return localConversation;
+    if (u != null) {
+      paramString = u.toString();
+    }
+    return paramString;
   }
   
-  private static String emptyIfNull(String paramString)
+  public final void a(ContentValues paramContentValues)
   {
-    if (paramString != null) {
-      return paramString;
+    Iterator localIterator = paramContentValues.keySet().iterator();
+    while (localIterator.hasNext())
+    {
+      Object localObject1 = (String)localIterator.next();
+      Object localObject2 = paramContentValues.get((String)localObject1);
+      cvm.b(a, "Conversation: applying cached value to col=%s val=%s", new Object[] { localObject1, localObject2 });
+      boolean bool;
+      if ("read".equals(localObject1))
+      {
+        if (((Integer)localObject2).intValue() != 0) {}
+        for (bool = true;; bool = false)
+        {
+          j = bool;
+          break;
+        }
+      }
+      if ("conversationInfo".equals(localObject1))
+      {
+        localObject1 = ConversationInfo.a((byte[])localObject2);
+        if (localObject1 == null)
+        {
+          cvm.b(a, "Null ConversationInfo in applyCachedValues", new Object[0]);
+        }
+        else
+        {
+          localObject2 = t;
+          a.clear();
+          a.addAll(a);
+          b = b;
+          c = c;
+          d = d;
+          e = e;
+        }
+      }
+      else
+      {
+        int i1;
+        if ("conversationFlags".equals(localObject1))
+        {
+          if (localObject2 != null) {}
+          for (i1 = ((Integer)localObject2).intValue();; i1 = 0)
+          {
+            o = i1;
+            break;
+          }
+        }
+        if ("starred".equals(localObject1))
+        {
+          if (((Integer)localObject2).intValue() != 0) {}
+          for (bool = true;; bool = false)
+          {
+            l = bool;
+            break;
+          }
+        }
+        if ("seen".equals(localObject1))
+        {
+          if (((Integer)localObject2).intValue() != 0) {}
+          for (bool = true;; bool = false)
+          {
+            k = bool;
+            break;
+          }
+        }
+        if ("rawFolders".equals(localObject1)) {
+          n = FolderList.a((byte[])localObject2);
+        } else if (!"viewed".equals(localObject1)) {
+          if ("importance".equals(localObject1))
+          {
+            i = ((Integer)localObject2).intValue();
+          }
+          else
+          {
+            if ("unsubscribeState".equals(localObject1))
+            {
+              if (localObject2 != null) {}
+              for (i1 = ((Integer)localObject2).intValue();; i1 = 0)
+              {
+                H = i1;
+                break;
+              }
+            }
+            if (!"unsubscribeSenderIdentifier".equals(localObject1))
+            {
+              if ("priority".equals(localObject1))
+              {
+                if (localObject2 != null) {}
+                for (i1 = ((Integer)localObject2).intValue();; i1 = 0)
+                {
+                  m = i1;
+                  break;
+                }
+              }
+              cvm.e(a, new UnsupportedOperationException(), "unsupported cached conv value in col=%s", new Object[] { localObject1 });
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  public final boolean a()
+  {
+    return i == 1;
+  }
+  
+  public final boolean b()
+  {
+    return (o & 0x1) != 0;
+  }
+  
+  public final boolean c()
+  {
+    return (o & 0x10) == 16;
+  }
+  
+  public final String d()
+  {
+    if (!TextUtils.isEmpty(t.d)) {
+      return t.d;
     }
     return "";
-  }
-  
-  public static SpannableStringBuilder getSubjectAndSnippetForDisplay(Context paramContext, String paramString1, String paramString2)
-  {
-    String str = paramString1;
-    if (!TextUtils.isEmpty(paramString2)) {
-      str = paramContext.getString(2131493016, new Object[] { paramString1, paramString2 });
-    }
-    return new SpannableStringBuilder(str);
-  }
-  
-  public static Collection<Conversation> listOf(Conversation paramConversation)
-  {
-    if (paramConversation == null) {
-      return EMPTY;
-    }
-    return ImmutableList.of(paramConversation);
-  }
-  
-  public static String toString(Collection<Conversation> paramCollection)
-  {
-    StringBuilder localStringBuilder = new StringBuilder(paramCollection.size() + " conversations:");
-    int i = 0;
-    paramCollection = paramCollection.iterator();
-    while (paramCollection.hasNext())
-    {
-      Conversation localConversation = (Conversation)paramCollection.next();
-      i += 1;
-      localStringBuilder.append("      " + i + ": " + localConversation.toString() + "\n");
-    }
-    return localStringBuilder.toString();
   }
   
   public int describeContents()
@@ -370,184 +569,132 @@ public class Conversation
     return 0;
   }
   
-  public boolean equals(Object paramObject)
+  public final boolean e()
   {
-    if ((paramObject instanceof Conversation)) {
-      return uri.equals(uri);
+    Iterator localIterator = n.a.iterator();
+    while (localIterator.hasNext()) {
+      if (((Folder)localIterator.next()).d(32)) {
+        return true;
+      }
     }
     return false;
   }
   
-  public int getNumMessages()
+  public boolean equals(Object paramObject)
   {
-    if (conversationInfo != null) {
-      return conversationInfo.messageCount;
+    if ((paramObject instanceof Conversation)) {
+      return c.equals(c);
     }
-    return numMessages;
+    return false;
   }
   
-  public ArrayList<Folder> getRawFolders()
+  public final boolean f()
   {
-    if (cachedRawFolders == null)
-    {
-      if (!TextUtils.isEmpty(rawFolders)) {
-        cachedRawFolders = Folder.getFoldersArray(rawFolders);
-      }
-    }
-    else {
-      return cachedRawFolders;
-    }
-    return new ArrayList();
-  }
-  
-  public ArrayList<Folder> getRawFoldersForDisplay(Folder paramFolder)
-  {
-    Object localObject = getRawFolders();
-    if (cachedDisplayableFolders == null)
-    {
-      cachedDisplayableFolders = new ArrayList();
-      localObject = ((ArrayList)localObject).iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        Folder localFolder = (Folder)((Iterator)localObject).next();
-        if ((paramFolder == null) || (!paramFolder.equals(localFolder))) {
-          cachedDisplayableFolders.add(localFolder);
-        }
-      }
-    }
-    return cachedDisplayableFolders;
-  }
-  
-  public String getRawFoldersString()
-  {
-    return rawFolders;
-  }
-  
-  public String getSnippet()
-  {
-    if ((conversationInfo != null) && (!TextUtils.isEmpty(conversationInfo.firstSnippet))) {
-      return conversationInfo.firstSnippet;
-    }
-    return snippet;
+    return (z != null) && ((H == 1) || (H == 2)) && (!q) && (!e());
   }
   
   public int hashCode()
   {
-    return uri.hashCode();
-  }
-  
-  public boolean isImportant()
-  {
-    return priority == 1;
-  }
-  
-  public boolean isMostlyDead()
-  {
-    return (convFlags & 0x1) != 0;
-  }
-  
-  public boolean isViewed()
-  {
-    return viewed;
-  }
-  
-  public void markViewed()
-  {
-    viewed = true;
-  }
-  
-  public void setRawFolders(String paramString)
-  {
-    clearCachedFolders();
-    rawFolders = paramString;
+    return c.hashCode();
   }
   
   public String toString()
   {
-    return "[conversation id=" + id + ", subject =" + subject + "]";
+    StringBuilder localStringBuilder = new StringBuilder("[conversation id=");
+    localStringBuilder.append(b);
+    if (cvm.a(a, 3))
+    {
+      localStringBuilder.append(", subject=");
+      localStringBuilder.append(d);
+    }
+    localStringBuilder.append("]");
+    return localStringBuilder.toString();
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    int i = 1;
-    paramParcel.writeLong(id);
-    paramParcel.writeParcelable(uri, paramInt);
-    paramParcel.writeString(subject);
-    paramParcel.writeLong(dateMs);
-    paramParcel.writeString(snippet);
-    if (hasAttachments)
+    int i1 = 1;
+    paramParcel.writeLong(b);
+    paramParcel.writeParcelable(c, paramInt);
+    paramParcel.writeString(d);
+    paramParcel.writeLong(e);
+    if (f)
     {
       paramInt = 1;
       paramParcel.writeInt(paramInt);
-      paramParcel.writeParcelable(messageListUri, 0);
-      paramParcel.writeString(senders);
-      paramParcel.writeInt(numMessages);
-      paramParcel.writeInt(numDrafts);
-      paramParcel.writeInt(sendingState);
-      paramParcel.writeInt(priority);
-      if (!read) {
-        break label257;
+      paramParcel.writeParcelable(g, 0);
+      paramParcel.writeInt(h);
+      paramParcel.writeInt(i);
+      if (!j) {
+        break label280;
       }
       paramInt = 1;
-      label115:
+      label83:
       paramParcel.writeInt(paramInt);
-      if (!starred) {
-        break label262;
+      if (!k) {
+        break label285;
       }
       paramInt = 1;
-      label129:
+      label97:
       paramParcel.writeInt(paramInt);
-      paramParcel.writeString(rawFolders);
-      paramParcel.writeInt(convFlags);
-      paramParcel.writeInt(personalLevel);
-      if (!spam) {
-        break label267;
+      if (!l) {
+        break label290;
       }
       paramInt = 1;
-      label167:
+      label111:
       paramParcel.writeInt(paramInt);
-      if (!phishing) {
-        break label272;
+      paramParcel.writeParcelable(n, 0);
+      paramParcel.writeInt(o);
+      paramParcel.writeInt(p);
+      if (!q) {
+        break label295;
       }
       paramInt = 1;
-      label181:
+      label150:
       paramParcel.writeInt(paramInt);
-      if (!muted) {
-        break label277;
+      if (!r) {
+        break label300;
       }
       paramInt = 1;
-      label195:
+      label164:
       paramParcel.writeInt(paramInt);
-      paramParcel.writeInt(color);
-      paramParcel.writeParcelable(accountUri, 0);
-      paramParcel.writeString(ConversationInfo.toString(conversationInfo));
-      paramParcel.writeParcelable(conversationBaseUri, 0);
-      if (!isRemote) {
-        break label282;
+      paramParcel.writeInt(G);
+      paramParcel.writeParcelable(s, 0);
+      paramParcel.writeParcelable(t, 0);
+      paramParcel.writeParcelable(u, 0);
+      if (!v) {
+        break label305;
       }
     }
-    label257:
-    label262:
-    label267:
-    label272:
-    label277:
-    label282:
-    for (paramInt = i;; paramInt = 0)
+    label280:
+    label285:
+    label290:
+    label295:
+    label300:
+    label305:
+    for (paramInt = i1;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);
+      paramParcel.writeLong(w);
+      paramParcel.writeInt(x);
+      paramParcel.writeInt(H);
+      paramParcel.writeString(y);
+      paramParcel.writeString(z);
+      paramParcel.writeInt(m);
+      paramParcel.writeInt(A);
       return;
       paramInt = 0;
       break;
       paramInt = 0;
-      break label115;
+      break label83;
       paramInt = 0;
-      break label129;
+      break label97;
       paramInt = 0;
-      break label167;
+      break label111;
       paramInt = 0;
-      break label181;
+      break label150;
       paramInt = 0;
-      break label195;
+      break label164;
     }
   }
 }

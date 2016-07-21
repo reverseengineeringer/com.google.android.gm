@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/folder_list_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginTop="8.0dip" />
+    <TextView android:textColor="@color/folder_list_heading_text_color" android:ellipsize="end" android:gravity="bottom" android:id="@id/header_text" android:paddingTop="@dimen/folder_list_heading_padding_top" android:paddingBottom="@dimen/folder_list_heading_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="32.0dip" android:singleLine="true" android:fontFamily="sans-serif-medium" style="@style/FolderListItemPaddingStyle" />
+</LinearLayout>

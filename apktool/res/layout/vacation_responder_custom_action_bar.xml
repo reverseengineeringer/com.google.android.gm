@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/action_cancel" style="@style/VacationResponderActionButton">
+        <ImageView android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_wht_24dp" />
+        <TextView android:text="@string/cancel" style="@style/VacationResponderActionButtonText" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/action_done" style="@style/VacationResponderActionButton">
+        <ImageView android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_check_wht_24dp" />
+        <TextView android:text="@string/done" style="@style/VacationResponderActionButtonText" />
+    </LinearLayout>
+</LinearLayout>

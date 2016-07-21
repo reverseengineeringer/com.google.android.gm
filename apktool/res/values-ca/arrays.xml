@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="compose_modes">
-        <item>Resposta</item>
+        <item>Respon</item>
         <item>Respon a tots</item>
         <item>Reenvia</item>
     </string-array>
     <string-array name="sync_status">
-        <item>Correcte</item>
-        <item>Sense connexió.</item>
-        <item>"No s'ha pogut iniciar la sessió."</item>
-        <item>Error de seguretat.</item>
-        <item>"No s'ha pogut sincronitzar."</item>
+        <item>Operació reeixida.</item>
+        <item>Sense connexió</item>
+        <item>"No s'ha pogut iniciar la sessió"</item>
+        <item>Error de seguretat</item>
+        <item>"No s'ha pogut sincronitzar"</item>
+        <item>Error del servidor</item>
         <item>Error intern</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistema</item>
-        <item>Ús freqüent</item>
-        <item>Totes etiquetes</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Més recent</item>
@@ -25,41 +21,82 @@
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
         <item>Mostra la conversa més recent en arxivar o suprimir</item>
-        <item>Mostra les converses més antigues en arxivar o en suprimir</item>
-        <item>Mostra la llista de converses en arxivar o en suprimir</item>
+        <item>Mostra la conversa més antiga en arxivar o suprimir</item>
+        <item>"Mostra la llista de converses després d'arxivar o suprimir"</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>No té cap efecte</item>
-        <item>Arxiva o suprimeix</item>
-        <item>Suprimeix sempre</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arxiva</item>
+        <item>Suprimeix</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>No té cap efecte</item>
-        <item>Rebuts.: arxiva converses Etiquetes normals: elimina etiqueta actual. Etiquetes del sistema: suprimeix conversa.</item>
-        <item>Suprimeix sempre les converses</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arxiva</item>
+        <item>Suprimeix</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Alta</item>
+        <item>Normal</item>
+        <item>Baixa</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>No perdeu més vols.</item>
+        <item>No perdeu més vols.</item>
+        <item>Voleu afegir aquest vol al vostre calendari?</item>
+        <item>"Deixeu que les reserves s'afegeixin a Google Calendar."</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>"Google Calendar afegeix automàticament les reserves de vols i d'altres esdeveniments al vostre calendari."</item>
+        <item>"Google Calendar afegeix automàticament les reserves de vols i d'altres esdeveniments al vostre calendari."</item>
+        <item>"Els esdeveniments de Gmail es poden afegir automàticament amb l'aplicació Google Calendar."</item>
+        <item>"Deixeu que les reserves de vols, d'hotels i de restaurants s'afegeixin automàticament."</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Voleu afegir aquesta reserva a Google Calendar?</item>
+        <item>Voleu afegir automàticament les reserves al calendari?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>"Amb l'aplicació Google Calendar, els esdeveniments de Gmail s'afegeixen automàticament al vostre calendari."</item>
+        <item>"Google Calendar afegeix automàticament les reserves d'hotels i d'altres esdeveniments des del vostre correu electrònic."</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Rebeu una notificació puntual per al vostre àpat.</item>
+        <item>Voleu afegir aquesta reserva a Google Calendar?</item>
+        <item>Afegiu les reserves automàticament a Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>"Google Calendar afegeix automàticament les reserves de restaurants i d'altres esdeveniments al vostre calendari."</item>
+        <item>Els esdeveniments de Gmail es poden afegir automàticament al vostre calendari.</item>
+        <item>"Deixeu que les reserves de vols, d'hotels i de restaurants s'afegeixin automàticament."</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>"Rebeu una notificació puntual abans d'aquest esdeveniment."</item>
+        <item>Voleu afegir aquest esdeveniment a Google Calendar?</item>
+        <item>"No us perdeu l'esdeveniment."</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>"Google Calendar afegeix automàticament esdeveniments i reserves com la d'aquest correu al vostre calendari."</item>
+        <item>Els esdeveniments de Gmail es poden afegir automàticament al vostre calendari.</item>
+        <item>Deixeu que Google Calendar afegeixi esdeveniments i altres reserves automàticament.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>"Feu un seguiment de les reserves des d'un sol lloc."</item>
+        <item>Voleu afegir aquestes reserves a Google Calendar?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>"Afegiu automàticament les reserves de vols, d'hotels i de restaurants al vostre compte de Google Calendar."</item>
+        <item>Els esdeveniments de Gmail es poden afegir automàticament al vostre calendari.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Molt petita</item>
         <item>Petita</item>
         <item>Normal</item>
         <item>Gran</item>
-        <item>Enorme</item>
+        <item>Molt gran</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Mostra el contingut dels missatges amb lletra molt petita</item>
         <item>Mostra el contingut dels missatges amb lletra petita</item>
-        <item>Mostra el contingut dels missatges amb una lletra normal</item>
+        <item>Mostra el contingut dels missatges amb lletra normal</item>
         <item>Mostra el contingut dels missatges amb lletra gran</item>
         <item>Mostra el contingut dels missatges amb lletra molt gran</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Mostra sempre les accions de missatges a la part superior de la pantalla</item>
-        <item>Mostra només accions de missatges a la part superior de la pantalla en girar a vertical</item>
-        <item>No mostris accions de missatges fora de la capçalera del missatge</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Mostra sempre</item>
-        <item>Mostra només en vertical</item>
-        <item>No mostris</item>
     </string-array>
 </resources>

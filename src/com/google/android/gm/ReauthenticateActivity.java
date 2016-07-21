@@ -3,26 +3,38 @@ package com.google.android.gm;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import ddy;
+import def;
+import dfd;
+import dri;
 
 public class ReauthenticateActivity
-  extends GmailBaseActivity
-  implements AccountHelper.CredentialsCallback
+  extends dfd
+  implements def
 {
+  private String a;
+  
+  public final void a(boolean paramBoolean)
+  {
+    int i = 0;
+    dri.c(dri.a, "Credential prompt successful: %b", new Object[] { Boolean.valueOf(paramBoolean) });
+    if (paramBoolean) {
+      i = -1;
+    }
+    setResult(i);
+    finish();
+  }
+  
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    AccountHelper.promptForCredentials(this, getIntent().getData().getQueryParameter("account"), this);
+    a = getIntent().getData().getQueryParameter("account");
   }
   
-  public void onCredentialsResult(boolean paramBoolean)
+  public void onResume()
   {
-    if (paramBoolean) {}
-    for (int i = -1;; i = 0)
-    {
-      setResult(i);
-      finish();
-      return;
-    }
+    super.onResume();
+    ddy.a(this, a, this);
   }
 }
 

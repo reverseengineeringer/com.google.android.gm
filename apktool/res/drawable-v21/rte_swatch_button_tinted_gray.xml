@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/rte_button_background_ripple"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask" android:drawable="@drawable/rte_button_ripple_mask" />
+    <item>
+        <selector>
+            <item android:state_checked="false" android:drawable="@drawable/rte_swatch_button_tinted_gray_off_inset" />
+            <item android:state_checked="true" android:drawable="@drawable/rte_swatch_button_tinted_gray_on_inset" />
+        </selector>
+    </item>
+</ripple>

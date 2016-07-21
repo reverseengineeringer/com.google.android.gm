@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/anchor" layout="@layout/account_switch_spinner_item" />
-    <FrameLayout android:id="@id/dropdown" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <include android:id="@id/account" layout="@layout/account_switch_spinner_dropdown_account" />
-    </FrameLayout>
-</FrameLayout>

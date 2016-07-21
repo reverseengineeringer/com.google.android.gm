@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_gravity="center|top" android:paddingLeft="@dimen/compose_wrapper_side_padding" android:paddingRight="@dimen/compose_wrapper_side_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingTop="@dimen/compose_wrapper_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+        <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" style="@style/VacationResponderArea">
+            <android.support.v7.widget.SwitchCompat android:id="@id/vacation_responder_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/preferences_vacation_responder_title" style="@style/VacationResponderDisplayText" />
+            <LinearLayout android:orientation="vertical" android:id="@id/vacation_responder_main_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/vacation_responder_header_text_size" android:textColor="@color/vacation_responder_header_text_color" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/pick_start_date_title" android:layout_weight="1.0" style="@style/VacationResponderDatePadding" />
+                    <TextView android:textSize="@dimen/vacation_responder_header_text_size" android:textColor="@color/vacation_responder_header_text_color" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/pick_end_date_title" android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_gravity="center_vertical" android:id="@id/start_date_selector" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/VacationResponderDatePadding">
+                        <TextView android:textSize="@dimen/vacation_responder_main_text_size" android:textColor="@color/vacation_responder_main_text_color" android:id="@id/start_date" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_drop_down_24dp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_gravity="center_vertical" android:id="@id/end_date_selector" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/vacation_responder_main_text_size" android:textColor="@color/vacation_responder_main_text_color" android:id="@id/end_date" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_drop_down_24dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="@color/divider_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_height" android:layout_marginTop="8.0dip" android:layout_weight="1.0" style="@style/VacationResponderDatePadding" />
+                    <View android:background="@color/divider_color" android:layout_width="0.0dip" android:layout_height="@dimen/divider_height" android:layout_marginTop="8.0dip" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/compose_padding_weight" />
+    </LinearLayout>
+</ScrollView>

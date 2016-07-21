@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.mail.ui.LeaveBehindItem android:background="@color/swiped_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/conversation_item_height" android:minHeight="@dimen/conversation_item_height"
+<com.android.mail.ui.LeaveBehindItem android:background="@color/swiped_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:layout_width="fill_parent" android:layout_height="@dimen/conversation_item_height" layout="@layout/swipe_leavebehind_inner" />
+    <include android:id="@id/swipeable_content" layout="@layout/swipe_leavebehind_body" />
+    <ImageView android:id="@id/swipe_image" android:layout_width="@dimen/undo_icon_width" android:layout_height="fill_parent" android:src="@drawable/ic_archive_wht_24dp" android:scaleType="center" />
 </com.android.mail.ui.LeaveBehindItem>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBoxPreference android:title="Enable full text search" android:key="enable-fts" android:summary="Enable indexing message content to allow local search" android:defaultValue="true" />
-    <CheckBoxPreference android:title="Enable drag and drop contact chip" android:key="enable-chip-drag-and-drop" android:summary="Enable drag and drop contact chip between To/CC/BCC" android:defaultValue="false" />
+    <CheckBoxPreference android:persistent="false" android:title="Cross-device notification sync" android:key="notification-requires-us" android:summary="Notifications will require the ^us label, so viewing your inbox on another device (or platform) will dismiss your inbox notification on this device. Dismissing a notification will clear ^us, causing it dismiss everywhere." android:defaultValue="false" />
 </PreferenceScreen>

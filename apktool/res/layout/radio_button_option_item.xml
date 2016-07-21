@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/option_padding_vertical" android:paddingBottom="@dimen/option_padding_vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatRadioButton android:id="@id/radio_button" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/option_inner_spacing" style="@style/SetupTextStyle" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:id="@id/option_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/SetupTextStyle" />
+        <TextView android:id="@id/option_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AccountSetupOptionSubText" />
+    </LinearLayout>
+</LinearLayout>

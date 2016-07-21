@@ -1,51 +1,41 @@
 package com.android.mail.ui;
 
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
+import ckj;
 import com.android.mail.providers.Attachment;
-import com.android.mail.utils.AttachmentUtils;
 
 public final class AttachmentTile$AttachmentPreview
   implements Parcelable
 {
-  public static final Parcelable.Creator<AttachmentPreview> CREATOR = new Parcelable.Creator()
-  {
-    public AttachmentTile.AttachmentPreview createFromParcel(Parcel paramAnonymousParcel)
-    {
-      return new AttachmentTile.AttachmentPreview(paramAnonymousParcel, null);
-    }
-    
-    public AttachmentTile.AttachmentPreview[] newArray(int paramAnonymousInt)
-    {
-      return new AttachmentTile.AttachmentPreview[paramAnonymousInt];
-    }
-  };
-  public String attachmentIdentifier;
-  public Bitmap preview;
+  public static final Parcelable.Creator<AttachmentPreview> CREATOR = new ckj();
+  public final String a;
+  public final Bitmap b;
   
-  private AttachmentTile$AttachmentPreview(Parcel paramParcel)
+  public AttachmentTile$AttachmentPreview(Parcel paramParcel)
   {
-    attachmentIdentifier = paramParcel.readString();
-    preview = ((Bitmap)paramParcel.readParcelable(null));
+    a = paramParcel.readString();
+    b = ((Bitmap)paramParcel.readParcelable(null));
   }
   
   public AttachmentTile$AttachmentPreview(Attachment paramAttachment, Bitmap paramBitmap)
   {
-    attachmentIdentifier = AttachmentUtils.getIdentifier(paramAttachment);
-    preview = paramBitmap;
+    a = paramAttachment.k().toString();
+    b = paramBitmap;
   }
   
-  public int describeContents()
+  public final int describeContents()
   {
     return 0;
   }
   
-  public void writeToParcel(Parcel paramParcel, int paramInt)
+  public final void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeString(attachmentIdentifier);
-    paramParcel.writeParcelable(preview, 0);
+    paramParcel.writeString(a);
+    paramParcel.writeParcelable(b, 0);
   }
 }
 

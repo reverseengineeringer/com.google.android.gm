@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Javob berish</item>
+        <item>Hammasiga javob</item>
+        <item>Yo‘naltirish</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Bajarildi</item>
+        <item>Internetga ulanmagan</item>
+        <item>Hisobga kirib bo‘lmadi</item>
+        <item>Xavfsizlik tizimi xatosi.</item>
+        <item>Sinxronlab bo‘lmadi.</item>
+        <item>Server xatoligi</item>
+        <item>Ichki xatolik</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Keyingi xat</item>
+        <item>Avvalgi xat</item>
+        <item>Suhbatlar ro‘yxati</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Arxivlash/o‘chirishdan so‘ng keyingi suhbat ko‘rsatilsin</item>
+        <item>Arxivlash/o‘chirishdan so‘ng avvalgi suhbat ko‘rsatilsin</item>
+        <item>Arxivlash/o‘chirishdan so‘ng keyingi suhbatlar ro‘yxati ko‘rsatilsin</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Arxivlash</item>
+        <item>O‘chirish</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arxivlash</item>
+        <item>O‘chirish</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Yuqori</item>
+        <item>O‘rtacha</item>
+        <item>Past</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Endi parvozga kech qolmaysiz.</item>
+        <item>Endi parvozga kech qolmaysiz.</item>
+        <item>Bu parvoz tafsilotlari taqvimga kiritilsinmi?</item>
+        <item>Bandlov tafsilotlarini Google Taqvimga saqlang.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Taqvim parvozlar va boshqa bandlovlar haqidagi ma’lumotlarni avtomatik ravishda taqvimingizga saqlaydi.</item>
+        <item>Google Taqvim parvozlar va boshqa bandlovlar haqidagi ma’lumotlarni avtomatik ravishda taqvimingizga saqlaydi.</item>
+        <item>Gmail e-pochtasidagi tadbirlar Google Taqvim ilovasiga avtomatik saqlanadi.</item>
+        <item>Parvozlar, mehmonxona va restoranlarda qilgan bandlovlaringizni taqvimga avtomatik ravishda qo‘shing.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Bu bandlov tafsiloti Google Taqvimga kiritilsinmi?</item>
+        <item>Bandlovlaringiz avtomatik ravishda Taqvimga qo‘shilsinmi?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Google Taqvim ilovasi Gmail e-pochtasidagi tadbirlarni taqvimga avtomatik ravishda kiritadi.</item>
+        <item>Google Taqvim ilovasi e-pochtangizdagi mehmonxonalar va boshqa bandlovlaringizni avtomatik ravishda taqvimga kiritadi.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Taomlar uchun o‘z vaqtida bildirishnoma oling.</item>
+        <item>Bu bandlov tafsiloti Google Taqvimga kiritilsinmi?</item>
+        <item>Bandlovlarni Google Taqvimga avtomatik qo‘shing.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Taqvim restoranlar va boshqa bandlov tafsilotlarini taqvimga avtomatik ravishda qo‘shadi.</item>
+        <item>Gmail e-pochtasidagi tadbirlarni taqvimga avtomatik ravishda kiritish mumkin.</item>
+        <item>Parvozlar, mehmonxona va restoranlarda qilgan bandlovlaringizni taqvimga avtomatik ravishda qo‘shing.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Bu tadbir boshlanishidan oldin bildirishnoma oling.</item>
+        <item>Bu tadbir Google Taqvimga kiritilsinmi?</item>
+        <item>Tadbirni o‘tkazib yubormang.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Taqvim shunga o‘xshash xatlarni avtomatik aniqlaydi hamda tadbir va bandlov tafsilotlarini taqvimingizga qo‘shadi.</item>
+        <item>Gmail e-pochtasidagi tadbirlarni taqvimga avtomatik ravishda kiritish mumkin.</item>
+        <item>Tadbirlar va boshqa bandlov tafsilotlarini Google Taqvimga avtomatik ravishda qo‘shing.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Barcha bandlovlaringizni bir joyda kuzatib boring.</item>
+        <item>Bu bandlov tafsiloti Google Taqvimga kiritilsinmi?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Parvozlar, mehmonxona va restoranlarda qilgan bandlovlaringizni avtomatik ravishda taqvimga kiriting.</item>
+        <item>Gmail e-pochtasidagi tadbirlarni taqvimga avtomatik ravishda kiritish mumkin.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Juda kichik</item>
+        <item>Kichik</item>
+        <item>O‘rtacha</item>
+        <item>Yirik</item>
+        <item>Juda katta</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Xatlar matnini kichik o‘lchamda ko‘rsatish</item>
+        <item>Xatlar matnini kichik yozuvda ko‘rsatish</item>
+        <item>Xatlar matnini o‘rtacha o‘lchamdagi yozuvda ko‘rsatish</item>
+        <item>Xatlar matnini katta yozuvda ko‘rsatish</item>
+        <item>Xatlar matnini juda katta yozuvda ko‘rsatish</item>
+    </string-array>
+</resources>

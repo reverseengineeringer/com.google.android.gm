@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:icon="@drawable/archive" android:id="@id/archive" android:title="@string/archive" android:alphabeticShortcut="@string/trigger_y_char" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/archive" android:id="@id/remove_folder" android:visible="false" android:title="@string/remove_folder" android:alphabeticShortcut="@string/trigger_y_char" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/trash" android:id="@id/delete" android:title="@string/delete" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/trash" android:id="@id/discard_drafts" android:title="@string/discard_drafts" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_menu_folders_holo_light" android:id="@id/change_folder" android:title="@string/menu_change_folders" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_menu_mark_unread_holo_light" android:id="@id/inside_conversation_unread" android:title="@string/mark_unread" android:showAsAction="ifRoom" />
-    <item android:icon="@drawable/ic_email_caret_double" android:id="@id/mark_important" android:title="@string/mark_important" />
-    <item android:icon="@drawable/ic_email_caret_single" android:id="@id/mark_not_important" android:visible="false" android:title="@string/mark_not_important" />
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_archive_wht_24dp" android:id="@id/archive" android:title="@string/archive" android:alphabeticShortcut="@string/trigger_archive_char" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_remove_label_wht_24dp" android:id="@id/remove_folder" android:visible="false" android:title="@string/remove_folder" android:alphabeticShortcut="@string/trigger_archive_char" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete_wht_24dp" android:id="@id/delete" android:title="@string/delete" android:alphabeticShortcut="@string/trigger_delete_char" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete_wht_24dp" android:id="@id/discard_drafts" android:visible="false" android:title="@string/discard_drafts" android:alphabeticShortcut="@string/trigger_delete_char" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete_wht_24dp" android:id="@id/discard_outbox" android:visible="false" android:title="@string/discard_failed" android:alphabeticShortcut="@string/trigger_delete_char" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_mark_unread_wht_24dp" android:id="@id/inside_conversation_unread" android:title="@string/mark_unread" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_move_to_wht_24dp" android:id="@id/move_to" android:title="@string/menu_move_to" app:showAsAction="@string/menu_move_to_state" />
+    <item android:icon="@drawable/ic_change_labels_wht_24dp" android:id="@id/change_folders" android:title="@string/menu_change_folders" android:alphabeticShortcut="@string/trigger_change_label_char" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_move_to_inbox_wht_24dp" android:id="@id/move_to_inbox" android:title="@string/menu_move_to_inbox" app:showAsAction="never" />
+    <item android:id="@id/mark_important" android:title="@string/mark_important" />
+    <item android:id="@id/mark_not_important" android:visible="false" android:title="@string/mark_not_important" />
+    <item android:id="@id/unsubscribe" android:title="@string/unsubscribe" app:showAsAction="never" />
     <item android:id="@id/mute" android:title="@string/mute" />
-    <item android:icon="@drawable/ic_spam_normal_holo_light" android:id="@id/report_spam" android:title="@string/report_spam" />
-    <item android:icon="@drawable/ic_spam_normal_holo_light" android:id="@id/mark_not_spam" android:visible="false" android:title="@string/mark_not_spam" />
-    <item android:id="@id/report_phishing" android:visible="false" android:title="@string/report_phishing" />
-    <item android:id="@id/settings" android:title="@string/menu_settings" />
-    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="@string/feedback" />
-    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="@string/help_and_info" />
+    <item android:id="@id/print_all" android:visible="false" android:title="@string/print_all" android:alphabeticShortcut="@string/trigger_print_char" />
+    <item android:id="@id/show_original" android:title="@string/menu_show_original" />
+    <item android:id="@id/report_spam" android:title="@string/report_spam" />
+    <item android:id="@id/mark_not_spam" android:visible="false" android:title="@string/mark_not_spam" />
+    <item android:id="@id/compose" android:visible="false" android:title="@string/menu_compose" android:alphabeticShortcut="@string/trigger_compose_char" />
+    <item android:id="@id/reply" android:visible="false" android:title="@string/reply" android:alphabeticShortcut="@string/trigger_reply_char" />
+    <item android:id="@id/reply_all" android:visible="false" android:title="@string/reply_all" android:alphabeticShortcut="@string/trigger_reply_all_char" />
+    <item android:id="@id/toggle_read_unread" android:visible="false" android:title="@string/toggle_read_unread" android:alphabeticShortcut="@string/trigger_toggle_read_unread_char" />
+    <item android:id="@id/toggle_drawer" android:visible="false" android:title="@string/menu_toggle_drawer" android:alphabeticShortcut="@string/trigger_toggle_drawer_char" />
+    <item android:id="@id/settings" android:visible="false" android:title="@string/menu_settings" android:alphabeticShortcut="@string/trigger_settings_char" />
+    <item android:id="@id/help_info_menu_item" android:visible="false" android:title="@string/help_and_feedback" android:alphabeticShortcut="@string/trigger_help_char" />
 </menu>

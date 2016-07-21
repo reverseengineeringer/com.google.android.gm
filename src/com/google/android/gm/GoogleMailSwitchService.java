@@ -4,43 +4,39 @@ import android.app.IntentService;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import dfh;
 
 public class GoogleMailSwitchService
   extends IntentService
 {
-  private static final ComponentName GMAIL_WIDGET_PROVIDER_COMPONENT_NAME = new ComponentName("com.google.android.gm", "com.google.android.gm.widget.GmailWidgetProvider");
-  private static final ComponentName GOOGLE_MAIL_WIDGET_PROVIDER_COMPONENT_NAME = new ComponentName("com.google.android.gm", "com.google.android.gm.widget.GoogleMailWidgetProvider");
+  private static final ComponentName a = new ComponentName("com.google.android.gm", "com.google.android.gm.widget.GmailWidgetProvider");
+  private static final ComponentName b = new ComponentName("com.google.android.gm", "com.google.android.gm.widget.GoogleMailWidgetProvider");
   
   public GoogleMailSwitchService()
   {
     super("GoogleMailSwitchService");
   }
   
-  private void validateGmailWidgets()
-  {
-    validateWidgetProvider();
-    Utils.enableLabelShortcutActivity(this);
-  }
-  
-  private void validateWidgetProvider()
+  private final void a()
   {
     PackageManager localPackageManager = getPackageManager();
-    boolean bool = Utils.haveGoogleMailActivitiesBeenEnabled(this);
+    boolean bool = dfh.h(this);
     ComponentName localComponentName1;
     if (bool)
     {
-      localComponentName1 = GOOGLE_MAIL_WIDGET_PROVIDER_COMPONENT_NAME;
+      localComponentName1 = b;
       if (!bool) {
-        break label51;
+        break label55;
       }
     }
-    label51:
-    for (ComponentName localComponentName2 = GMAIL_WIDGET_PROVIDER_COMPONENT_NAME;; localComponentName2 = GOOGLE_MAIL_WIDGET_PROVIDER_COMPONENT_NAME)
+    label55:
+    for (ComponentName localComponentName2 = a;; localComponentName2 = b)
     {
       localPackageManager.setComponentEnabledSetting(localComponentName2, 2, 1);
       localPackageManager.setComponentEnabledSetting(localComponentName1, 1, 1);
+      dfh.e(this);
       return;
-      localComponentName1 = GMAIL_WIDGET_PROVIDER_COMPONENT_NAME;
+      localComponentName1 = a;
       break;
     }
   }
@@ -49,13 +45,13 @@ public class GoogleMailSwitchService
   {
     paramIntent = paramIntent.getAction();
     if ("android.intent.action.BOOT_COMPLETED".equals(paramIntent)) {
-      validateGmailWidgets();
+      a();
     }
     while (!"android.intent.action.MY_PACKAGE_REPLACED".equals(paramIntent)) {
       return;
     }
-    GoogleMailDeviceStartupReceiver.enableReceiver(this);
-    validateGmailWidgets();
+    GoogleMailDeviceStartupReceiver.a(this);
+    a();
   }
 }
 

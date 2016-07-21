@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="done_label">Gotovo</string>
+    <string name="hour_picker_description">Kružni klizač za sate</string>
+    <string name="minute_picker_description">Kružni klizač za minute</string>
+    <string name="select_hours">Izaberi sate</string>
+    <string name="select_minutes">Izaberi minute</string>
+    <string name="day_picker_description">Prikaz dana u mesecu u vidu mreže</string>
+    <string name="year_picker_description">Lista godina</string>
+    <string name="select_day">Izaberite mesec i dan</string>
+    <string name="select_year">Izaberite godinu</string>
+    <string name="item_is_selected">Stavka %1$s je izabrana</string>
+    <string name="deleted_key">Izbrisali ste %1$s</string>
+    <string name="suw_next_button_label">Dalje</string>
+    <string name="suw_back_button_label">Nazad</string>
+    <string name="suw_more_button_label">Još</string>
+    <string name="photo_view_count" formatted="false">%d od %d</string>
+    <string name="retry">Pokušaj ponovo</string>
+    <string name="failed">Nije moguće učitati sliku</string>
+    <string name="titles" formatted="false">%s, %s</string>
+    <string name="more_string">+%1$d</string>
+    <string name="copy_email">Kopiraj imejl adresu</string>
+    <string name="copy_number">Kopiraj broj telefona</string>
+    <string name="action_label">Return</string>
+    <string name="accessbility_suggestion_dropdown_opened">Predlozi za kontakte su otvoreni</string>
+    <string name="accessbility_suggestion_dropdown_closed">Nema dostupnih predloga</string>
+    <string name="dropdown_delete_button_desc">Uklonite %s iz primalaca</string>
+    <string name="chips_action_copy">Kopiraj</string>
+    <string name="chips_action_cancel">Otkaži</string>
+    <string name="chips_permission_text">Dozvolite predloge za kontakte</string>
+    <string name="add_account">Dodaj nalog</string>
+    <string name="manage_accounts">Upravljaj nalozima</string>
+    <string name="sign_in">Prijavi me</string>
+    <string name="show_account_list">Prikaži naloge</string>
+    <string name="hide_account_list">Sakrij naloge</string>
+    <string name="account_item">Prebaci na %1$s</string>
+    <string name="selected_account">Prijavljen/a na %1$s</string>
+    <string name="account_list">Lista naloga</string>
+</resources>

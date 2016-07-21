@@ -13,64 +13,62 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
+import buc;
+import bue;
+import bug;
 
 public class ShortcutNameActivity
   extends Activity
   implements View.OnClickListener, TextView.OnEditorActionListener
 {
-  private String mFolderName;
-  private EditText mFolderText;
-  private Intent mShortcutClickIntent;
+  private EditText a;
+  private String b;
+  private Intent c;
   
-  private void doCancel()
+  private final void a()
   {
-    setResult(0);
-    finish();
-  }
-  
-  private void doCreateShortcut()
-  {
-    Object localObject = mFolderText.getText();
+    Object localObject = a.getText();
     Intent localIntent = new Intent();
-    localIntent.putExtra("extra_folder_click_intent", mShortcutClickIntent);
-    localIntent.putExtra("android.intent.extra.shortcut.NAME", mFolderName);
-    localObject = localObject.toString();
+    localIntent.putExtra("extra_folder_click_intent", c);
+    localIntent.putExtra("android.intent.extra.shortcut.NAME", b);
+    localObject = ((CharSequence)localObject).toString();
     if (TextUtils.getTrimmedLength((CharSequence)localObject) > 0) {
-      mShortcutClickIntent.putExtra("android.intent.extra.shortcut.NAME", (String)localObject);
+      c.putExtra("android.intent.extra.shortcut.NAME", (String)localObject);
     }
-    setResult(-1, mShortcutClickIntent);
+    setResult(-1, c);
     finish();
   }
   
   public void onClick(View paramView)
   {
     int i = paramView.getId();
-    if (2131755258 == i) {
-      doCreateShortcut();
+    if (buc.be == i) {
+      a();
     }
-    while (2131755199 != i) {
+    while (buc.P != i) {
       return;
     }
-    doCancel();
+    setResult(0);
+    finish();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130968679);
-    mShortcutClickIntent = ((Intent)getIntent().getParcelableExtra("extra_folder_click_intent"));
-    mFolderName = getIntent().getStringExtra("extra_shortcut_name");
-    mFolderText = ((EditText)findViewById(2131755244));
-    mFolderText.setText(mFolderName);
-    mFolderText.setOnEditorActionListener(this);
-    mFolderText.requestFocus();
-    paramBundle = mFolderText.getText();
+    setContentView(bue.ah);
+    c = ((Intent)getIntent().getParcelableExtra("extra_folder_click_intent"));
+    b = getIntent().getStringExtra("extra_shortcut_name");
+    a = ((EditText)findViewById(buc.bC));
+    a.setText(b);
+    a.setOnEditorActionListener(this);
+    a.requestFocus();
+    paramBundle = a.getText();
     Selection.setSelection(paramBundle, paramBundle.length());
-    findViewById(2131755258).setOnClickListener(this);
-    findViewById(2131755199).setOnClickListener(this);
+    findViewById(buc.be).setOnClickListener(this);
+    findViewById(buc.P).setOnClickListener(this);
     paramBundle = getActionBar();
     if (paramBundle != null) {
-      paramBundle.setIcon(2130903041);
+      paramBundle.setIcon(bug.a);
     }
   }
   
@@ -78,7 +76,7 @@ public class ShortcutNameActivity
   {
     if (paramInt == 6)
     {
-      doCreateShortcut();
+      a();
       return true;
     }
     return false;

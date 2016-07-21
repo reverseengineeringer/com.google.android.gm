@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_close_wht_24dp" android:id="@id/action_cancel" android:title="@string/cancel" app:showAsAction="always|withText" />
+    <item android:icon="@drawable/ic_check_wht_24dp" android:id="@id/action_done" android:title="@string/done" app:showAsAction="always|withText" />
+</menu>

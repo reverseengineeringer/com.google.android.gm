@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="snack_bar_max_width">420.0dip</dimen>
+    <item type="dimen" name="welcome_tour_illustration_scale">1.0</item>
+    <dimen name="label_list_pane_width">320.0dip</dimen>
+</resources>

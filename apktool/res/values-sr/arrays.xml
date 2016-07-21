@@ -6,17 +6,13 @@
         <item>Проследи</item>
     </string-array>
     <string-array name="sync_status">
-        <item>Успешно</item>
-        <item>Веза није успостављена.</item>
-        <item>Пријављивање није могуће.</item>
-        <item>Безбедносна грешка.</item>
-        <item>Синхронизација није могућа.</item>
+        <item>Успело је</item>
+        <item>Веза није успостављена</item>
+        <item>Пријављивање није успело</item>
+        <item>Безбедносна грешка</item>
+        <item>Синхронизација није успела</item>
+        <item>Грешка на серверу</item>
         <item>Интерна грешка</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Систем</item>
-        <item>Често коришћено</item>
-        <item>Све ознаке</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Новије</item>
@@ -25,41 +21,82 @@
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
         <item>Приказивање новије преписке након архивирања или брисања</item>
-        <item>Приказивање старије преписке након архивирања или брисања</item>
-        <item>Приказивање листе преписки након архивирања или брисања</item>
+        <item>Приказжи старију преписку после архивирања или брисања</item>
+        <item>Прикажи листу преписки после архивирања или брисања</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Нема никаквог ефекта</item>
-        <item>Архивира или брише</item>
-        <item>Увек брише</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Архивирај</item>
+        <item>Избриши</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Нема никаквог ефекта</item>
-        <item>Примљене: архивира преписке. Регуларне ознаке: уклања актуелну ознаку. Системске ознаке попут Сва пошта или Послате: брише преписку.</item>
-        <item>Увек брише преписку</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Архивирај</item>
+        <item>Избриши</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Висок</item>
+        <item>Нормалан</item>
+        <item>Низак</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Не пропустите више ниједан лет.</item>
+        <item>Не пропустите више ниједан лет.</item>
+        <item>Желите да додате овај лет у календар?</item>
+        <item>Додајте резервације у Google календар.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google календар аутоматски додаје летове и друге резервације у календар.</item>
+        <item>Google календар аутоматски додаје летове и друге резервације у календар.</item>
+        <item>Догађаје из Gmail-а можете аутоматски да додајете помоћу апликације Google календар.</item>
+        <item>Аутоматски додајте резервације летова, хотела и ресторана.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Желите да додате ову резервацију у Google календар?</item>
+        <item>Желите да се резервације аутоматски додају у Календар?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Помоћу апликације Google календар догађаји из Gmail-а се аутоматски додају у календар.</item>
+        <item>Google календар аутоматски додаје хотеле и друге резервације у календар.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Добијте правовремено обавештење за оброк.</item>
+        <item>Желите да додате ову резервацију у Google календар?</item>
+        <item>Аутоматски додајте резервације у Google календар.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google календар аутоматски додаје резервације ресторана и друге резервације у календар.</item>
+        <item>Догађаје из Gmail-а можете аутоматски да додајете у календар.</item>
+        <item>Аутоматски додајте резервације летова, хотела и ресторана.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Добијте правовремено обавештење пре овог догађаја.</item>
+        <item>Желите да додате овај догађај у Google календар?</item>
+        <item>Не пропустите догађај.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google календар аутоматски у календар додаје догађаје и резервације, попут ове у имејлу.</item>
+        <item>Догађаје из Gmail-а можете аутоматски да додајете у календар.</item>
+        <item>Аутоматски додајте догађаје и друге резервације помоћу Google календара.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Пратите резервације на једном месту.</item>
+        <item>Желите да додате ове резервације у Google календар?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Аутоматски додајте резервације летова, хотела и ресторана у Google календар.</item>
+        <item>Догађаје из Gmail-а можете аутоматски да додајете у календар.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
-        <item>Мајушно</item>
-        <item>Мала</item>
+        <item>Најмањи</item>
+        <item>Мали</item>
         <item>Нормалан</item>
-        <item>Велика</item>
-        <item>Огромно</item>
+        <item>Велики</item>
+        <item>Огроман</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
-        <item>Приказивање садржаја порука сићушним текстом</item>
-        <item>Прикажи садржај порука ситним текстом</item>
-        <item>Прикажи садржај порука текстом нормалне величине</item>
-        <item>Прикажи садржај порука великим текстом</item>
-        <item>Приказивање садржаја порука огромним текстом</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Увек приказуј радње са порукама на врху екрана</item>
-        <item>Приказуј активности са порукама на врху екрана само када је положај промењен у вертикални</item>
-        <item>Без приказивања радњи са порукама ван заглавља поруке</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Увек приказуј</item>
-        <item>Приказуј само у вертикалном положају</item>
-        <item>Не приказуј</item>
+        <item>Прикажи садржај поруке најмањим текстом</item>
+        <item>Прикажи садржај поруке малим текстом</item>
+        <item>Прикажи садржај поруке текстом нормалне величине</item>
+        <item>Прикажи садржај поруке великим текстом</item>
+        <item>Прикажи садржај поруке огромним текстом</item>
     </string-array>
 </resources>

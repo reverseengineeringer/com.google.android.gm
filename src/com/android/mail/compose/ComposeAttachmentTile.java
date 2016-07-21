@@ -1,17 +1,22 @@
 package com.android.mail.compose;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.view.View;
+import android.widget.TextView;
+import buc;
+import buj;
+import ckk;
+import com.android.mail.providers.Attachment;
 import com.android.mail.ui.AttachmentTile;
+import ctr;
 
 public class ComposeAttachmentTile
   extends AttachmentTile
 {
-  private ImageButton mDeleteButton;
+  public View a;
+  private TextView b;
   
   public ComposeAttachmentTile(Context paramContext)
   {
@@ -23,20 +28,33 @@ public class ComposeAttachmentTile
     super(paramContext, paramAttributeSet);
   }
   
-  public static ComposeAttachmentTile inflate(LayoutInflater paramLayoutInflater, ViewGroup paramViewGroup)
+  public final void a(Attachment paramAttachment, ckk paramckk)
   {
-    return (ComposeAttachmentTile)paramLayoutInflater.inflate(2130968599, paramViewGroup, false);
+    super.a(paramAttachment, paramckk);
+    a.setContentDescription(getResources().getString(buj.eb, new Object[] { c }));
+    if (d > 0)
+    {
+      b.setText(ctr.a(getContext(), g.d));
+      b.setVisibility(0);
+    }
+    setContentDescription(c());
   }
   
-  public void addDeleteListener(View.OnClickListener paramOnClickListener)
+  protected final String c()
   {
-    mDeleteButton.setOnClickListener(paramOnClickListener);
+    String str = super.c();
+    if (str != null) {
+      return getResources().getString(buj.D, new Object[] { str, "", a.getContentDescription() });
+    }
+    return null;
   }
   
   protected void onFinishInflate()
   {
     super.onFinishInflate();
-    mDeleteButton = ((ImageButton)findViewById(2131755087));
+    b = ((TextView)findViewById(buc.E));
+    a = findViewById(buc.B);
+    a.setVisibility(0);
   }
 }
 

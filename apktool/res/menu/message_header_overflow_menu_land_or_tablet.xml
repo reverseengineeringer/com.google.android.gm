@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/reply" android:title="@string/reply" />
+    <item android:id="@id/reply_all" android:title="@string/reply_all" />
+    <item android:id="@id/add_star" android:title="@string/add_star" />
+    <item android:id="@id/remove_star" android:title="@string/remove_star" />
+    <item android:id="@id/print_message" android:title="@string/print" />
+    <item android:id="@id/block_sender" />
+    <item android:id="@id/unblock_sender" />
+    <item android:id="@id/report_rendering_problem" android:title="@string/report_rendering_problem" />
+    <item android:id="@id/report_rendering_improvement" android:title="@string/report_rendering_improvement" />
+</menu>

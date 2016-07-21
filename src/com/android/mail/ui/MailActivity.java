@@ -1,381 +1,631 @@
 package com.android.mail.ui;
 
+import aah;
+import aaj;
+import acr;
+import acz;
+import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
-import android.nfc.NdefMessage;
-import android.nfc.NdefRecord;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.net.http.HttpResponseCache;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.view.ActionMode;
-import android.view.DragEvent;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
+import anf;
+import anp;
+import btz;
+import buc;
+import buj;
+import buo;
+import buq;
+import but;
+import bvd;
+import bvu;
+import bzn;
+import cde;
+import cfx;
+import cgm;
+import cgr;
+import chc;
+import chf;
+import cjn;
+import cjo;
+import cjw;
+import cke;
+import ckf;
+import ckg;
+import ckt;
+import cku;
+import ckv;
+import cky;
+import cll;
+import cmz;
+import cng;
+import cnh;
+import cod;
+import cof;
+import com.android.mail.drawer.CurrentFolderDialogState;
+import com.android.mail.providers.Account;
 import com.android.mail.providers.Folder;
-import com.android.mail.utils.Utils;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import com.android.mail.ui.toastbar.ToastBarOperation;
+import cos;
+import cpb;
+import cpe;
+import cpf;
+import cpn;
+import cpo;
+import cqp;
+import cqw;
+import crj;
+import cro;
+import csl;
+import cst;
+import cud;
+import cvh;
+import cvi;
+import cwr;
+import cxa;
+import cxe;
+import cxf;
+import gnr;
+import gnt;
+import hlj;
+import java.util.Locale;
+import java.util.Set;
+import zc;
 
 public class MailActivity
-  extends AbstractMailActivity
-  implements ControllableActivity
+  extends cjn
+  implements ckv, cpe
 {
-  private static MailActivity sForegroundInstance;
-  private boolean mAccessibilityEnabled;
-  private AccessibilityManager mAccessibilityManager;
-  private ActivityController mController;
-  private NdefMessage mForegroundNdef;
-  private boolean mLaunchedCleanly = false;
-  private NfcAdapter mNfcAdapter;
-  private ToastBarOperation mPendingToastOp;
-  private ViewMode mViewMode;
+  public static boolean s = false;
+  public static String t = null;
+  private CustomViewToolbar A;
+  private bzn B;
+  private final cos C = new cos();
+  public cjw l;
+  public crj m;
+  public ToastBarOperation n;
+  public boolean o;
+  public csl p = new csl();
+  public cst q = new cst();
+  public cpn r = new cpn();
+  public boolean u;
+  private cke v;
+  private cvh w = new cvi();
+  private AccessibilityManager x;
+  private bvu y;
+  private anf z;
   
-  public static NdefMessage getMailtoNdef(String paramString)
+  public chc A()
   {
-    try
-    {
-      arrayOfByte = URLEncoder.encode(paramString, "UTF-8").getBytes("UTF-8");
-      paramString = arrayOfByte;
-    }
-    catch (UnsupportedEncodingException localUnsupportedEncodingException)
-    {
-      for (;;)
-      {
-        byte[] arrayOfByte;
-        paramString = paramString.getBytes();
-      }
-    }
-    arrayOfByte = new byte[paramString.length + 1];
-    arrayOfByte[0] = 6;
-    System.arraycopy(paramString, 0, arrayOfByte, 1, paramString.length);
-    return new NdefMessage(new NdefRecord[] { new NdefRecord(1, NdefRecord.RTD_URI, new byte[0], arrayOfByte) });
+    return new chf(this);
   }
   
-  public static void setForegroundNdef(NdefMessage paramNdefMessage)
+  public final ToastBarOperation B()
   {
-    MailActivity localMailActivity = sForegroundInstance;
-    if ((localMailActivity != null) && (mNfcAdapter != null)) {
-      try
+    return n;
+  }
+  
+  public bvu C()
+  {
+    return new bvu();
+  }
+  
+  public void D() {}
+  
+  public bvd a(Context paramContext, anf paramanf)
+  {
+    return new bvd(paramContext, paramanf);
+  }
+  
+  public final bvu a()
+  {
+    return y;
+  }
+  
+  public cro a(Bundle paramBundle)
+  {
+    return new cro(this);
+  }
+  
+  public void a(int paramInt, Account paramAccount) {}
+  
+  public final void a(int paramInt, boolean paramBoolean)
+  {
+    if (paramBoolean)
+    {
+      localcke = v;
+      float f = a;
+      if (!c)
       {
-        mForegroundNdef = paramNdefMessage;
-        if (sForegroundInstance != null)
-        {
-          if (paramNdefMessage == null) {
-            break label48;
-          }
-          sForegroundInstancemNfcAdapter.enableForegroundNdefPush(sForegroundInstance, paramNdefMessage);
+        if (d != null) {
+          d.cancel();
         }
-        for (;;)
-        {
-          return;
-          label48:
-          sForegroundInstancemNfcAdapter.disableForegroundNdefPush(sForegroundInstance);
-        }
+        d = ValueAnimator.ofFloat(new float[] { f, paramInt });
+      }
+      ValueAnimator localValueAnimator = d;
+      if (paramInt == 0) {}
+      for (long l1 = (f * 300.0F);; l1 = ((1.0F - f) * 300.0F))
+      {
+        localValueAnimator.setDuration(l1);
+        d.addUpdateListener(new ckf(localcke));
+        d.start();
         return;
       }
-      finally {}
+    }
+    cke localcke = v;
+    if ((!c) && (d != null))
+    {
+      d.cancel();
+      d = null;
+    }
+    localcke.b(paramInt);
+  }
+  
+  public final void a(acz paramacz)
+  {
+    super.a(paramacz);
+    cxe.a(this, btz.a);
+  }
+  
+  public void a(View paramView) {}
+  
+  public void a(View paramView, int paramInt) {}
+  
+  public void a(Account paramAccount) {}
+  
+  public void a(Account paramAccount, int paramInt)
+  {
+    if (crj.b(paramInt)) {}
+    for (paramInt = buj.aO;; paramInt = buj.aJ)
+    {
+      cxa.a(this, paramAccount, getString(paramInt));
+      return;
     }
   }
   
-  private void setupNfc()
+  public final void a(Account paramAccount, CurrentFolderDialogState paramCurrentFolderDialogState)
   {
-    mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+    if (getFragmentManager() != null)
+    {
+      cde localcde = new cde();
+      Bundle localBundle = new Bundle(3);
+      localBundle.putParcelable("createFolderUri", k);
+      localBundle.putParcelable("dialogState", paramCurrentFolderDialogState);
+      localBundle.putParcelable("account", paramAccount);
+      localcde.setArguments(localBundle);
+      localcde.show(getFragmentManager(), "create-folder-dialog");
+    }
+  }
+  
+  public final void a(Account paramAccount1, Account paramAccount2)
+  {
+    Object localObject = null;
+    if (paramAccount1 == null)
+    {
+      paramAccount1 = cxf.a();
+      if ((paramAccount2 != null) && (c.equals(paramAccount1))) {
+        return;
+      }
+      a(new gnr(hlj.a), 25, paramAccount1);
+      cgr localcgr = cgr.b;
+      if (localcgr != null)
+      {
+        paramAccount1 = (Account)localObject;
+        if (cxf.a(this, paramAccount2)) {
+          paramAccount1 = c;
+        }
+        paramAccount2 = localcgr.d().edit();
+        paramAccount2.putString("lastViewedVisualElementLoggingAccount", paramAccount1);
+        paramAccount2.apply();
+      }
+      a(new gnr(hlj.b));
+      return;
+    }
+    if (cxf.a(this, paramAccount1)) {}
+    for (paramAccount1 = c;; paramAccount1 = null)
+    {
+      a(new gnr(hlj.a), 25, paramAccount1);
+      break;
+    }
+  }
+  
+  public final void a(Folder paramFolder)
+  {
+    l.a(paramFolder);
+  }
+  
+  public final void a(cqp paramcqp)
+  {
+    l.a(paramcqp);
+  }
+  
+  public void a(gnr paramgnr) {}
+  
+  public void a(gnr paramgnr, int paramInt, String paramString) {}
+  
+  public void a(gnr paramgnr, View paramView) {}
+  
+  public final void a_(ToastBarOperation paramToastBarOperation)
+  {
+    l.a_(paramToastBarOperation);
+  }
+  
+  public gnt b(Folder paramFolder)
+  {
+    return null;
+  }
+  
+  public void b(int paramInt, Account paramAccount) {}
+  
+  public final void b(acz paramacz)
+  {
+    super.b(paramacz);
+    cxe.a(this, btz.C);
+  }
+  
+  public final void b(ToastBarOperation paramToastBarOperation)
+  {
+    n = null;
+  }
+  
+  public final cjw d()
+  {
+    return l;
   }
   
   public boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
   {
-    mController.onTouchEvent(paramMotionEvent);
+    l.a(paramMotionEvent);
     return super.dispatchTouchEvent(paramMotionEvent);
   }
   
-  public void doNothingClickHandler(View paramView) {}
-  
-  public AccountController getAccountController()
+  public final ConversationCheckedSet h()
   {
-    return mController;
+    return l.T();
   }
   
-  public ConversationUpdater getConversationUpdater()
+  public final cod i()
   {
-    return mController;
+    return l;
   }
   
-  public ErrorListener getErrorListener()
+  public final Folder j()
   {
-    return mController;
+    return l.q();
   }
   
-  public FolderController getFolderController()
+  public final cll k()
   {
-    return mController;
+    return l;
   }
   
-  public FolderListFragment.FolderListSelectionListener getFolderListSelectionListener()
+  public final cng l()
   {
-    return mController;
+    return l;
   }
   
-  public Folder getHierarchyFolder()
+  public final cnh m()
   {
-    return mController.getHierarchyFolder();
+    return l;
   }
   
-  public ConversationListCallbacks getListHandler()
+  public final cjo n()
   {
-    return mController;
+    return l;
   }
   
-  public ToastBarOperation getPendingToastOperation()
+  public final cpo o()
   {
-    return mPendingToastOp;
-  }
-  
-  public RecentFolderController getRecentFolderController()
-  {
-    return mController;
-  }
-  
-  public ConversationSelectionSet getSelectedSet()
-  {
-    return mController.getSelectedSet();
-  }
-  
-  public SubjectDisplayChanger getSubjectDisplayChanger()
-  {
-    return mController.getSubjectDisplayChanger();
-  }
-  
-  public ViewMode getViewMode()
-  {
-    return mViewMode;
-  }
-  
-  public void handleDrop(DragEvent paramDragEvent, Folder paramFolder)
-  {
-    mController.handleDrop(paramDragEvent, paramFolder);
-  }
-  
-  public boolean isAccessibilityEnabled()
-  {
-    return mAccessibilityEnabled;
-  }
-  
-  public void onAccessibilityStateChanged(boolean paramBoolean)
-  {
-    mAccessibilityEnabled = paramBoolean;
-    mController.onAccessibilityStateChanged();
-  }
-  
-  public void onActionModeFinished(ActionMode paramActionMode)
-  {
-    super.onActionModeFinished(paramActionMode);
-  }
-  
-  public void onActionModeStarted(ActionMode paramActionMode)
-  {
-    super.onActionModeStarted(paramActionMode);
+    return l;
   }
   
   public void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    mController.onActivityResult(paramInt1, paramInt2, paramIntent);
-  }
-  
-  public void onAnimationEnd(AnimatedAdapter paramAnimatedAdapter)
-  {
-    mController.onAnimationEnd(paramAnimatedAdapter);
+    if (!y.a(paramInt1, paramInt2, paramIntent)) {
+      l.a(paramInt1, paramInt2, paramIntent);
+    }
   }
   
   public void onBackPressed()
   {
-    if (!mController.onBackPressed()) {
+    if (!l.w()) {
       super.onBackPressed();
     }
+  }
+  
+  public void onConfigurationChanged(Configuration paramConfiguration)
+  {
+    super.onConfigurationChanged(paramConfiguration);
+    l.ap();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    mViewMode = new ViewMode(this);
-    boolean bool = Utils.useTabletUI(this);
-    mController = ControllerFactory.forActivity(this, mViewMode, bool);
-    mController.onCreate(paramBundle);
-    Intent localIntent = getIntent();
-    if ((paramBundle == null) && (localIntent.getAction() != null)) {
-      mLaunchedCleanly = true;
+    Object localObject = getIntent();
+    if ((localObject != null) && (((Intent)localObject).getCategories() != null) && (((Intent)localObject).getCategories().contains("android.intent.category.LAUNCHER"))) {
+      buq.b.a("cold_start_to_list");
     }
-    mAccessibilityManager = ((AccessibilityManager)getSystemService("accessibility"));
-    mAccessibilityEnabled = mAccessibilityManager.isEnabled();
-    setupNfc();
+    x();
+    m = new crj();
+    if (cxa.a(getResources()))
+    {
+      l = new cqw(this, m);
+      setContentView(l.ar());
+      localObject = (Toolbar)findViewById(buc.cw);
+      if ((localObject instanceof CustomViewToolbar))
+      {
+        A = ((CustomViewToolbar)localObject);
+        CustomViewToolbar localCustomViewToolbar = A;
+        cjw localcjw = l;
+        crj localcrj = m;
+        u = localcjw;
+        v = localcrj;
+        v.a(localCustomViewToolbar);
+        w.a(n());
+        x.a(m());
+        l.a(A);
+      }
+      f().a((Toolbar)localObject);
+      ((Toolbar)localObject).a(l.ak());
+      x = ((AccessibilityManager)getSystemService("accessibility"));
+      o = x.isEnabled();
+      if (o) {
+        ((Toolbar)localObject).getRootView().setAccessibilityDelegate(new cku((Toolbar)localObject));
+      }
+      v = new cke(this);
+      l.a(paramBundle);
+      f().a().b(v);
+      localObject = NfcAdapter.getDefaultAdapter(this);
+      if (localObject != null) {
+        ((NfcAdapter)localObject).setNdefPushMessageCallback(C, this, new Activity[0]);
+      }
+      if (getResourcesgetConfigurationhardKeyboardHidden != 1) {
+        break label398;
+      }
+      buo.a().a("configuration", "keyboard", "use_hardware_keyboard", 0L);
+    }
+    for (;;)
+    {
+      y = C();
+      y.a(this, paramBundle);
+      return;
+      l = new cpf(this, m);
+      break;
+      label398:
+      buo.a().a("configuration", "keyboard", "do_not_use_hardware_keyboard", 0L);
+    }
   }
   
   public Dialog onCreateDialog(int paramInt, Bundle paramBundle)
   {
-    Dialog localDialog2 = mController.onCreateDialog(paramInt, paramBundle);
-    Dialog localDialog1 = localDialog2;
-    if (localDialog2 == null) {
-      localDialog1 = super.onCreateDialog(paramInt, paramBundle);
-    }
-    return localDialog1;
+    return super.onCreateDialog(paramInt, paramBundle);
   }
   
   public boolean onCreateOptionsMenu(Menu paramMenu)
   {
-    return (mController.onCreateOptionsMenu(paramMenu)) || (super.onCreateOptionsMenu(paramMenu));
+    return (l.a(paramMenu)) || (super.onCreateOptionsMenu(paramMenu));
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
-    mController.onDestroy();
-  }
-  
-  public void onFooterViewErrorActionClick(Folder paramFolder, int paramInt)
-  {
-    mController.onFooterViewErrorActionClick(paramFolder, paramInt);
-  }
-  
-  public void onFooterViewLoadMoreClick(Folder paramFolder)
-  {
-    mController.onFooterViewLoadMoreClick(paramFolder);
+    l.E();
+    if (A != null)
+    {
+      localObject = A;
+      w.a();
+      x.a();
+    }
+    Object localObject = HttpResponseCache.getInstalled();
+    if (localObject != null)
+    {
+      if (((HttpResponseCache)localObject).getRequestCount() > 0) {
+        buo.a().a("gmail_auth", "http_response_cache_hit_rate", String.format(Locale.US, "%.1f", new Object[] { Double.valueOf(((HttpResponseCache)localObject).getHitCount() / ((HttpResponseCache)localObject).getRequestCount()) }), 0L);
+      }
+      ((HttpResponseCache)localObject).flush();
+    }
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
-    return (mController.onKeyDown(paramInt, paramKeyEvent)) || (super.onKeyDown(paramInt, paramKeyEvent));
+    return super.onKeyDown(paramInt, paramKeyEvent);
   }
   
   public boolean onOptionsItemSelected(MenuItem paramMenuItem)
   {
-    return (mController.onOptionsItemSelected(paramMenuItem)) || (super.onOptionsItemSelected(paramMenuItem));
+    return (l.a(paramMenuItem)) || (super.onOptionsItemSelected(paramMenuItem));
   }
   
   public void onPause()
   {
     super.onPause();
-    mController.onPause();
-    try
-    {
-      if ((mNfcAdapter != null) && (mForegroundNdef != null)) {
-        mNfcAdapter.disableForegroundNdefPush(this);
-      }
-      sForegroundInstance = null;
-      return;
-    }
-    finally {}
+    l.B();
+    s = false;
+    u = false;
   }
   
-  public void onPrepareDialog(int paramInt, Dialog paramDialog, Bundle paramBundle)
+  protected void onPostCreate(Bundle paramBundle)
   {
-    super.onPrepareDialog(paramInt, paramDialog, paramBundle);
-    mController.onPrepareDialog(paramInt, paramDialog, paramBundle);
+    super.onPostCreate(paramBundle);
+    l.ao();
   }
   
   public boolean onPrepareOptionsMenu(Menu paramMenu)
   {
-    mController.onPrepareOptionsMenu(paramMenu);
+    l.b(paramMenu);
     return super.onPrepareOptionsMenu(paramMenu);
   }
   
   protected void onRestart()
   {
     super.onRestart();
-    mController.onRestart();
+    l.s();
   }
   
   protected void onRestoreInstanceState(Bundle paramBundle)
   {
     super.onRestoreInstanceState(paramBundle);
-    mController.onRestoreInstanceState(paramBundle);
+    l.c(paramBundle);
   }
   
   public void onResume()
   {
     super.onResume();
-    mController.onResume();
-    try
+    l.C();
+    boolean bool = x.isEnabled();
+    if (bool != o)
     {
-      sForegroundInstance = this;
-      if ((mNfcAdapter != null) && (mForegroundNdef != null)) {
-        mNfcAdapter.enableForegroundNdefPush(this, mForegroundNdef);
+      o = bool;
+      Toolbar localToolbar = (Toolbar)findViewById(buc.cw);
+      if ((o) && (localToolbar != null)) {
+        localToolbar.getRootView().setAccessibilityDelegate(new cku(localToolbar));
       }
-      boolean bool = mAccessibilityManager.isEnabled();
-      if (bool != mAccessibilityEnabled) {
-        onAccessibilityStateChanged(bool);
-      }
+      l.ac();
+    }
+    if (registerReceiver(null, new IntentFilter("android.intent.action.DEVICE_STORAGE_LOW")) != null) {}
+    for (bool = true;; bool = false)
+    {
+      cwr.a(bool);
+      s = true;
+      u = true;
       return;
     }
-    finally {}
   }
   
   public void onSaveInstanceState(Bundle paramBundle)
   {
     super.onSaveInstanceState(paramBundle);
-    mController.onSaveInstanceState(paramBundle);
+    l.b(paramBundle);
+    y.a(paramBundle);
+    u = false;
   }
   
   public boolean onSearchRequested()
   {
-    mController.startSearch();
+    l.W();
     return true;
   }
   
-  public boolean onSearchRequested(String paramString)
-  {
-    mController.onSearchRequested(paramString);
-    return true;
-  }
-  
-  protected void onStart()
+  public void onStart()
   {
     super.onStart();
-    if (mLaunchedCleanly) {}
-    mController.onStart();
+    l.r();
+    y.a();
   }
   
   public void onStop()
   {
     super.onStop();
-    mController.onStop();
-  }
-  
-  public void onUndoAvailable(ToastBarOperation paramToastBarOperation)
-  {
-    mController.onUndoAvailable(paramToastBarOperation);
+    l.D();
+    y.b();
   }
   
   public void onWindowFocusChanged(boolean paramBoolean)
   {
     super.onWindowFocusChanged(paramBoolean);
-    mController.onWindowFocusChanged(paramBoolean);
+    l.f(paramBoolean);
   }
   
-  public void setPendingToastOperation(ToastBarOperation paramToastBarOperation)
+  public final cmz p()
   {
-    mPendingToastOp = paramToastBarOperation;
+    return l.ag();
   }
   
-  public void startDragMode()
+  public final ckg q()
   {
-    mController.startDragMode();
+    return l;
   }
   
-  public void stopDragMode()
+  public final cpb r()
   {
-    mController.stopDragMode();
+    return l;
   }
   
-  public boolean supportsDrag(DragEvent paramDragEvent, Folder paramFolder)
+  public final csl s()
   {
-    return mController.supportsDrag(paramDragEvent, paramFolder);
+    return p;
   }
   
-  public void unsetViewModeListener(ViewMode.ModeChangeListener paramModeChangeListener)
+  public final cst t()
   {
-    mViewMode.removeListener(paramModeChangeListener);
+    return q;
+  }
+  
+  public String toString()
+  {
+    StringBuilder localStringBuilder = new StringBuilder(super.toString());
+    localStringBuilder.append("{ViewMode=");
+    localStringBuilder.append(m);
+    localStringBuilder.append(" controller=");
+    localStringBuilder.append(l);
+    localStringBuilder.append(" current_focus=");
+    localStringBuilder.append(getCurrentFocus());
+    localStringBuilder.append("}");
+    return localStringBuilder.toString();
+  }
+  
+  public final cof u()
+  {
+    return l;
+  }
+  
+  public ckt v()
+  {
+    return new ckt(this);
+  }
+  
+  public final crj v_()
+  {
+    return m;
+  }
+  
+  public final anf w()
+  {
+    return z;
+  }
+  
+  public final cky w_()
+  {
+    return l;
+  }
+  
+  public final void x()
+  {
+    if (cud.a(this)) {}
+    for (int i = 0;; i = 347136)
+    {
+      z = new anp(i);
+      return;
+    }
+  }
+  
+  public final cpn y()
+  {
+    return r;
+  }
+  
+  public final bzn z()
+  {
+    if (B == null) {
+      B = new bzn(this);
+    }
+    return B;
   }
 }
 

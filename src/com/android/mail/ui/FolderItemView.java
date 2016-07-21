@@ -1,157 +1,153 @@
 package com.android.mail.ui;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
+import android.graphics.Paint;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.RoundRectShape;
 import android.util.AttributeSet;
-import android.view.DragEvent;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.view.View;
 import android.widget.TextView;
+import bua;
+import buc;
 import com.android.mail.providers.Folder;
-import com.android.mail.utils.Utils;
+import cus;
+import cvl;
+import cvm;
+import cxa;
 
 public class FolderItemView
-  extends RelativeLayout
+  extends NonOverlappingLinearLayout
 {
-  private static Drawable DRAG_STEADY_STATE_BACKGROUND;
-  private static Drawable DROPPABLE_HOVER_BACKGROUND;
-  private static int NON_DROPPABLE_TARGET_TEXT_COLOR;
-  private static Bitmap SHORTCUT_ICON;
-  private Drawable mBackground;
-  private DropHandler mDropHandler;
-  private Folder mFolder;
-  private ImageView mFolderParentIcon;
-  private TextView mFolderTextView;
-  private ColorStateList mInitialFolderTextColor;
-  private ColorStateList mInitialUnreadCountTextColor;
-  private TextView mUnreadCountTextView;
+  private static float[] f;
+  public Folder a;
+  public View b;
+  public float c;
+  public boolean d;
+  private final String e = cvl.a;
+  private TextView g;
+  private TextView h;
+  private TextView i;
   
   public FolderItemView(Context paramContext)
   {
     super(paramContext);
+    a(paramContext);
   }
   
   public FolderItemView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
+    a(paramContext);
   }
   
   public FolderItemView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
+    a(paramContext);
   }
   
-  private boolean isDroppableTarget(DragEvent paramDragEvent)
+  private static void a(Context paramContext)
   {
-    return (mDropHandler != null) && (mDropHandler.supportsDrag(paramDragEvent, mFolder));
-  }
-  
-  public void bind(Folder paramFolder, DropHandler paramDropHandler)
-  {
-    int j = 0;
-    mFolder = paramFolder;
-    mDropHandler = paramDropHandler;
-    mFolderTextView.setText(name);
-    paramFolder = mFolderParentIcon;
-    int k;
-    if (mFolder.hasChildren)
+    if (f == null)
     {
-      i = 0;
-      paramFolder.setVisibility(i);
-      k = Utils.getFolderUnreadDisplayCount(mFolder);
-      paramFolder = mUnreadCountTextView;
-      if (k <= 0) {
-        break label101;
-      }
+      float f1 = paramContext.getResources().getDimension(bua.M);
+      f = new float[] { f1, f1, f1, f1, f1, f1, f1, f1 };
     }
-    label101:
-    for (int i = j;; i = 8)
+  }
+  
+  private final void b(int paramInt)
+  {
+    TextView localTextView = h;
+    if (paramInt > 0) {}
+    for (int j = 0;; j = 8)
     {
-      paramFolder.setVisibility(i);
-      if (k > 0) {
-        mUnreadCountTextView.setText(Utils.getUnreadCountString(getContext(), k));
+      localTextView.setVisibility(j);
+      if (paramInt > 0) {
+        h.setText(cxa.a(getContext(), paramInt));
       }
       return;
-      i = 8;
-      break;
     }
   }
   
-  public boolean onDragEvent(DragEvent paramDragEvent)
+  public final void a(float paramFloat, boolean paramBoolean)
   {
-    boolean bool = true;
-    switch (paramDragEvent.getAction())
+    c = paramFloat;
+    d = paramBoolean;
+    setAlpha(1.0F);
+    b.setAlpha(1.0F);
+  }
+  
+  public final void a(int paramInt)
+  {
+    cvm.e(e, "FLF->FolderItem.getFolderView: unread count mismatch found (%s vs %d)", new Object[] { h.getText(), Integer.valueOf(paramInt) });
+    b(paramInt);
+  }
+  
+  public final void a(Folder paramFolder, cus paramcus)
+  {
+    int k = 0;
+    a = paramFolder;
+    g.setText(d);
+    int j;
+    if (paramcus != null)
     {
-    default: 
-    case 2: 
-    case 1: 
-    case 5: 
-    case 6: 
-      do
+      boolean bool = c.equals(paramcus);
+      paramFolder = findViewById(buc.dc);
+      if (bool)
       {
-        do
-        {
-          bool = false;
-          return bool;
-          if (!isDroppableTarget(paramDragEvent))
-          {
-            mInitialFolderTextColor = mFolderTextView.getTextColors();
-            mInitialUnreadCountTextColor = mUnreadCountTextView.getTextColors();
-            mFolderTextView.setTextColor(NON_DROPPABLE_TARGET_TEXT_COLOR);
-            mUnreadCountTextView.setTextColor(NON_DROPPABLE_TARGET_TEXT_COLOR);
-          }
-          setBackgroundDrawable(DRAG_STEADY_STATE_BACKGROUND);
-          return true;
-        } while (!isDroppableTarget(paramDragEvent));
-        setBackgroundDrawable(DROPPABLE_HOVER_BACKGROUND);
-        return true;
-      } while (!isDroppableTarget(paramDragEvent));
-      setBackgroundDrawable(DRAG_STEADY_STATE_BACKGROUND);
-      return true;
-    case 4: 
-      if (!isDroppableTarget(paramDragEvent))
-      {
-        mFolderTextView.setTextColor(mInitialFolderTextColor);
-        mUnreadCountTextView.setTextColor(mInitialUnreadCountTextColor);
+        j = 8;
+        paramFolder.setVisibility(j);
       }
-      setBackgroundDrawable(mBackground);
-      return true;
     }
-    if (mDropHandler == null) {
-      return false;
+    else
+    {
+      if ((!a.d(8194)) || (a.j <= 0)) {
+        break label220;
+      }
+      h.setVisibility(8);
+      int m = a.b(-16777216);
+      int n = a.j;
+      paramFolder = i;
+      if (n <= 0) {
+        break label214;
+      }
+      j = k;
+      label119:
+      paramFolder.setVisibility(j);
+      if (n > 0)
+      {
+        paramFolder = new ShapeDrawable(new RoundRectShape(f, null, null));
+        paramFolder.getPaint().setColor(m);
+        i.setBackgroundDrawable(paramFolder);
+        i.setText(cxa.b(getContext(), n));
+      }
     }
-    mDropHandler.handleDrop(paramDragEvent, mFolder);
-    return true;
+    for (;;)
+    {
+      setAlpha(1.0F);
+      setTranslationY(0.0F);
+      b.setAlpha(1.0F);
+      b.setTranslationY(0.0F);
+      return;
+      j = 0;
+      break;
+      label214:
+      j = 8;
+      break label119;
+      label220:
+      i.setVisibility(8);
+      b(cxa.a(a));
+    }
   }
   
   protected void onFinishInflate()
   {
     super.onFinishInflate();
-    if (SHORTCUT_ICON == null)
-    {
-      Resources localResources = getResources();
-      SHORTCUT_ICON = BitmapFactory.decodeResource(localResources, 2130903041);
-      DROPPABLE_HOVER_BACKGROUND = localResources.getDrawable(2130837534);
-      DRAG_STEADY_STATE_BACKGROUND = localResources.getDrawable(2130837536);
-      NON_DROPPABLE_TARGET_TEXT_COLOR = localResources.getColor(2131296290);
-    }
-    mFolderTextView = ((TextView)findViewById(2131755069));
-    mUnreadCountTextView = ((TextView)findViewById(2131755068));
-    mBackground = getBackground();
-    mInitialFolderTextColor = mFolderTextView.getTextColors();
-    mInitialUnreadCountTextColor = mUnreadCountTextView.getTextColors();
-    mFolderParentIcon = ((ImageView)findViewById(2131755066));
-  }
-  
-  public static abstract interface DropHandler
-  {
-    public abstract void handleDrop(DragEvent paramDragEvent, Folder paramFolder);
-    
-    public abstract boolean supportsDrag(DragEvent paramDragEvent, Folder paramFolder);
+    b = findViewById(buc.bz);
+    g = ((TextView)b.findViewById(buc.cY));
+    h = ((TextView)b.findViewById(buc.fx));
+    i = ((TextView)b.findViewById(buc.fz));
   }
 }
 

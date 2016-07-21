@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/device_id_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_exchange_device_id_label" style="@style/AccountSetupLabelText" />
+    <TextView android:id="@id/device_id" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_default_text_vertical_spacing" style="@style/AccountSetupSubText" />
+</LinearLayout>

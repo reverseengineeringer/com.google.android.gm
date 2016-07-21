@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.FolderItemView android:gravity="center_vertical" android:background="@drawable/folder_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/folder_list_item_minimum_height" style="@style/FolderListItemEndStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/nested_folder_space" android:visibility="gone" android:layout_width="@dimen/nested_folder_space" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/folder_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FolderListIconStyle" />
+    <com.android.mail.ui.NonOverlappingLinearLayout android:id="@id/folder_content_wrapper" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/drawer_item_font_size" android:textColor="@color/text_color_black" android:ellipsize="end" android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" android:fontFamily="sans-serif-medium" android:textAlignment="viewStart" style="@style/FolderListItemStyle" />
+        <TextView android:id="@id/unread" style="@style/DrawerUnreadCount" />
+        <TextView android:id="@id/unseen" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:includeFontPadding="false" style="@style/UnseenCount" />
+    </com.android.mail.ui.NonOverlappingLinearLayout>
+</com.android.mail.ui.FolderItemView>

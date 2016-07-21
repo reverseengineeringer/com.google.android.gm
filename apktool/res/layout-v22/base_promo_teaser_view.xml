@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/swipeable_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/promo_card_margin" app:cardBackgroundColor="@color/promo_card"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Promo.Content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/promo_icon" android:layout_width="@dimen/promo_illustration" android:layout_height="@dimen/promo_illustration" android:layout_margin="@dimen/promo_inner_padding" android:scaleType="fitCenter" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/promo_title_text_size" android:textStyle="bold" android:id="@id/promo_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/promo_inner_padding" android:layout_marginBottom="4.0dip" style="@style/Promo.Text" />
+                <TextView android:textSize="@dimen/promo_body_text_size" android:id="@id/promo_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:lineSpacingExtra="3.0dip" style="@style/Promo.Text" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:id="@id/promo_actions_single_line" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/buttonBarStyle">
+            <Button android:id="@id/promo_action_negative_single_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:accessibilityTraversalAfter="@id/promo_action_positive_single_line" style="@style/Promo.ActionButton.Negative" />
+            <Button android:id="@id/promo_action_positive_single_line" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Promo.ActionButton.Positive" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/promo_actions_multi_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:layout_gravity="end" android:id="@id/promo_action_positive_multi_line" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Promo.ActionButton.Positive" />
+            <Button android:layout_gravity="end" android:id="@id/promo_action_negative_multi_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/promo_multiline_action_padding" style="@style/Promo.ActionButton.Negative" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

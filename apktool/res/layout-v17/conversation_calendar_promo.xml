@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="2.0dip" style="@style/CalendarPromotionStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gm.ui.teasers.CalendarPromotionView android:id="@id/conversation_promotion" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/calendar_icon" android:src="@mipmap/quantum_logo_calendar_color_48" style="@style/CalendarPromotionIcon" />
+        <TextView android:id="@id/calendar_promotion_title" android:layout_alignParentTop="true" style="@style/CalendarPromotionTitle" />
+        <TextView android:id="@id/calendar_promotion_text" android:layout_below="@id/calendar_promotion_title" style="@style/CalendarPromotionText" />
+        <LinearLayout android:gravity="end" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/calendar_promotion_text">
+            <TextView android:id="@id/calendar_promotion_decline" android:text="@string/no_thanks" android:layout_below="@id/calendar_promotion_text" style="@style/CalendarPromotionActionText" />
+            <TextView android:textColor="@color/text_color_blue" android:id="@id/calendar_promotion_accept" android:text="@string/get_google_calendar" android:layout_below="@id/calendar_promotion_text" android:layout_alignEnd="@id/calendar_promotion_text" style="@style/CalendarPromotionActionTextAccept" />
+        </LinearLayout>
+    </com.google.android.gm.ui.teasers.CalendarPromotionView>
+</android.support.v7.widget.CardView>

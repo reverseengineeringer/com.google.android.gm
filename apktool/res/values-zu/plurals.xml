@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Amakhalenda awabelwe</item>
+        <item quantity="one">Amakhalenda awabelwe</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">Okusalungiswa</item>
+        <item quantity="one">Okusalungiswa</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Ufuna ukususa lezi zingxoxo ezingu-%1$d?</item>
+        <item quantity="one">Ufuna ukususa lezi zingxoxo ezingu-%1$d?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Ufuna ukulondoloza lezi zingxoxo ezingu-%1$d?</item>
+        <item quantity="one">Ufuna ukulondoloza lezi zingxoxo ezingu-%1$d?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Ufuna ukulahla okusalungiswa kulezi zingxoxo ezingu-%1$d?</item>
+        <item quantity="one">Ufuna ukulahla okusalungiswa kulezi zingxoxo ezingu-%1$d?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Kususwa izinkanyezi ezingxoxweni ezingu-%1$d.</item>
+        <item quantity="one">Kususwa izinkanyezi ezingxoxweni ezingu-%1$d.</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d okubikwe njengogaxekile futhi kwakhishwa ohlwini</item>
+        <item quantity="one">%1$d okubikwe njengogaxekile futhi kwakhishwa ohlwini</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ithulisiwe</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ithulisiwe</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> kubikwe njengogaxekile</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> kubikwe njengogaxekile</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> kubikwe njengokungawona ugaxekile</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> kubikwe njengokungawona ugaxekile</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> kumakwe njengokungabalulekile</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> kumakwe njengokungabalulekile</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> kufakwe kungobo yomlando</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> kufakwe kungobo yomlando</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> kususiwe</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> kususiwe</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Amalebula ashintshiwe.</item>
+        <item quantity="one">Amalebula ashintshiwe.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d imilayezo emisha</item>
+        <item quantity="one">%1$d imilayezo emisha</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Nweba imilayezo emidala engu-%1$d</item>
+        <item quantity="one">Nweba imilayezo emidala engu-%1$d</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Kunwetshwe imilayezo emidala engu-%1$d</item>
+        <item quantity="one">Kunwetshwe imilayezo emidala engu-%1$d</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d imilayezo emisha</item>
+        <item quantity="one">%1$d imilayezo emisha</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d izingxoxo zizosuswa unomphela.</item>
+        <item quantity="one">%1$d izingxoxo zizosuswa unomphela.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d imilayezo</item>
+        <item quantity="one">%1$d imilayezo</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d izinanyathiselwa</item>
+        <item quantity="one">%1$d izinanyathiselwa</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Le milayezo izomakwa njengogaxekile. Ungathanda futhi ukuyeka ukuthola imilayezo efanayo esuka kulaba bathumeli abangu-&amp;lt;b>%2$d&amp;lt;/b>:%1$s</item>
+        <item quantity="one">Le milayezo izomakwa njengogaxekile. Ungathanda futhi ukuyeka ukuthola imilayezo efanayo esuka kulaba bathumeli abangu-&amp;lt;b>%2$d&amp;lt;/b>:%1$s</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Vumelanisa: Izinsuku %1$d zokugcina</item>
+        <item quantity="one">Vumelanisa: Izinsuku %1$d zokugcina</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d izinsuku</item>
+        <item quantity="one">%d izinsuku</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Izinsuku</item>
+        <item quantity="one">Izinsuku</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Izinsuku zokugcina ezingu-%1$d zemilayezo izolanda lapho kuxhunyiwe</item>
+        <item quantity="one">Izinsuku zokugcina ezingu-%1$d zemilayezo izolanda lapho kuxhunyiwe</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Inothi: Abanye abamukeli bangase baqhubeke bengafinyeleli la mafayela. Ungase udinge ukwabelana ngala mafayela kusuka ngaphakathi ku-Google Drayivu.</item>
+        <item quantity="one">Inothi: Abanye abamukeli bangase baqhubeke bengafinyeleli la mafayela. Ungase udinge ukwabelana ngala mafayela kusuka ngaphakathi ku-Google Drayivu.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Wabelana nabamukeli:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>abangekho kunhlangano Yezinhlelo zokusebenza ze-Google engumnikazi walawa mafayela."</item>
+        <item quantity="one">"Wabelana nabamukeli:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>abangekho kunhlangano Yezinhlelo zokusebenza ze-Google engumnikazi walawa mafayela."</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Abemukeli bakho bangase bangakwazi ukufinyelela amafayela owafake kusuka kuDrayivu. Ungase udinge ukwabelana ngamafayela kusuka ngaphakathi ku-Google Drayivu.</item>
+        <item quantity="one">Abemukeli bakho bangase bangakwazi ukufinyelela amafayela owafake kusuka kuDrayivu. Ungase udinge ukwabelana ngamafayela kusuka ngaphakathi ku-Google Drayivu.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Amakheli akho amanje e-imeyili:</item>
+        <item quantity="one">Amakheli akho amanje e-imeyili:</item>
+    </plurals>
+</resources>

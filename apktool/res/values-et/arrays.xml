@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Vasta</item>
+        <item>Vasta kõigile</item>
+        <item>Edasta</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Õnnestus</item>
+        <item>Ühendus puudub</item>
+        <item>Sisselogimine ebaõnnestus</item>
+        <item>Turvaviga</item>
+        <item>Ei saanud sünkroonida</item>
+        <item>Serveri viga</item>
+        <item>Sisemine viga</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Uuemad</item>
+        <item>Vanemad</item>
+        <item>Meilivestluste loend</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Näita pärast arhiivimist või kustutamist uuemat meilivestlust</item>
+        <item>Näita pärast arhiivimist või kustutamist vanemat meilivestlust</item>
+        <item>Näita pärast arhiivimist või kustutamist meilivestluste loendit</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Arhiivi</item>
+        <item>Kustuta</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arhiivimine</item>
+        <item>Kustutamine</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Kõrge</item>
+        <item>Tavaline</item>
+        <item>Madal</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Te ei jää enam ühestki lennust maha.</item>
+        <item>Te ei jää enam ühestki lennust maha.</item>
+        <item>Kas lisada see lend teie kalendrisse?</item>
+        <item>"Vaadake Google'i kalendris oma broneeringuid."</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>"Google'i kalender lisab lennud ja muud broneeringud automaatselt teie kalendrisse."</item>
+        <item>"Google'i kalender lisab lennud ja muud broneeringud automaatselt teie kalendrisse."</item>
+        <item>"Gmailist pärinevad sündmused saab automaatselt lisada Google'i kalendri rakendusega."</item>
+        <item>Lennu- ja hotellibroneeringud ning restoranireserveeringud lisatakse automaatselt.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>"Kas lisada see broneering Google'i kalendrisse?"</item>
+        <item>Kas soovite broneeringud automaatselt kalendrisse lisada?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>"Rakendusega Google'i kalender lisatakse Gmailist pärinevad sündmused automaatselt teie kalendrisse."</item>
+        <item>"Google'i kalender lisab hotelli- ja muud broneeringud automaatselt teie meilikontolt."</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Saate õhtusöögi kohta õigeaegse märguande.</item>
+        <item>"Kas lisada see broneering Google'i kalendrisse?"</item>
+        <item>"Broneeringud lisatakse automaatselt Google'i kalendrisse."</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>"Google'i kalender lisab restorani- ja muud reserveeringud automaatselt teie kalendrisse."</item>
+        <item>Gmailist pärinevad sündmused saab automaatselt lisada teie kalendrisse.</item>
+        <item>Lennu- ja hotellibroneeringud ning restoranireserveeringud lisatakse automaatselt.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Saate enne seda sündmust õigeaegse märguande.</item>
+        <item>"Kas lisada see sündmus Google'i kalendrisse?"</item>
+        <item>Teil ei jää ükski sündmus kahe silma vahele.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>"Google'i kalender lisab sündmused ja broneeringud, nagu selles meilis olev, automaatselt teie kalendrisse."</item>
+        <item>Gmailist pärinevad sündmused saab automaatselt lisada teie kalendrisse.</item>
+        <item>"Sündmused ja muud broneeringud lisatakse automaatselt rakendusega Google'i kalender."</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Jälgige oma broneeringuid ühes kohas.</item>
+        <item>"Kas lisada need broneeringud Google'i kalendrisse?"</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>"Lennu- ja hotellibroneeringud ning restoranireserveeringud lisatakse automaatselt teie Google'i kalendrisse."</item>
+        <item>Gmailist pärinevad sündmused saab automaatselt lisada teie kalendrisse.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Pisike</item>
+        <item>Väike</item>
+        <item>Tavaline</item>
+        <item>Suur</item>
+        <item>Ülisuur</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Kirjade sisu kuvamine pisikese tekstina</item>
+        <item>Kirjade sisu kuvamine väikese tekstina</item>
+        <item>Kirjade sisu kuvamine normaalsuuruses tekstina</item>
+        <item>Kirjade sisu kuvamine suure tekstina</item>
+        <item>Kirjade sisu kuvamine väga suure tekstina</item>
+    </string-array>
+</resources>

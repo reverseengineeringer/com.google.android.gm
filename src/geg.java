@@ -1,0 +1,7 @@
+public final class geg {}
+
+/* Location:
+ * Qualified Name:     geg
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

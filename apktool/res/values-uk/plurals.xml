@@ -1,147 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="number_of_attachments">
-        <item quantity="other">Вкладених файлів: %d</item>
-        <item quantity="one">%d вкладений файл</item>
-    </plurals>
-    <plurals name="move_conversation">
-        <item quantity="other">Переміщення %1$d бес.</item>
-        <item quantity="one">Переміщення бесіди</item>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">До календарів не надано доступ</item>
+        <item quantity="one">До календарів не надано доступ</item>
+        <item quantity="few">До календарів не надано доступ</item>
+        <item quantity="many">До календарів не надано доступ</item>
     </plurals>
     <plurals name="draft">
         <item quantity="other">Чернетки</item>
-        <item quantity="one">Чернетка</item>
+        <item quantity="one">Чернетки</item>
+        <item quantity="few">Чернетки</item>
+        <item quantity="many">Чернетки</item>
     </plurals>
     <plurals name="confirm_delete_conversation">
-        <item quantity="other">Видалити ці бесіди (%1$d)?</item>
-        <item quantity="one">Видалити цю бесіду?</item>
+        <item quantity="other">Видалити ці %1$d ланцюжка повідомлень?</item>
+        <item quantity="one">Видалити цей %1$d ланцюжок повідомлень?</item>
+        <item quantity="few">Видалити ці %1$d ланцюжки повідомлень?</item>
+        <item quantity="many">Видалити ці %1$d ланцюжків повідомлень?</item>
     </plurals>
     <plurals name="confirm_archive_conversation">
-        <item quantity="other">Заархівувати ці бесіди (%1$d)?</item>
-        <item quantity="one">Заархівувати цю бесіду?</item>
+        <item quantity="other">Архівувати ці %1$d ланцюжка повідомлень?</item>
+        <item quantity="one">Архівувати цей %1$d ланцюжок повідомлень?</item>
+        <item quantity="few">Архівувати ці %1$d ланцюжки повідомлень?</item>
+        <item quantity="many">Архівувати ці %1$d ланцюжків повідомлень?</item>
     </plurals>
     <plurals name="confirm_discard_drafts_conversation">
-        <item quantity="other">Відхилити чернетки в цих бесідах (%1$d)?</item>
-        <item quantity="one">Відхилити чернетки в цій бесіді?</item>
-    </plurals>
-    <plurals name="conversation_marking_read">
-        <item quantity="other">Познач. бесід як прочит.: %1$d.</item>
-        <item quantity="one">Познач-ня бесід як прочит.: %1$d.</item>
-    </plurals>
-    <plurals name="conversation_marking_unread">
-        <item quantity="other">Позначення бесід як непрочит.: %1$d</item>
-        <item quantity="one">Позначення бесід як непрочит.: %1$d.</item>
-    </plurals>
-    <plurals name="conversation_starring">
-        <item quantity="other">Познач. бесід зір-кою: %1$d.</item>
-        <item quantity="one">Познач. бесід зір-кою: %1$d.</item>
+        <item quantity="other">Відхилити чернетки з цих %1$d ланцюжка повідомлень?</item>
+        <item quantity="one">Відхилити чернетки з цього %1$d ланцюжка повідомлень?</item>
+        <item quantity="few">Відхилити чернетки з цих %1$d ланцюжків повідомлень?</item>
+        <item quantity="many">Відхилити чернетки з цих %1$d ланцюжків повідомлень?</item>
     </plurals>
     <plurals name="conversation_unstarred">
-        <item quantity="other">Видалення зірочки з бесід: %1$d.</item>
-        <item quantity="one">Видалення зірочки з %1$d бесіди.</item>
+        <item quantity="other">Знімається зірочка з %1$d ланцюжка повідомлень.</item>
+        <item quantity="one">Знімається зірочка з %1$d ланцюжка повідомлень</item>
+        <item quantity="few">Знімається зірочка з %1$d ланцюжків повідомлень</item>
+        <item quantity="many">Знімається зірочка з %1$d ланцюжків повідомлень</item>
     </plurals>
-    <plurals name="conversation_unknown_operation">
-        <item quantity="other">Очікування на операцію з бесідами: %1$d.</item>
-        <item quantity="one">Очікування на операцію з бесідами: %1$d.</item>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d позначено як спам, підписку скасовано</item>
+        <item quantity="one">%1$d позначено як спам, підписку скасовано</item>
+        <item quantity="few">%1$d позначено як спам, підписку скасовано</item>
+        <item quantity="many">%1$d позначено як спам, підписку скасовано</item>
     </plurals>
     <plurals name="conversation_muted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> проігноровано.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> проігноровано.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ігноруються</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ігнорується</item>
+        <item quantity="few">&amp;lt;b>%1$d&amp;lt;/b> ігноруються</item>
+        <item quantity="many">&amp;lt;b>%1$d&amp;lt;/b> ігноруються</item>
     </plurals>
     <plurals name="conversation_spammed">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> повідомлено як спам.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> повідомлено як спам.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як спам</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як спам</item>
+        <item quantity="few">&amp;lt;b>%1$d&amp;lt;/b> позначено як спам</item>
+        <item quantity="many">&amp;lt;b>%1$d&amp;lt;/b> позначено як спам</item>
     </plurals>
     <plurals name="conversation_not_spam">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як не спам.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як не спам.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як не спам</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як не спам</item>
+        <item quantity="few">&amp;lt;b>%1$d&amp;lt;/b> позначено як не спам</item>
+        <item quantity="many">&amp;lt;b>%1$d&amp;lt;/b> позначено як не спам</item>
     </plurals>
     <plurals name="conversation_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливі.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливу.</item>
-    </plurals>
-    <plurals name="conversation_phished">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як фішинг.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як фішинг.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливі</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливий</item>
+        <item quantity="few">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливі</item>
+        <item quantity="many">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливі</item>
     </plurals>
     <plurals name="conversation_archived">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> заархівовано.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> заархівовано.</item>
-    </plurals>
-    <plurals name="conversation_moved_to_inbox">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> переміщено у вхідні.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> переміщено у вхідні.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> заархівовано</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> заархівовано</item>
+        <item quantity="few">&amp;lt;b>%1$d&amp;lt;/b> заархівовано</item>
+        <item quantity="many">&amp;lt;b>%1$d&amp;lt;/b> заархівовано</item>
     </plurals>
     <plurals name="conversation_deleted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> видалено.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> видалено.</item>
-    </plurals>
-    <plurals name="conversation_marked_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як важливі.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як важливі.</item>
-    </plurals>
-    <plurals name="conversation_marked_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливі.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як неважливі.</item>
-    </plurals>
-    <plurals name="conversation_marked_read">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як прочитані.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як прочитані.</item>
-    </plurals>
-    <plurals name="conversation_marked_unread">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> позначено як непрочитані.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> позначено як непрочитані.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> видалено</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> видалено</item>
+        <item quantity="few">&amp;lt;b>%1$d&amp;lt;/b> видалено</item>
+        <item quantity="many">&amp;lt;b>%1$d&amp;lt;/b> видалено</item>
     </plurals>
     <plurals name="conversation_folder_changed">
         <item quantity="other">Змінено мітки.</item>
-        <item quantity="one">Змінено мітку.</item>
+        <item quantity="one">Змінено мітки.</item>
+        <item quantity="few">Змінено мітки.</item>
+        <item quantity="many">Змінено мітки.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d нового повідомлення</item>
+        <item quantity="one">%1$d нове повідомлення</item>
+        <item quantity="few">%1$d нових повідомлення</item>
+        <item quantity="many">%1$d нових повідомлень</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Розгорнути %1$d старішого повідомлення</item>
+        <item quantity="one">Розгорнути %1$d старіше повідомлення</item>
+        <item quantity="few">Розгорнути %1$d старіших повідомлення</item>
+        <item quantity="many">Розгорнути %1$d старіших повідомлень</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Розгорнуто %1$d старішого повідомлення</item>
+        <item quantity="one">Розгорнуто %1$d старіше повідомлення</item>
+        <item quantity="few">Розгорнуто %1$d старіших повідомлення</item>
+        <item quantity="many">Розгорнуто %1$d старіших повідомлень</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d нового повідомлення</item>
+        <item quantity="one">%1$d нове повідомлення</item>
+        <item quantity="few">%1$d нових повідомлення</item>
+        <item quantity="many">%1$d нових повідомлень</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d ланцюжка повідомлень буде видалено назавжди.</item>
+        <item quantity="one">%1$d ланцюжок повідомлень буде видалено назавжди.</item>
+        <item quantity="few">%1$d ланцюжки повідомлень буде видалено назавжди.</item>
+        <item quantity="many">%1$d ланцюжків повідомлень буде видалено назавжди.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d повідомлення</item>
+        <item quantity="one">%1$d повідомлення</item>
+        <item quantity="few">%1$d повідомлення</item>
+        <item quantity="many">%1$d повідомлень</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d вкладеного файлу</item>
+        <item quantity="one">%1$d вкладений файл</item>
+        <item quantity="few">%1$d вкладених файли</item>
+        <item quantity="many">%1$d вкладених файлів</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Ці листи буде позначено як спам. Не хочете більше отримувати подібних листів від &amp;lt;b>%2$d відправника&amp;lt;/b>: %1$s?</item>
+        <item quantity="one">Ці листи буде позначено як спам. Не хочете більше отримувати подібних листів від &amp;lt;b>%2$d відправника&amp;lt;/b>: %1$s?</item>
+        <item quantity="few">Ці листи буде позначено як спам. Не хочете більше отримувати подібних листів від &amp;lt;b>%2$d відправників&amp;lt;/b>: %1$s?</item>
+        <item quantity="many">Ці листи буде позначено як спам. Не хочете більше отримувати подібних листів від &amp;lt;b>%2$d відправників&amp;lt;/b>: %1$s?</item>
     </plurals>
     <plurals name="sync_recent">
-        <item quantity="other">Синхронізувати: за останні %1$d дн.</item>
+        <item quantity="other">Синхронізувати: за останніх %1$d дня</item>
         <item quantity="one">Синхронізувати: за останній %1$d день</item>
-    </plurals>
-    <plurals name="confirm_discard_conversation">
-        <item quantity="other">Відхилити ці чернетки (%1$d)?</item>
-        <item quantity="one">Відхилити цю чернетку?</item>
-    </plurals>
-    <plurals name="conversation_muting">
-        <item quantity="other">Ігнорування бесід: %1$d.</item>
-        <item quantity="one">Ігнорування бесід: %1$d.</item>
-    </plurals>
-    <plurals name="conversation_spamming">
-        <item quantity="other">Повідомл-ня про бесіди як спам: %1$d.</item>
-        <item quantity="one">Повідомл-ня про бесіди як спам: %1$d.</item>
-    </plurals>
-    <plurals name="conversation_archiving">
-        <item quantity="other">Архівування бесід: %1$d.</item>
-        <item quantity="one">Архівування бесід: %1$d.</item>
-    </plurals>
-    <plurals name="conversation_deleting">
-        <item quantity="other">Видалення бесід: %1$d.</item>
-        <item quantity="one">Видалення бесід: %1$d.</item>
-    </plurals>
-    <plurals name="conversation_unstarring">
-        <item quantity="other">Видалення зірочки з %1$d бес.</item>
-        <item quantity="one">Видалення зірочки з %1$d бесіди.</item>
-    </plurals>
-    <plurals name="conversation_label_changed">
-        <item quantity="other">Змінено мітки.</item>
-        <item quantity="one">Змінено мітку.</item>
+        <item quantity="few">Синхронізувати: за останніх %1$d дні</item>
+        <item quantity="many">Синхронізувати: за останніх %1$d днів</item>
     </plurals>
     <plurals name="sync_duration">
-        <item quantity="other">%d дн.</item>
-        <item quantity="one">Один день</item>
+        <item quantity="other">%d дня</item>
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дні</item>
+        <item quantity="many">%d днів</item>
     </plurals>
     <plurals name="title_day_dialog_content">
-        <item quantity="other">Дні</item>
-        <item quantity="one">День</item>
-    </plurals>
-    <plurals name="notify_attachment_error">
-        <item quantity="other">Не вдалося показати вкладений файл %s</item>
-        <item quantity="one">Не вдалося показати вкладений файл</item>
+        <item quantity="other">дня</item>
+        <item quantity="one">день</item>
+        <item quantity="few">дні</item>
+        <item quantity="many">днів</item>
     </plurals>
     <plurals name="sync_messages_partial_description">
-        <item quantity="other">Коли з’явиться з’єднання, завантажаться повідомлення за стільки останніх днів: %1$d</item>
-        <item quantity="one">Повідомлення за 1 останній день завантажаться, коли з’явиться з’єднання</item>
+        <item quantity="other">Повідомлення за %1$d останнього дня завантажаться, коли з’явиться з’єднання</item>
+        <item quantity="one">Повідомлення за %1$d останній день завантажаться, коли з’явиться з’єднання</item>
+        <item quantity="few">Повідомлення за %1$d останніх дні завантажаться, коли з’явиться з’єднання</item>
+        <item quantity="many">Повідомлення за %1$d останніх днів завантажаться, коли з’явиться з’єднання</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Примітка. Деякі одержувачі все ще не мають доступу до файлів. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+        <item quantity="one">Примітка. Деякі одержувачі все ще не мають доступу до файлів. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+        <item quantity="few">Примітка. Деякі одержувачі все ще не мають доступу до файлів. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+        <item quantity="many">Примітка. Деякі одержувачі все ще не мають доступу до файлів. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Ви надаєте доступ одержувачам:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>за межами організації Google Apps, якій належать ці файли."</item>
+        <item quantity="one">"Ви надаєте доступ одержувачам:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>за межами організації Google Apps, якій належать ці файли."</item>
+        <item quantity="few">"Ви надаєте доступ одержувачам:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>за межами організації Google Apps, якій належать ці файли."</item>
+        <item quantity="many">"Ви надаєте доступ одержувачам:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>за межами організації Google Apps, якій належать ці файли."</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Одержувачі можуть не мати доступу до файлів, які ви вставили з Диска. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+        <item quantity="one">Одержувачі можуть не мати доступу до файлів, які ви вставили з Диска. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+        <item quantity="few">Одержувачі можуть не мати доступу до файлів, які ви вставили з Диска. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+        <item quantity="many">Одержувачі можуть не мати доступу файлів, які ви вставили з Диска. Можливо, вам потрібно буде надати їм доступ до цих файлів на Google Диску.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Ваші поточні електронні адреси:</item>
+        <item quantity="one">Ваші поточні електронні адреси:</item>
+        <item quantity="few">Ваші поточні електронні адреси:</item>
+        <item quantity="many">Ваші поточні електронні адреси:</item>
     </plurals>
 </resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">ቀን መቁጠሪያዎች አልተጋሩም</item>
+        <item quantity="one">ቀን መቁጠሪያዎች አልተጋሩም</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">ረቂቆች</item>
+        <item quantity="one">ረቂቆች</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">እነዚህ %1$d ውይይቶች ይሰረዙ?</item>
+        <item quantity="one">እነዚህ %1$d ውይይቶች ይሰረዙ?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">እነዚህ %1$d ውይይቶች ይመዝገቡ?</item>
+        <item quantity="one">እነዚህ %1$d ውይይቶች ይመዝገቡ?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">ረቂቆች ከነዚህ %1$d ውይይቶች ይወገዱ?</item>
+        <item quantity="one">ረቂቆች ከነዚህ %1$d ውይይቶች ይወገዱ?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">የ%1$d ውይይቶች ኮከብ በማንሳት ላይ።</item>
+        <item quantity="one">የ%1$d ውይይቶች ኮከብ በማንሳት ላይ።</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d እንደ አይፈለጌ መልዕክት ሪፖርት ተደርገዋል እና ከደንበኝነት ተሰርዘዋል</item>
+        <item quantity="one">%1$d እንደ አይፈለጌ መልዕክት ሪፖርት ተደርጓል እና ከደንበኝነት ተሰርዟል</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ድምፀ-ከል የተደረጉ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ድምፀ-ከል የተደረጉ</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b>አይፈለጌ መልዕክት ተብለው ሪፖርት ተደርገዋል</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> አይፈለጌ መልዕክት ተብለው ሪፖርት ተደርገዋል</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> አይፈለጌ መልዕክት ተብለው ሪፖርት ተደርገዋል</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> አይፈለጌ መልዕክት ተብለው ሪፖርት ተደርገዋል</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> አስፈላጊ አይደሉም የሚል ምልክት ተደርጎባቸዋል</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> አስፈላጊ አይደሉም የሚል ምልክት ተደርጎባቸዋል</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> በማህደር ተቀምጠዋል</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> በማህደር ተቀምጠዋል</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ተሰርዟል</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ተሰርዟል</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">መለያዎች ተቀይረዋል።</item>
+        <item quantity="one">መለያዎች ተቀይረዋል።</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d አዲስ መልዕክቶች</item>
+        <item quantity="one">%1$d አዲስ መልዕክቶች</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">የቆዩ %1$d መልክክቶችን ዘርጋ</item>
+        <item quantity="one">የቆዩ %1$d መልክክቶችን ዘርጋ</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">የቆዩ %1$d መልዕክቶች ተዘርግተዋል</item>
+        <item quantity="one">የቆዩ %1$d መልዕክቶች ተዘርግተዋል</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d አዲስ መልዕክቶች</item>
+        <item quantity="one">%1$d አዲስ መልዕክቶች</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d ውይይቶች እስከመጨረሻው ይሰረዛሉ።</item>
+        <item quantity="one">%1$d ውይይቶች እስከመጨረሻው ይሰረዛሉ።</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d መልዕክቶች</item>
+        <item quantity="one">%1$d መልዕክቶች</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d አባሪዎች</item>
+        <item quantity="one">%1$d አባሪዎች</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">እነዚህ መልዕክቶች እንደ አይፈለጌ መልዕክት ምልክት ይደረግባቸዋል። እንዲሁም ከእነዚህ &amp;lt;b>%2$d ላኪዎች&amp;lt;/b>፦%1$s የሚመጡ ተመሳሳይ መልዕክቶችን መቀበል ማቆም ይፈልጋሉ?</item>
+        <item quantity="one">እነዚህ መልዕክቶች እንደ አይፈለጌ መልዕክት ምልክት ይደረግባቸዋል። እንዲሁም ከእነዚህ &amp;lt;b>%2$d ላኪዎች&amp;lt;/b>፦%1$s የሚመጡ ተመሳሳይ መልዕክቶችን መቀበል ማቆም ይፈልጋሉ?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">አመሳሰል፦ የመጨረሻ %1$d ቀናት</item>
+        <item quantity="one">አመሳሰል፦ የመጨረሻ %1$d ቀናት</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d ቀናት</item>
+        <item quantity="one">%d ቀናት</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">ቀናት</item>
+        <item quantity="one">ቀናት</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">ያለፉት %1$d ቀናት መልዕክቶች ሲገናኝ ይወርዳሉ።</item>
+        <item quantity="one">ያለፉት %1$d ቀናት መልዕክቶች ሲገናኝ ይወርዳሉ።</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">ማስታወሻ፦ አንዳንድ ተቀባዮች አሁንም የእነዚህ ፋይሎች መድረሻ ላይኖራቸው ይችላል። እነዚህን ፋይሎች ከGoogle Drive ውስጥ ማጋራት ሊኖርብዎ ይችላል።</item>
+        <item quantity="one">ማስታወሻ፦ አንዳንድ ተቀባዮች አሁንም የእነዚህ ፋይሎች መድረሻ ላይኖራቸው ይችላል። እነዚህን ፋይሎች ከGoogle Drive ውስጥ ማጋራት ሊኖርብዎ ይችላል።</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"እነዚህ ፋይሎች ባሉበት የGoogle መተግበሪያዎች ድርጅት ውስጥ ላልሆኑ ተቀባዮች፦&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>እያጋሩ ነው።"</item>
+        <item quantity="one">"እነዚህ ፋይሎች ባሉበት የGoogle መተግበሪያዎች ድርጅት ውስጥ ላልሆኑ ተቀባዮች፦&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>እያጋሩ ነው።"</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">ከDrive የጨመሯቸውን ፋይሎች መድረሻ ተቀባዮችዎ ላይኖራቸው ይችላል። ፋይሎቹን ከGoogle Drive ውስጥ ማጋራት ሊኖርብዎ ይችላል።</item>
+        <item quantity="one">ከDrive የጨመሯቸውን ፋይሎች መድረሻ ተቀባዮችዎ ላይኖራቸው ይችላል። ፋይሎቹን ከGoogle Drive ውስጥ ማጋራት ሊኖርብዎ ይችላል።</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">የአሁኑ የኢሜይል አድራሻዎችዎ፦</item>
+        <item quantity="one">የአሁኑ የኢሜይል አድራሻዎችዎ፦</item>
+    </plurals>
+</resources>

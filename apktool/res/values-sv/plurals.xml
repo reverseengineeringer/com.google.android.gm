@@ -1,132 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="number_of_attachments">
-        <item quantity="other">%d bilagor</item>
-        <item quantity="one">%d bilaga</item>
-    </plurals>
-    <plurals name="move_conversation">
-        <item quantity="other">Flytta %1$d konversationer</item>
-        <item quantity="one">Flytta konversation</item>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Kalendrarna delas inte</item>
+        <item quantity="one">Kalendern delas inte</item>
     </plurals>
     <plurals name="draft">
         <item quantity="other">Utkast</item>
         <item quantity="one">Utkast</item>
     </plurals>
     <plurals name="confirm_delete_conversation">
-        <item quantity="other">Vill du ta bort de här %1$d konversationerna?</item>
+        <item quantity="other">Vill du radera dessa %1$d konversationer?</item>
         <item quantity="one">Vill du ta bort konversationen?</item>
     </plurals>
     <plurals name="confirm_archive_conversation">
-        <item quantity="other">Vill du arkivera de här %1$d konversationerna?</item>
+        <item quantity="other">Vill du arkivera dessa %1$d konversationer?</item>
         <item quantity="one">Vill du arkivera konversationen?</item>
     </plurals>
     <plurals name="confirm_discard_drafts_conversation">
         <item quantity="other">Vill du slänga utkast från dessa %1$d konversationer?</item>
         <item quantity="one">Vill du slänga utkast från konversationen?</item>
     </plurals>
-    <plurals name="conversation_marking_read">
-        <item quantity="other">Markerar %1$d konversationer som lästa.</item>
-        <item quantity="one">Markerar %1$d konversationer som lästa.</item>
-    </plurals>
-    <plurals name="conversation_marking_unread">
-        <item quantity="other">Markerar %1$d konversationer som olästa.</item>
-        <item quantity="one">Markera %1$d konversation som oläst.</item>
-    </plurals>
-    <plurals name="conversation_starring">
-        <item quantity="other">Lägg till stjärna för %1$d konversationer.</item>
-        <item quantity="one">Markera %1$d konversation med stjärna.</item>
-    </plurals>
     <plurals name="conversation_unstarred">
-        <item quantity="other">Tar bort stjärnmärkning från %1$d konversationer.</item>
-        <item quantity="one">Tar bort stjärnmärkning från %1$d konversation.</item>
+        <item quantity="other">Tar bort stjärnmarkering för %1$d konversationer.</item>
+        <item quantity="one">Tar bort stjärnmarkering för %1$d konversation.</item>
     </plurals>
-    <plurals name="conversation_unknown_operation">
-        <item quantity="other">%1$d konversationer väntar på åtgärd.</item>
-        <item quantity="one">%1$d konversationer väntar på åtgärd.</item>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d har anmälts som skräppost och tagits bort från prenumerationen</item>
+        <item quantity="one">%1$d har anmälts som skräppost och tagits bort från prenumerationen</item>
     </plurals>
     <plurals name="conversation_muted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har ignorerats.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har ignorerats.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har ignorerats</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har ignorerats</item>
     </plurals>
     <plurals name="conversation_spammed">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som skräppost.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som skräppost.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som skräppost</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som skräppost</item>
     </plurals>
     <plurals name="conversation_not_spam">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som Inte skräppost.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som Inte skräppost.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som inte skräppost</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som inte skräppost</item>
     </plurals>
     <plurals name="conversation_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har markerats som oviktig.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har markerats som oviktig.</item>
-    </plurals>
-    <plurals name="conversation_phished">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som nätfiske.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har rapporterats som nätfiske.</item>
+        <item quantity="other">%1$d har markerats som oviktiga</item>
+        <item quantity="one">%1$d har markerats som oviktig</item>
     </plurals>
     <plurals name="conversation_archived">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har arkiverats.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har arkiverats.</item>
-    </plurals>
-    <plurals name="conversation_moved_to_inbox">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har flyttats till inkorgen.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har flyttats till inkorgen.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har arkiverats</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har arkiverats</item>
     </plurals>
     <plurals name="conversation_deleted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har tagits bort.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har tagits bort.</item>
-    </plurals>
-    <plurals name="conversation_marked_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har markerats som viktiga.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har markerats som viktig.</item>
-    </plurals>
-    <plurals name="conversation_marked_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har markerats som oviktiga.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har markerats som oviktig.</item>
-    </plurals>
-    <plurals name="conversation_marked_read">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har markerats som lästa.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har markerats som läst.</item>
-    </plurals>
-    <plurals name="conversation_marked_unread">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har markerats som olästa.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har markerats som oläst.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> har raderats</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> har raderats</item>
     </plurals>
     <plurals name="conversation_folder_changed">
-        <item quantity="other">Etiketterna har ändrats.</item>
+        <item quantity="other">Etiketter har ändrats.</item>
         <item quantity="one">Etiketten har ändrats.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d nya meddelanden</item>
+        <item quantity="one">%1$d nytt meddelande</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Visa %1$d äldre meddelanden</item>
+        <item quantity="one">Visa äldre meddelanede</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d äldre meddelanden visade</item>
+        <item quantity="one">Ett äldre meddelande visat</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d nya meddelanden</item>
+        <item quantity="one">%1$d nytt meddelande</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d konversationer raderas permanent.</item>
+        <item quantity="one">%1$d konversation raderas permanent.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d meddelanden</item>
+        <item quantity="one">%1$d meddelande</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d bilagor</item>
+        <item quantity="one">%1$d bilaga</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Meddelandena markeras som skräppost. Vill du dessutom sluta få liknande meddelanden från de här &amp;lt;/b>%2$d avsändarna&amp;lt;/b>: %1$s</item>
+        <item quantity="one">Meddelandet markeras som skräppost. Vill du dessutom sluta få liknande meddelanden från %1$s?</item>
     </plurals>
     <plurals name="sync_recent">
-        <item quantity="other">Synkronisera: %1$d d. bakåt</item>
+        <item quantity="other">Synkronisera: %1$d dagar bakåt</item>
         <item quantity="one">Synkronisera: %1$d dag bakåt</item>
-    </plurals>
-    <plurals name="confirm_discard_conversation">
-        <item quantity="other">Vill du slänga de här %1$d utkasten?</item>
-        <item quantity="one">Vill du slänga utkastet?</item>
-    </plurals>
-    <plurals name="conversation_muting">
-        <item quantity="other">Stänger av ljudet på %1$d konversationer.</item>
-        <item quantity="one">Stänger av ljudet för %1$d konversation.</item>
-    </plurals>
-    <plurals name="conversation_spamming">
-        <item quantity="other">Rapporterar %1$d konversationer som skräppost.</item>
-        <item quantity="one">Rapporterar %1$d konversation som skräppost.</item>
-    </plurals>
-    <plurals name="conversation_archiving">
-        <item quantity="other">Arkiverar %1$d konversationer.</item>
-        <item quantity="one">Arkiverar %1$d konversation.</item>
-    </plurals>
-    <plurals name="conversation_deleting">
-        <item quantity="other">Tar bort %1$d konversationer.</item>
-        <item quantity="one">Tar bort %1$d konversation.</item>
-    </plurals>
-    <plurals name="conversation_unstarring">
-        <item quantity="other">Tar bort stjärnmärkning från %1$d konversationer.</item>
-        <item quantity="one">Tar bort stjärnmärkning från %1$d konversation.</item>
-    </plurals>
-    <plurals name="conversation_label_changed">
-        <item quantity="other">Etiketterna har ändrats.</item>
-        <item quantity="one">Etiketten har ändrats.</item>
     </plurals>
     <plurals name="sync_duration">
         <item quantity="other">%d dagar</item>
@@ -136,12 +100,25 @@
         <item quantity="other">Dagar</item>
         <item quantity="one">Dag</item>
     </plurals>
-    <plurals name="notify_attachment_error">
-        <item quantity="other">Det gick inte att visa bilagan%s</item>
-        <item quantity="one">Det gick inte att visa bilagan</item>
-    </plurals>
     <plurals name="sync_messages_partial_description">
-        <item quantity="other">Meddelanden från de senaste %1$d dagarna hämtas när du är ansluten</item>
-        <item quantity="one">Meddelanden från den senaste dagen hämtas när du är ansluten</item>
+        <item quantity="other">Meddelanden från de senaste %1$d dagarna laddas ned när du är ansluten</item>
+        <item quantity="one">Meddelanden från den senaste dagen laddas ned när du är ansluten</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Obs! Vissa mottagare kanske fortfarande inte har tillgång till dessa filer. Du kan behöva dela dessa filer inifrån Google Drive.</item>
+        <item quantity="one">Obs! Vissa mottagare kanske fortfarande inte har tillgång till den här filen. Du kan behöva dela den här filen inifrån Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Du delar med mottagare:&amp;lt;b>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;/b> som inte ingår i Google Apps-organisationen som filen tillhör."</item>
+        <item quantity="one">Du delar med mottagare:&amp;lt;b>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;/b> som inte ingår i Google Apps-organisationen som filen tillhör.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Dina mottagare kanske inte har tillgång till de filer du la till från Drive. Du kan behöva dela filerna inifrån Google Drive.</item>
+        <item quantity="one">Dina mottagare kanske inte har tillgång till den fil du la till från Drive. Du kan behöva dela filen inifrån Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Nuvarande e-postadresser:</item>
+        <item quantity="one">Nuvarande e-postadress:</item>
     </plurals>
 </resources>

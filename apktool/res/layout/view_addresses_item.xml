@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/setup_dialog_item_padding_side" android:paddingTop="@dimen/setup_dialog_item_padding_vertical" android:paddingRight="@dimen/setup_dialog_item_padding_side" android:paddingBottom="@dimen/setup_dialog_item_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@color/text_color_black" android:id="@id/email" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="@color/text_color_grey" android:id="@id/canonical_type" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

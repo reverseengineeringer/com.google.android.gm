@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.browse.ConversationFooterView android:orientation="vertical" android:background="@color/conversation_view_overlay_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/conversation_view_border" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/footer_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_border_margin_side" android:layout_marginRight="@dimen/conversation_border_margin_side">
+        <TextView android:id="@id/reply_button" android:focusable="true" android:text="@string/reply" android:drawableTop="@drawable/ic_reply_24dp" style="@style/ConversationFooterButtonStyle" />
+        <TextView android:id="@id/reply_all_button" android:focusable="true" android:text="@string/reply_all" android:drawableTop="@drawable/ic_reply_all_24dp" style="@style/ConversationFooterButtonStyle" />
+        <TextView android:id="@id/forward_button" android:focusable="true" android:text="@string/forward" android:drawableTop="@drawable/ic_forward_24dp" style="@style/ConversationFooterButtonStyle" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/conversation_footer_canned_responses" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_border_margin_side" android:layout_marginRight="@dimen/conversation_border_margin_side">
+        <TextView android:id="@id/canned_response_1" android:focusable="true" android:visibility="invisible" android:text="@string/reply" android:drawableTop="@drawable/ic_reply_24dp" style="@style/ConversationFooterButtonStyle" />
+        <TextView android:id="@id/canned_response_2" android:focusable="true" android:visibility="invisible" android:text="@string/reply" android:drawableTop="@drawable/ic_reply_24dp" style="@style/ConversationFooterButtonStyle" />
+        <TextView android:id="@id/canned_response_3" android:focusable="true" android:visibility="invisible" android:text="@string/reply" android:drawableTop="@drawable/ic_reply_24dp" style="@style/ConversationFooterButtonStyle" />
+    </LinearLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="48.0dip" />
+</com.android.mail.browse.ConversationFooterView>

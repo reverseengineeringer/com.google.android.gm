@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_drawer_label_40_24dp" android:state_activated="true" />
+    <item android:drawable="@drawable/ic_drawer_label_24dp" />
+</selector>

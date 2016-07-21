@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/compose_recipients_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/to_content" style="@style/RecipientComposeFieldLayout">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ComposeFieldContentWithEndButton">
+            <TextView android:id="@id/to_heading" android:text="@string/to" android:contentDescription="@string/to" android:labelFor="@id/to" style="@style/ComposeHeading" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.android.ex.chips.RecipientEditTextView android:id="@id/to" android:dropDownAnchor="@id/to_content" style="@style/ToRecipientEditTextViewStyle" />
+                    <ImageView android:id="@id/add_cc_bcc" android:src="@drawable/ic_expand_more_24dp" android:contentDescription="@string/add_cc_label" style="@style/ComposeFieldButton" />
+                </LinearLayout>
+                <Space android:id="@id/compose_to_dropdown_anchor" android:layout_width="fill_parent" android:layout_height="0.0dip" style="@style/ComposeToDropdownAnchor" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/DefaultDividerStyle" />
+    <com.android.mail.compose.CcBccView android:id="@id/cc_bcc_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

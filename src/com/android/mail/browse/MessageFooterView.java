@@ -3,42 +3,56 @@ package com.android.mail.browse;
 import android.app.FragmentManager;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
+import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.res.Resources;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import buc;
+import buj;
+import buo;
+import but;
+import bvo;
+import bvu;
+import bvz;
+import bxu;
+import byy;
+import com.android.mail.providers.Account;
 import com.android.mail.providers.Attachment;
 import com.android.mail.providers.Message;
-import com.android.mail.ui.AttachmentTile;
 import com.android.mail.ui.AttachmentTileGrid;
-import com.android.mail.utils.LogTag;
-import com.android.mail.utils.LogUtils;
-import com.google.common.base.Objects;
-import com.google.common.collect.Lists;
+import ctw;
+import cvl;
+import cvm;
+import hbc;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
 public class MessageFooterView
   extends LinearLayout
-  implements ConversationContainer.DetachListener, LoaderManager.LoaderCallbacks<Cursor>
+  implements LoaderManager.LoaderCallbacks<Cursor>, View.OnClickListener
 {
-  private static final String LOG_TAG = ;
-  private LinearLayout mAttachmentBarList;
-  private AttachmentTileGrid mAttachmentGrid;
-  private AttachmentLoader.AttachmentCursor mAttachmentsCursor;
-  private FragmentManager mFragmentManager;
-  private final LayoutInflater mInflater;
-  private LoaderManager mLoaderManager;
-  private ConversationViewAdapter.MessageHeaderItem mMessageHeaderItem;
-  private View mTitleBar;
-  private TextView mTitleText;
+  private static final String g = cvl.a;
+  public AttachmentTileGrid a;
+  private bxu b;
+  private LoaderManager c;
+  private FragmentManager d;
+  private final List<Attachment> e = new ArrayList();
+  private TextView f;
+  private bvz h;
+  private byy i;
+  private bvu j;
+  private Integer k;
   
   public MessageFooterView(Context paramContext)
   {
@@ -48,173 +62,185 @@ public class MessageFooterView
   public MessageFooterView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    mInflater = LayoutInflater.from(paramContext);
   }
   
-  private Integer getAttachmentLoaderId()
+  private final Account a()
   {
-    Object localObject2 = null;
-    if (mMessageHeaderItem == null) {}
-    for (MessageCursor.ConversationMessage localConversationMessage = null;; localConversationMessage = mMessageHeaderItem.getMessage())
+    if (h != null) {
+      return h.a();
+    }
+    return null;
+  }
+  
+  private final void a(boolean paramBoolean)
+  {
+    Object localObject1;
+    if (!e.isEmpty())
     {
-      Object localObject1 = localObject2;
-      if (localConversationMessage != null)
+      localObject1 = e;
+      if ((localObject1 != null) && (!((List)localObject1).isEmpty())) {
+        break label45;
+      }
+    }
+    label45:
+    ArrayList localArrayList;
+    do
+    {
+      return;
+      localObject1 = b.f.l();
+      break;
+      localArrayList = new ArrayList(((List)localObject1).size());
+      Object localObject2 = ((List)localObject1).iterator();
+      int m = 0;
+      while (((Iterator)localObject2).hasNext())
       {
-        localObject1 = localObject2;
-        if (hasAttachments)
-        {
-          localObject1 = localObject2;
-          if (attachmentListUri != null) {
-            localObject1 = Integer.valueOf(attachmentListUri.hashCode());
+        Attachment localAttachment = (Attachment)((Iterator)localObject2).next();
+        if (((!localAttachment.m()) || (i.c())) && ((l & 0x800) == 0)) {
+          if (localAttachment.j())
+          {
+            localArrayList.add(m, localAttachment);
+            m += 1;
+          }
+          else
+          {
+            localArrayList.add(localAttachment);
           }
         }
       }
-      return (Integer)localObject1;
+      localObject2 = b.f;
+      H = Attachment.a((Collection)localObject1);
+      al = null;
+    } while (localArrayList.isEmpty());
+    a.a(d, a(), b.f, localArrayList, paramBoolean, j);
+    a.setVisibility(0);
+  }
+  
+  public final void a(LoaderManager paramLoaderManager, FragmentManager paramFragmentManager, bvz parambvz, byy parambyy, bvu parambvu)
+  {
+    c = paramLoaderManager;
+    d = paramFragmentManager;
+    h = parambvz;
+    i = parambyy;
+    j = parambvu;
+  }
+  
+  public final void a(bxu parambxu, boolean paramBoolean)
+  {
+    TextView localTextView = null;
+    int n = 0;
+    b = parambxu;
+    if (b == null)
+    {
+      parambxu = null;
+      if (parambxu != null) {
+        break label247;
+      }
+      parambxu = localTextView;
+      label27:
+      if ((k != null) && (!hbc.a(k, parambxu)))
+      {
+        c.destroyLoader(k.intValue());
+        a.removeAllViewsInLayout();
+        f.setVisibility(8);
+        a.setVisibility(8);
+      }
+      k = parambxu;
+      if ((!paramBoolean) && (parambxu != null))
+      {
+        cvm.c(g, "binding footer view, calling initLoader for message %d", new Object[] { parambxu });
+        c.initLoader(parambxu.intValue(), Bundle.EMPTY, this);
+      }
+      if (a.getChildCount() == 0) {
+        a(false);
+      }
+      parambxu = b.f;
+      localTextView = f;
+      if (O != 2) {
+        break label255;
+      }
+      m = buj.fD;
+      label171:
+      localTextView.setText(m);
+      localTextView = f;
+      if ((O != 2) && ((O != 1) || (TextUtils.isEmpty(P)))) {
+        break label262;
+      }
+      m = 0;
+      label211:
+      localTextView.setVisibility(m);
+      if (!b.g) {
+        break label268;
+      }
+    }
+    label247:
+    label255:
+    label262:
+    label268:
+    for (int m = n;; m = 8)
+    {
+      setVisibility(m);
+      return;
+      parambxu = b.f;
+      break;
+      parambxu = parambxu.q();
+      break label27;
+      m = buj.fC;
+      break label171;
+      m = 8;
+      break label211;
     }
   }
   
-  private void renderAttachments(List<Attachment> paramList, boolean paramBoolean)
+  public void onClick(View paramView)
   {
-    if ((paramList == null) || (paramList.isEmpty())) {
+    buo.a().a("view_entire_message", "clicked", null, 0L);
+    paramView = getContext();
+    ConversationMessage localConversationMessage = b.f;
+    if (O == 1)
+    {
+      localObject1 = new Intent();
+      localObject2 = paramView.getResources().getString(buj.cb);
+      if (TextUtils.isEmpty((CharSequence)localObject2)) {
+        cvm.f(g, "Trying to open clipped message with no activity defined", new Object[0]);
+      }
+    }
+    while (O != 2)
+    {
+      Object localObject2;
+      do
+      {
+        return;
+        ((Intent)localObject1).setClassName(paramView, (String)localObject2);
+        localObject2 = a();
+      } while ((localObject2 == null) || (TextUtils.isEmpty(P)));
+      ((Intent)localObject1).putExtra("extra-account-uri", g);
+      ((Intent)localObject1).putExtra("permalink", P);
+      ((Intent)localObject1).putExtra("account-name", c);
+      ((Intent)localObject1).putExtra("server-message-id", e);
+      paramView.startActivity((Intent)localObject1);
       return;
     }
-    int i = paramList.size();
-    ArrayList localArrayList1 = new ArrayList(i);
-    ArrayList localArrayList2 = new ArrayList(i);
-    Iterator localIterator = paramList.iterator();
-    while (localIterator.hasNext())
-    {
-      Attachment localAttachment = (Attachment)localIterator.next();
-      if (AttachmentTile.isTiledAttachment(localAttachment)) {
-        localArrayList1.add(localAttachment);
-      } else {
-        localArrayList2.add(localAttachment);
-      }
-    }
-    mMessageHeaderItem.getMessage().attachmentsJson = Attachment.toJSONArray(paramList);
-    mTitleText.setVisibility(0);
-    mTitleBar.setVisibility(0);
-    renderTiledAttachments(localArrayList1, paramBoolean);
-    renderBarAttachments(localArrayList2, paramBoolean);
-  }
-  
-  private void renderAttachments(boolean paramBoolean)
-  {
-    if ((mAttachmentsCursor != null) && (!mAttachmentsCursor.isClosed()))
-    {
-      int i = -1;
-      ArrayList localArrayList = Lists.newArrayList();
-      for (;;)
-      {
-        AttachmentLoader.AttachmentCursor localAttachmentCursor = mAttachmentsCursor;
-        i += 1;
-        localObject = localArrayList;
-        if (!localAttachmentCursor.moveToPosition(i)) {
-          break;
-        }
-        localArrayList.add(mAttachmentsCursor.get());
-      }
-    }
-    Object localObject = mMessageHeaderItem.getMessage().getAttachments();
-    renderAttachments((List)localObject, paramBoolean);
-  }
-  
-  private void renderBarAttachments(List<Attachment> paramList, boolean paramBoolean)
-  {
-    mAttachmentBarList.setVisibility(0);
-    Iterator localIterator = paramList.iterator();
-    while (localIterator.hasNext())
-    {
-      Attachment localAttachment = (Attachment)localIterator.next();
-      Uri localUri = localAttachment.getIdentifierUri();
-      MessageAttachmentBar localMessageAttachmentBar = (MessageAttachmentBar)mAttachmentBarList.findViewWithTag(localUri);
-      paramList = localMessageAttachmentBar;
-      if (localMessageAttachmentBar == null)
-      {
-        paramList = MessageAttachmentBar.inflate(mInflater, this);
-        paramList.setTag(localUri);
-        paramList.initialize(mFragmentManager);
-        mAttachmentBarList.addView(paramList);
-      }
-      paramList.render(localAttachment, paramBoolean);
-    }
-  }
-  
-  private void renderTiledAttachments(List<Attachment> paramList, boolean paramBoolean)
-  {
-    mAttachmentGrid.setVisibility(0);
-    mAttachmentGrid.configureGrid(mFragmentManager, mMessageHeaderItem.getMessage().attachmentListUri, paramList, paramBoolean);
-  }
-  
-  public void bind(ConversationViewAdapter.MessageHeaderItem paramMessageHeaderItem, boolean paramBoolean)
-  {
-    int i = 0;
-    if ((mMessageHeaderItem != null) && (mMessageHeaderItem.getMessage() != null) && (mMessageHeaderItem.getMessage().attachmentListUri != null) && (!mMessageHeaderItem.getMessage().attachmentListUri.equals(getMessageattachmentListUri)))
-    {
-      mAttachmentGrid.removeAllViewsInLayout();
-      mAttachmentBarList.removeAllViewsInLayout();
-      mTitleText.setVisibility(8);
-      mTitleBar.setVisibility(8);
-      mAttachmentGrid.setVisibility(8);
-      mAttachmentBarList.setVisibility(8);
-    }
-    Integer localInteger = getAttachmentLoaderId();
-    mMessageHeaderItem = paramMessageHeaderItem;
-    paramMessageHeaderItem = getAttachmentLoaderId();
-    if ((localInteger != null) && (!Objects.equal(localInteger, paramMessageHeaderItem))) {
-      mLoaderManager.destroyLoader(localInteger.intValue());
-    }
-    if ((!paramBoolean) && (paramMessageHeaderItem != null))
-    {
-      LogUtils.i(LOG_TAG, "binding footer view, calling initLoader for message %d", new Object[] { paramMessageHeaderItem });
-      mLoaderManager.initLoader(paramMessageHeaderItem.intValue(), Bundle.EMPTY, this);
-    }
-    if ((mAttachmentGrid.getChildCount() == 0) && (mAttachmentBarList.getChildCount() == 0)) {
-      renderAttachments(false);
-    }
-    if (mMessageHeaderItem.isExpanded()) {}
-    for (;;)
-    {
-      setVisibility(i);
-      return;
-      i = 8;
-    }
-  }
-  
-  public void initialize(LoaderManager paramLoaderManager, FragmentManager paramFragmentManager)
-  {
-    mLoaderManager = paramLoaderManager;
-    mFragmentManager = paramFragmentManager;
+    Object localObject1 = new ContentValues(1);
+    ((ContentValues)localObject1).put("clipped", Integer.valueOf(3));
+    new ctw().a(paramView.getContentResolver(), f, (ContentValues)localObject1, null, null);
   }
   
   public Loader<Cursor> onCreateLoader(int paramInt, Bundle paramBundle)
   {
-    return new AttachmentLoader(getContext(), mMessageHeaderItem.getMessage().attachmentListUri);
+    return new bvo(getContext(), b.f.x);
   }
-  
-  public void onDetachedFromParent() {}
   
   protected void onFinishInflate()
   {
     super.onFinishInflate();
-    mTitleText = ((TextView)findViewById(2131755146));
-    mTitleBar = findViewById(2131755147);
-    mAttachmentGrid = ((AttachmentTileGrid)findViewById(2131755090));
-    mAttachmentBarList = ((LinearLayout)findViewById(2131755091));
-  }
-  
-  public void onLoadFinished(Loader<Cursor> paramLoader, Cursor paramCursor)
-  {
-    mAttachmentsCursor = ((AttachmentLoader.AttachmentCursor)paramCursor);
-    if ((mAttachmentsCursor == null) || (mAttachmentsCursor.isClosed())) {
-      return;
-    }
-    renderAttachments(true);
+    f = ((TextView)findViewById(buc.fH));
+    a = ((AttachmentTileGrid)findViewById(buc.z));
+    f.setOnClickListener(this);
   }
   
   public void onLoaderReset(Loader<Cursor> paramLoader)
   {
-    mAttachmentsCursor = null;
+    e.clear();
   }
 }
 

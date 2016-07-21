@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/rte_toolbar_height" android:width="@dimen/rte_toolbar_fade_edge_width" />
+    <gradient android:startColor="@android:color/transparent" android:endColor="@color/rte_fade_edge_end_color" />
+</shape>

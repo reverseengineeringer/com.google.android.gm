@@ -2,48 +2,95 @@
 <resources>
     <string-array name="compose_modes">
         <item>Beantwoorden</item>
-        <item>Allen beantwoorden</item>
+        <item>Allen beantw.</item>
         <item>Doorsturen</item>
     </string-array>
     <string-array name="sync_status">
         <item>Geslaagd</item>
-        <item>Geen verbinding.</item>
-        <item>Kan niet aanmelden.</item>
-        <item>Beveiligingsfout.</item>
-        <item>Kan niet synchroniseren.</item>
+        <item>Geen verbinding</item>
+        <item>Kan niet inloggen</item>
+        <item>Veiligheidsfout</item>
+        <item>Kan niet synchroniseren</item>
+        <item>Serverfout</item>
         <item>Interne fout</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Systeem</item>
-        <item>Veelgebruikt</item>
-        <item>Alle labels</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Nieuwer</item>
         <item>Ouder</item>
-        <item>Conversatielijst</item>
+        <item>Gesprekkenlijst</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
-        <item>Nieuwere conversatie weergeven na archiveren of verwijderen</item>
-        <item>Oudere conversatie weergeven na archiveren of verwijderen</item>
-        <item>Conversatielijst weergeven na archiveren of verwijderen</item>
+        <item>Nieuwer gesprek weergeven na archiveren of verwijderen</item>
+        <item>Ouder gesprek weergeven na archiveren of verwijderen</item>
+        <item>Gesprekkenlijst weergeven na archiveren of verwijderen</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Heeft geen effect</item>
-        <item>Archiveert of verwijdert</item>
-        <item>Verwijdert altijd</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archiveren</item>
+        <item>Verwijderen</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Heeft geen effect</item>
-        <item>Postvak IN: archiveert conversatie. Gewone labels: verwijdert huidig label. Systeemlabels zoals Alle e-mail of Verzonden: verwijdert conversatie.</item>
-        <item>Verwijdert conversatie altijd</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archiveren</item>
+        <item>Verwijderen</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Hoog</item>
+        <item>Normaal</item>
+        <item>Laag</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Mis nooit meer een vlucht.</item>
+        <item>Mis nooit meer een vlucht.</item>
+        <item>Deze vlucht toevoegen aan je agenda?</item>
+        <item>Ontvang reserveringen in je Google-agenda.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Agenda voegt automatisch vluchten en andere reserveringen toe aan je agenda.</item>
+        <item>Google Agenda voegt automatisch vluchten en andere reserveringen toe aan je agenda.</item>
+        <item>Afspraken uit Gmail kunnen automatisch worden toegevoegd met de Google Agenda-app.</item>
+        <item>Laat reserveringen voor vluchten, hotels en restaurants automatisch toevoegen.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Deze reservering toevoegen aan Google Agenda?</item>
+        <item>Wil je reserveringen automatisch toevoegen aan je agenda?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Met de Google Agenda-app worden afspraken uit Gmail automatisch toegevoegd aan je agenda.</item>
+        <item>Google Agenda voegt automatisch hotelreserveringen en andere reserveringen uit je e-mail toe.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Ontvang een tijdige melding voor je etentje.</item>
+        <item>Deze reservering toevoegen aan Google Agenda?</item>
+        <item>Ontvang reserveringen automatisch in je Google-agenda.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Agenda voegt automatisch restaurantreserveringen en andere reserveringen toe aan je agenda.</item>
+        <item>Afspraken uit Gmail kunnen automatisch worden toegevoegd aan je agenda.</item>
+        <item>Laat reserveringen voor vluchten, hotels en restaurants automatisch toevoegen.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Ontvang een tijdige melding voorafgaand aan deze afspraak.</item>
+        <item>Deze afspraak toevoegen aan Google Agenda?</item>
+        <item>Mis je afspraak niet.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Agenda voegt automatisch afspraken en reserveringen, zoals die in deze e-mail, toe aan je agenda.</item>
+        <item>Afspraken uit Gmail kunnen automatisch worden toegevoegd aan je agenda.</item>
+        <item>Laat afspraken en andere reserveringen automatisch toevoegen met Google Agenda.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Houd je reserveringen op één centrale locatie bij.</item>
+        <item>Deze reserveringen toevoegen aan Google Agenda?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Laat reserveringen voor vluchten, hotels en restaurants automatisch toevoegen aan je Google-agenda.</item>
+        <item>Afspraken uit Gmail kunnen automatisch worden toegevoegd aan je agenda.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
-        <item>Minuscuul</item>
+        <item>Heel klein</item>
         <item>Klein</item>
         <item>Normaal</item>
         <item>Groot</item>
-        <item>Enorm</item>
+        <item>Extra groot</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Inhoud van berichten weergeven in minuscule tekst</item>
@@ -51,15 +98,5 @@
         <item>Inhoud van berichten weergeven in tekst van normaal formaat</item>
         <item>Inhoud van berichten weergeven in grote tekst</item>
         <item>Inhoud van berichten weergeven in enorme tekst</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Berichtacties altijd boven aan het scherm weergeven</item>
-        <item>Berichtacties alleen boven aan het scherm weergeven wanneer het scherm naar een staande indeling is gedraaid</item>
-        <item>Berichtacties niet weergeven buiten de berichtkop</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Altijd weergeven</item>
-        <item>Alleen staand weergeven</item>
-        <item>Niet weergeven</item>
     </string-array>
 </resources>

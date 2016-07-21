@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WelcomeTour.ImageContainer" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">end|center</item>
+        <item name="android:layout_marginEnd">@dimen/welcome_tour_image_margin_end</item>
+    </style>
+</resources>

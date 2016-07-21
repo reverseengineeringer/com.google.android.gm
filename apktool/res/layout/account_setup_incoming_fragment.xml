@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/headline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/setup_title_bottom_padding" android:text="@string/account_setup_incoming_headline" style="@style/AccountSettingsHeadline" />
+    <include layout="@layout/error_text_view" />
+    <android.support.design.widget.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSetupEditText">
+        <EditText android:id="@id/account_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/account_setup_username_label" android:inputType="textEmailAddress" style="@style/SetupTextStyle" />
+    </android.support.design.widget.TextInputLayout>
+    <com.android.email.activity.setup.AuthenticationView android:id="@id/authentication_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include android:id="@id/client_certificate_selector" android:visibility="gone" layout="@layout/client_certificate_selector" />
+    <include layout="@layout/device_details" />
+    <android.support.design.widget.TextInputLayout android:id="@id/account_server_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSetupEditText">
+        <EditText android:id="@id/account_server" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/account_setup_server_label" android:inputType="textUri" style="@style/SetupTextStyle" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSetupEditText">
+        <EditText android:id="@id/account_port" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/account_setup_port_label" android:inputType="number" style="@style/SetupTextStyle" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_security_label" style="@style/AccountSetupLabelText" />
+    <Spinner android:id="@id/account_security_type" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/account_setup_security_label" style="@style/AccountSettingsSpinner" />
+    <TextView android:id="@id/account_delete_policy_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_setup_incoming_delete_policy_label" style="@style/AccountSetupLabelText" />
+    <Spinner android:id="@id/account_delete_policy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/account_setup_incoming_delete_policy_label" style="@style/AccountSettingsSpinner" />
+    <android.support.design.widget.TextInputLayout android:id="@id/imap_path_prefix_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AccountSetupEditText">
+        <EditText android:id="@id/imap_path_prefix" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/account_setup_incoming_imap_path_prefix_label" android:inputType="text" style="@style/SetupTextStyle" />
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

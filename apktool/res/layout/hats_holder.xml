@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gm.happiness.HatsHolder android:id="@id/survey_holder" android:layout_height="wrap_content" style="@style/HatsSurveyHolder"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/hats_card_margin_default" android:layout_marginTop="@dimen/hats_card_margin_top" android:layout_marginRight="@dimen/hats_card_margin_default" android:layout_marginBottom="@dimen/hats_card_margin_default" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="@dimen/hats_card_corner_radius">
+        <include layout="@layout/hats_survey_promo" />
+        <include android:visibility="gone" layout="@layout/hats_survey_container" />
+        <include android:visibility="gone" layout="@layout/hats_survey_thank_you" />
+    </android.support.v7.widget.CardView>
+</com.google.android.gm.happiness.HatsHolder>

@@ -1,0 +1,9 @@
+final class bhp
+  implements bht<Long>
+{}
+
+/* Location:
+ * Qualified Name:     bhp
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

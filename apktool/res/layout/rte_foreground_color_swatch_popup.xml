@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/radio_group_swatch" style="@style/PopupWindowContentView"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/btn_default" android:background="@drawable/rte_swatch_button_default" android:contentDescription="@string/rte_swatch_button_black" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/btn_red" android:background="@drawable/rte_swatch_button_red" android:contentDescription="@string/rte_swatch_button_red" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/btn_blue" android:background="@drawable/rte_swatch_button_blue" android:contentDescription="@string/rte_swatch_button_blue" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/btn_green" android:background="@drawable/rte_swatch_button_green" android:contentDescription="@string/rte_swatch_button_green" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/btn_yellow" android:background="@drawable/rte_swatch_button_yellow" android:contentDescription="@string/rte_swatch_button_yellow" style="@style/PopupRadioButton" />
+    <RadioButton android:id="@id/btn_gray" android:background="@drawable/rte_swatch_button_gray" android:contentDescription="@string/rte_swatch_button_gray" style="@style/PopupRadioButton" />
+</RadioGroup>

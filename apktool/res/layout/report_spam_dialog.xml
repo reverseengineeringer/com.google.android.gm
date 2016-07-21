@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="?android:dialogPreferredPadding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:id="@id/report_spam_dialog_message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:textColor="@color/conversation_view_text_color_link_blue" android:id="@id/report_spam_dialog_learn_more" android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/learn_more" />
+</LinearLayout>

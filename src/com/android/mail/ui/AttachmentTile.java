@@ -4,38 +4,49 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.os.Parcelable.Creator;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.Shader;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.View.OnLongClickListener;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.android.ex.photo.util.ImageUtils;
+import android.widget.Toast;
+import bua;
+import bub;
+import buc;
+import buj;
+import ceb;
+import cki;
+import ckk;
 import com.android.mail.providers.Attachment;
-import com.android.mail.utils.AttachmentUtils;
-import com.android.mail.utils.LogTag;
-import com.android.mail.utils.LogUtils;
+import cqr;
+import ctr;
+import cvl;
+import cvm;
+import cxa;
+import cxe;
 
 public class AttachmentTile
-  extends RelativeLayout
-  implements AttachmentBitmapHolder
+  extends FrameLayout
+  implements View.OnLongClickListener, cki
 {
-  private static final String LOG_TAG = ;
-  protected Attachment mAttachment;
-  private AttachmentPreviewCache mAttachmentPreviewCache;
-  private String mAttachmentSizeText;
-  private ImageView mDefaultIcon;
-  private boolean mDefaultThumbnailSet = true;
-  private String mDisplayType;
-  private ImageView mIcon;
-  private TextView mSubtitle;
-  private ThumbnailLoadTask mThumbnailTask;
-  private TextView mTitle;
+  private static final String j = cvl.a;
+  private int a;
+  private int b;
+  private int c;
+  private ImageView d;
+  private TextView e;
+  private boolean f = true;
+  public Attachment g;
+  ImageView h;
+  private ckk i;
   
   public AttachmentTile(Context paramContext)
   {
@@ -47,187 +58,238 @@ public class AttachmentTile
     super(paramContext, paramAttributeSet);
   }
   
-  public static boolean isTiledAttachment(Attachment paramAttachment)
+  public static int a(int paramInt)
   {
-    return ImageUtils.isImageMimeType(contentType);
+    switch (paramInt)
+    {
+    case 4: 
+    default: 
+      return bub.X;
+    case 1: 
+      return bub.ad;
+    case 2: 
+      return bub.Y;
+    case 3: 
+      return bub.ac;
+    case 5: 
+      return bub.Z;
+    case 6: 
+      return bub.aa;
+    case 7: 
+      return bub.V;
+    case 8: 
+      return bub.ab;
+    case 9: 
+      return bub.W;
+    }
+    return bub.ae;
   }
   
-  private void updateSubtitleText()
+  private final CharSequence a()
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append(mAttachmentSizeText);
-    localStringBuilder.append(' ');
-    localStringBuilder.append(mDisplayType);
-    mSubtitle.setText(localStringBuilder.toString());
+    if (g == null) {
+      return null;
+    }
+    int k;
+    switch (ctr.a(g.l()))
+    {
+    case 4: 
+    default: 
+      k = buj.G;
+    }
+    for (;;)
+    {
+      String str = cxa.d(g.c);
+      return getResources().getString(k, new Object[] { str });
+      k = buj.s;
+      continue;
+      k = buj.x;
+      continue;
+      k = buj.H;
+      continue;
+      k = buj.t;
+      continue;
+      k = buj.v;
+      continue;
+      k = buj.w;
+      continue;
+      k = buj.B;
+      continue;
+      k = buj.u;
+      continue;
+      k = buj.I;
+    }
   }
   
-  public boolean bitmapSetToDefault()
+  public final void a(Bitmap paramBitmap)
   {
-    return mDefaultThumbnailSet;
+    if (paramBitmap == null) {
+      return;
+    }
+    int k = paramBitmap.getWidth();
+    int m = paramBitmap.getHeight();
+    int n = h.getWidth();
+    int i1 = h.getHeight();
+    float f1 = n / k;
+    float f2 = i1 / m;
+    Matrix localMatrix = new Matrix();
+    float f3 = Math.max(f1, f2);
+    localMatrix.setScale(f3, f3);
+    if (ctr.a(g.l()) == 2)
+    {
+      if (f1 >= f2) {
+        break label171;
+      }
+      localMatrix.postTranslate((n - k * f2) * 0.5F, 0.0F);
+    }
+    for (;;)
+    {
+      ceb localceb = new ceb(paramBitmap, a);
+      a.getShader().setLocalMatrix(localMatrix);
+      h.setImageDrawable(localceb);
+      i.a(g, paramBitmap);
+      f = false;
+      return;
+      label171:
+      localMatrix.postTranslate(0.0F, (i1 - m * f1) * 0.5F);
+    }
   }
   
-  public ContentResolver getResolver()
-  {
-    return getContext().getContentResolver();
-  }
-  
-  public int getThumbnailHeight()
-  {
-    return mIcon.getHeight();
-  }
-  
-  public int getThumbnailWidth()
-  {
-    return mIcon.getWidth();
-  }
-  
-  protected void onFinishInflate()
-  {
-    super.onFinishInflate();
-    mTitle = ((TextView)findViewById(2131755088));
-    mSubtitle = ((TextView)findViewById(2131755089));
-    mIcon = ((ImageView)findViewById(2131755057));
-    mDefaultIcon = ((ImageView)findViewById(2131755058));
-  }
-  
-  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
-    super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    ThumbnailLoadTask.setupThumbnailPreview(mThumbnailTask, this, mAttachment, null);
-  }
-  
-  public void render(Attachment paramAttachment, Uri paramUri, int paramInt, AttachmentPreviewCache paramAttachmentPreviewCache, boolean paramBoolean)
+  public void a(Attachment paramAttachment, ckk paramckk)
   {
     if (paramAttachment == null)
     {
       setVisibility(4);
       return;
     }
-    paramUri = mAttachment;
-    mAttachment = paramAttachment;
-    mAttachmentPreviewCache = paramAttachmentPreviewCache;
-    LogUtils.d(LOG_TAG, "got attachment list row: name=%s state/dest=%d/%d dled=%d contentUri=%s MIME=%s", new Object[] { name, Integer.valueOf(state), Integer.valueOf(destination), Integer.valueOf(downloadedSize), contentUri, contentType });
-    if ((paramUri == null) || (!TextUtils.equals(name, name))) {
-      mTitle.setText(name);
-    }
-    if ((paramUri == null) || (size != size))
+    Attachment localAttachment = g;
+    g = paramAttachment;
+    i = paramckk;
+    paramckk = c;
+    cvm.b(j, "got attachment list row: name=%s state/dest=%d/%d dled=%d contentUri=%s MIME=%s flags=%d", new Object[] { paramckk, Integer.valueOf(f), Integer.valueOf(g), Integer.valueOf(h), i, paramAttachment.l(), Integer.valueOf(l) });
+    int m;
+    Object localObject;
+    int k;
+    if ((localAttachment == null) || (!TextUtils.equals(paramckk, c)))
     {
-      mAttachmentSizeText = AttachmentUtils.convertToHumanReadableSize(getContext(), size);
-      mDisplayType = AttachmentUtils.getDisplayType(getContext(), paramAttachment);
-      updateSubtitleText();
-    }
-    ThumbnailLoadTask.setupThumbnailPreview(mThumbnailTask, this, paramAttachment, paramUri);
-  }
-  
-  public void setThumbnail(Bitmap paramBitmap)
-  {
-    if (paramBitmap == null) {
-      return;
-    }
-    mDefaultIcon.setVisibility(8);
-    int i = getResources().getInteger(2131361837);
-    int j = paramBitmap.getWidth();
-    int k = paramBitmap.getHeight();
-    int m = getResourcesgetDisplayMetricsdensityDpi * j / 160;
-    int n = getResourcesgetDisplayMetricsdensityDpi * k / 160;
-    float f = Math.min(j / k, k / j);
-    boolean bool1;
-    boolean bool2;
-    if ((j >= i) || (m >= mIcon.getWidth()) || (k >= i) || (n >= mIcon.getHeight()))
-    {
-      bool1 = true;
-      if ((f >= 0.5F) || ((m >= mIcon.getHeight() * 0.5F) && (n >= mIcon.getWidth() * 0.5F))) {
-        break label276;
+      e.setText(paramckk);
+      m = ctr.a(paramAttachment.l());
+      localObject = h;
+      switch (m)
+      {
+      default: 
+        k = bub.ak;
       }
-      bool2 = true;
-      label177:
-      LogUtils.d(LOG_TAG, "scaledWidth: %d, scaledHeight: %d, large: %b, skinny: %b", new Object[] { Integer.valueOf(m), Integer.valueOf(n), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
-      if (!bool1) {
-        break label295;
-      }
-      if (!bool2) {
-        break label282;
-      }
-      mIcon.setScaleType(ImageView.ScaleType.CENTER);
     }
     for (;;)
     {
-      mIcon.setImageBitmap(paramBitmap);
-      mAttachmentPreviewCache.set(mAttachment, paramBitmap);
-      mDefaultThumbnailSet = false;
+      ((ImageView)localObject).setImageResource(k);
+      localObject = getResources();
+      h.setContentDescription(((Resources)localObject).getString(buj.z, new Object[] { paramckk }));
+      d.setImageResource(a(m));
+      d.setContentDescription(a());
+      cqr.a(i, this, paramAttachment, localAttachment);
       return;
-      bool1 = false;
-      break;
-      label276:
-      bool2 = false;
-      break label177;
-      label282:
-      mIcon.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      k = bub.al;
       continue;
-      label295:
-      mIcon.setScaleType(ImageView.ScaleType.CENTER);
+      k = bub.am;
     }
   }
   
-  public void setThumbnailToDefault()
+  public String c()
   {
-    Bitmap localBitmap = mAttachmentPreviewCache.get(mAttachment);
+    if (g == null) {
+      return null;
+    }
+    Resources localResources = getResources();
+    return localResources.getString(buj.C, new Object[] { a(), localResources.getString(buj.A, new Object[] { g.c }) });
+  }
+  
+  public void d()
+  {
+    g();
+  }
+  
+  public final int e()
+  {
+    return h.getWidth();
+  }
+  
+  public final int f()
+  {
+    return h.getHeight();
+  }
+  
+  public final void g()
+  {
+    Bitmap localBitmap = i.a(g);
     if (localBitmap != null)
     {
-      setThumbnail(localBitmap);
+      a(localBitmap);
       return;
     }
-    mDefaultIcon.setVisibility(0);
-    mDefaultThumbnailSet = true;
+    h.setScaleType(ImageView.ScaleType.CENTER);
+    h.setImageResource(bub.ak);
+    f = true;
   }
   
-  public static final class AttachmentPreview
-    implements Parcelable
+  public final ContentResolver h()
   {
-    public static final Parcelable.Creator<AttachmentPreview> CREATOR = new Parcelable.Creator()
-    {
-      public AttachmentTile.AttachmentPreview createFromParcel(Parcel paramAnonymousParcel)
-      {
-        return new AttachmentTile.AttachmentPreview(paramAnonymousParcel, null);
-      }
-      
-      public AttachmentTile.AttachmentPreview[] newArray(int paramAnonymousInt)
-      {
-        return new AttachmentTile.AttachmentPreview[paramAnonymousInt];
-      }
-    };
-    public String attachmentIdentifier;
-    public Bitmap preview;
-    
-    private AttachmentPreview(Parcel paramParcel)
-    {
-      attachmentIdentifier = paramParcel.readString();
-      preview = ((Bitmap)paramParcel.readParcelable(null));
-    }
-    
-    public AttachmentPreview(Attachment paramAttachment, Bitmap paramBitmap)
-    {
-      attachmentIdentifier = AttachmentUtils.getIdentifier(paramAttachment);
-      preview = paramBitmap;
-    }
-    
-    public int describeContents()
-    {
-      return 0;
-    }
-    
-    public void writeToParcel(Parcel paramParcel, int paramInt)
-    {
-      paramParcel.writeString(attachmentIdentifier);
-      paramParcel.writeParcelable(preview, 0);
-    }
+    return getContext().getContentResolver();
   }
   
-  public static abstract interface AttachmentPreviewCache
+  public final boolean i()
   {
-    public abstract Bitmap get(Attachment paramAttachment);
-    
-    public abstract void set(Attachment paramAttachment, Bitmap paramBitmap);
+    return f;
+  }
+  
+  public void onFinishInflate()
+  {
+    super.onFinishInflate();
+    Resources localResources = getResources();
+    a = localResources.getDimensionPixelSize(bua.f);
+    b = localResources.getDimensionPixelSize(bua.h);
+    c = localResources.getDimensionPixelSize(bua.g);
+    h = ((ImageView)findViewById(buc.F));
+    d = ((ImageView)findViewById(buc.A));
+    e = ((TextView)findViewById(buc.G));
+    setOnLongClickListener(this);
+  }
+  
+  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
+    cqr.a(i, this, g, null);
+  }
+  
+  public boolean onLongClick(View paramView)
+  {
+    int[] arrayOfInt = new int[2];
+    Rect localRect = new Rect();
+    getLocationOnScreen(arrayOfInt);
+    getWindowVisibleDisplayFrame(localRect);
+    Context localContext = getContext();
+    int k = getHeight();
+    int m = arrayOfInt[1] + k;
+    if (cxe.a(paramView))
+    {
+      k = getResourcesgetDisplayMetricswidthPixels - arrayOfInt[0] - getWidth();
+      if (m >= localRect.height()) {
+        break label156;
+      }
+      m -= c;
+    }
+    for (;;)
+    {
+      paramView = Toast.makeText(localContext, localContext.getString(buj.E, new Object[] { g.c, ctr.a(localContext, g.d) }), 0);
+      paramView.setGravity(8388659, k, m);
+      paramView.show();
+      return true;
+      k = arrayOfInt[0];
+      break;
+      label156:
+      m = arrayOfInt[1] - b;
+    }
   }
 }
 

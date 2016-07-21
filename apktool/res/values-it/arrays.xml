@@ -7,16 +7,12 @@
     </string-array>
     <string-array name="sync_status">
         <item>Operazione riuscita</item>
-        <item>Nessuna connessione.</item>
-        <item>Accesso non riuscito.</item>
-        <item>Errore di protezione.</item>
-        <item>Sincronizzazione non riuscita.</item>
+        <item>Nessuna connessione</item>
+        <item>Accesso non riuscito</item>
+        <item>Errore di sicurezza</item>
+        <item>Impossibile sincronizzare</item>
+        <item>Errore del server</item>
         <item>Errore interno</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistema</item>
-        <item>Usate spesso</item>
-        <item>Tutte le etichette</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Più recente</item>
@@ -25,25 +21,76 @@
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
         <item>Mostra conversazione più recente dopo archiviaz. o eliminaz.</item>
-        <item>Mostra conversazione meno recente dopo archiviaz. o eliminaz.</item>
+        <item>Mostra conversaz. meno recente dopo archiviaz. o eliminaz.</item>
         <item>Mostra elenco conversazioni dopo archiviaz. o eliminaz.</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Non ha effetto</item>
-        <item>Archivia o elimina</item>
-        <item>Elimina sempre</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archivia</item>
+        <item>Elimina</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Non ha effetto</item>
-        <item>Posta in arrivo: archivia conversazione. Etichette normali: rimuove etichetta corrente. Etichette di sistema (Tutta la posta o Inviati): elimina conversazione.</item>
-        <item>Elimina sempre la conversazione</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archivia</item>
+        <item>Elimina</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Alta</item>
+        <item>Normale</item>
+        <item>Bassa</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Non perdere un altro volo.</item>
+        <item>Non perdere un altro volo.</item>
+        <item>Aggiungere questo volo al calendario?</item>
+        <item>Aggiungi le prenotazioni a Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Calendar aggiunge automaticamente prenotazioni di voli e altro ancora al tuo calendario.</item>
+        <item>Google Calendar aggiunge automaticamente prenotazioni di voli e altro ancora al tuo calendario.</item>
+        <item>"Gli eventi di Gmail possono essere aggiunti automaticamente al tuo calendario con l'app Google Calendar."</item>
+        <item>Aggiungi automaticamente prenotazioni di voli, hotel e ristoranti.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Aggiungere questa prenotazione a Google Calendar?</item>
+        <item>Vuoi aggiungere automaticamente le prenotazioni a Calendar?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>"Con l'app Google Calendar, gli eventi di Gmail vengono aggiunti automaticamente al tuo calendario."</item>
+        <item>Google Calendar aggiunge automaticamente prenotazioni di hotel e altro ancora direttamente dalle email.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Ricevi per tempo una notifica della tua cena al ristorante.</item>
+        <item>Aggiungere questa prenotazione a Google Calendar?</item>
+        <item>Aggiungi automaticamente le prenotazioni a Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Calendar aggiunge automaticamente prenotazioni di ristoranti e altro ancora al tuo calendario.</item>
+        <item>Gli eventi di Gmail possono essere aggiunti automaticamente al tuo calendario.</item>
+        <item>Aggiungi automaticamente prenotazioni di voli, hotel e ristoranti.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Ricevi per tempo una notifica di questo evento.</item>
+        <item>Aggiungere questo evento a Google Calendar?</item>
+        <item>Non perderti il tuo evento.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Calendar aggiunge automaticamente al tuo calendario eventi e prenotazioni come quella contenuta in questa email.</item>
+        <item>Gli eventi di Gmail possono essere aggiunti automaticamente al tuo calendario.</item>
+        <item>Aggiungi automaticamente eventi e prenotazioni con Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>"Gestisci le tue prenotazioni da un'unica posizione."</item>
+        <item>Aggiungere queste prenotazioni a Google Calendar?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Aggiungi automaticamente prenotazioni di voli, hotel e ristoranti a Google Calendar.</item>
+        <item>Gli eventi di Gmail possono essere aggiunti automaticamente al tuo calendario.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
-        <item>Molto piccole</item>
-        <item>Piccole</item>
-        <item>Normali</item>
-        <item>Grandi</item>
-        <item>Molto grandi</item>
+        <item>Molto piccolo</item>
+        <item>Piccolo</item>
+        <item>Normale</item>
+        <item>Grande</item>
+        <item>Molto grande</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
         <item>Mostra contenuti dei messaggi con testo molto piccolo</item>
@@ -51,15 +98,5 @@
         <item>Mostra contenuti dei messaggi con testo normale</item>
         <item>Mostra contenuti dei messaggi con testo grande</item>
         <item>Mostra contenuti dei messaggi con testo molto grande</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Mostra sempre le azioni sui messaggi nella parte superiore dello schermo</item>
-        <item>Mostra le azioni sui messaggi nella parte superiore dello schermo solo quando ruotato in verticale</item>
-        <item>"Non mostrare le azioni sui messaggi all'esterno dell'intestazione del messaggio"</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Mostra sempre</item>
-        <item>Mostra solo in verticale</item>
-        <item>Non mostrare</item>
     </string-array>
 </resources>

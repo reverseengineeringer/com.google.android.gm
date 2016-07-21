@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.mail.browse.SpamWarningView android:id="@id/spam_warning" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/spam_warning_icon" android:paddingLeft="@dimen/message_details_header_padding_left" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    <TextView android:gravity="center_vertical" android:id="@id/spam_warning_text" android:paddingTop="8.0dip" android:paddingRight="@dimen/message_details_header_padding_right" android:layout_marginLeft="10.0dip" android:layout_marginRight="14.0dip" android:minHeight="@dimen/message_details_header_collapsed_height" android:layout_toRightOf="@id/spam_warning_icon" style="@style/MessageHeaderSmallStyle" />
-    <TextView android:textColor="@android:color/holo_blue_light" android:gravity="center_vertical" android:id="@id/spam_warning_link" android:background="?android:selectableItemBackground" android:paddingRight="@dimen/message_details_header_padding_right" android:layout_marginLeft="10.0dip" android:layout_marginRight="14.0dip" android:layout_toRightOf="@id/spam_warning_icon" android:layout_below="@id/spam_warning_text" style="@style/MessageHeaderSmallStyle" />
-    <View android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_below="@id/spam_warning_link" />
-    <View android:id="@id/spam_warning_bottom_border" android:background="@color/conv_subject_border" android:layout_width="fill_parent" android:layout_height="@dimen/message_details_header_bottom_border_height" android:layout_alignParentBottom="true" />
+<com.android.mail.browse.SpamWarningView android:id="@id/spam_warning_text" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_message_content_margin_side" android:layout_marginTop="@dimen/spam_warning_view_top_margin" android:layout_marginRight="@dimen/conversation_message_content_margin_side" android:layout_marginBottom="@dimen/spam_warning_view_bottom_margin" app:cardBackgroundColor="@color/spam_warning_background_color" app:cardCornerRadius="@dimen/spam_warning_view_card_corner_radius" app:cardElevation="@dimen/spam_warning_view_card_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/warning_stripe" android:layout_width="3.0dip" android:layout_height="fill_parent" />
+    <LinearLayout android:padding="@dimen/spam_warning_view_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/warning_icon" android:layout_width="@dimen/spam_warning_icon_width" android:layout_height="wrap_content" android:src="@drawable/ic_shield_security" style="@style/SpamWarningIconStyle" />
+        <TextView android:textSize="@dimen/spam_warning_text_size" android:id="@id/warning_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/spam_warning_text_line_spacing" />
+    </LinearLayout>
 </com.android.mail.browse.SpamWarningView>

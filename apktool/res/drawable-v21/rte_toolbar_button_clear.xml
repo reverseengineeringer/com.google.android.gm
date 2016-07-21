@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/rte_button_background_ripple"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask" android:drawable="@drawable/rte_button_ripple_mask" android:left="@dimen/rte_toolbar_button_insetLeft" android:top="@dimen/rte_toolbar_button_insetTop" android:right="@dimen/rte_toolbar_button_insetRight" android:bottom="@dimen/rte_toolbar_button_insetBottom" />
+    <item>
+        <selector>
+            <item android:state_enabled="true" android:drawable="@drawable/rte_toolbar_button_clear_enabled" />
+            <item android:state_enabled="false" android:drawable="@drawable/rte_toolbar_button_clear_disabled" />
+        </selector>
+    </item>
+</ripple>

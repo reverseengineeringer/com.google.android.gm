@@ -30,7 +30,7 @@ public class EnterSubject
     int i = imeOptions & 0xFF;
     if ((i & 0x5) != 0)
     {
-      imeOptions ^= i;
+      imeOptions = (i ^ imeOptions);
       imeOptions |= 0x5;
     }
     if ((imeOptions & 0x40000000) != 0) {

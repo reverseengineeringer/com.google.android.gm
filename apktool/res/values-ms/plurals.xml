@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Kalendar tidak dikongsi</item>
+        <item quantity="one">Kalendar tidak dikongsi</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">Draf</item>
+        <item quantity="one">Draf</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">Padamkan %1$d perbualan ini?</item>
+        <item quantity="one">Padamkan perbualan ini?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">Arkibkan %1$d perbualan ini?</item>
+        <item quantity="one">Arkibkan perbualan ini?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">Buang draf daripada %1$d perbualan ini?</item>
+        <item quantity="one">Buang draf daripada perbualan ini?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">Menyahbintangkan %1$d perbualan.</item>
+        <item quantity="one">Menyahbintangkan %1$d perbualan.</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d dilaporkan sebagai spam dan dinyahlanggan</item>
+        <item quantity="one">%1$d dilaporkan sebagai spam dan dinyahlanggan</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> diredamkan</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> diredamkan</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai spam</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai bukan spam</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> dilaporkan sebagai bukan spam</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b> %1$d &amp;lt;/ b> ditandakan tidak penting</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ditandakan tidak penting</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> diarkibkan</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> diarkibkan</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> dipadamkan</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> dipadamkan</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">Label ditukar.</item>
+        <item quantity="one">Label ditukar.</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d mesej baharu</item>
+        <item quantity="one">%1$d mesej baharu</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">Kembangkan %1$d mesej lama</item>
+        <item quantity="one">Kembangkan mesej lama</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">Mengembangkan %1$d mesej lama</item>
+        <item quantity="one">Satu mesej lama dikembangkan</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d mesej baharu</item>
+        <item quantity="one">%1$d mesej baharu</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d perbualan akan dipadamkan secara kekal.</item>
+        <item quantity="one">%1$d perbualan akan dipadamkan secara kekal.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d mesej</item>
+        <item quantity="one">%1$d mesej</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d lampiran</item>
+        <item quantity="one">%1$d lampiran</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Mesej ini akan ditandai sebagai spam. Adakah anda mahu turut berhenti menerima mesej yang serupa daripada &amp;lt;b>%2$d pengirim&amp;lt;/b>:%1$s</item>
+        <item quantity="one">Mesej ini akan ditandai sebagai spam. Adakah anda mahu turut berhenti menerima mesej yang serupa daripada %1$s?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">Segerakkan: %1$d hari lalu</item>
+        <item quantity="one">Segerakkan: %1$d hari lalu</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d hari</item>
+        <item quantity="one">Satu hari</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">Hari</item>
+        <item quantity="one">Hari</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">Mesej %1$d hari lalu akan dimuat turun apabila disambungkan</item>
+        <item quantity="one">Mesej 1 hari lalu akan dimuat turun apabila disambungkan</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">Nota: Sesetengah penerima mungkin masih tidak mempunyai akses kepada fail ini. Anda mungkin perlu mengongsi fail ini dari dalam Google Drive.</item>
+        <item quantity="one">Nota: Sesetengah penerima mungkin masih tidak mempunyai akses kepada fail ini. Anda mungkin perlu mengongsi fail ini dari dalam Google Drive.</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Anda berkongsi dengan penerima: &amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>yang tidak berada dalam organisasi Google Apps yang memiliki fail ini."</item>
+        <item quantity="one">Anda berkongsi dengan penerima: &amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>yang tidak berada dalam organisasi Google Apps yang memiliki fail ini.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">Penerima anda mungkin tidak mempunyai akses kepada fail yang anda sisipkan dari Drive. Anda mungkin perlu mengongsi fail tersebut dari dalam Google Drive.</item>
+        <item quantity="one">Penerima anda mungkin tidak mempunyai akses kepada fail yang anda sisipkan dari Drive. Anda mungkin perlu mengongsi fail tersebut dari dalam Google Drive.</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Alamat e-mel semasa anda:</item>
+        <item quantity="one">Alamat e-mel semasa anda:</item>
+    </plurals>
+</resources>

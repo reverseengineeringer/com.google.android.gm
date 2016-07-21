@@ -1,56 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="ComposeEditTextView">
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:background">@null</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:minHeight">40.0dip</item>
+    <style name="SuwCardTitle" parent="@style/SuwBaseCardTitle">
+        <item name="android:maxLines">6</item>
     </style>
-    <style name="ComposeHeading">
-        <item name="android:textSize">18.0sp</item>
-        <item name="android:textColor">@color/compose_label_text</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">8.0dip</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">26.0dip</item>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">center</item>
     </style>
-    <style name="ComposeFieldLayout" parent="@android:style/Widget.Holo.Light.EditText">
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingTop">0.0dip</item>
-        <item name="android:focusable">false</item>
-        <item name="android:focusableInTouchMode">false</item>
-        <item name="android:addStatesFromChildren">true</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:minHeight">38.0dip</item>
-    </style>
-    <style name="AccountSpinnerAnchorTextPrimary" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:textSize">14.0dip</item>
-    </style>
-    <style name="ComposeFieldLinearLayout" parent="@android:style/Widget.Holo.Light.EditText">
+    <style name="WelcomeTour.Container" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">center</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:paddingLeft">0.0dip</item>
-        <item name="android:paddingRight">0.0dip</item>
-        <item name="android:focusable">false</item>
-        <item name="android:focusableInTouchMode">false</item>
-        <item name="android:clickable">true</item>
-        <item name="android:addStatesFromChildren">true</item>
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:minHeight">40.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
     </style>
-    <style name="message_header_date_text" parent="@style/message_header_extra_small" />
-    <style name="message_header_expander_minimized">
-        <item name="android:layout_width">@dimen/message_header_action_button_width</item>
+    <style name="WelcomeTour.ImageArea" parent="@style/WelcomeTour">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:src">@drawable/ic_menu_expander_minimized_holo_light</item>
-        <item name="android:contentDescription">@string/expand_recipient_details</item>
+        <item name="android:layout_weight">45.0</item>
     </style>
-    <style name="message_header_expander_maximized">
-        <item name="android:layout_width">@dimen/message_header_action_button_width</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:src">@drawable/ic_menu_expander_maximized_holo_light</item>
-        <item name="android:contentDescription">@string/collapse_recipient_details</item>
+    <style name="WelcomeTour.ImageContainer" parent="@style/WelcomeTour">
+        <item name="android:layout_gravity">center</item>
     </style>
+    <style name="WelcomeTour.ContentArea" parent="@style/WelcomeTour">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/welcome_tour_content_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/welcome_tour_content_padding_horizontal</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">55.0</item>
+    </style>
+    <style name="WelcomeTour" />
 </resources>

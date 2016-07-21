@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>Reply</item>
+        <item>Reply all</item>
+        <item>Forward</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>Success</item>
+        <item>No connection</item>
+        <item>"Couldn't sign in"</item>
+        <item>Security error</item>
+        <item>"Couldn't sync"</item>
+        <item>Server Error</item>
+        <item>Internal Error</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>Newer</item>
+        <item>Older</item>
+        <item>Conversation list</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>Show newer conversation after you archive or delete</item>
+        <item>Show older conversation after you archive or delete</item>
+        <item>Show conversation list after you archive or delete</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>Archive</item>
+        <item>Delete</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archive</item>
+        <item>Delete</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>High</item>
+        <item>Normal</item>
+        <item>Low</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>"Don't miss another flight."</item>
+        <item>"Don't miss another flight."</item>
+        <item>Add this flight to your calendar?</item>
+        <item>Get reservations on your Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Calendar automagically adds flights and other reservations to your calendar.</item>
+        <item>Google Calendar automatically adds flights and other reservations to your calendar.</item>
+        <item>Events from Gmail can be automatically added with the Google Calendar app.</item>
+        <item>Get flight, hotel and restaurant reservations added automatically.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Add this reservation to Google Calendar?</item>
+        <item>Want reservations automatically on your Calendar?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>With the Google Calendar app, events from Gmail are automatically added to your calendar.</item>
+        <item>Google Calendar automatically adds hotels and other reservations from your emails.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Get a timely notification for your meal.</item>
+        <item>Add this reservation to Google Calendar?</item>
+        <item>Get reservations automatically on your Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Calendar automatically adds restaurant and other reservations to your calendar.</item>
+        <item>Events from Gmail can be automatically added to your calendar.</item>
+        <item>Get flight, hotel and restaurant reservations added automatically.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Get a timely notification before this event.</item>
+        <item>Add this event to Google Calendar?</item>
+        <item>"Don't miss your event."</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Calendar automatically adds events and reservations, like the one in this email, to your calendar.</item>
+        <item>Events from Gmail can be automatically added to your calendar.</item>
+        <item>Get events and other reservations added automatically with Google Calendar.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Track your reservations in one place.</item>
+        <item>Add these reservations to Google Calendar?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Get flight, hotel and restaurant reservations added automatically to your Google Calendar.</item>
+        <item>Events from Gmail can be automatically added to your calendar.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>Tiny</item>
+        <item>Small</item>
+        <item>Normal</item>
+        <item>Large</item>
+        <item>Huge</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>Display the content of messages in tiny text</item>
+        <item>Display the content of messages in small text</item>
+        <item>Display the content of messages in normal-sized text</item>
+        <item>Display the content of messages in large-sized text</item>
+        <item>Display the content of messages in huge text</item>
+    </string-array>
+</resources>

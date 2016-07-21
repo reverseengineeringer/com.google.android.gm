@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MessageDetailsHeaderStyle" />
+    <style name="MessageHeaderShowPicsStyle" parent="@style/AbstractMessageHeaderShowPicsStyle">
+        <item name="android:drawableStart">@drawable/ic_show_images_holo_light</item>
+    </style>
+    <style name="MessageUpperHeaderTextStyle" />
+    <style name="ConversationHeaderStyle" />
+    <style name="CheckedTextStyle" />
+    <style name="SendMailStyle" parent="@style/ComposeFromTextViewStyle" />
+    <style name="MessageHeaderIconStyle" />
+    <style name="SuperCollapsedStrokeStyle" />
+    <style name="DrawerNavigationStyle">
+        <item name="android:nextFocusLeft">@id/conversation_list_view</item>
+    </style>
+    <style name="FolderListItemStartStyle" />
+    <style name="FolderListItemEndStyle" />
+    <style name="FolderListItemStyle" />
+    <style name="DismissSeparatorStyle" />
+    <style name="TeaserStartMargin" />
+    <style name="MessageHeaderDetailsHeadingStyle" parent="@style/MessageHeaderSmallStyle" />
+    <style name="AttachmentPaddingStyle" />
+    <style name="AttachmentIconStyle" />
+    <style name="UnreadCountWithMarginEndStyle" parent="@style/UnreadCountRelativeLayout" />
+    <style name="UnseenCountWithMarginEndStyle" parent="@style/UnseenCount" />
+    <style name="AttachmentInfoTextStyle" />
+    <style name="AttachmentInfoStyle" />
+    <style name="VacationResponderArea" parent="@style/ComposeArea" />
+    <style name="VacationResponderDatePadding" />
+    <style name="MessageSenderNameStyle" parent="@style/AbstractMessageSenderNameStyle" />
+    <style name="MessageHeaderSubtitleStyle" parent="@style/AbstractMessageHeaderSubtitleStyle">
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="MiniDrawerFolderStyle" parent="@style/MiniDrawerFolderStyleBase">
+        <item name="android:scaleX">-1.0</item>
+    </style>
+    <style name="SingleFolderListIconStyle">
+        <item name="android:scaleX">-1.0</item>
+    </style>
+    <style name="FolderSelectionItemStyle" parent="@style/AbstractFolderSelectionItemStyle" />
+    <style name="FolderListIconStyle">
+        <item name="android:scaleX">-1.0</item>
+    </style>
+    <style name="MessageHeaderUpperDateStyle" parent="@style/MessageHeaderSmallStyle" />
+    <style name="WidgetSendersStyle" />
+    <style name="WidgetAttachStyle" />
+    <style name="WidgetHeaderStartMargin" />
+    <style name="ConversationListContactImageStyle" />
+    <style name="ConversationListSendersDecorationStyle" />
+    <style name="ConversationListReplyStateStyle" />
+    <style name="ConversationListPersonalIndicatorStyle" />
+    <style name="ConversationListSendersStyle" />
+    <style name="ConversationListDateStyle" />
+    <style name="ConversationListPaperclipStyle" />
+    <style name="ConversationListSubjectStyle">
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="ConversationListSnippetAndFoldersStyle">
+        <item name="android:layout_below">@id/subject</item>
+    </style>
+    <style name="ConversationListStarStyle">
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="ConversationListFooterLoadMoreStyle" />
+    <style name="SpinnerAccountNameStyle" parent="@style/ComposeFromTextViewStyle" />
+    <style name="AbstractComposeAreaWithRtl" parent="@style/AbstractComposeArea" />
+    <style name="ComposeSubjectIcon" parent="@style/ComposeSubjectIconBase" />
+    <style name="ComposeAttachmentTileTextEndStyle" />
+    <style name="ComposeFieldContent" parent="@style/ComposeFieldContentBase" />
+    <style name="ComposeFieldContentWithEndButton" parent="@style/ComposeFieldContent" />
+    <style name="ComposeToDropdownAnchor" />
+    <style name="ComposeHeadingPadding" />
+    <style name="ComposeFieldButton" parent="@style/BaseComposeFieldButton" />
+    <style name="QuotedTextCheckbox" />
+    <style name="FolderTeaserPaddingEndStyle" />
+    <style name="ArrowStyle" />
+    <style name="UndoDescriptionStyle" />
+    <style name="AccountItemNameStyle" />
+    <style name="SpamWarningIconStyle" />
+</resources>

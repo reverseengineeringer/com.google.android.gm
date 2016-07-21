@@ -1,17 +1,28 @@
 package com.google.android.gm.ui;
 
 import android.content.Intent;
+import cnz;
 import com.android.mail.providers.Account;
 import com.android.mail.providers.Folder;
-import com.android.mail.ui.FolderSelectionActivity;
-import com.android.mail.widget.BaseGmailWidgetProvider;
+import com.android.mail.widget.BaseGmailWidgetProviderService;
+import cus;
+import java.util.ArrayList;
 
 public class FolderSelectionActivityGmail
-  extends FolderSelectionActivity
+  extends cnz
 {
-  protected void createWidget(int paramInt, Account paramAccount, Folder paramFolder)
+  protected final ArrayList<Integer> A()
   {
-    BaseGmailWidgetProvider.updateWidget(this, paramInt, paramAccount, paramFolder);
+    ArrayList localArrayList = super.A();
+    if (n) {
+      localArrayList.add(Integer.valueOf(512));
+    }
+    return localArrayList;
+  }
+  
+  protected final void a(int paramInt, Account paramAccount, Folder paramFolder)
+  {
+    BaseGmailWidgetProviderService.a(this, paramInt, paramAccount, p, e, c.b, h, d);
     paramAccount = new Intent();
     paramAccount.putExtra("appWidgetId", paramInt);
     setResult(-1, paramAccount);

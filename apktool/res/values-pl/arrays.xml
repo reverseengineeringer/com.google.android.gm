@@ -7,20 +7,16 @@
     </string-array>
     <string-array name="sync_status">
         <item>Udało się</item>
-        <item>Brak połączenia.</item>
-        <item>Nie można się zalogować.</item>
-        <item>Błąd zabezpieczeń.</item>
-        <item>Błąd synchronizacji.</item>
+        <item>Brak połączenia</item>
+        <item>Nie udało się zalogować</item>
+        <item>Błąd zabezpieczeń</item>
+        <item>Błąd synchronizacji</item>
+        <item>Błąd serwera</item>
         <item>Błąd wewnętrzny</item>
     </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>System</item>
-        <item>Często używane</item>
-        <item>Wszystkie etykiety</item>
-    </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Nowszy</item>
-        <item>Starszy</item>
+        <item>Nowsze</item>
+        <item>Starsze</item>
         <item>Lista wątków</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
@@ -28,15 +24,66 @@
         <item>Pokazuj starszy wątek po archiwizacji lub usunięciu</item>
         <item>Pokazuj listę wątków po archiwizacji lub usunięciu</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Brak efektu</item>
-        <item>Archiwizuje lub usuwa</item>
-        <item>Zawsze usuwa</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archiwizuj</item>
+        <item>Usuń</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Brak efektu</item>
-        <item>Odebrane: archiwizuje wątek. Etykiety zwykłe: usuwa bieżącą etykietę. Etykiety systemowe (np. Wszystkie lub Wysłane): usuwa wątek.</item>
-        <item>Zawsze usuwa wątki</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archiwizuj</item>
+        <item>Usuń</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Wysoki</item>
+        <item>Normalny</item>
+        <item>Niski</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Nie przegapisz już żadnego lotu.</item>
+        <item>Nie przegapisz już żadnego lotu.</item>
+        <item>Dodać lot do kalendarza?</item>
+        <item>Wyświetlaj rezerwacje w swoim Kalendarzu Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Kalendarz Google automatycznie dodaje loty i inne rezerwacje do Twojego kalendarza.</item>
+        <item>Kalendarz Google automatycznie dodaje loty i inne rezerwacje do Twojego kalendarza.</item>
+        <item>Wydarzenia z Gmaila mogą być dodawane automatycznie za pomocą aplikacji Kalendarz Google.</item>
+        <item>Włącz automatyczne dodawanie rezerwacji lotów, hoteli i restauracji.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Dodać rezerwację do Kalendarza Google?</item>
+        <item>Chcesz automatycznie dodawać rezerwacje do Kalendarza?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Dzięki aplikacji Kalendarz Google wydarzenia z Gmaila są automatycznie dodawane do Twojego kalendarza.</item>
+        <item>Kalendarz Google automatycznie dodaje rezerwacje hotelowe i inne z Twojej poczty.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Włącz powiadomienie o rezerwacji.</item>
+        <item>Dodać rezerwację do Kalendarza Google?</item>
+        <item>Automatycznie dodawaj rezerwacje do Kalendarza Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Kalendarz Google automatycznie dodaje rezerwacje stolików w restauracji i inne rezerwacje do Twojego kalendarza.</item>
+        <item>Wydarzenia z Gmaila mogą być automatycznie dodawane do kalendarza.</item>
+        <item>Włącz automatyczne dodawanie rezerwacji lotów, hoteli i restauracji.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Włącz odpowiednie powiadomienie o tym wydarzeniu.</item>
+        <item>Dodać to wydarzenie do Kalendarza Google?</item>
+        <item>Nie przegap wydarzenia.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Kalendarz Google automatycznie dodaje do Twojego kalendarza wydarzenia i rezerwacje, takie jak z tego e-maila.</item>
+        <item>Wydarzenia z Gmaila mogą być automatycznie dodawane do kalendarza.</item>
+        <item>Włącz automatyczne dodawanie wydarzeń i rezerwacji do Kalendarza Google.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Sprawdzaj wszystkie swoje rezerwacje w jednym miejscu.</item>
+        <item>Dodać rezerwacje do Kalendarza Google?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Włącz automatyczne dodawanie rezerwacji lotów, hoteli i restauracji do Kalendarza Google.</item>
+        <item>Wydarzenia z Gmaila mogą być automatycznie dodawane do kalendarza.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Bardzo mały</item>
@@ -46,20 +93,10 @@
         <item>Wielki</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
-        <item>Wyświetlaj treść wiadomości bardzo małą czcionką.</item>
-        <item>Wyświetlaj treść wiadomości małym tekstem.</item>
-        <item>Wyświetlaj treść wiadomości normalnym tekstem</item>
-        <item>Wyświetlaj treść wiadomości dużym tekstem.</item>
-        <item>Wyświetlaj treść wiadomości wielką czcionką.</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Zawsze pokazuj pasek opcji u góry ekranu</item>
-        <item>Pokazuj pasek opcji u góry ekranu tylko w trybie pionowym</item>
-        <item>Nie pokazuj paska opcji poza nagłówkiem wiadomości</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Zawsze pokazuj</item>
-        <item>Pokazuj w trybie pionowym</item>
-        <item>Nie pokazuj</item>
+        <item>Wyświetlaj treść wiadomości bardzo małą czcionką</item>
+        <item>Wyświetlaj treść wiadomości małą czcionką</item>
+        <item>Wyświetlaj treść wiadomości normalną czcionką</item>
+        <item>Wyświetlaj treść wiadomości dużą czcionką</item>
+        <item>Wyświetlaj treść wiadomości wielką czcionką</item>
     </string-array>
 </resources>

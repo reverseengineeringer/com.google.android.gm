@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>जवाब दें</item>
+        <item>सबको जवाब दें</item>
+        <item>अग्रेषित करें</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>सफलता</item>
+        <item>कोई कनेक्शन नहीं</item>
+        <item>प्रवेश नहीं किया जा सका</item>
+        <item>सुरक्षा त्रुटि</item>
+        <item>समन्‍वयन नहीं किया जा सका</item>
+        <item>सर्वर त्रुटि</item>
+        <item>आंतरिक त्रुटि</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>नया</item>
+        <item>पुराना</item>
+        <item>बातचीत सूची</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>आपके द्वारा संग्रहीत करने या हटाने के बाद नई बातचीत दिखाएं</item>
+        <item>संग्रहीत करने या हटाने के बाद पुरानी बातचीत दिखाएं</item>
+        <item>संग्रहीत करने या हटाने के बाद बातचीत की सूची दिखाएं</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>संग्रहीत करें</item>
+        <item>हटाएं</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>संग्रहीत करें</item>
+        <item>हटाएं</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>उच्च</item>
+        <item>सामान्य</item>
+        <item>निम्न</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>कोई दूसरी फ़्लाइट न छोड़ें.</item>
+        <item>कोई दूसरी फ़्लाइट न छोड़ें.</item>
+        <item>इस फ़्लाइट को आपके कैलेंडर में जोड़ें?</item>
+        <item>अपने Google कैलेंडर पर रिज़र्वेशन प्राप्त करें.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google कैलेंडर फ़्लाइट और अन्य रिज़र्वेशन को अपने आप आपके कैलेंडर में जोड़ देता है.</item>
+        <item>Google कैलेंडर फ़्लाइट और अन्य रिज़र्वेशन को अपने आप आपके कैलेंडर में जोड़ देता है.</item>
+        <item>Gmail के ईवेंट अपने आप Google कैलेंडर ऐप्लिकेशन में जोड़े जा सकते हैं.</item>
+        <item>फ़्लाइट, होटल और रेस्तरां रिज़र्वेशन अपने आप जोड़ दिए जाते हैं.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>इस रिज़र्वेशन को Google कैलेंडर में जोड़ें?</item>
+        <item>रिज़र्वेशन को अपने आप अपने कैलेंडर पर चाहते हैं?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Google कैलेंडर ऐप्लिकेशन से Gmail के ईवेंट को अपने आप आपके कैलेंडर में जोड़ दिया जाता है.</item>
+        <item>Google कैलेंडर आपके ईमेल के होटल और अन्य रिज़र्वेशन को अपने आप जोड़ देता है.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>अपने भोजन के लिए उचित समय पर नोटिफिकेशन प्राप्त करें.</item>
+        <item>इस रिज़र्वेशन को Google कैलेंडर में जोड़ें?</item>
+        <item>अपने Google कैलेंडर पर अपने आप रिज़र्वेशन प्राप्त करें.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google कैलेंडर रेस्तरां और अन्य रिज़र्वेशन को अपने आप आपके कैलेंडर में जोड़ देता है.</item>
+        <item>Gmail के ईवेंट को आपके कैलेंडर में अपने आप जोड़ा जा सकता है.</item>
+        <item>फ़्लाइट, होटल और रेस्तरां रिज़र्वेशन अपने आप जोड़ दिए जाते हैं.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>इस ईवेंट से पहले उचित समय पर नोटिफिकेशन प्राप्त करें.</item>
+        <item>इस ईवेंट को Google कैलेंडर में जोड़ें?</item>
+        <item>अपने ईवेंट से न चूकें.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google कैलेंडर ईवेंट और रिज़र्वेशन, जैसे कि इस ईमेल में एक है, को अपने आप आपके कैलेंडर में जोड़ देता है.</item>
+        <item>Gmail के ईवेंट को आपके कैलेंडर में अपने आप जोड़ा जा सकता है.</item>
+        <item>ईवेंट और अन्य रिज़र्वेशन को अपने आप Google कैलेंडर से जोड़ें.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>अपने रिज़र्वेशन को एक ही स्थान में ट्रैक करें.</item>
+        <item>इन रिज़र्वेशन को Google कैलेंडर में जोड़ें?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>फ़्लाइट, होटल और रेस्तरां रिज़र्वेशन को अपने आप अपने Google कैलेंडर में जोड़ें.</item>
+        <item>Gmail के ईवेंट को आपके कैलेंडर में अपने आप जोड़ा जा सकता है.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>बहुत छोटा</item>
+        <item>छोटा</item>
+        <item>सामान्य</item>
+        <item>बड़ा</item>
+        <item>बहुत बड़ा</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>संदेशों की सामग्री बहुत छोटे लेख में दिखाएं</item>
+        <item>संदेशों की सामग्री छोटे लेख में दिखाएं</item>
+        <item>संदेश की सामग्री सामान्‍य आकार के लेख में दिखाएं</item>
+        <item>संदेशों की सामग्री बड़े लेख में दिखाएं</item>
+        <item>संदेशों की सामग्री बहुत बड़े लेख में दिखाएं</item>
+    </string-array>
+</resources>

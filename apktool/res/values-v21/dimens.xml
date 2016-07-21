@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="compose_button_margin_bottom">16.0dip</dimen>
+    <dimen name="compose_button_margin_side">16.0dip</dimen>
+    <dimen name="drawer_item_font_size">14.0sp</dimen>
+    <dimen name="mini_drawer_account_padding">9.0dip</dimen>
+    <dimen name="mini_drawer_avatar_margin">3.0dip</dimen>
+    <dimen name="hats_card_margin_default">0.0dip</dimen>
+</resources>

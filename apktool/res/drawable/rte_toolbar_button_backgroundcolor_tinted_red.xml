@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rte_button_background" />
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/rte_fillcolor_tinted_red_24" android:alpha="@dimen/rte_toolbar_button_enabled_alpha" />
+    </item>
+</layer-list>

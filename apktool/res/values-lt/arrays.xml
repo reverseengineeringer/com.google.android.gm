@@ -2,21 +2,17 @@
 <resources>
     <string-array name="compose_modes">
         <item>Atsakyti</item>
-        <item>Atsakyt visiems</item>
+        <item>Atsakyti visiem</item>
         <item>Persiųsti</item>
     </string-array>
     <string-array name="sync_status">
         <item>Sėkmingai</item>
-        <item>Nėra ryšio.</item>
-        <item>Nepavyko prisijungti.</item>
-        <item>Saugos klaida.</item>
-        <item>Nepavyko sinchronizuoti.</item>
+        <item>Nėra ryšio</item>
+        <item>Nepavyko prisijungti</item>
+        <item>Saugos klaida</item>
+        <item>Nepavyko sinchronizuoti</item>
+        <item>Serverio klaida</item>
         <item>Vidinė klaida</item>
-    </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistema</item>
-        <item>Dažnai naudoj.</item>
-        <item>Visos etiketės</item>
     </string-array>
     <string-array name="prefEntries_autoAdvance">
         <item>Naujesnis</item>
@@ -28,20 +24,71 @@
         <item>Ištrynus ar įtraukus į archyvą rodyti senesnį pokalbį</item>
         <item>Ištrynus ar įtraukus į archyvą rodyti pokalbių sąrašą</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Jokio poveikio</item>
-        <item>Archyvuoja arba trina</item>
-        <item>Visada trina</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Archyvuoti</item>
+        <item>Ištrynimas</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Jokio poveikio</item>
-        <item>Gautieji: archyvuoja pokalbį. Įpr. etiketės: šalina dab. etiketę. Sist. etiketės, pvz., „Visi laiškai“ ar „Išsiųsti“: ištrina pokalbį.</item>
-        <item>Visada ištrina pokalbį</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Archyvuoti</item>
+        <item>Ištrynimas</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Aukštas</item>
+        <item>Normalus</item>
+        <item>Žemas</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Nepraleiskite skrydžio.</item>
+        <item>Nepraleiskite skrydžio.</item>
+        <item>Pridėti skrydį prie kalendoriaus?</item>
+        <item>Matykite užsakymus „Google“ kalendoriuje.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>„Google“ kalendorius automatiškai prideda skrydžius ir kitus užsakymus prie jūsų kalendoriaus.</item>
+        <item>„Google“ kalendorius automatiškai prideda skrydžius ir kitus užsakymus prie jūsų kalendoriaus.</item>
+        <item>Įvykiai iš „Gmail“ gali būti automatiškai pridėti prie „Google“ kalendoriaus programos.</item>
+        <item>Skrydžiai ir viešbučių bei restoranų užsakymai gali būti automatiškai pridėti.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Pridėti šį užsakymą prie „Google“ kalendoriaus?</item>
+        <item>Ar norite automatiškai pridėti užsakymus prie Kalendoriaus?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Naudojant „Google“ kalendoriaus programą, įvykiai iš „Gmail“ automatiškai pridedami prie kalendoriaus.</item>
+        <item>„Google“ kalendorius automatiškai prideda viešbučių ir kitus užsakymus iš el. pašto.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Laiku gaukite pranešimą apie valgį.</item>
+        <item>Pridėti šį užsakymą prie „Google“ kalendoriaus?</item>
+        <item>Automatiškai pridėkite užsakymus prie „Google“ kalendoriaus.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>„Google“ kalendorius automatiškai prideda restoranų ir kitus užsakymus prie jūsų kalendoriaus.</item>
+        <item>Įvykiai iš „Gmail“ gali būti automatiškai pridėti prie kalendoriaus.</item>
+        <item>Skrydžiai ir viešbučių bei restoranų užsakymai gali būti automatiškai pridėti.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Laiku gaukite pranešimą prieš šį įvykį.</item>
+        <item>Pridėti šį įvykį prie „Google“ kalendoriaus?</item>
+        <item>Nepraleiskite įvykio.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>„Google“ kalendorius automatiškai prideda įvykius ir užsakymus (tokius, kaip šiame el. laiške) prie jūsų kalendoriaus.</item>
+        <item>Įvykiai iš „Gmail“ gali būti automatiškai pridėti prie kalendoriaus.</item>
+        <item>Įvykiai ir kiti užsakymai gali būti automatiškai pridėti prie „Google“ kalendoriaus.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Stebėkite visus užsakymus vienoje vietoje.</item>
+        <item>Pridėti šiuos užsakymus prie „Google“ kalendoriaus?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Skrydžiai ir viešbučių bei restoranų užsakymai gali būti automatiškai pridėti prie „Google“ kalendoriaus.</item>
+        <item>Įvykiai iš „Gmail“ gali būti automatiškai pridėti prie kalendoriaus.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Itin mažas</item>
-        <item>Mažas</item>
-        <item>Įprastas</item>
+        <item>Nedidelis</item>
+        <item>Normalus</item>
         <item>Didelis</item>
         <item>Itin didelis</item>
     </string-array>
@@ -51,15 +98,5 @@
         <item>Pateikti pranešimų turinį įprasto dydžio tekstu</item>
         <item>Pateikti pranešimų turinį didelio dydžio tekstu</item>
         <item>Pateikti pranešimų turinį itin didelio dydžio tekstu</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Visada rodyti pranešimų veiksmus ekrano viršuje</item>
-        <item>Pranešimo veiksmus ekrano viršuje rodyti tik tada, kai pasukta stačiai</item>
-        <item>Nerodyti pranešimo veiksmų už pranešimo antraštės ribų</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Visada rodyti</item>
-        <item>Rodyti tik stačiai</item>
-        <item>Nerodyti</item>
     </string-array>
 </resources>

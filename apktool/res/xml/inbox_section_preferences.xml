@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:icon="@drawable/ic_drawer_inbox_24dp" android:persistent="false" android:title="@string/preferences_inbox_category_personal_title" android:key="inbox-category-personal" android:summary="@string/preferences_inbox_category_personal_summary" />
+    <CheckBoxPreference android:icon="@drawable/ic_drawer_social_24dp" android:persistent="false" android:title="@string/preferences_inbox_category_social_title" android:key="inbox-category-social" android:summary="@string/preferences_inbox_category_social_summary" />
+    <CheckBoxPreference android:icon="@drawable/ic_drawer_promotions_24dp" android:persistent="false" android:title="@string/preferences_inbox_category_promo_title" android:key="inbox-category-promo" android:summary="@string/preferences_inbox_category_promo_summary" />
+    <CheckBoxPreference android:icon="@drawable/ic_drawer_updates_24dp" android:persistent="false" android:title="@string/preferences_inbox_category_notification_title" android:key="inbox-category-notification" android:summary="@string/preferences_inbox_category_notification_summary" />
+    <CheckBoxPreference android:icon="@drawable/ic_drawer_forums_24dp" android:persistent="false" android:title="@string/preferences_inbox_category_group_title" android:key="inbox-category-group" android:summary="@string/preferences_inbox_category_group_summary" />
+    <PreferenceCategory android:title="@string/preferences_inbox_categories_starred_category_title">
+        <CheckBoxPreference android:persistent="false" android:title="@string/preferences_inbox_categories_starred_checkbox" android:key="inbox-sections-starred-in-personal" android:summary="@string/preferences_inbox_categories_starred_subtitle" />
+    </PreferenceCategory>
+</PreferenceScreen>

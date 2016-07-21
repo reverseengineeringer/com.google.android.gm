@@ -1,277 +1,258 @@
 package com.google.android.gm.preference;
 
-import android.accounts.AccountManagerCallback;
-import android.accounts.AccountManagerFuture;
-import android.accounts.AuthenticatorException;
-import android.accounts.OperationCanceledException;
-import android.app.ActionBar;
+import aaj;
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
+import android.os.Parcelable;
+import android.os.PersistableBundle;
+import android.preference.Preference;
 import android.preference.PreferenceActivity.Header;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import com.android.mail.providers.Folder;
-import com.google.android.gm.AccountHelper;
-import com.google.android.gm.AccountHelper.AddAccountCallback;
-import com.google.android.gm.ApplicationMenuHandler;
-import com.google.android.gm.ApplicationMenuHandler.HelpCallback;
-import com.google.android.gm.LabelsActivity;
-import com.google.android.gm.Utils;
-import com.google.android.gm.persistence.Persistence;
-import com.google.android.gm.provider.UiProvider;
-import com.google.common.collect.Lists;
-import java.io.IOException;
-import java.util.Iterator;
+import bum;
+import buo;
+import but;
+import com.android.mail.providers.Account;
+import com.android.mail.ui.settings.GeneralPrefsFragment;
+import com.google.android.gm.provider.GmailProvider;
+import com.google.android.gm.ui.MailActivityGmail;
+import crv;
+import crx;
+import csc;
+import ddy;
+import dev;
+import dfy;
+import dgb;
+import dge;
+import dgh;
+import dkn;
+import dnf;
+import dng;
+import dnm;
+import dno;
+import dnp;
+import dri;
+import dyo;
+import dyv;
+import dyw;
+import dyz;
+import eiz;
+import ejh;
+import fjg;
+import java.lang.ref.WeakReference;
 import java.util.List;
+import zc;
 
 public class GmailPreferenceActivity
-  extends PreferenceActivity
-  implements SharedPreferences.OnSharedPreferenceChangeListener, AccountHelper.AddAccountCallback, ApplicationMenuHandler.HelpCallback
+  extends crv
+  implements SharedPreferences.OnSharedPreferenceChangeListener, csc, dng
 {
-  private static boolean sCreatedAccount = false;
-  private List<String> mAccounts;
-  private boolean mRestartAccountQuery = false;
-  private boolean mSynced = false;
+  private dyz c;
   
-  private void addAccountHeaders(List<PreferenceActivity.Header> paramList)
+  public final String F_()
   {
-    mAccounts = Persistence.getInstance().getCachedConfiguredGoogleAccounts(this, false);
-    if (!mSynced)
-    {
-      asyncInitAccounts();
-      mSynced = true;
-    }
-    for (;;)
-    {
-      return;
-      Iterator localIterator = mAccounts.iterator();
-      while (localIterator.hasNext())
-      {
-        String str = (String)localIterator.next();
-        PreferenceActivity.Header localHeader = new PreferenceActivity.Header();
-        title = str;
-        fragment = "com.google.android.gm.preference.AccountPreferenceFragment";
-        Bundle localBundle = new Bundle();
-        localBundle.putString("account", str);
-        fragmentArguments = localBundle;
-        paramList.add(1, localHeader);
-      }
-    }
+    return getString(dge.fA);
   }
   
-  private void asyncInitAccounts()
+  public final void G_()
   {
-    AccountHelper.getSyncingAccounts(this, new AccountManagerCallback()
+    if (a != null) {}
+    for (Object localObject = (GeneralPrefsFragment)a.get();; localObject = null)
     {
-      public void run(AccountManagerFuture<android.accounts.Account[]> paramAnonymousAccountManagerFuture)
+      if ((localObject != null) && (dev.c))
       {
-        try
-        {
-          GmailPreferenceActivity localGmailPreferenceActivity = GmailPreferenceActivity.this;
-          GmailPreferenceActivity.access$002(GmailPreferenceActivity.this, AccountHelper.mergeAccountLists(mAccounts, (android.accounts.Account[])paramAnonymousAccountManagerFuture.getResult(), true));
-          Persistence.getInstance().cacheConfiguredGoogleAccounts(localGmailPreferenceActivity, false, mAccounts);
-          invalidateHeaders();
-          return;
+        localObject = ((GeneralPrefsFragment)localObject).findPreference("mail-enable-threading");
+        if (localObject != null) {
+          ((Preference)localObject).setSummary(dge.eM);
         }
-        catch (OperationCanceledException paramAnonymousAccountManagerFuture) {}catch (IOException paramAnonymousAccountManagerFuture) {}catch (AuthenticatorException paramAnonymousAccountManagerFuture) {}
       }
-    });
-  }
-  
-  private final PreferenceActivity.Header getInitialHeader(long paramLong, List<PreferenceActivity.Header> paramList)
-  {
-    paramList = paramList.iterator();
-    while (paramList.hasNext())
-    {
-      PreferenceActivity.Header localHeader = (PreferenceActivity.Header)paramList.next();
-      if ((id == paramLong) && (fragment != null)) {
-        return localHeader;
-      }
-    }
-    return null;
-  }
-  
-  private void launchLabelSettings(Intent paramIntent)
-  {
-    Object localObject = (Folder)paramIntent.getParcelableExtra("extra_folder");
-    paramIntent = getParcelableExtra"extra_account"name;
-    localObject = uri.getLastPathSegment();
-    Intent localIntent = new Intent(this, LabelsActivity.class);
-    localIntent.putExtra("account_key", paramIntent);
-    localIntent.putExtra("label", (String)localObject);
-    startActivity(localIntent);
-    finish();
-  }
-  
-  private void launchManageLabels(Intent paramIntent)
-  {
-    paramIntent = getParcelableExtra"extra_account"name;
-    Intent localIntent = new Intent(this, LabelsActivity.class);
-    localIntent.putExtra("account_key", paramIntent);
-    startActivity(localIntent);
-    finish();
-  }
-  
-  private void loadHeaders(List<PreferenceActivity.Header> paramList)
-  {
-    loadHeadersFromResource(2131165189, paramList);
-    addAccountHeaders(paramList);
-  }
-  
-  private void loadInitialHeader(long paramLong)
-  {
-    Object localObject = Lists.newArrayList();
-    loadHeaders((List)localObject);
-    localObject = getInitialHeader(paramLong, (List)localObject);
-    if (localObject != null)
-    {
-      if (!isMultiPane())
-      {
-        startActivity(onBuildStartFragmentIntent(fragment, new Bundle(), titleRes, 0));
-        finish();
-      }
-    }
-    else {
       return;
     }
-    switchToHeader((PreferenceActivity.Header)localObject);
   }
   
-  public String getHelpContext()
+  protected boolean isValidFragment(String paramString)
   {
-    return "gm_settings";
+    return true;
   }
   
   public void onBuildHeaders(List<PreferenceActivity.Header> paramList)
   {
-    loadHeaders(paramList);
+    loadHeadersFromResource(bum.b, paramList);
+    if (b != null)
+    {
+      Account[] arrayOfAccount = b;
+      int j = arrayOfAccount.length;
+      int i = 0;
+      while (i < j)
+      {
+        Object localObject = arrayOfAccount[i];
+        PreferenceActivity.Header localHeader = new PreferenceActivity.Header();
+        title = c;
+        fragment = I;
+        Bundle localBundle = new Bundle(1);
+        localBundle.putParcelable("account", (Parcelable)localObject);
+        fragmentArguments = localBundle;
+        if ((dkn.a()) && (TextUtils.equals(e, "com.google")))
+        {
+          localObject = dnm.a(this, ((Account)localObject).h()).g();
+          if (!TextUtils.isEmpty((CharSequence)localObject)) {
+            summary = getString(dge.eO, new Object[] { localObject });
+          }
+        }
+        paramList.add(localHeader);
+        i += 1;
+      }
+    }
+    loadHeadersFromResource(dgh.b, paramList);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    paramBundle = getIntent();
-    long l2 = -1L;
-    long l1;
-    if (paramBundle.hasExtra("initial_fragment_id"))
+    Object localObject2 = getIntent();
+    Object localObject1;
+    if (((Intent)localObject2).hasExtra("mail_account"))
     {
-      l1 = paramBundle.getLongExtra("initial_fragment_id", -1L);
-      paramBundle.removeExtra("initial_fragment_id");
-    }
-    for (;;)
-    {
-      if (l1 != -1L)
-      {
-        int j = 1;
-        int i = j;
-        if (l1 == 2131755291L)
-        {
-          i = j;
-          if (paramBundle.getBooleanExtra("reporting_problem", false))
-          {
-            Utils.launchGoogleFeedback(this);
-            i = 0;
-            finish();
-          }
-        }
-        if (i != 0) {
-          loadInitialHeader(l1);
-        }
+      paramBundle = (Account)((Intent)localObject2).getParcelableExtra("mail_account");
+      localObject1 = new Bundle();
+      ((Bundle)localObject1).putParcelable("account", paramBundle);
+      if (((Intent)localObject2).hasExtra("folderId")) {
+        ((Bundle)localObject1).putString("folderId", ((Intent)localObject2).getStringExtra("folderId"));
       }
-      paramBundle = getActionBar();
+      localObject1 = onBuildStartFragmentIntent(I, (Bundle)localObject1, 0, 0);
+      ((Intent)localObject1).putExtra("current-account", paramBundle);
+      startActivity((Intent)localObject1);
+      finish();
+    }
+    do
+    {
+      paramBundle = super.b().a();
       if (paramBundle != null) {
-        paramBundle.setDisplayOptions(4, 4);
+        paramBundle.a(4, 4);
       }
       PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
       return;
-      if (paramBundle.hasExtra("extra_folder"))
-      {
-        launchLabelSettings(paramBundle);
-        return;
+      localObject1 = ((Intent)localObject2).getData();
+    } while ((localObject1 == null) || (!Boolean.parseBoolean(((Uri)localObject1).getQueryParameter("reporting_problem"))));
+    c = new dno(this, this, paramBundle, "state-feedback-error", "Feedback");
+    boolean bool = ((Intent)localObject2).getBooleanExtra("reporting_problem", false);
+    paramBundle = ((Uri)localObject1).getQueryParameter("reporting_problem");
+    int i;
+    label210:
+    dyv localdyv;
+    Account localAccount;
+    if ((paramBundle != null) && (Boolean.parseBoolean(paramBundle)))
+    {
+      i = 1;
+      if ((!bool) && (i == 0)) {
+        break label359;
       }
-      if (paramBundle.hasExtra("extra_manage_folders"))
-      {
-        launchManageLabels(paramBundle);
-        l1 = l2;
+      localObject1 = (Bitmap)((Intent)localObject2).getParcelableExtra("screen_shot");
+      localdyv = new dyv();
+      localAccount = a();
+      localObject2 = ((Intent)localObject2).getParcelableArrayExtra("all_accounts");
+      if ((localObject2 == null) || (localObject2.length <= 0)) {
+        break label378;
       }
-      else
+      paramBundle = new Account[localObject2.length];
+      System.arraycopy(localObject2, 0, paramBundle, 0, localObject2.length);
+    }
+    for (;;)
+    {
+      if ((this instanceof MailActivityGmail))
       {
-        Object localObject = paramBundle.getData();
-        l1 = l2;
-        if (localObject != null)
-        {
-          localObject = ((Uri)localObject).getQueryParameter("preference_fragment_id");
-          l1 = l2;
-          if (localObject != null) {
-            l1 = Long.parseLong((String)localObject);
-          }
+        localObject2 = y.f;
+        if (!((eiz)localObject2).e()) {
+          ((eiz)localObject2).b();
         }
+        fjg.a((eiz)localObject2, dyv.a(this, localAccount, paramBundle, (Bitmap)localObject1)).a(new dyw(localdyv, (eiz)localObject2));
       }
+      for (;;)
+      {
+        finish();
+        return;
+        i = 0;
+        break label210;
+        label359:
+        break;
+        dri.f(dyv.a, "GmailFeedbackHelper needs a MailActivityGmail because it requires a GoogleApiClient.", new Object[0]);
+      }
+      label378:
+      paramBundle = null;
     }
   }
   
   public boolean onCreateOptionsMenu(Menu paramMenu)
   {
-    getMenuInflater().inflate(2131886093, paramMenu);
+    getMenuInflater().inflate(dgb.c, paramMenu);
     return true;
+  }
+  
+  public void onHeaderClick(PreferenceActivity.Header paramHeader, int paramInt)
+  {
+    if (id == dfy.u) {
+      ddy.a(this, "from_mail_settings");
+    }
+    super.onHeaderClick(paramHeader, paramInt);
   }
   
   public boolean onOptionsItemSelected(MenuItem paramMenuItem)
   {
-    switch (paramMenuItem.getItemId())
+    int i = paramMenuItem.getItemId();
+    if (i == 16908332)
     {
-    default: 
-      return ApplicationMenuHandler.handleApplicationMenu(paramMenuItem, this, this);
-    case 2131755327: 
-      AccountHelper.showAddAccount(this, this);
+      finish();
       return true;
     }
-    finish();
-    return true;
-  }
-  
-  public void onPause()
-  {
-    super.onPause();
-    mRestartAccountQuery = true;
-  }
-  
-  public void onResult(android.accounts.Account paramAccount)
-  {
-    if (paramAccount != null) {
-      sCreatedAccount = true;
+    if ((i == dfy.bk) && (getFragmentManager().findFragmentByTag("manage-accounts") == null)) {
+      new dnp().show(getFragmentManager(), "manage-accounts");
+    }
+    Account localAccount = a();
+    if (b == null) {}
+    for (Account[] arrayOfAccount = new Account[0];; arrayOfAccount = b) {
+      return dnf.a(paramMenuItem, this, localAccount, arrayOfAccount, this);
     }
   }
   
-  public void onResume()
+  public void onSaveInstanceState(Bundle paramBundle, PersistableBundle paramPersistableBundle)
   {
-    super.onResume();
-    if ((sCreatedAccount) || (mRestartAccountQuery)) {}
-    for (int i = 1;; i = 0)
-    {
-      sCreatedAccount = false;
-      if (i != 0) {
-        asyncInitAccounts();
-      }
-      return;
+    super.onSaveInstanceState(paramBundle, paramPersistableBundle);
+    if (c != null) {
+      c.b(paramBundle);
     }
   }
   
   public void onSharedPreferenceChanged(SharedPreferences paramSharedPreferences, String paramString)
   {
-    UiProvider.notifyAccountListChanged(this);
+    GmailProvider.a(this);
+  }
+  
+  protected void onStart()
+  {
+    super.onStart();
+    if (c != null) {
+      c.d();
+    }
+    buo.a().a(this);
   }
   
   public void onStop()
   {
-    super.onStop();
+    buo.a().b(this);
     PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
+    if (c != null) {
+      c.e();
+    }
+    super.onStop();
   }
 }
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/account_setup_provider_item_separator" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/account_setup_provider_item" android:background="?selectableItemBackground" android:paddingLeft="@dimen/setup_logo_landing_list_outer_horizontal_margin" android:paddingTop="@dimen/setup_logo_landing_list_outer_vertical_margin" android:paddingRight="@dimen/setup_logo_landing_list_outer_horizontal_margin" android:paddingBottom="@dimen/setup_logo_landing_list_outer_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/provider_logo" android:layout_width="@dimen/setup_logo_landing_list_logo_size" android:layout_height="@dimen/setup_logo_landing_list_logo_size" android:layout_marginLeft="@dimen/setup_logo_landing_list_inner_horizontal_margin" android:layout_marginRight="@dimen/setup_logo_landing_list_inner_horizontal_margin" android:src="@drawable/quantum_ic_email_grey600_24" android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/setup_default_text_size" android:textColor="@color/account_setup_text_color" android:id="@id/provider_name" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/setup_logo_landing_list_inner_horizontal_margin" android:layout_marginRight="@dimen/setup_logo_landing_list_inner_horizontal_margin" />
+    </LinearLayout>
+</LinearLayout>

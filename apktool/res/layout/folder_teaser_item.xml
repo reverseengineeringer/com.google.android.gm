@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/folder_teaser_row" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/folder_teaser_item_height" style="@style/FolderTeaserPaddingEndStyle">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/nested_folder_icon" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="@dimen/folder_teaser_start_margin" android:layout_height="wrap_content" android:src="@drawable/ic_drawer_folder_24dp" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/text_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/FolderTeaserPaddingEndStyle">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/folder_teaser_main_text" android:ellipsize="end" android:id="@id/folder_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/folder_teaser_sub_text" android:ellipsize="end" android:id="@id/senders_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:id="@id/unread_count_textView" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/FolderTeaserUnreadCountTextStyle" />
+        <TextView android:textSize="14.0sp" android:id="@id/unseen_count_textView" android:visibility="gone" android:minWidth="57.0sp" style="@style/UnseenCount" />
+    </LinearLayout>
+    <View style="@style/ConversationListDividerStyle" />
+</LinearLayout>

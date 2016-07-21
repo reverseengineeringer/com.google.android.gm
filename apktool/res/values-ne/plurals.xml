@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">पात्रोहरू साझेदारी गरिएका छैनन्</item>
+        <item quantity="one">पात्रो साझेदारी गरिएको छैन</item>
+    </plurals>
+    <plurals name="draft">
+        <item quantity="other">ड्राफ्टहरू</item>
+        <item quantity="one">ड्राफ्ट</item>
+    </plurals>
+    <plurals name="confirm_delete_conversation">
+        <item quantity="other">यी %1$d कुराकानीहरू हटाउने हो?</item>
+        <item quantity="one">यो कुराकानी हटाउने हो?</item>
+    </plurals>
+    <plurals name="confirm_archive_conversation">
+        <item quantity="other">यी %1$d कुराकानीहरूका अभिलेख राख्ने हो?</item>
+        <item quantity="one">यो कुराकानीको अभिलेख राख्ने हो?</item>
+    </plurals>
+    <plurals name="confirm_discard_drafts_conversation">
+        <item quantity="other">यी %1$d कुराकानीहरूबाट ड्राफ्टहरू खारेज गर्ने हो?</item>
+        <item quantity="one">यस कुराकानीबाट ड्राफ्टहरू खारेज गर्ने हो?</item>
+    </plurals>
+    <plurals name="conversation_unstarred">
+        <item quantity="other">%1$d कुराकानीहरूबाट तारा हटाइदै</item>
+        <item quantity="one">%1$d कुराकानीबाट तारा हटाइदै</item>
+    </plurals>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d स्प्यामको रूपमा रिपोर्ट गरियो र सदस्यता रद्द गरियो</item>
+        <item quantity="one">%1$d स्प्यामको रूपमा रिपोर्ट गरियो र सदस्यता रद्द गरियो</item>
+    </plurals>
+    <plurals name="conversation_muted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> म्यूट गरिएको छ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> म्यूट गरिएको छ</item>
+    </plurals>
+    <plurals name="conversation_spammed">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> स्प्यामको रूपमा रिपोर्ट गरिएको छ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> स्प्यामको रूपमा रिपोर्ट गरिएको छ</item>
+    </plurals>
+    <plurals name="conversation_not_spam">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> स्प्याम नभएको रूपमा रिपोर्ट गरिएको छ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> स्प्याम नभएको रूपमा रिपोर्ट गरिएको छ</item>
+    </plurals>
+    <plurals name="conversation_not_important">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> महत्वहीनको रूपमा चिन्ह लगाइयो</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> महत्वहीनको रूपमा चिन्ह लगाइयो</item>
+    </plurals>
+    <plurals name="conversation_archived">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> अभिलेख राखिएको छ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> अभिलेख राखिएको छ</item>
+    </plurals>
+    <plurals name="conversation_deleted">
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> मेटाइएको छ</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> मेटाइएको छ</item>
+    </plurals>
+    <plurals name="conversation_folder_changed">
+        <item quantity="other">लेबलहरू परिवर्तन गरियो।</item>
+        <item quantity="one">लेबल परिवर्तन गरियो।</item>
+    </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d नयाँ सन्देशहरू</item>
+        <item quantity="one">%1$d नयाँ सन्देश</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d पुराना सन्देशहरू विस्तृत गर्नुहोस्</item>
+        <item quantity="one">पुरानो सन्देश विस्तृत गर्नुहोस्</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d पुराना सन्देशहरू विस्तृत गरियो</item>
+        <item quantity="one">एक पुरानो सन्देश विस्तृत गरियो</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d नयाँ सन्देशहरू</item>
+        <item quantity="one">%1$d नयाँ सन्देश</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d कुराकानीहरूलाई स्थायी रूपमा मेटाइनेछ।</item>
+        <item quantity="one">%1$d कुराकानीलाई स्थायी रूपमा मेटाइनेछ।</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d सन्देशहरू</item>
+        <item quantity="one">%1$d सन्देश</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d संलग्नकहरू</item>
+        <item quantity="one">%1$d संलग्नक</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">यी सन्देशहरूलाई स्प्यामका रूपमा चिन्हित गरिने छ। तपाईँ यी&amp;lt;b>%2$d प्रेषकहरू&amp;lt;/b>:%1$s बाट पनि यस्ता खालका सन्देशहरू प्राप्त गर्न रोक्न चाहनुहुन्छ?</item>
+        <item quantity="one">यस सन्देशलाई स्प्यामका रूपमा चिन्हित गरिने छ। तपाईँ %1$s बाट पनि यस्ता खालका सन्देशहरू प्राप्त गर्न रोक्न चाहनुहुन्छ?</item>
+    </plurals>
+    <plurals name="sync_recent">
+        <item quantity="other">: अन्तिम %1$d दिन</item>
+        <item quantity="one">सिंक: अन्तिम %1$d दिन</item>
+    </plurals>
+    <plurals name="sync_duration">
+        <item quantity="other">%d दिन</item>
+        <item quantity="one">एकदिन</item>
+    </plurals>
+    <plurals name="title_day_dialog_content">
+        <item quantity="other">दिन</item>
+        <item quantity="one">दिन</item>
+    </plurals>
+    <plurals name="sync_messages_partial_description">
+        <item quantity="other">जडान भएपछि अन्तिम %1$d दिनका सन्देशहरू डाउनलोड हुनेछन्</item>
+        <item quantity="one">जडान भएपछि अन्तिम 1 दिनका सन्देशहरू उनलोड हुनेछ</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">नोट: केही प्राप्तकर्ताहरूले यी फाइलहरूमा अझैपनि पहुँच गरेका छैनन्। तपाईंले Google ड्राइभ भित्रबाट यी फाइलहरू साझेदारी गर्नुपर्ने हुनसक्छ।</item>
+        <item quantity="one">नोट: केही प्राप्तकर्ताहरूले अझैपनि यस फाइलमा पहुँच गरेका छैनन्। तपाईंले Google ड्राइभ भित्रबाट यो फाइल साझेदारी गर्नुपर्ने हुनसक्छ।</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"तपाईँ ती प्राप्तकर्ताहरूसँग साझेदारी गर्दै हुनुहुन्छ:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>जो यी फाइलहरूमाथि स्वामित्व राख्ने Google अनुप्रयोग संस्थामा छैनन्।"</item>
+        <item quantity="one">तपाईँ ती प्राप्तकर्ताहरूसँग साझेदारी गर्दै हुनुहुन्छ:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>जो यो फाइलमाथि स्वामित्व राख्ने Google अनुप्रयोग संस्थामा छैनन्।</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">तपाईंले ड्राइभबाट सम्मिलित गर्नुभएका फाइलहरूमा तपाईंको प्राप्तकर्ताहरूको पहुँच नहुन सक्छ। तपाईंले Google ड्राइभ भित्रबाट फाइलहरू साझेदारी गर्नुपर्ने हुनसक्छ।</item>
+        <item quantity="one">तपाईंले ड्राइभबाट सम्मिलित गर्नुभएको फाइलमा तपाईंको प्राप्तकर्ताहरूको पहुँच नहुन सक्छ। तपाईंले Google ड्राइभ भित्रबाट फाइल साझेदारी गर्नुपर्ने हुनसक्छ।</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">तपाईंको हालको इमेल ठेगानाहरू:</item>
+        <item quantity="one">तपाईंको हालको इमेल ठेगाना:</item>
+    </plurals>
+</resources>

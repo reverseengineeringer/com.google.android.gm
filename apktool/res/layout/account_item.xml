@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mail.ui.AccountItemView android:background="@drawable/nonfolder_item" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/account_item_minimum_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="@dimen/account_avatar_dimension" android:layout_height="@dimen/account_avatar_dimension" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AccountItemNameStyle">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:ellipsize="end" android:id="@id/account_display_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:id="@id/account_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/checkmark" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_drawer_accnt_check_24dp" />
+</com.android.mail.ui.AccountItemView>

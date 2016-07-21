@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/compose_proposed_time_margin_top" android:layout_marginBottom="@dimen/compose_proposed_time_margin_bottom" app:cardBackgroundColor="@color/compose_proposed_time_card_background"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/compose_proposed_time_text_container_top_padding" android:paddingBottom="@dimen/compose_proposed_time_text_container_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/compose_proposed_time_title_text_size" android:textStyle="bold" android:id="@id/title" style="@style/ComposeProposeTimeTextViewStyle" />
+        <TextView android:id="@id/current_time" style="@style/ComposeProposeTimeTextViewStyle" />
+        <TextView android:textColor="@color/compose_proposed_time_highlight_text" android:id="@id/proposed_time" style="@style/ComposeProposeTimeTextViewStyle" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

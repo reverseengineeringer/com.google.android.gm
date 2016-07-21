@@ -1,9 +1,6 @@
 package com.android.mail.compose;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.text.Html;
-import android.text.SpannedString;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -14,24 +11,23 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import com.android.mail.providers.Message;
-import com.android.mail.utils.Utils;
-import java.text.DateFormat;
-import java.util.Date;
+import buc;
+import bue;
+import buo;
+import but;
+import ccp;
+import cxa;
 
-class QuotedTextView
+public class QuotedTextView
   extends LinearLayout
   implements View.OnClickListener
 {
-  private static final int HEADER_SEPARATOR_LENGTH = "<br type='attribution'>".length();
-  private static String sQuoteBegin;
-  private boolean mIncludeText = true;
-  private CharSequence mQuotedText;
-  private WebView mQuotedTextWebView;
-  private Button mRespondInlineButton;
-  private RespondInlineListener mRespondInlineListener;
-  private CheckBox mShowHideCheckBox;
-  private ShowHideQuotedTextListener mShowHideListener;
+  public CharSequence a;
+  public boolean b = true;
+  public ccp c;
+  private final WebView d;
+  private final CheckBox e;
+  private final Button f;
   
   public QuotedTextView(Context paramContext)
   {
@@ -40,242 +36,87 @@ class QuotedTextView
   
   public QuotedTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
-    this(paramContext, paramAttributeSet, -1);
+    this(paramContext, paramAttributeSet, 0);
   }
   
   public QuotedTextView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet);
-    LayoutInflater.from(paramContext).inflate(2130968673, this);
-    mQuotedTextWebView = ((WebView)findViewById(2131755236));
-    Utils.restrictWebView(mQuotedTextWebView);
-    mQuotedTextWebView.getSettings().setBlockNetworkLoads(true);
-    mShowHideCheckBox = ((CheckBox)findViewById(2131755232));
-    mShowHideCheckBox.setChecked(true);
-    mShowHideCheckBox.setOnClickListener(this);
-    sQuoteBegin = paramContext.getResources().getString(2131493126);
-    findViewById(2131755233).setOnClickListener(this);
-    mRespondInlineButton = ((Button)findViewById(2131755234));
-    if (mRespondInlineButton != null) {
-      mRespondInlineButton.setEnabled(false);
+    LayoutInflater.from(paramContext).inflate(bue.ac, this);
+    d = ((WebView)findViewById(buc.dK));
+    cxa.a(d);
+    d.getSettings().setBlockNetworkLoads(true);
+    e = ((CheckBox)findViewById(buc.bQ));
+    e.setChecked(true);
+    e.setOnClickListener(this);
+    f = ((Button)findViewById(buc.ef));
+    if (f != null) {
+      f.setEnabled(false);
     }
   }
   
-  public static boolean containsQuotedText(String paramString)
+  public final void a()
   {
-    return paramString.indexOf(sQuoteBegin) >= 0;
-  }
-  
-  public static int findQuotedTextIndex(CharSequence paramCharSequence)
-  {
-    if (TextUtils.isEmpty(paramCharSequence)) {
-      return -1;
-    }
-    return paramCharSequence.toString().indexOf(sQuoteBegin);
-  }
-  
-  private String getHtmlText(Message paramMessage)
-  {
-    if (bodyHtml != null) {
-      return bodyHtml;
-    }
-    if (bodyText != null) {
-      return Html.toHtml(new SpannedString(bodyText));
-    }
-    return "";
-  }
-  
-  public static int getQuotedTextOffset(String paramString)
-  {
-    return paramString.indexOf("<br type='attribution'>") + HEADER_SEPARATOR_LENGTH;
-  }
-  
-  private void populateData()
-  {
-    String str1 = getContext().getResources().getString(2131492870);
-    String str2 = getContext().getResources().getString(2131492871);
-    str1 = "<head><style type=\"text/css\">* body { background-color: " + str1 + "; color: " + str2 + "; }</style></head>" + mQuotedText.toString();
-    mQuotedTextWebView.loadDataWithBaseURL(null, str1, "text/html", "utf-8", null);
-  }
-  
-  private void respondInline()
-  {
-    Object localObject = Utils.convertHtmlToPlainText(getQuotedText().toString());
-    if (mRespondInlineListener != null) {
-      mRespondInlineListener.onRespondInline("\n" + (String)localObject);
-    }
-    updateCheckedState(false);
-    mRespondInlineButton.setVisibility(8);
-    localObject = findViewById(2131755228);
-    if (localObject != null) {
-      ((View)localObject).setVisibility(8);
+    if (f != null) {
+      f.setVisibility(0);
     }
   }
   
-  private void setQuotedText(CharSequence paramCharSequence)
+  public final void a(CharSequence paramCharSequence)
   {
-    mQuotedText = paramCharSequence;
-    populateData();
-    if (mRespondInlineButton != null)
+    setVisibility(0);
+    a = paramCharSequence;
+    d.loadDataWithBaseURL(null, a.toString(), "text/html", "utf-8", null);
+    if (f != null)
     {
       if (!TextUtils.isEmpty(paramCharSequence))
       {
-        mRespondInlineButton.setVisibility(0);
-        mRespondInlineButton.setEnabled(true);
-        mRespondInlineButton.setOnClickListener(this);
+        f.setVisibility(0);
+        f.setEnabled(true);
+        f.setOnClickListener(this);
       }
     }
     else {
       return;
     }
-    mRespondInlineButton.setVisibility(8);
-    mRespondInlineButton.setEnabled(false);
+    f.setVisibility(8);
+    f.setEnabled(false);
   }
   
-  private void updateQuotedTextVisibility(boolean paramBoolean)
+  public final void a(boolean paramBoolean)
   {
-    WebView localWebView = mQuotedTextWebView;
-    if (paramBoolean) {}
-    for (int i = 0;; i = 8)
+    CheckBox localCheckBox;
+    if (e != null)
     {
-      localWebView.setVisibility(i);
-      mIncludeText = paramBoolean;
-      return;
-    }
-  }
-  
-  public void allowQuotedText(boolean paramBoolean)
-  {
-    View localView = findViewById(2131755231);
-    if (localView != null) {
-      if (!paramBoolean) {
-        break label23;
-      }
-    }
-    label23:
-    for (int i = 0;; i = 4)
-    {
-      localView.setVisibility(i);
-      return;
-    }
-  }
-  
-  public void allowRespondInline(boolean paramBoolean)
-  {
-    Button localButton;
-    if (mRespondInlineButton != null)
-    {
-      localButton = mRespondInlineButton;
+      localCheckBox = e;
       if (!paramBoolean) {
         break label24;
       }
     }
     label24:
+    for (int i = 0;; i = 4)
+    {
+      localCheckBox.setVisibility(i);
+      return;
+    }
+  }
+  
+  public final void b(boolean paramBoolean)
+  {
+    e.setChecked(paramBoolean);
+    WebView localWebView = d;
+    if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
-      localButton.setVisibility(i);
+      localWebView.setVisibility(i);
+      b = paramBoolean;
       return;
     }
   }
   
-  public CharSequence getQuotedText()
+  public final void c(boolean paramBoolean)
   {
-    return mQuotedText;
-  }
-  
-  public CharSequence getQuotedTextIfIncluded()
-  {
-    if (mIncludeText) {
-      return mQuotedText;
-    }
-    return null;
-  }
-  
-  public boolean isTextIncluded()
-  {
-    return mIncludeText;
-  }
-  
-  public void onClick(View paramView)
-  {
-    switch (paramView.getId())
-    {
-    default: 
-      return;
-    case 2131755234: 
-      respondInline();
-      return;
-    case 2131755232: 
-      updateCheckedState(mShowHideCheckBox.isChecked());
-      return;
-    }
-    if (!mShowHideCheckBox.isChecked()) {}
-    for (boolean bool = true;; bool = false)
-    {
-      updateCheckedState(bool);
-      return;
-    }
-  }
-  
-  public void setQuotedText(int paramInt, Message paramMessage, boolean paramBoolean)
-  {
-    setVisibility(0);
-    String str = getHtmlText(paramMessage);
-    StringBuffer localStringBuffer = new StringBuffer();
-    DateFormat localDateFormat = DateFormat.getDateTimeInstance(2, 3);
-    Date localDate = new Date(dateReceivedMs);
-    Resources localResources = getContext().getResources();
-    if ((paramInt == 0) || (paramInt == 1))
-    {
-      localStringBuffer.append(sQuoteBegin);
-      localStringBuffer.append(String.format(localResources.getString(2131492905), new Object[] { localDateFormat.format(localDate), Utils.cleanUpString(from, true) }));
-      localStringBuffer.append("<br type='attribution'>");
-      localStringBuffer.append("<blockquote class=\"quote\" style=\"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex\">");
-      localStringBuffer.append(str);
-      localStringBuffer.append("</blockquote>");
-      localStringBuffer.append("</div>");
-    }
-    for (;;)
-    {
-      setQuotedText(localStringBuffer);
-      allowQuotedText(paramBoolean);
-      allowRespondInline(true);
-      return;
-      if (paramInt == 2)
-      {
-        localStringBuffer.append(sQuoteBegin);
-        localStringBuffer.append(String.format(localResources.getString(2131492906), new Object[] { Utils.cleanUpString(from, true), localDateFormat.format(localDate), Utils.cleanUpString(subject, false), Utils.cleanUpString(to, true) }));
-        paramMessage = cc;
-        localStringBuffer.append(String.format(localResources.getString(2131492907), new Object[] { Utils.cleanUpString(paramMessage, true) }));
-        localStringBuffer.append("<br type='attribution'>");
-        localStringBuffer.append("<blockquote class=\"quote\" style=\"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex\">");
-        localStringBuffer.append(str);
-        localStringBuffer.append("</blockquote>");
-        localStringBuffer.append("</div>");
-      }
-    }
-  }
-  
-  public void setQuotedTextFromDraft(CharSequence paramCharSequence, boolean paramBoolean)
-  {
-    boolean bool = false;
-    setVisibility(0);
-    setQuotedText(paramCharSequence);
-    if (!paramBoolean) {
-      bool = true;
-    }
-    allowQuotedText(bool);
-    allowRespondInline(true);
-  }
-  
-  public void setRespondInlineListener(RespondInlineListener paramRespondInlineListener)
-  {
-    mRespondInlineListener = paramRespondInlineListener;
-  }
-  
-  public void setUpperDividerVisible(boolean paramBoolean)
-  {
-    View localView = findViewById(2131755229);
+    View localView = findViewById(buc.fD);
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
@@ -284,23 +125,43 @@ class QuotedTextView
     }
   }
   
-  public void updateCheckedState(boolean paramBoolean)
+  public void onClick(View paramView)
   {
-    mShowHideCheckBox.setChecked(paramBoolean);
-    updateQuotedTextVisibility(paramBoolean);
-    if (mShowHideListener != null) {
-      mShowHideListener.onShowHideQuotedText(paramBoolean);
+    int i = paramView.getId();
+    if (i == buc.ef)
+    {
+      paramView = cxa.b(a.toString());
+      if (c != null)
+      {
+        localccp = c;
+        paramView = String.valueOf(paramView);
+        if (paramView.length() != 0)
+        {
+          paramView = "\n".concat(paramView);
+          localccp.b(paramView);
+        }
+      }
+      else
+      {
+        b(false);
+        f.setVisibility(8);
+        paramView = findViewById(buc.dH);
+        if (paramView != null) {
+          paramView.setVisibility(8);
+        }
+        buo.a().a("quotedtextview", "respond_inline", "", 0L);
+      }
     }
-  }
-  
-  public static abstract interface RespondInlineListener
-  {
-    public abstract void onRespondInline(String paramString);
-  }
-  
-  public static abstract interface ShowHideQuotedTextListener
-  {
-    public abstract void onShowHideQuotedText(boolean paramBoolean);
+    while (i != buc.bQ) {
+      for (;;)
+      {
+        ccp localccp;
+        return;
+        paramView = new String("\n");
+      }
+    }
+    b(e.isChecked());
+    buo.a().a("quotedtextview", "hide_quoted_text", "", 0L);
   }
 }
 

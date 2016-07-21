@@ -2,25 +2,21 @@
 <resources>
     <string-array name="compose_modes">
         <item>Balas</item>
-        <item>Balas semua</item>
+        <item>Balas ke semua</item>
         <item>Teruskan</item>
     </string-array>
     <string-array name="sync_status">
         <item>Berhasil</item>
-        <item>Tidak ada sambungan.</item>
-        <item>Tidak dapat masuk.</item>
-        <item>Kesalahan keamanan.</item>
-        <item>Tidak dapat menyinkronkan.</item>
+        <item>Tidak ada koneksi</item>
+        <item>Tidak dapat masuk</item>
+        <item>Kesalahan keamanan</item>
+        <item>Tidak dapat menyinkronkan</item>
+        <item>Kesalahan Server</item>
         <item>Kesalahan Internal</item>
     </string-array>
-    <string-array name="moveto_folder_sections">
-        <item>Sistem</item>
-        <item>Sering Dgunakan</item>
-        <item>Semua Label</item>
-    </string-array>
     <string-array name="prefEntries_autoAdvance">
-        <item>Baru</item>
-        <item>Lama</item>
+        <item>Lebih baru</item>
+        <item>Terdahulu</item>
         <item>Daftar percakapan</item>
     </string-array>
     <string-array name="prefSummaries_autoAdvance">
@@ -28,38 +24,79 @@
         <item>Tampilkan percakapan lama setelah menghapus atau mengarsipkan</item>
         <item>Tampilkan daftar percakapan setelah menghapus atau mengarsipkan</item>
     </string-array>
-    <string-array name="prefEntries_swipe">
-        <item>Tidak memiliki efek</item>
-        <item>Mengarsipkan atau menghapus</item>
-        <item>Selalu menghapus</item>
+    <string-array name="prefEntries_removal_action">
+        <item>Arsipkan</item>
+        <item>Hapus</item>
     </string-array>
-    <string-array name="prefSummaries_swipe">
-        <item>Tidak memiliki efek</item>
-        <item>Kotak masuk: mengarsipkan percakapan. Label reguler: menghapus label aktif. Label sistem seperti Semua email atau Terkirim: menghapus percakapan.</item>
-        <item>Selalu menghapus percakapan</item>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>Arsipkan</item>
+        <item>Hapus</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>Tinggi</item>
+        <item>Sedang</item>
+        <item>Rendah</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>Jangan sampai ketinggalan penerbangan lagi.</item>
+        <item>Jangan sampai ketinggalan penerbangan lagi.</item>
+        <item>Tambahkan penerbangan ini ke kalender Anda?</item>
+        <item>Dapatkan reservasi di Google Kalender Anda.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google Kalender menambahkan reservasi penerbangan dan lainnya ke kalender Anda secara otomatis.</item>
+        <item>Google Kalender menambahkan reservasi penerbangan dan lainnya ke kalender Anda secara otomatis.</item>
+        <item>Acara dari Gmail dapat ditambahkan secara otomatis dengan aplikasi Google Kalender.</item>
+        <item>Reservasi penerbangan, hotel, dan restoran ditambahkan secara otomatis.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>Tambahkan reservasi ini ke Google Kalender?</item>
+        <item>Ingin agar reservasi otomatis ada di Kalender Anda?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Dengan aplikasi Google Kalender, acara dari Gmail ditambahkan ke kalender Anda secara otomatis.</item>
+        <item>Google Kalender menambahkan reservasi hotel dan lainnya dari email Anda secara otomatis.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>Dapatkan notifikasi tepat waktu untuk waktu makan Anda.</item>
+        <item>Tambahkan reservasi ini ke Google Kalender?</item>
+        <item>Dapatkan reservasi di Google Kalender Anda secara otomatis.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google Kalender menambahkan reservasi restoran dan lainnya ke kalender Anda secara otomatis.</item>
+        <item>Acara dari Gmail dapat ditambahkan ke kalender Anda secara otomatis.</item>
+        <item>Reservasi penerbangan, hotel, dan restoran ditambahkan secara otomatis.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>Dapatkan notifikasi tepat waktu sebelum acara ini.</item>
+        <item>Tambahkan acara ini ke Google Kalender?</item>
+        <item>Jangan lewatkan acara Anda.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google Kalender menambahkan acara dan reservasi lainnya ke kalender Anda secara otomatis.</item>
+        <item>Acara dari Gmail dapat ditambahkan ke kalender Anda secara otomatis.</item>
+        <item>Acara dan reservasi lainnya ditambahkan secara otomatis dengan Google Kalender.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>Lacak reservasi Anda di satu tempat.</item>
+        <item>Tambahkan rerservasi ini ke Google Kalender?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>Reservasi penerbangan, hotel, dan restoran ditambahkan ke Google Kalender secara otomatis.</item>
+        <item>Acara dari Gmail dapat ditambahkan ke kalender Anda secara otomatis.</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeName">
         <item>Mini</item>
         <item>Kecil</item>
         <item>Normal</item>
         <item>Besar</item>
-        <item>Sangat besar</item>
+        <item>Besar sekali</item>
     </string-array>
     <string-array name="prefEntries_messageTextSizeSummary">
-        <item>Menampilkan konten pesan dalam teks berukuran mini</item>
-        <item>Menampilkan konten pesan dalam teks berukuran kecil</item>
+        <item>Tampilkan konten pesan dalam teks berukuran mini</item>
+        <item>Tampilkan konten pesan dalam teks berukuran kecil</item>
         <item>Tampilkan konten pesan dalam teks berukuran normal</item>
-        <item>Menampilkan konten pesan dalam teks berukuran besar</item>
-        <item>Menampilkan konten pesan dalam teks berukuran raksasa</item>
-    </string-array>
-    <string-array name="prefSummaries_snapHeader">
-        <item>Selalu tampilkan aksi pesan di bagian atas layar</item>
-        <item>Hanya tampilkan aksi pesan di atas layar saat diputar ke orientasi potret</item>
-        <item>Jangan tampilkan tindakan pesan di luar judul pesan</item>
-    </string-array>
-    <string-array name="prefEntries_snapHeader">
-        <item>Selalu tampilkan</item>
-        <item>Hanya tampilkan dalam orientasi potret</item>
-        <item>Jangan tampilkan</item>
+        <item>Tampilkan konten pesan dalam teks berukuran besar</item>
+        <item>Tampilkan konten pesan dalam teks berukuran raksasa</item>
     </string-array>
 </resources>

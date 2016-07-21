@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="2.0dip" android:touchscreenBlocksFocus="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/mail_toolbar_view" />
+    <include layout="@layout/mail_actionbar_searchview" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="start|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/fix_permissions_dialog_title_height" style="@style/FixPermissionsDialogTitle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/alertTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/fix_permissions_title" android:layout_weight="1.0" style="?android:attr/windowTitleStyle" />
+    <ImageView android:id="@id/fix_permissions_info_icon" android:background="?android:selectableItemBackground" android:layout_width="@dimen/fix_permissions_dialog_icon_width" android:layout_height="fill_parent" android:src="@drawable/ic_ad_info_20dp" android:scaleType="center" android:contentDescription="@string/learn_more" style="@style/FixPermissionsIcon" />
+</LinearLayout>

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="number_of_attachments">
-        <item quantity="other">%d ek</item>
-        <item quantity="one">%d ek</item>
-    </plurals>
-    <plurals name="move_conversation">
-        <item quantity="other">%1$d ileti dizisini taşı</item>
-        <item quantity="one">İleti dizisini taşı</item>
+    <plurals name="pntg_find_a_time_all_calendars_not_shared">
+        <item quantity="other">Takvimler paylaşılmadı</item>
+        <item quantity="one">Takvim paylaşılmadı</item>
     </plurals>
     <plurals name="draft">
         <item quantity="other">Taslaklar</item>
@@ -21,112 +17,80 @@
         <item quantity="one">Bu ileti dizisi arşivlensin mi?</item>
     </plurals>
     <plurals name="confirm_discard_drafts_conversation">
-        <item quantity="other">Taslaklar bu %1$d ileti dizisinden silinsin mi?</item>
-        <item quantity="one">Taslaklar bu ileti dizisinden silinsin mi?</item>
-    </plurals>
-    <plurals name="conversation_marking_read">
-        <item quantity="other">%1$d ileti dizisi okundu olarak işaretleniyor.</item>
-        <item quantity="one">%1$d ileti dizisi okundu olarak işaretleniyor.</item>
-    </plurals>
-    <plurals name="conversation_marking_unread">
-        <item quantity="other">%1$d ileti dizisi okunmadı olarak işaretleniyor.</item>
-        <item quantity="one">%1$d ileti dizisi okunmadı olarak işaretleniyor.</item>
-    </plurals>
-    <plurals name="conversation_starring">
-        <item quantity="other">%1$d ileti dizisine yıldız ekleniyor.</item>
-        <item quantity="one">%1$d ileti dizisine yıldız ekleniyor.</item>
+        <item quantity="other">Bu %1$d ileti dizisindeki taslaklar silinsin mi?</item>
+        <item quantity="one">Bu ileti dizisindeki taslaklar silinsin mi?</item>
     </plurals>
     <plurals name="conversation_unstarred">
-        <item quantity="other">%1$d ileti dizisinin yıldızı kaldırılıyor.</item>
-        <item quantity="one">%1$d ileti dizisinin yıldızı kaldırılıyor.</item>
+        <item quantity="other">%1$d ileti dizisinin yıldızı kaldırılıyor</item>
+        <item quantity="one">%1$d ileti dizisinin yıldızı kaldırılıyor</item>
     </plurals>
-    <plurals name="conversation_unknown_operation">
-        <item quantity="other">%1$d ileti dizisinde yapılan işlem için bekleniyor.</item>
-        <item quantity="one">%1$d ileti dizisinde yapılan işlem için bekleniyor.</item>
+    <plurals name="conversation_spammed_and_unsubscribed">
+        <item quantity="other">%1$d ileti dizisi spam olarak bildirildi ve e-posta listesinden çıkıldı</item>
+        <item quantity="one">%1$d ileti dizisi spam olarak bildirildi ve e-posta listesinden çıkıldı</item>
     </plurals>
     <plurals name="conversation_muted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi kapatıldı.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi kapatıldı.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi yoksayıldı</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi yoksayıldı</item>
     </plurals>
     <plurals name="conversation_spammed">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi spam olarak bildirildi.</item>
-        <item quantity="one">"&amp;lt;b>%1$d&amp;lt;/b>  ileti dizisi spam olarak bildirildi."</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi spam olarak bildirildi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi spam olarak bildirildi</item>
     </plurals>
     <plurals name="conversation_not_spam">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisinin spam olmadığı bildirildi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisinin spam olmadığı bildirildi.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisinin spam olmadığı bildirildi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisinin spam olmadığı bildirildi</item>
     </plurals>
     <plurals name="conversation_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemsiz olarak işaretlendi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemsiz olarak işaretlendi.</item>
-    </plurals>
-    <plurals name="conversation_phished">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi kimlik avı olarak bildirildi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi kimlik avı olarak bildirildi.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemsiz olarak işaretlendi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemsiz olarak işaretlendi</item>
     </plurals>
     <plurals name="conversation_archived">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi arşivlendi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi arşivlendi.</item>
-    </plurals>
-    <plurals name="conversation_moved_to_inbox">
-        <item quantity="other">"&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi Gelen Kutusu'na taşındı."</item>
-        <item quantity="one">"&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi Gelen Kutusu'na taşındı."</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi arşivlendi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi arşivlendi</item>
     </plurals>
     <plurals name="conversation_deleted">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi silindi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi silindi.</item>
-    </plurals>
-    <plurals name="conversation_marked_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemli olarak işaretlendi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemli olarak işaretlendi.</item>
-    </plurals>
-    <plurals name="conversation_marked_not_important">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemsiz olarak işaretlendi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi önemsiz olarak işaretlendi.</item>
-    </plurals>
-    <plurals name="conversation_marked_read">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi okundu olarak işaretlendi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi okundu olarak işaretlendi.</item>
-    </plurals>
-    <plurals name="conversation_marked_unread">
-        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi okunmadı olarak işaretlendi.</item>
-        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi okunmadı olarak işaretlendi.</item>
+        <item quantity="other">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi silindi</item>
+        <item quantity="one">&amp;lt;b>%1$d&amp;lt;/b> ileti dizisi silindi</item>
     </plurals>
     <plurals name="conversation_folder_changed">
         <item quantity="other">Etiketler değiştirildi.</item>
         <item quantity="one">Etiket değiştirildi.</item>
     </plurals>
+    <plurals name="new_incoming_messages">
+        <item quantity="other">%1$d yeni ileti</item>
+        <item quantity="one">%1$d yeni ileti</item>
+    </plurals>
+    <plurals name="show_messages_read">
+        <item quantity="other">%1$d eski iletiyi genişlet</item>
+        <item quantity="one">Eski iletiyi genişlet</item>
+    </plurals>
+    <plurals name="super_collapsed_block_accessibility_announcement">
+        <item quantity="other">%1$d eski ileti genişletildi</item>
+        <item quantity="one">Bir eski ileti genişletildi</item>
+    </plurals>
+    <plurals name="new_messages">
+        <item quantity="other">%1$d yeni ileti</item>
+        <item quantity="one">%1$d yeni ileti</item>
+    </plurals>
+    <plurals name="empty_folder_dialog_message">
+        <item quantity="other">%1$d ileti dizisi kalıcı olarak silinecek.</item>
+        <item quantity="one">%1$d ileti dizisi kalıcı olarak silinecek.</item>
+    </plurals>
+    <plurals name="num_messages">
+        <item quantity="other">%1$d ileti</item>
+        <item quantity="one">%1$d ileti</item>
+    </plurals>
+    <plurals name="num_attachments">
+        <item quantity="other">%1$d ek</item>
+        <item quantity="one">%1$d ek</item>
+    </plurals>
+    <plurals name="dialog_report_spam_unsubscribe_text">
+        <item quantity="other">Bu iletiler spam olarak işaretlenecek. Şu &amp;lt;b>%2$d gönderenden&amp;lt;/b> benzer iletiler almaya son vermek ister misiniz:%1$s?</item>
+        <item quantity="one">Bu ileti spam olarak işaretlenecek. %1$s adlı gönderenden benzer iletiler almaya son vermek ister misiniz?</item>
+    </plurals>
     <plurals name="sync_recent">
-        <item quantity="other">Son %1$d günü senkronize et</item>
+        <item quantity="other">Senkronizasyon: Son %1$d gün</item>
         <item quantity="one">Senkronizasyon: Son %1$d gün</item>
-    </plurals>
-    <plurals name="confirm_discard_conversation">
-        <item quantity="other">Bu %1$d taslak silinsin mi?</item>
-        <item quantity="one">Bu taslak silinsin mi?</item>
-    </plurals>
-    <plurals name="conversation_muting">
-        <item quantity="other">%1$d ileti dizisinin sesi kapatılıyor.</item>
-        <item quantity="one">%1$d ileti dizisinin sesi kapatılıyor.</item>
-    </plurals>
-    <plurals name="conversation_spamming">
-        <item quantity="other">%1$d ileti dizisi spam olarak bildiriliyor.</item>
-        <item quantity="one">%1$d ileti dizisi spam olarak bildiriliyor.</item>
-    </plurals>
-    <plurals name="conversation_archiving">
-        <item quantity="other">%1$d ileti dizisi arşivleniyor.</item>
-        <item quantity="one">%1$d ileti dizisi arşivleniyor.</item>
-    </plurals>
-    <plurals name="conversation_deleting">
-        <item quantity="other">%1$d ileti dizisi siliniyor.</item>
-        <item quantity="one">%1$d ileti dizisi siliniyor.</item>
-    </plurals>
-    <plurals name="conversation_unstarring">
-        <item quantity="other">%1$d sohbetin yıldızı kaldırılıyor.</item>
-        <item quantity="one">%1$d sohbetin yıldızı kaldırılıyor.</item>
-    </plurals>
-    <plurals name="conversation_label_changed">
-        <item quantity="other">Değişen etiketler.</item>
-        <item quantity="one">Değişen etiket.</item>
     </plurals>
     <plurals name="sync_duration">
         <item quantity="other">%d gün</item>
@@ -136,12 +100,25 @@
         <item quantity="other">Gün</item>
         <item quantity="one">Gün</item>
     </plurals>
-    <plurals name="notify_attachment_error">
-        <item quantity="other">Ek gösterilemiyor%s</item>
-        <item quantity="one">Ek gösterilemedi</item>
-    </plurals>
     <plurals name="sync_messages_partial_description">
-        <item quantity="other">Bağlandığında, son %1$d günlük iletiler indirilecek</item>
-        <item quantity="one">Bağlandığında, son 1 günlük iletiler indirilecek</item>
+        <item quantity="other">Bağlanıldığında, son %1$d günün iletileri indirilecek</item>
+        <item quantity="one">Bağlanıldığında, son 1 günün iletileri indirilecek</item>
+    </plurals>
+    <plurals name="fix_permissions_does_not_fix_everything_warning">
+        <item quantity="other">"Not: Bazı alıcıların hâlâ bu dosyalara erişimi olmayabilir. Bu dosyaları Google Drive'ın içinden paylaşmanız gerekebilir."</item>
+        <item quantity="one">"Not: Bazı alıcıların hâlâ bu dosyaya erişimi olmayabilir. Bu dosyayı Google Drive'ın içinden paylaşmanız gerekebilir."</item>
+    </plurals>
+    <plurals name="fix_permissions_outside_domain_warning">
+        <item quantity="other">"Bu dosyaların ait olduğu Google Apps kuruluşunda bulunmayan alıcılarla paylaşıyorsunuz:&amp;lt;br>&amp;lt;b>%1$s
+&amp;lt;/b>&amp;lt;br>."</item>
+        <item quantity="one">Bu dosyanın ait olduğu Google Apps kuruluşunda bulunmayan alıcılarla paylaşıyorsunuz:&amp;lt;br>&amp;lt;b>%1$s&amp;lt;/b>&amp;lt;br>.</item>
+    </plurals>
+    <plurals name="files_not_shared_dialog_body">
+        <item quantity="other">"Alıcılarınızın, Drive'dan eklediğiniz dosyalara erişimi olmayabilir. Dosyaları Google Drive'ın içinden paylaşmanız gerekebilir."</item>
+        <item quantity="one">"Alıcılarınızın, Drive'dan eklediğiniz dosyaya erişimi olmayabilir. Dosyayı Google Drive'ın içinden paylaşmanız gerekebilir."</item>
+    </plurals>
+    <plurals name="welcome_tour_other_addresses_list_label">
+        <item quantity="other">Mevcut e-posta adresleriniz:</item>
+        <item quantity="one">Mevcut e-posta adresiniz:</item>
     </plurals>
 </resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:persistent="false" android:title="@string/account_settings_description_label" android:key="account_description" android:summary="" android:dialogTitle="@string/account_settings_description_label" android:inputType="textCapWords" />
+    <EditTextPreference android:persistent="false" android:title="@string/account_settings_name_label" android:key="account_name" android:summary="" android:dialogTitle="@string/account_settings_name_label" android:inputType="textPersonName|textCapWords" />
+    <EditTextPreference android:persistent="false" android:singleLine="false" android:title="@string/preferences_signature_title" android:key="account_signature" android:dialogTitle="@string/preferences_signature_dialog_title" />
+    <PreferenceScreen android:persistent="false" android:title="@string/preferences_vacation_responder_title" android:key="vacation-responder" />
+    <PreferenceScreen android:title="@string/account_settings_edit_quick_responses_label" android:key="account_quick_responses" android:summary="@string/account_settings_edit_quick_responses_summary" />
+    <PreferenceCategory android:title="@string/account_settings_data_usage" android:key="data_usage">
+        <ListPreference android:persistent="false" android:entries="@array/account_settings_check_frequency_entries" android:title="@string/account_settings_mail_check_frequency_label" android:key="account_check_frequency" android:order="1" android:dialogTitle="@string/account_settings_mail_check_frequency_label" android:entryValues="@array/account_settings_check_frequency_values" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/account_settings_sync_email_enable" android:key="account_sync_email" android:summary="@string/account_settings_sync_email_summary" android:order="4" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/account_settings_sync_contacts_enable" android:key="account_sync_contacts" android:summary="@string/account_settings_sync_contacts_summary" android:order="5" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/account_settings_sync_calendar_enable" android:key="account_sync_calendar" android:summary="@string/account_settings_sync_calendar_summary" android:order="6" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/account_settings_background_attachments_label" android:key="account_background_attachments" android:summary="@string/account_settings_background_attachments_summary" android:order="7" />
+        <ListPreference android:persistent="false" android:entries="@array/showImagesEntries" android:title="@string/preference_show_images_title" android:key="account_show_images" android:entryValues="@array/showImagesValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:enabled="false" android:title="@string/account_settings_notifications" android:key="account_notifications">
+        <CheckBoxPreference android:persistent="false" android:title="@string/account_settings_notify_label" android:key="notifications-enabled" android:summary="@string/account_settings_notify_summary" android:defaultValue="true" />
+        <Preference android:persistent="false" android:title="@string/account_settings_ringtone" android:key="notification-ringtone" android:dependency="notifications-enabled" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/label_notification_vibrate_title" android:key="notification-vibrate" android:dependency="notifications-enabled" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/system_folders_title" android:key="system_folders">
+        <Preference android:persistent="false" android:layout="?android:preferenceLayoutChild" android:title="@string/system_folders_trash_title" android:key="system_folders_trash" android:summary="@string/system_folders_trash_summary" android:dialogTitle="@string/system_folders_trash_dlg" />
+        <Preference android:persistent="false" android:layout="?android:preferenceLayoutChild" android:title="@string/system_folders_sent_title" android:key="system_folders_sent" android:summary="@string/system_folders_sent_summary" android:dialogTitle="@string/system_folders_sent_dlg" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/account_settings_servers" android:key="account_servers">
+        <PreferenceScreen android:title="@string/account_settings_incoming_label" android:key="incoming" android:summary="@string/account_settings_incoming_summary" />
+        <PreferenceScreen android:title="@string/account_settings_outgoing_label" android:key="outgoing" android:summary="@string/account_settings_outgoing_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/account_settings_policies" android:key="account_policies">
+        <com.android.email.activity.setup.PolicyListPreference android:persistent="false" android:title="@string/account_settings_enforced_label" android:key="policies_enforced" android:summary="@string/account_settings_enforced_summary" />
+        <com.android.email.activity.setup.PolicyListPreference android:persistent="false" android:title="@string/account_settings_unsupported_label" android:key="policies_unsupported" android:summary="@string/account_settings_unsupported_summary" />
+        <Preference android:persistent="false" android:title="@string/account_settings_retry_label" android:key="policies_retry_account" android:summary="@string/account_settings_retry_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

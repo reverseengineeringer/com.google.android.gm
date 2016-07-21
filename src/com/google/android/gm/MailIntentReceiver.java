@@ -3,15 +3,15 @@ package com.google.android.gm;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.google.android.gm.provider.LogUtils;
+import dri;
 
 public class MailIntentReceiver
   extends BroadcastReceiver
 {
   public void onReceive(Context paramContext, Intent paramIntent)
   {
-    LogUtils.v("Gmail", "Received intent %s", new Object[] { paramIntent });
-    paramIntent.setClass(paramContext, MailIntentService.class);
+    dri.a(dri.a, "Received intent %s", new Object[] { paramIntent });
+    paramIntent.setClass(paramContext, GmailIntentService.class);
     paramContext.startService(paramIntent);
   }
 }

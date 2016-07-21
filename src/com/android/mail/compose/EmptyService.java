@@ -3,23 +3,23 @@ package com.android.mail.compose;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import com.android.mail.utils.LogTag;
-import com.android.mail.utils.LogUtils;
+import cvl;
+import cvm;
 
 public class EmptyService
   extends Service
 {
-  private static final String TAG = ;
+  private static final String a = cvl.a;
   
   public IBinder onBind(Intent paramIntent)
   {
-    LogUtils.i(TAG, "onBind()", new Object[0]);
+    cvm.c(a, "onBind()", new Object[0]);
     return null;
   }
   
   public void onCreate()
   {
-    LogUtils.v(TAG, "onCreate()", new Object[0]);
+    cvm.a(a, "onCreate()", new Object[0]);
   }
 }
 

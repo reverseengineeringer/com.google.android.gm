@@ -3,47 +3,49 @@ package com.android.mail.ui;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
+import cms;
 
-class ConversationViewState$MessageViewState
+public class ConversationViewState$MessageViewState
   implements Parcelable
 {
-  public static Parcelable.Creator<MessageViewState> CREATOR = new Parcelable.Creator()
-  {
-    public ConversationViewState.MessageViewState createFromParcel(Parcel paramAnonymousParcel)
-    {
-      return new ConversationViewState.MessageViewState(paramAnonymousParcel, null);
-    }
-    
-    public ConversationViewState.MessageViewState[] newArray(int paramAnonymousInt)
-    {
-      return new ConversationViewState.MessageViewState[paramAnonymousInt];
-    }
-  };
-  public Integer expansionState;
-  public boolean read;
+  public static final Parcelable.Creator<MessageViewState> CREATOR = new cms();
+  public boolean a;
+  public Integer b;
+  public boolean c;
+  public int d;
   
   public ConversationViewState$MessageViewState() {}
   
-  private ConversationViewState$MessageViewState(Parcel paramParcel)
+  public ConversationViewState$MessageViewState(Parcel paramParcel)
   {
-    boolean bool;
     int i;
+    Integer localInteger;
     if (paramParcel.readInt() != 0)
     {
-      bool = true;
-      read = bool;
+      bool1 = true;
+      a = bool1;
       i = paramParcel.readInt();
       if (i != -1) {
-        break label41;
+        break label69;
+      }
+      localInteger = null;
+      label34:
+      b = localInteger;
+      if (paramParcel.readInt() == 0) {
+        break label78;
       }
     }
-    label41:
-    for (paramParcel = null;; paramParcel = Integer.valueOf(i))
+    label69:
+    label78:
+    for (boolean bool1 = bool2;; bool1 = false)
     {
-      expansionState = paramParcel;
+      c = bool1;
+      d = paramParcel.readInt();
       return;
-      bool = false;
+      bool1 = false;
       break;
+      localInteger = Integer.valueOf(i);
+      break label34;
     }
   }
   
@@ -54,21 +56,32 @@ class ConversationViewState$MessageViewState
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    if (read)
+    int i = 1;
+    if (a)
     {
       paramInt = 1;
       paramParcel.writeInt(paramInt);
-      if (expansionState != null) {
-        break label34;
+      if (b != null) {
+        break label58;
+      }
+      paramInt = -1;
+      label25:
+      paramParcel.writeInt(paramInt);
+      if (!c) {
+        break label69;
       }
     }
-    label34:
-    for (paramInt = -1;; paramInt = expansionState.intValue())
+    label58:
+    label69:
+    for (paramInt = i;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);
+      paramParcel.writeInt(d);
       return;
       paramInt = 0;
       break;
+      paramInt = b.intValue();
+      break label25;
     }
   }
 }

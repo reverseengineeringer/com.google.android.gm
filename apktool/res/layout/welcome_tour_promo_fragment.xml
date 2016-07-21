@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/WelcomeTour.Container">
+        <FrameLayout style="@style/WelcomeTour.ImageArea">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WelcomeTour.ImageContainer">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_oobe_002" android:contentDescription="@string/welcome_tour_gmail_logo_desc" style="@style/WelcomeTour.Image" />
+            </FrameLayout>
+        </FrameLayout>
+        <ScrollView android:fillViewport="true" style="@style/WelcomeTour.ContentArea">
+            <TextView android:layout_gravity="center" android:id="@id/welcome_tour_promotion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/welcome_tour_promo_text" style="@style/WelcomeTour.Text.Large.Aligned" />
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

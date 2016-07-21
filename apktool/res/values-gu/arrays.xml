@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="compose_modes">
+        <item>જવાબ આપો</item>
+        <item>બધાને જવાબ આપો</item>
+        <item>ફોર્વર્ડ કરો</item>
+    </string-array>
+    <string-array name="sync_status">
+        <item>સફળતા</item>
+        <item>કોઈ કનેક્શન નથી</item>
+        <item>સાઇન ઇન કરી શક્યાં નથી</item>
+        <item>સુરક્ષા ભૂલ</item>
+        <item>સમન્વયિત કરી શક્યાં નથી</item>
+        <item>સર્વર ભૂલ</item>
+        <item>આંતરિક ભૂલ</item>
+    </string-array>
+    <string-array name="prefEntries_autoAdvance">
+        <item>વધુ નવું</item>
+        <item>જૂનું</item>
+        <item>વાર્તાલાપની સૂચિ</item>
+    </string-array>
+    <string-array name="prefSummaries_autoAdvance">
+        <item>તમે આર્કાઇવ કરો કે કાઢી નાખો તે પછી નવા વાર્તાલાપ દર્શાવો</item>
+        <item>તમે આર્કાઇવ કરો કે કાઢી નાખો તે પછી જૂનો વાર્તાલાપ દર્શાવો</item>
+        <item>તમે આર્કાઇવ કરો કે કાઢી નાખો તે પછી વાર્તાલાપ સૂચિ દર્શાવો</item>
+    </string-array>
+    <string-array name="prefEntries_removal_action">
+        <item>આર્કાઇવ</item>
+        <item>કાઢી નાખો</item>
+    </string-array>
+    <string-array name="prefSummaries_removal_action_summary">
+        <item>આર્કાઇવ</item>
+        <item>કાઢી નાખો</item>
+    </string-array>
+    <string-array name="priority_array">
+        <item>ઉચ્ચ</item>
+        <item>સામાન્ય</item>
+        <item>ઓછી</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_title">
+        <item>અન્ય કોઇ ફ્લાઇટ ચૂકશો નહીં.</item>
+        <item>અન્ય કોઇ ફ્લાઇટ ચૂકશો નહીં.</item>
+        <item>આ ફ્લાઇટને તમારા કેલેન્ડર પર ઉમેરીએ?</item>
+        <item>તમારા Google કેલેન્ડર પર આરક્ષણો મેળવો.</item>
+    </string-array>
+    <string-array name="promote_calendar_flight_text">
+        <item>Google કેલેન્ડર આપમેળે ફ્લાઇટ્સ અને અન્ય આરક્ષણો તમારા કેલેન્ડર પર ઉમેરે છે.</item>
+        <item>Google કેલેન્ડર આપમેળે ફ્લાઇટ્સ અને અન્ય આરક્ષણો તમારા કેલેન્ડર પર ઉમેરે છે.</item>
+        <item>Gmail માંથી ઇવેન્ટ્સ, આપમેળે Google કેલેન્ડર ઍપ્લિકેશન સાથે ઉમેરી શકાય છે.</item>
+        <item>ફ્લાઇટ, હોટલ અને રેસ્ટોરેન્ટ આરક્ષણો આપમેળે ઉમેરેલા મેળવો.</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_title">
+        <item>આ આરક્ષણને Google કેલેન્ડરમાં ઉમેરીએ?</item>
+        <item>તમારા કેલેન્ડર પર આપમેળે આરક્ષણો ઇચ્છો છો?</item>
+    </string-array>
+    <string-array name="promote_calendar_hotel_text">
+        <item>Google કેલેન્ડર ઍપ્લિકેશન સાથે Gmail માંથી ઇવેન્ટ્સ આપમેળે તમારા કેલેન્ડર પર ઉમેરવામાં આવે છે.</item>
+        <item>Google કેલેન્ડર તમારા ઇમેઇલમાંથી આપમેળે હોટેલ્સ અને અન્ય આરક્ષણો ઉમેરે છે.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_title">
+        <item>તમારા ભોજન માટે સમયસરની સૂચના મેળવો.</item>
+        <item>આ આરક્ષણને Google કેલેન્ડરમાં ઉમેરીએ?</item>
+        <item>તમારા Google કેલેન્ડર પર આપમેળે આરક્ષણો મેળવો.</item>
+    </string-array>
+    <string-array name="promote_calendar_restaurant_text">
+        <item>Google કેલેન્ડર, આપમેળે રેસ્ટોરેન્ટ અને અન્ય આરક્ષણો તમારા કેલેન્ડર પર ઉમેરે છે.</item>
+        <item>Gmail તરફથી ઇવેન્ટ્સ, આપમેળે તમારા કેલેન્ડર પર ઉમેરી શકાય છે.</item>
+        <item>ફ્લાઇટ, હોટલ અને રેસ્ટોરેન્ટ આરક્ષણો આપમેળે ઉમેરેલા મેળવો.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_title">
+        <item>આ ઇવેન્ટ પહેલાં એક સમયસરની સૂચના મેળવો.</item>
+        <item>આ ઇવેન્ટને Google કેલેન્ડર પર ઉમેરીએ?</item>
+        <item>તમારી ઇવેન્ટ ચૂકશો નહીં.</item>
+    </string-array>
+    <string-array name="promote_calendar_event_text">
+        <item>Google કેલેન્ડર, આ ઇમેઇલમાં છે તેની જેમ, તમારા કેલેન્ડર પર, ઇવેન્ટ્સ અને આરક્ષણો આપમેળે ઉમેરે છે.</item>
+        <item>Gmail તરફથી ઇવેન્ટ્સ, આપમેળે તમારા કેલેન્ડર પર ઉમેરી શકાય છે.</item>
+        <item>Google કેલેન્ડર સાથે ઇવેન્ટ્સ અને અન્ય આરક્ષણો આપમેળે ઉમેરેલા મેળવો.</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_title">
+        <item>તમારા આરક્ષણોને એક જ સ્થાનેથી ટ્રેક કરો.</item>
+        <item>આ આરક્ષણો Google કેલેન્ડર પર ઉમેરીએ?</item>
+    </string-array>
+    <string-array name="promote_calendar_mixed_text">
+        <item>ફ્લાઇટ, હોટલ અને રેસ્ટોરેન્ટ આરક્ષણો, તમારા Google કેલેન્ડર પર આપમેળે ઉમેરેલા મેળવો.</item>
+        <item>Gmail તરફથી ઇવેન્ટ્સ, આપમેળે તમારા કેલેન્ડર પર ઉમેરી શકાય છે.</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeName">
+        <item>બહુ નાનું</item>
+        <item>નાનું</item>
+        <item>સામાન્ય</item>
+        <item>મોટું</item>
+        <item>વિશાળ</item>
+    </string-array>
+    <string-array name="prefEntries_messageTextSizeSummary">
+        <item>સંદેશાની સામગ્રી નાનકડી ટેક્સ્ટમાં પ્રદર્શિત કરો</item>
+        <item>સંદેશાની સામગ્રી નાની ટેક્સ્ટમાં પ્રદર્શિત કરો</item>
+        <item>સંદેશાની સામગ્રી સામાન્ય કદની ટેક્સ્ટમાં પ્રદર્શિત કરો</item>
+        <item>સંદેશાની સામગ્રી મોટી ટેક્સ્ટમાં પ્રદર્શિત કરો</item>
+        <item>સંદેશાની સામગ્રી વિશાળ ટેક્સ્ટમાં પ્રદર્શિત કરો</item>
+    </string-array>
+</resources>

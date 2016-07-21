@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/chip_autocomplete_top_divider" style="@style/ChipAutocompleteDividerStyle" />
+    <LinearLayout android:id="@id/chip_person_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChipAutocompleteWrapperStyle">
+        <LinearLayout style="@style/ChipTextViewLayoutStyle">
+            <TextView style="@style/ChipTitleStyle" />
+            <TextView style="@style/ChipSubtitleStyle" />
+        </LinearLayout>
+        <com.android.ex.chips.CircularImageView style="@style/ChipEndIconStyle" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/chip_permission_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ChipAutocompleteWrapperStyle">
+        <TextView style="@style/ChipPermissionStyle" />
+        <ImageView style="@style/ChipPermissionDismissIconStyle" />
+    </LinearLayout>
+    <View android:id="@id/chip_autocomplete_bottom_divider" style="@style/ChipAutocompleteDividerStyle" />
+    <View android:id="@id/chip_permission_bottom_divider" android:visibility="gone" style="@style/ChipAutocompleteDividerStyle.PermissionItem" />
+</LinearLayout>

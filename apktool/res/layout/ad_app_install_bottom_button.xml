@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/app_install_bottom_button_bar" android:background="@drawable/ad_bottom_install_bar_background_shadow" android:paddingLeft="@dimen/conversation_view_margin_side" android:paddingTop="@dimen/app_install_bottom_button_bar_top_margin" android:paddingRight="@dimen/conversation_view_margin_side" android:paddingBottom="@dimen/app_install_bottom_button_bar_bottom_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/app_install_bottom_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/AdAppInstallButton" />
+</FrameLayout>

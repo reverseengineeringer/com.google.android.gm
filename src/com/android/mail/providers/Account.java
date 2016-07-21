@@ -4,13 +4,21 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
+import android.os.Parcelable.ClassLoaderCreator;
 import android.text.TextUtils;
-import com.android.mail.utils.LogTag;
-import com.android.mail.utils.LogUtils;
-import com.android.mail.utils.Utils;
-import com.google.common.base.Objects;
-import com.google.common.collect.Lists;
+import ccx;
+import ccy;
+import cfu;
+import cfv;
+import cfw;
+import cha;
+import cvl;
+import cvm;
+import cxa;
+import hbc;
+import hbw;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import org.json.JSONArray;
@@ -18,237 +26,710 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Account
-  extends android.accounts.Account
   implements Parcelable
 {
-  public static final Parcelable.Creator<Account> CREATOR;
-  private static final String LOG_TAG;
-  public String accountFromAddresses;
-  public final Uri accoutCookieQueryUri;
-  public final int capabilities;
-  public final int color;
-  public final Uri composeIntentUri;
-  public final Uri defaultRecentFolderListUri;
-  public final Uri expungeMessageUri;
-  public final Uri folderListUri;
-  public Uri fullFolderListUri;
-  public final Uri helpIntentUri;
-  private transient List<ReplyFromAccount> mReplyFroms;
-  public final Uri manualSyncUri;
-  public final String mimeType;
-  public final int providerVersion;
-  public final Uri reauthenticationIntentUri;
-  public final Uri recentFolderListUri;
-  public final Uri saveDraftUri;
-  public final Uri searchUri;
-  public final Uri sendFeedbackIntentUri;
-  public final Uri sendMessageUri;
-  public final Settings settings;
-  public final Uri settingsIntentUri;
-  public final int syncStatus;
-  public final Uri undoUri;
-  public final Uri uri;
-  public final Uri viewIntentProxyUri;
-  
-  static
-  {
-    if (!Account.class.desiredAssertionStatus()) {}
-    for (boolean bool = true;; bool = false)
-    {
-      $assertionsDisabled = bool;
-      LOG_TAG = LogTag.getLogTag();
-      CREATOR = new Parcelable.Creator()
-      {
-        public Account createFromParcel(Parcel paramAnonymousParcel)
-        {
-          return new Account(paramAnonymousParcel);
-        }
-        
-        public Account[] newArray(int paramAnonymousInt)
-        {
-          return new Account[paramAnonymousInt];
-        }
-      };
-      return;
-    }
-  }
+  public static final Parcelable.ClassLoaderCreator<Account> CREATOR = new cfu();
+  public static final ccx<Account> S = new cfv();
+  private static final String T = cvl.a;
+  private static Class<? extends cfw> W;
+  private static cfw X;
+  public final Uri A;
+  public final Uri B;
+  public final Uri C;
+  public final Uri D;
+  public final Uri E;
+  public final int F;
+  public final String G;
+  public final Uri H;
+  public final String I;
+  public final int J;
+  public final String K;
+  public final Uri L;
+  public final Uri M;
+  public final Uri N;
+  public final String O;
+  public final String P;
+  public final String Q;
+  public final Uri R;
+  private android.accounts.Account U;
+  private transient List<cha> V;
+  public final String a;
+  public final String b;
+  public final String c;
+  public String d;
+  public final String e;
+  public final int f;
+  public final Uri g;
+  public final long h;
+  public final Uri i;
+  public Uri j;
+  public Uri k;
+  public final Uri l;
+  public final Uri m;
+  public String n;
+  public final Uri o;
+  public final Uri p;
+  public final Uri q;
+  public final Uri r;
+  public final Uri s;
+  public final Uri t;
+  public final int u;
+  public final Uri v;
+  public final String w;
+  public final Uri x;
+  public final Uri y;
+  public final Settings z;
   
   public Account(Cursor paramCursor)
   {
-    super(paramCursor.getString(1), "unknown");
-    accountFromAddresses = paramCursor.getString(8);
-    capabilities = paramCursor.getInt(4);
-    providerVersion = paramCursor.getInt(2);
-    uri = Uri.parse(paramCursor.getString(3));
-    folderListUri = Uri.parse(paramCursor.getString(5));
-    fullFolderListUri = Utils.getValidUri(paramCursor.getString(6));
-    searchUri = Utils.getValidUri(paramCursor.getString(7));
-    saveDraftUri = Utils.getValidUri(paramCursor.getString(9));
-    sendMessageUri = Utils.getValidUri(paramCursor.getString(10));
-    expungeMessageUri = Utils.getValidUri(paramCursor.getString(11));
-    undoUri = Utils.getValidUri(paramCursor.getString(12));
-    settingsIntentUri = Utils.getValidUri(paramCursor.getString(13));
-    helpIntentUri = Utils.getValidUri(paramCursor.getString(15));
-    sendFeedbackIntentUri = Utils.getValidUri(paramCursor.getString(16));
-    reauthenticationIntentUri = Utils.getValidUri(paramCursor.getString(17));
-    syncStatus = paramCursor.getInt(14);
-    composeIntentUri = Utils.getValidUri(paramCursor.getString(18));
-    mimeType = paramCursor.getString(19);
-    recentFolderListUri = Utils.getValidUri(paramCursor.getString(20));
-    color = paramCursor.getInt(21);
-    defaultRecentFolderListUri = Utils.getValidUri(paramCursor.getString(22));
-    manualSyncUri = Utils.getValidUri(paramCursor.getString(23));
-    viewIntentProxyUri = Utils.getValidUri(paramCursor.getString(24));
-    accoutCookieQueryUri = Utils.getValidUri(paramCursor.getString(25));
-    settings = new Settings(paramCursor);
-  }
-  
-  public Account(Parcel paramParcel)
-  {
-    super(paramParcel);
-    providerVersion = paramParcel.readInt();
-    uri = ((Uri)paramParcel.readParcelable(null));
-    capabilities = paramParcel.readInt();
-    folderListUri = ((Uri)paramParcel.readParcelable(null));
-    fullFolderListUri = ((Uri)paramParcel.readParcelable(null));
-    searchUri = ((Uri)paramParcel.readParcelable(null));
-    accountFromAddresses = paramParcel.readString();
-    saveDraftUri = ((Uri)paramParcel.readParcelable(null));
-    sendMessageUri = ((Uri)paramParcel.readParcelable(null));
-    expungeMessageUri = ((Uri)paramParcel.readParcelable(null));
-    undoUri = ((Uri)paramParcel.readParcelable(null));
-    settingsIntentUri = ((Uri)paramParcel.readParcelable(null));
-    helpIntentUri = ((Uri)paramParcel.readParcelable(null));
-    sendFeedbackIntentUri = ((Uri)paramParcel.readParcelable(null));
-    reauthenticationIntentUri = ((Uri)paramParcel.readParcelable(null));
-    syncStatus = paramParcel.readInt();
-    composeIntentUri = ((Uri)paramParcel.readParcelable(null));
-    mimeType = paramParcel.readString();
-    recentFolderListUri = ((Uri)paramParcel.readParcelable(null));
-    color = paramParcel.readInt();
-    defaultRecentFolderListUri = ((Uri)paramParcel.readParcelable(null));
-    manualSyncUri = ((Uri)paramParcel.readParcelable(null));
-    viewIntentProxyUri = ((Uri)paramParcel.readParcelable(null));
-    accoutCookieQueryUri = ((Uri)paramParcel.readParcelable(null));
-    paramParcel = Settings.newInstance(paramParcel.readString());
-    if (paramParcel != null)
+    a = paramCursor.getString(paramCursor.getColumnIndex("name"));
+    b = paramCursor.getString(paramCursor.getColumnIndex("senderName"));
+    e = paramCursor.getString(paramCursor.getColumnIndex("type"));
+    c = paramCursor.getString(paramCursor.getColumnIndex("accountManagerName"));
+    d = paramCursor.getString(paramCursor.getColumnIndex("accountId"));
+    n = hbw.a(paramCursor.getString(paramCursor.getColumnIndex("accountFromAddresses")));
+    int i2 = paramCursor.getColumnIndex("capabilities");
+    if (i2 != -1)
     {
-      settings = paramParcel;
-      return;
-    }
-    LogUtils.e(LOG_TAG, new Throwable(), "Unexpected null settings in Account(Parcel)", new Object[0]);
-    settings = Settings.EMPTY_SETTINGS;
-  }
-  
-  private Account(String paramString1, String paramString2, String paramString3)
-    throws JSONException
-  {
-    super(paramString1, paramString2);
-    paramString1 = new JSONObject(paramString3);
-    providerVersion = paramString1.getInt("providerVersion");
-    uri = Uri.parse(paramString1.optString("accountUri"));
-    capabilities = paramString1.getInt("capabilities");
-    folderListUri = Utils.getValidUri(paramString1.optString("folderListUri"));
-    fullFolderListUri = Utils.getValidUri(paramString1.optString("fullFolderListUri"));
-    searchUri = Utils.getValidUri(paramString1.optString("searchUri"));
-    accountFromAddresses = paramString1.optString("accountFromAddresses", "");
-    saveDraftUri = Utils.getValidUri(paramString1.optString("saveDraftUri"));
-    sendMessageUri = Utils.getValidUri(paramString1.optString("sendMailUri"));
-    expungeMessageUri = Utils.getValidUri(paramString1.optString("expungeMessageUri"));
-    undoUri = Utils.getValidUri(paramString1.optString("undoUri"));
-    settingsIntentUri = Utils.getValidUri(paramString1.optString(UIProvider.AccountColumns.SETTINGS_INTENT_URI));
-    helpIntentUri = Utils.getValidUri(paramString1.optString(UIProvider.AccountColumns.HELP_INTENT_URI));
-    sendFeedbackIntentUri = Utils.getValidUri(paramString1.optString(UIProvider.AccountColumns.SEND_FEEDBACK_INTENT_URI));
-    reauthenticationIntentUri = Utils.getValidUri(paramString1.optString(UIProvider.AccountColumns.REAUTHENTICATION_INTENT_URI));
-    syncStatus = paramString1.optInt("syncStatus");
-    composeIntentUri = Utils.getValidUri(paramString1.optString("composeUri"));
-    mimeType = paramString1.optString("mimeType");
-    recentFolderListUri = Utils.getValidUri(paramString1.optString("recentFolderListUri"));
-    color = paramString1.optInt("color", 0);
-    defaultRecentFolderListUri = Utils.getValidUri(paramString1.optString("defaultRecentFolderListUri"));
-    manualSyncUri = Utils.getValidUri(paramString1.optString("manualSyncUri"));
-    viewIntentProxyUri = Utils.getValidUri(paramString1.optString("viewProxyUri"));
-    accoutCookieQueryUri = Utils.getValidUri(paramString1.optString("accountCookieUri"));
-    paramString1 = Settings.newInstance(paramString1.optJSONObject("settings"));
-    if (paramString1 != null)
-    {
-      settings = paramString1;
-      return;
-    }
-    LogUtils.e(LOG_TAG, new Throwable(), "Unexpected null settings in Account(name, type, jsonAccount)", new Object[0]);
-    settings = Settings.EMPTY_SETTINGS;
-  }
-  
-  public static int findPosition(Account[] paramArrayOfAccount, Uri paramUri)
-  {
-    if ((paramArrayOfAccount != null) && (paramArrayOfAccount.length > 0) && (paramUri != null))
-    {
-      int i = 0;
-      int j = paramArrayOfAccount.length;
-      while (i < j)
-      {
-        if (uri.equals(paramUri))
-        {
-          LogUtils.d(LOG_TAG, "findPositionOfAccount: Found needle at position %d", new Object[] { Integer.valueOf(i) });
-          return i;
-        }
-        i += 1;
+      h = paramCursor.getLong(i2);
+      f = paramCursor.getInt(paramCursor.getColumnIndex("providerVersion"));
+      g = Uri.parse(paramCursor.getString(paramCursor.getColumnIndex("accountUri")));
+      i = Uri.parse(paramCursor.getString(paramCursor.getColumnIndex("folderListUri")));
+      j = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("fullFolderListUri")));
+      k = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("allFolderListUri")));
+      l = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("searchUri")));
+      m = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("searchMessageGenericUri")));
+      o = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("expungeMessageUri")));
+      p = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("undoUri")));
+      q = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("accountSettingsIntentUri")));
+      r = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("helpIntentUri")));
+      s = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("sendFeedbackIntentUri")));
+      t = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("reauthenticationUri")));
+      u = paramCursor.getInt(paramCursor.getColumnIndex("syncStatus"));
+      v = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("composeUri")));
+      w = paramCursor.getString(paramCursor.getColumnIndex("mimeType"));
+      x = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("recentFolderListUri")));
+      y = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("defaultRecentFolderListUri")));
+      A = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("manualSyncUri")));
+      B = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("viewProxyUri")));
+      C = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("accountCookieUri")));
+      D = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("accountOAuthTokenUri")));
+      E = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("updateSettingsUri")));
+      F = paramCursor.getInt(paramCursor.getColumnIndex("enableMessageTransforms"));
+      G = paramCursor.getString(paramCursor.getColumnIndex("syncAuthority"));
+      if (TextUtils.isEmpty(G)) {
+        cvm.e(T, "Unexpected empty syncAuthority from cursor", new Object[0]);
+      }
+      H = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("quickResponseUri")));
+      I = paramCursor.getString(paramCursor.getColumnIndex("settingsFragmentClass"));
+      if (paramCursor.getColumnIndex("securityHold") >= 0) {
+        i1 = paramCursor.getInt(paramCursor.getColumnIndex("securityHold"));
+      }
+      J = i1;
+      i1 = paramCursor.getColumnIndex("accountSecurityUri");
+      if (i1 < 0) {
+        break label945;
       }
     }
-    return -1;
+    label945:
+    for (String str = paramCursor.getString(i1);; str = "")
+    {
+      K = str;
+      L = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("settingsSnapshotUri")));
+      M = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("vacationResponderSettingsUri")));
+      N = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("driveUri")));
+      O = paramCursor.getString(paramCursor.getColumnIndex("drawerAddress"));
+      P = paramCursor.getString(paramCursor.getColumnIndex("providerHostname"));
+      Q = paramCursor.getString(paramCursor.getColumnIndex("providerPathname"));
+      R = cxa.f(paramCursor.getString(paramCursor.getColumnIndex("domainTlsPredictionUri")));
+      z = new Settings(paramCursor);
+      return;
+      h = 0L;
+      break;
+    }
   }
   
-  public static Account[] getAllAccounts(Cursor paramCursor)
+  public Account(Parcel paramParcel, ClassLoader paramClassLoader)
   {
-    int k = paramCursor.getCount();
-    if ((k <= 0) || (!paramCursor.moveToFirst()))
-    {
-      paramCursor = new Account[0];
-      return paramCursor;
+    a = paramParcel.readString();
+    b = paramParcel.readString();
+    e = paramParcel.readString();
+    c = paramParcel.readString();
+    f = paramParcel.readInt();
+    g = ((Uri)paramParcel.readParcelable(null));
+    h = paramParcel.readLong();
+    i = ((Uri)paramParcel.readParcelable(null));
+    j = ((Uri)paramParcel.readParcelable(null));
+    k = ((Uri)paramParcel.readParcelable(null));
+    l = ((Uri)paramParcel.readParcelable(null));
+    m = ((Uri)paramParcel.readParcelable(null));
+    n = paramParcel.readString();
+    o = ((Uri)paramParcel.readParcelable(null));
+    p = ((Uri)paramParcel.readParcelable(null));
+    q = ((Uri)paramParcel.readParcelable(null));
+    r = ((Uri)paramParcel.readParcelable(null));
+    s = ((Uri)paramParcel.readParcelable(null));
+    t = ((Uri)paramParcel.readParcelable(null));
+    u = paramParcel.readInt();
+    v = ((Uri)paramParcel.readParcelable(null));
+    w = paramParcel.readString();
+    x = ((Uri)paramParcel.readParcelable(null));
+    y = ((Uri)paramParcel.readParcelable(null));
+    A = ((Uri)paramParcel.readParcelable(null));
+    B = ((Uri)paramParcel.readParcelable(null));
+    C = ((Uri)paramParcel.readParcelable(null));
+    D = ((Uri)paramParcel.readParcelable(null));
+    E = ((Uri)paramParcel.readParcelable(null));
+    F = paramParcel.readInt();
+    G = paramParcel.readString();
+    if (TextUtils.isEmpty(G)) {
+      cvm.e(T, "Unexpected empty syncAuthority from Parcel", new Object[0]);
     }
-    Account[] arrayOfAccount = new Account[k];
-    int j;
-    for (int i = 0;; i = j)
+    H = ((Uri)paramParcel.readParcelable(null));
+    I = paramParcel.readString();
+    J = paramParcel.readInt();
+    K = paramParcel.readString();
+    L = ((Uri)paramParcel.readParcelable(null));
+    M = ((Uri)paramParcel.readParcelable(null));
+    N = ((Uri)paramParcel.readParcelable(null));
+    if (paramParcel.readInt() == 0) {
+      cvm.e(T, new Throwable(), "Unexpected null settings from Parcel", new Object[0]);
+    }
+    for (z = Settings.a;; z = ((Settings)paramParcel.readParcelable(paramClassLoader)))
     {
-      j = i + 1;
-      arrayOfAccount[i] = new Account(paramCursor);
-      if (!paramCursor.moveToNext())
-      {
-        paramCursor = arrayOfAccount;
-        if ($assertionsDisabled) {
-          break;
-        }
-        paramCursor = arrayOfAccount;
-        if (j == k) {
-          break;
-        }
-        throw new AssertionError();
-      }
+      d = paramParcel.readString();
+      O = paramParcel.readString();
+      P = paramParcel.readString();
+      Q = paramParcel.readString();
+      R = ((Uri)paramParcel.readParcelable(null));
+      return;
     }
   }
   
-  public static Account newinstance(String paramString)
+  private Account(JSONObject paramJSONObject)
+  {
+    a = ((String)paramJSONObject.get("name"));
+    e = ((String)paramJSONObject.get("type"));
+    b = paramJSONObject.optString("senderName", null);
+    String str = paramJSONObject.optString("accountManagerName");
+    if (TextUtils.isEmpty(str)) {}
+    for (c = a;; c = str)
+    {
+      d = paramJSONObject.optString("accountId", c);
+      f = paramJSONObject.getInt("providerVersion");
+      g = Uri.parse(paramJSONObject.optString("accountUri"));
+      h = paramJSONObject.getLong("capabilities");
+      i = cxa.f(paramJSONObject.optString("folderListUri"));
+      j = cxa.f(paramJSONObject.optString("fullFolderListUri"));
+      k = cxa.f(paramJSONObject.optString("allFolderListUri"));
+      l = cxa.f(paramJSONObject.optString("searchUri"));
+      m = cxa.f(paramJSONObject.optString("searchMessageGenericUri"));
+      n = paramJSONObject.optString("accountFromAddresses", "");
+      o = cxa.f(paramJSONObject.optString("expungeMessageUri"));
+      p = cxa.f(paramJSONObject.optString("undoUri"));
+      q = cxa.f(paramJSONObject.optString("accountSettingsIntentUri"));
+      r = cxa.f(paramJSONObject.optString("helpIntentUri"));
+      s = cxa.f(paramJSONObject.optString("sendFeedbackIntentUri"));
+      t = cxa.f(paramJSONObject.optString("reauthenticationUri"));
+      u = paramJSONObject.optInt("syncStatus");
+      v = cxa.f(paramJSONObject.optString("composeUri"));
+      w = paramJSONObject.optString("mimeType");
+      x = cxa.f(paramJSONObject.optString("recentFolderListUri"));
+      y = cxa.f(paramJSONObject.optString("defaultRecentFolderListUri"));
+      A = cxa.f(paramJSONObject.optString("manualSyncUri"));
+      B = cxa.f(paramJSONObject.optString("viewProxyUri"));
+      C = cxa.f(paramJSONObject.optString("accountCookieUri"));
+      D = cxa.f(paramJSONObject.optString("accountOAuthTokenUri"));
+      E = cxa.f(paramJSONObject.optString("updateSettingsUri"));
+      F = paramJSONObject.optInt("enableMessageTransforms");
+      G = paramJSONObject.optString("syncAuthority");
+      H = cxa.f(paramJSONObject.optString("quickResponseUri"));
+      I = paramJSONObject.optString("settingsFragmentClass", "");
+      J = paramJSONObject.optInt("securityHold");
+      K = paramJSONObject.optString("accountSecurityUri");
+      L = cxa.f(paramJSONObject.optString("settingsSnapshotUri"));
+      M = cxa.f(paramJSONObject.optString("vacationResponderSettingsUri"));
+      N = cxa.f(paramJSONObject.optString("driveUri"));
+      O = paramJSONObject.optString("drawerAddress");
+      P = paramJSONObject.optString("providerHostname");
+      Q = paramJSONObject.optString("providerPathname");
+      R = cxa.f(paramJSONObject.optString("domainTlsPredictionUri"));
+      paramJSONObject = Settings.a(paramJSONObject.optJSONObject("settings"));
+      if (paramJSONObject == null) {
+        break;
+      }
+      z = paramJSONObject;
+      return;
+    }
+    cvm.e(T, new Throwable(), "Unexpected null settings in Account", new Object[0]);
+    z = Settings.a;
+  }
+  
+  public static Account a(String paramString)
   {
     try
     {
       Object localObject = new JSONObject(paramString);
+      b();
+      localObject = new Account((JSONObject)localObject);
+      return (Account)localObject;
     }
-    catch (JSONException localJSONException1)
+    catch (JSONException localJSONException)
     {
-      try
-      {
-        localObject = new Account((String)((JSONObject)localObject).get("name"), (String)((JSONObject)localObject).get("type"), paramString);
-        return (Account)localObject;
-      }
-      catch (JSONException localJSONException2)
-      {
-        for (;;) {}
-      }
-      localJSONException1 = localJSONException1;
+      cvm.d(T, localJSONException, "Could not create an account from this input: \"%s\"", new Object[] { paramString });
     }
-    tmp52_49[0] = paramString;
-    LogUtils.e(LOG_TAG, localJSONException1, "Could not create an account from this input: \"%s\"", tmp52_49);
     return null;
+  }
+  
+  public static Account[] a(ccy<Account> paramccy)
+  {
+    int i1 = paramccy.getCount();
+    if ((i1 <= 0) || (!paramccy.moveToFirst())) {
+      return new Account[0];
+    }
+    Account[] arrayOfAccount = new Account[i1];
+    i1 = 0;
+    for (;;)
+    {
+      arrayOfAccount[i1] = ((Account)paramccy.f());
+      if (!paramccy.moveToNext()) {
+        return arrayOfAccount;
+      }
+      i1 += 1;
+    }
+  }
+  
+  /* Error */
+  public static cfw b()
+  {
+    // Byte code:
+    //   0: ldc 2
+    //   2: monitorenter
+    //   3: getstatic 422	com/android/mail/providers/Account:W	Ljava/lang/Class;
+    //   6: ifnonnull +9 -> 15
+    //   9: ldc_w 424
+    //   12: putstatic 422	com/android/mail/providers/Account:W	Ljava/lang/Class;
+    //   15: getstatic 426	com/android/mail/providers/Account:X	Lcfw;
+    //   18: astore_0
+    //   19: aload_0
+    //   20: ifnonnull +15 -> 35
+    //   23: getstatic 422	com/android/mail/providers/Account:W	Ljava/lang/Class;
+    //   26: invokevirtual 431	java/lang/Class:newInstance	()Ljava/lang/Object;
+    //   29: checkcast 424	cfw
+    //   32: putstatic 426	com/android/mail/providers/Account:X	Lcfw;
+    //   35: getstatic 426	com/android/mail/providers/Account:X	Lcfw;
+    //   38: astore_0
+    //   39: ldc 2
+    //   41: monitorexit
+    //   42: aload_0
+    //   43: areturn
+    //   44: astore_0
+    //   45: getstatic 432	cvm:a	Ljava/lang/String;
+    //   48: aload_0
+    //   49: ldc_w 434
+    //   52: iconst_0
+    //   53: anewarray 4	java/lang/Object
+    //   56: invokestatic 398	cvm:d	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
+    //   59: pop
+    //   60: new 424	cfw
+    //   63: dup
+    //   64: invokespecial 435	cfw:<init>	()V
+    //   67: putstatic 426	com/android/mail/providers/Account:X	Lcfw;
+    //   70: goto -35 -> 35
+    //   73: astore_0
+    //   74: ldc 2
+    //   76: monitorexit
+    //   77: aload_0
+    //   78: athrow
+    //   79: astore_0
+    //   80: goto -35 -> 45
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   18	25	0	localcfw	cfw
+    //   44	5	0	localInstantiationException	InstantiationException
+    //   73	5	0	localObject	Object
+    //   79	1	0	localIllegalAccessException	IllegalAccessException
+    // Exception table:
+    //   from	to	target	type
+    //   23	35	44	java/lang/InstantiationException
+    //   3	15	73	finally
+    //   15	19	73	finally
+    //   23	35	73	finally
+    //   35	39	73	finally
+    //   45	70	73	finally
+    //   23	35	79	java/lang/IllegalAccessException
+  }
+  
+  /* Error */
+  public final String a()
+  {
+    // Byte code:
+    //   0: aload_0
+    //   1: monitorenter
+    //   2: new 352	org/json/JSONObject
+    //   5: dup
+    //   6: invokespecial 436	org/json/JSONObject:<init>	()V
+    //   9: astore_1
+    //   10: aload_1
+    //   11: ldc 95
+    //   13: aload_0
+    //   14: getfield 106	com/android/mail/providers/Account:a	Ljava/lang/String;
+    //   17: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   20: pop
+    //   21: aload_1
+    //   22: ldc 112
+    //   24: aload_0
+    //   25: getfield 114	com/android/mail/providers/Account:e	Ljava/lang/String;
+    //   28: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   31: pop
+    //   32: aload_1
+    //   33: ldc 108
+    //   35: aload_0
+    //   36: getfield 110	com/android/mail/providers/Account:b	Ljava/lang/String;
+    //   39: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   42: pop
+    //   43: aload_1
+    //   44: ldc 116
+    //   46: aload_0
+    //   47: getfield 118	com/android/mail/providers/Account:c	Ljava/lang/String;
+    //   50: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   53: pop
+    //   54: aload_1
+    //   55: ldc 120
+    //   57: aload_0
+    //   58: getfield 122	com/android/mail/providers/Account:d	Ljava/lang/String;
+    //   61: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   64: pop
+    //   65: aload_1
+    //   66: ldc -115
+    //   68: aload_0
+    //   69: getfield 147	com/android/mail/providers/Account:f	I
+    //   72: invokevirtual 443	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   75: pop
+    //   76: aload_1
+    //   77: ldc -107
+    //   79: aload_0
+    //   80: getfield 157	com/android/mail/providers/Account:g	Landroid/net/Uri;
+    //   83: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   86: pop
+    //   87: aload_1
+    //   88: ldc -123
+    //   90: aload_0
+    //   91: getfield 139	com/android/mail/providers/Account:h	J
+    //   94: invokevirtual 446	org/json/JSONObject:put	(Ljava/lang/String;J)Lorg/json/JSONObject;
+    //   97: pop
+    //   98: aload_1
+    //   99: ldc -97
+    //   101: aload_0
+    //   102: getfield 161	com/android/mail/providers/Account:i	Landroid/net/Uri;
+    //   105: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   108: pop
+    //   109: aload_1
+    //   110: ldc -93
+    //   112: aload_0
+    //   113: getfield 169	com/android/mail/providers/Account:j	Landroid/net/Uri;
+    //   116: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   119: pop
+    //   120: aload_1
+    //   121: ldc -85
+    //   123: aload_0
+    //   124: getfield 173	com/android/mail/providers/Account:k	Landroid/net/Uri;
+    //   127: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   130: pop
+    //   131: aload_1
+    //   132: ldc -81
+    //   134: aload_0
+    //   135: getfield 177	com/android/mail/providers/Account:l	Landroid/net/Uri;
+    //   138: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   141: pop
+    //   142: aload_1
+    //   143: ldc -77
+    //   145: aload_0
+    //   146: getfield 181	com/android/mail/providers/Account:m	Landroid/net/Uri;
+    //   149: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   152: pop
+    //   153: aload_1
+    //   154: ldc 124
+    //   156: aload_0
+    //   157: getfield 131	com/android/mail/providers/Account:n	Ljava/lang/String;
+    //   160: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   163: pop
+    //   164: aload_1
+    //   165: ldc -73
+    //   167: aload_0
+    //   168: getfield 185	com/android/mail/providers/Account:o	Landroid/net/Uri;
+    //   171: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   174: pop
+    //   175: aload_1
+    //   176: ldc -69
+    //   178: aload_0
+    //   179: getfield 189	com/android/mail/providers/Account:p	Landroid/net/Uri;
+    //   182: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   185: pop
+    //   186: aload_1
+    //   187: ldc -65
+    //   189: aload_0
+    //   190: getfield 193	com/android/mail/providers/Account:q	Landroid/net/Uri;
+    //   193: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   196: pop
+    //   197: aload_1
+    //   198: ldc -61
+    //   200: aload_0
+    //   201: getfield 197	com/android/mail/providers/Account:r	Landroid/net/Uri;
+    //   204: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   207: pop
+    //   208: aload_1
+    //   209: ldc -57
+    //   211: aload_0
+    //   212: getfield 201	com/android/mail/providers/Account:s	Landroid/net/Uri;
+    //   215: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   218: pop
+    //   219: aload_1
+    //   220: ldc -53
+    //   222: aload_0
+    //   223: getfield 205	com/android/mail/providers/Account:t	Landroid/net/Uri;
+    //   226: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   229: pop
+    //   230: aload_1
+    //   231: ldc -49
+    //   233: aload_0
+    //   234: getfield 209	com/android/mail/providers/Account:u	I
+    //   237: invokevirtual 443	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   240: pop
+    //   241: aload_1
+    //   242: ldc -45
+    //   244: aload_0
+    //   245: getfield 213	com/android/mail/providers/Account:v	Landroid/net/Uri;
+    //   248: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   251: pop
+    //   252: aload_1
+    //   253: ldc -41
+    //   255: aload_0
+    //   256: getfield 217	com/android/mail/providers/Account:w	Ljava/lang/String;
+    //   259: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   262: pop
+    //   263: aload_1
+    //   264: ldc -37
+    //   266: aload_0
+    //   267: getfield 221	com/android/mail/providers/Account:x	Landroid/net/Uri;
+    //   270: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   273: pop
+    //   274: aload_1
+    //   275: ldc -33
+    //   277: aload_0
+    //   278: getfield 225	com/android/mail/providers/Account:y	Landroid/net/Uri;
+    //   281: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   284: pop
+    //   285: aload_1
+    //   286: ldc -29
+    //   288: aload_0
+    //   289: getfield 229	com/android/mail/providers/Account:A	Landroid/net/Uri;
+    //   292: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   295: pop
+    //   296: aload_1
+    //   297: ldc -25
+    //   299: aload_0
+    //   300: getfield 233	com/android/mail/providers/Account:B	Landroid/net/Uri;
+    //   303: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   306: pop
+    //   307: aload_1
+    //   308: ldc -21
+    //   310: aload_0
+    //   311: getfield 237	com/android/mail/providers/Account:C	Landroid/net/Uri;
+    //   314: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   317: pop
+    //   318: aload_1
+    //   319: ldc -17
+    //   321: aload_0
+    //   322: getfield 241	com/android/mail/providers/Account:D	Landroid/net/Uri;
+    //   325: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   328: pop
+    //   329: aload_1
+    //   330: ldc -13
+    //   332: aload_0
+    //   333: getfield 245	com/android/mail/providers/Account:E	Landroid/net/Uri;
+    //   336: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   339: pop
+    //   340: aload_1
+    //   341: ldc -9
+    //   343: aload_0
+    //   344: getfield 249	com/android/mail/providers/Account:F	I
+    //   347: invokevirtual 443	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   350: pop
+    //   351: aload_1
+    //   352: ldc -5
+    //   354: aload_0
+    //   355: getfield 253	com/android/mail/providers/Account:G	Ljava/lang/String;
+    //   358: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   361: pop
+    //   362: aload_1
+    //   363: ldc_w 268
+    //   366: aload_0
+    //   367: getfield 270	com/android/mail/providers/Account:H	Landroid/net/Uri;
+    //   370: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   373: pop
+    //   374: aload_1
+    //   375: ldc_w 272
+    //   378: aload_0
+    //   379: getfield 274	com/android/mail/providers/Account:I	Ljava/lang/String;
+    //   382: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   385: pop
+    //   386: aload_1
+    //   387: ldc_w 276
+    //   390: aload_0
+    //   391: getfield 278	com/android/mail/providers/Account:J	I
+    //   394: invokevirtual 443	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   397: pop
+    //   398: aload_1
+    //   399: ldc_w 280
+    //   402: aload_0
+    //   403: getfield 282	com/android/mail/providers/Account:K	Ljava/lang/String;
+    //   406: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   409: pop
+    //   410: aload_1
+    //   411: ldc_w 284
+    //   414: aload_0
+    //   415: getfield 286	com/android/mail/providers/Account:L	Landroid/net/Uri;
+    //   418: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   421: pop
+    //   422: aload_1
+    //   423: ldc_w 288
+    //   426: aload_0
+    //   427: getfield 290	com/android/mail/providers/Account:M	Landroid/net/Uri;
+    //   430: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   433: pop
+    //   434: aload_1
+    //   435: ldc_w 292
+    //   438: aload_0
+    //   439: getfield 294	com/android/mail/providers/Account:N	Landroid/net/Uri;
+    //   442: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   445: pop
+    //   446: aload_1
+    //   447: ldc_w 296
+    //   450: aload_0
+    //   451: getfield 298	com/android/mail/providers/Account:O	Ljava/lang/String;
+    //   454: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   457: pop
+    //   458: aload_1
+    //   459: ldc_w 300
+    //   462: aload_0
+    //   463: getfield 302	com/android/mail/providers/Account:P	Ljava/lang/String;
+    //   466: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   469: pop
+    //   470: aload_1
+    //   471: ldc_w 304
+    //   474: aload_0
+    //   475: getfield 306	com/android/mail/providers/Account:Q	Ljava/lang/String;
+    //   478: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   481: pop
+    //   482: aload_1
+    //   483: ldc_w 308
+    //   486: aload_0
+    //   487: getfield 310	com/android/mail/providers/Account:R	Landroid/net/Uri;
+    //   490: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   493: pop
+    //   494: aload_0
+    //   495: getfield 316	com/android/mail/providers/Account:z	Lcom/android/mail/providers/Settings;
+    //   498: ifnull +18 -> 516
+    //   501: aload_1
+    //   502: ldc_w 374
+    //   505: aload_0
+    //   506: getfield 316	com/android/mail/providers/Account:z	Lcom/android/mail/providers/Settings;
+    //   509: invokevirtual 449	com/android/mail/providers/Settings:a	()Lorg/json/JSONObject;
+    //   512: invokevirtual 440	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   515: pop
+    //   516: aload_1
+    //   517: invokevirtual 452	org/json/JSONObject:toString	()Ljava/lang/String;
+    //   520: astore_1
+    //   521: aload_0
+    //   522: monitorexit
+    //   523: aload_1
+    //   524: areturn
+    //   525: astore_2
+    //   526: getstatic 78	com/android/mail/providers/Account:T	Ljava/lang/String;
+    //   529: aload_2
+    //   530: ldc_w 454
+    //   533: iconst_1
+    //   534: anewarray 4	java/lang/Object
+    //   537: dup
+    //   538: iconst_0
+    //   539: aload_0
+    //   540: getfield 106	com/android/mail/providers/Account:a	Ljava/lang/String;
+    //   543: aastore
+    //   544: invokestatic 456	cvm:f	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
+    //   547: pop
+    //   548: goto -32 -> 516
+    //   551: astore_1
+    //   552: aload_0
+    //   553: monitorexit
+    //   554: aload_1
+    //   555: athrow
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	556	0	this	Account
+    //   9	515	1	localObject1	Object
+    //   551	4	1	localObject2	Object
+    //   525	5	2	localJSONException	JSONException
+    // Exception table:
+    //   from	to	target	type
+    //   10	516	525	org/json/JSONException
+    //   2	10	551	finally
+    //   10	516	551	finally
+    //   516	521	551	finally
+    //   526	548	551	finally
+  }
+  
+  public final boolean a(long paramLong)
+  {
+    return (h & paramLong) != 0L;
+  }
+  
+  public final boolean a(Account paramAccount)
+  {
+    if (paramAccount == null) {}
+    while ((u != u) || (!hbc.a(n, n)) || (!hbc.a(z, z))) {
+      return true;
+    }
+    return false;
+  }
+  
+  public final boolean b(Account paramAccount)
+  {
+    return (paramAccount != null) && (hbc.a(g, g));
+  }
+  
+  public final boolean b(String paramString)
+  {
+    Iterator localIterator = g().iterator();
+    while (localIterator.hasNext()) {
+      if (TextUtils.equals(nextb, paramString)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public final android.accounts.Account c()
+  {
+    if (U == null) {
+      U = new android.accounts.Account(c, e);
+    }
+    return U;
+  }
+  
+  public final boolean d()
+  {
+    return (u & 0x8) == 8;
+  }
+  
+  public int describeContents()
+  {
+    return 0;
+  }
+  
+  public final boolean e()
+  {
+    return (u & 0x20) == 32;
   }
   
   public boolean equals(Object paramObject)
@@ -261,388 +742,169 @@ public class Account
         return false;
       }
       paramObject = (Account)paramObject;
-    } while ((TextUtils.equals(name, name)) && (TextUtils.equals(type, type)) && (capabilities == capabilities) && (providerVersion == providerVersion) && (Objects.equal(uri, uri)) && (Objects.equal(folderListUri, folderListUri)) && (Objects.equal(fullFolderListUri, fullFolderListUri)) && (Objects.equal(searchUri, searchUri)) && (Objects.equal(accountFromAddresses, accountFromAddresses)) && (Objects.equal(saveDraftUri, saveDraftUri)) && (Objects.equal(sendMessageUri, sendMessageUri)) && (Objects.equal(expungeMessageUri, expungeMessageUri)) && (Objects.equal(undoUri, undoUri)) && (Objects.equal(settingsIntentUri, settingsIntentUri)) && (Objects.equal(helpIntentUri, helpIntentUri)) && (Objects.equal(sendFeedbackIntentUri, sendFeedbackIntentUri)) && (Objects.equal(reauthenticationIntentUri, reauthenticationIntentUri)) && (syncStatus == syncStatus) && (Objects.equal(composeIntentUri, composeIntentUri)) && (TextUtils.equals(mimeType, mimeType)) && (Objects.equal(recentFolderListUri, recentFolderListUri)) && (color == color) && (Objects.equal(defaultRecentFolderListUri, defaultRecentFolderListUri)) && (Objects.equal(viewIntentProxyUri, viewIntentProxyUri)) && (Objects.equal(accoutCookieQueryUri, accoutCookieQueryUri)) && (Objects.equal(settings, settings)));
+    } while ((TextUtils.equals(a, a)) && (TextUtils.equals(b, b)) && (TextUtils.equals(c, c)) && (TextUtils.equals(d, d)) && (TextUtils.equals(e, e)) && (h == h) && (f == f) && (hbc.a(g, g)) && (hbc.a(i, i)) && (hbc.a(j, j)) && (hbc.a(k, k)) && (hbc.a(l, l)) && (hbc.a(m, m)) && (hbc.a(n, n)) && (hbc.a(o, o)) && (hbc.a(p, p)) && (hbc.a(q, q)) && (hbc.a(r, r)) && (hbc.a(s, s)) && (hbc.a(t, t)) && (u == u) && (hbc.a(v, v)) && (TextUtils.equals(w, w)) && (hbc.a(x, x)) && (hbc.a(y, y)) && (hbc.a(B, B)) && (hbc.a(C, C)) && (hbc.a(D, D)) && (hbc.a(E, E)) && (hbc.a(Integer.valueOf(F), Integer.valueOf(F))) && (hbc.a(G, G)) && (hbc.a(H, H)) && (hbc.a(I, I)) && (hbc.a(Integer.valueOf(J), Integer.valueOf(J))) && (hbc.a(K, K)) && (hbc.a(L, L)) && (hbc.a(M, M)) && (hbc.a(N, N)) && (hbc.a(z, z)) && (hbc.a(O, O)) && (TextUtils.equals(P, P)) && (TextUtils.equals(Q, Q)) && (hbc.a(R, R)));
     return false;
   }
   
-  public List<ReplyFromAccount> getReplyFroms()
+  public final boolean f()
   {
-    if (mReplyFroms == null)
+    return (!e()) && (!d());
+  }
+  
+  public final List<cha> g()
+  {
+    if (V == null)
     {
-      mReplyFroms = Lists.newArrayList();
-      if (supportsCapability(524288)) {
-        return mReplyFroms;
+      V = new ArrayList();
+      if (a(524288L)) {
+        return V;
       }
-      mReplyFroms.add(new ReplyFromAccount(this, uri, name, name, name, false, false));
-      if (!TextUtils.isEmpty(accountFromAddresses)) {
-        try
-        {
-          JSONArray localJSONArray = new JSONArray(accountFromAddresses);
-          int i = 0;
-          int j = localJSONArray.length();
-          while (i < j)
-          {
-            ReplyFromAccount localReplyFromAccount = ReplyFromAccount.deserialize(this, localJSONArray.getJSONObject(i));
-            if (localReplyFromAccount != null) {
-              mReplyFroms.add(localReplyFromAccount);
-            }
-            i += 1;
-          }
-          return mReplyFroms;
-        }
-        catch (JSONException localJSONException)
-        {
-          LogUtils.e(LOG_TAG, localJSONException, "Unable to parse accountFromAddresses. name=%s", new Object[] { name });
-        }
+      if (TextUtils.isEmpty(n)) {
+        break label227;
       }
     }
+    for (;;)
+    {
+      try
+      {
+        Object localObject1 = new JSONArray(n);
+        int i2 = 0;
+        i1 = 0;
+        Object localObject2;
+        int i3;
+        String str1;
+        String str2;
+      }
+      catch (JSONException localJSONException1)
+      {
+        try
+        {
+          if (i2 < ((JSONArray)localObject1).length())
+          {
+            localObject2 = cha.a(this, ((JSONArray)localObject1).getJSONObject(i2));
+            i3 = i1;
+            if (localObject2 != null)
+            {
+              V.add(localObject2);
+              bool = d;
+              i3 = i1;
+              if (bool) {
+                i3 = 1;
+              }
+            }
+            i2 += 1;
+            i1 = i3;
+            continue;
+          }
+          localObject1 = V;
+          localObject2 = c;
+          str1 = b;
+          str2 = c;
+          if (i1 != 0) {
+            break label216;
+          }
+          bool = true;
+          ((List)localObject1).add(0, new cha(this, (String)localObject2, str1, str2, bool, false));
+          return V;
+        }
+        catch (JSONException localJSONException2)
+        {
+          boolean bool;
+          for (;;) {}
+        }
+        localJSONException1 = localJSONException1;
+        i1 = 0;
+      }
+      tmp202_199[0] = a;
+      cvm.e(T, localJSONException1, "Unable to parse accountFromAddresses. name=%s", tmp202_199);
+      continue;
+      label216:
+      bool = false;
+      continue;
+      label227:
+      int i1 = 0;
+    }
+  }
+  
+  public final String h()
+  {
+    cvm.a(cvm.a, "getAccountId=%s for email %s", new Object[] { d, c });
+    return d;
   }
   
   public int hashCode()
   {
-    return super.hashCode() ^ Objects.hashCode(new Object[] { name, type, Integer.valueOf(capabilities), Integer.valueOf(providerVersion), uri, folderListUri, fullFolderListUri, searchUri, accountFromAddresses, saveDraftUri, sendMessageUri, expungeMessageUri, undoUri, settingsIntentUri, helpIntentUri, sendFeedbackIntentUri, reauthenticationIntentUri, Integer.valueOf(syncStatus), composeIntentUri, mimeType, recentFolderListUri, Integer.valueOf(color), defaultRecentFolderListUri, viewIntentProxyUri, accoutCookieQueryUri });
+    return Arrays.hashCode(new Object[] { a, b, c, e, Long.valueOf(h), Integer.valueOf(f), g, i, j, k, l, m, n, o, p, q, r, s, t, Integer.valueOf(u), v, w, x, y, B, C, D, E, Integer.valueOf(F), G, H, Integer.valueOf(J), K, L, M, N, O, P, Q, R });
   }
   
-  public boolean isAccountInitializationRequired()
+  public final String i()
   {
-    return (syncStatus & 0x20) == 32;
-  }
-  
-  public boolean isAccountReady()
-  {
-    return (!isAccountInitializationRequired()) && (!isAccountSyncRequired());
-  }
-  
-  public boolean isAccountSyncRequired()
-  {
-    return (syncStatus & 0x8) == 8;
-  }
-  
-  public boolean matches(Account paramAccount)
-  {
-    return (paramAccount != null) && (Objects.equal(uri, uri));
-  }
-  
-  public boolean ownsFromAddress(String paramString)
-  {
-    Iterator localIterator = getReplyFroms().iterator();
-    while (localIterator.hasNext()) {
-      if (TextUtils.equals(nextaddress, paramString)) {
-        return true;
-      }
+    if (!TextUtils.isEmpty(O)) {
+      return O;
     }
-    return false;
-  }
-  
-  /* Error */
-  public String serialize()
-  {
-    // Byte code:
-    //   0: aload_0
-    //   1: monitorenter
-    //   2: new 192	org/json/JSONObject
-    //   5: dup
-    //   6: invokespecial 415	org/json/JSONObject:<init>	()V
-    //   9: astore_1
-    //   10: aload_1
-    //   11: ldc_w 300
-    //   14: aload_0
-    //   15: getfield 318	android/accounts/Account:name	Ljava/lang/String;
-    //   18: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   21: pop
-    //   22: aload_1
-    //   23: ldc_w 308
-    //   26: aload_0
-    //   27: getfield 325	android/accounts/Account:type	Ljava/lang/String;
-    //   30: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   33: pop
-    //   34: aload_1
-    //   35: ldc -60
-    //   37: aload_0
-    //   38: getfield 92	com/android/mail/providers/Account:providerVersion	I
-    //   41: invokevirtual 422	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
-    //   44: pop
-    //   45: aload_1
-    //   46: ldc -55
-    //   48: aload_0
-    //   49: getfield 100	com/android/mail/providers/Account:uri	Landroid/net/Uri;
-    //   52: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   55: pop
-    //   56: aload_1
-    //   57: ldc -50
-    //   59: aload_0
-    //   60: getfield 90	com/android/mail/providers/Account:capabilities	I
-    //   63: invokevirtual 422	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
-    //   66: pop
-    //   67: aload_1
-    //   68: ldc -49
-    //   70: aload_0
-    //   71: getfield 102	com/android/mail/providers/Account:folderListUri	Landroid/net/Uri;
-    //   74: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   77: pop
-    //   78: aload_1
-    //   79: ldc -48
-    //   81: aload_0
-    //   82: getfield 109	com/android/mail/providers/Account:fullFolderListUri	Landroid/net/Uri;
-    //   85: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   88: pop
-    //   89: aload_1
-    //   90: ldc -47
-    //   92: aload_0
-    //   93: getfield 111	com/android/mail/providers/Account:searchUri	Landroid/net/Uri;
-    //   96: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   99: pop
-    //   100: aload_1
-    //   101: ldc -46
-    //   103: aload_0
-    //   104: getfield 84	com/android/mail/providers/Account:accountFromAddresses	Ljava/lang/String;
-    //   107: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   110: pop
-    //   111: aload_1
-    //   112: ldc -40
-    //   114: aload_0
-    //   115: getfield 113	com/android/mail/providers/Account:saveDraftUri	Landroid/net/Uri;
-    //   118: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   121: pop
-    //   122: aload_1
-    //   123: ldc -38
-    //   125: aload_0
-    //   126: getfield 115	com/android/mail/providers/Account:sendMessageUri	Landroid/net/Uri;
-    //   129: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   132: pop
-    //   133: aload_1
-    //   134: ldc -37
-    //   136: aload_0
-    //   137: getfield 117	com/android/mail/providers/Account:expungeMessageUri	Landroid/net/Uri;
-    //   140: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   143: pop
-    //   144: aload_1
-    //   145: ldc -36
-    //   147: aload_0
-    //   148: getfield 119	com/android/mail/providers/Account:undoUri	Landroid/net/Uri;
-    //   151: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   154: pop
-    //   155: aload_1
-    //   156: getstatic 225	com/android/mail/providers/UIProvider$AccountColumns:SETTINGS_INTENT_URI	Ljava/lang/String;
-    //   159: aload_0
-    //   160: getfield 121	com/android/mail/providers/Account:settingsIntentUri	Landroid/net/Uri;
-    //   163: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   166: pop
-    //   167: aload_1
-    //   168: getstatic 228	com/android/mail/providers/UIProvider$AccountColumns:HELP_INTENT_URI	Ljava/lang/String;
-    //   171: aload_0
-    //   172: getfield 123	com/android/mail/providers/Account:helpIntentUri	Landroid/net/Uri;
-    //   175: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   178: pop
-    //   179: aload_1
-    //   180: getstatic 231	com/android/mail/providers/UIProvider$AccountColumns:SEND_FEEDBACK_INTENT_URI	Ljava/lang/String;
-    //   183: aload_0
-    //   184: getfield 125	com/android/mail/providers/Account:sendFeedbackIntentUri	Landroid/net/Uri;
-    //   187: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   190: pop
-    //   191: aload_1
-    //   192: getstatic 234	com/android/mail/providers/UIProvider$AccountColumns:REAUTHENTICATION_INTENT_URI	Ljava/lang/String;
-    //   195: aload_0
-    //   196: getfield 127	com/android/mail/providers/Account:reauthenticationIntentUri	Landroid/net/Uri;
-    //   199: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   202: pop
-    //   203: aload_1
-    //   204: ldc -21
-    //   206: aload_0
-    //   207: getfield 129	com/android/mail/providers/Account:syncStatus	I
-    //   210: invokevirtual 422	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
-    //   213: pop
-    //   214: aload_1
-    //   215: ldc -16
-    //   217: aload_0
-    //   218: getfield 131	com/android/mail/providers/Account:composeIntentUri	Landroid/net/Uri;
-    //   221: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   224: pop
-    //   225: aload_1
-    //   226: ldc -15
-    //   228: aload_0
-    //   229: getfield 133	com/android/mail/providers/Account:mimeType	Ljava/lang/String;
-    //   232: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   235: pop
-    //   236: aload_1
-    //   237: ldc -14
-    //   239: aload_0
-    //   240: getfield 135	com/android/mail/providers/Account:recentFolderListUri	Landroid/net/Uri;
-    //   243: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   246: pop
-    //   247: aload_1
-    //   248: ldc -13
-    //   250: aload_0
-    //   251: getfield 137	com/android/mail/providers/Account:color	I
-    //   254: invokevirtual 422	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
-    //   257: pop
-    //   258: aload_1
-    //   259: ldc -9
-    //   261: aload_0
-    //   262: getfield 139	com/android/mail/providers/Account:defaultRecentFolderListUri	Landroid/net/Uri;
-    //   265: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   268: pop
-    //   269: aload_1
-    //   270: ldc -8
-    //   272: aload_0
-    //   273: getfield 141	com/android/mail/providers/Account:manualSyncUri	Landroid/net/Uri;
-    //   276: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   279: pop
-    //   280: aload_1
-    //   281: ldc -6
-    //   283: aload_0
-    //   284: getfield 143	com/android/mail/providers/Account:viewIntentProxyUri	Landroid/net/Uri;
-    //   287: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   290: pop
-    //   291: aload_1
-    //   292: ldc -4
-    //   294: aload_0
-    //   295: getfield 145	com/android/mail/providers/Account:accoutCookieQueryUri	Landroid/net/Uri;
-    //   298: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   301: pop
-    //   302: aload_0
-    //   303: getfield 151	com/android/mail/providers/Account:settings	Lcom/android/mail/providers/Settings;
-    //   306: ifnull +17 -> 323
-    //   309: aload_1
-    //   310: ldc -3
-    //   312: aload_0
-    //   313: getfield 151	com/android/mail/providers/Account:settings	Lcom/android/mail/providers/Settings;
-    //   316: invokevirtual 426	com/android/mail/providers/Settings:toJSON	()Lorg/json/JSONObject;
-    //   319: invokevirtual 419	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    //   322: pop
-    //   323: aload_1
-    //   324: invokevirtual 429	org/json/JSONObject:toString	()Ljava/lang/String;
-    //   327: astore_1
-    //   328: aload_0
-    //   329: monitorexit
-    //   330: aload_1
-    //   331: areturn
-    //   332: astore_2
-    //   333: getstatic 64	com/android/mail/providers/Account:LOG_TAG	Ljava/lang/String;
-    //   336: aload_2
-    //   337: ldc_w 431
-    //   340: iconst_1
-    //   341: anewarray 178	java/lang/Object
-    //   344: dup
-    //   345: iconst_0
-    //   346: aload_0
-    //   347: getfield 318	android/accounts/Account:name	Ljava/lang/String;
-    //   350: aastore
-    //   351: invokestatic 434	com/android/mail/utils/LogUtils:wtf	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
-    //   354: pop
-    //   355: goto -32 -> 323
-    //   358: astore_1
-    //   359: aload_0
-    //   360: monitorexit
-    //   361: aload_1
-    //   362: athrow
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	363	0	this	Account
-    //   9	322	1	localObject1	Object
-    //   358	4	1	localObject2	Object
-    //   332	5	2	localJSONException	JSONException
-    // Exception table:
-    //   from	to	target	type
-    //   10	323	332	org/json/JSONException
-    //   2	10	358	finally
-    //   10	323	358	finally
-    //   323	328	358	finally
-    //   333	355	358	finally
-  }
-  
-  public boolean supportsCapability(int paramInt)
-  {
-    return (capabilities & paramInt) != 0;
+    return c;
   }
   
   public String toString()
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("name=");
-    localStringBuilder.append(name);
-    localStringBuilder.append(",type=");
-    localStringBuilder.append(type);
-    localStringBuilder.append(",accountFromAddressUri=");
-    localStringBuilder.append(accountFromAddresses);
-    localStringBuilder.append(",capabilities=");
-    localStringBuilder.append(capabilities);
-    localStringBuilder.append(",providerVersion=");
-    localStringBuilder.append(providerVersion);
-    localStringBuilder.append(",folderListUri=");
-    localStringBuilder.append(folderListUri);
-    localStringBuilder.append(",fullFolderListUri=");
-    localStringBuilder.append(fullFolderListUri);
-    localStringBuilder.append(",searchUri=");
-    localStringBuilder.append(searchUri);
-    localStringBuilder.append(",saveDraftUri=");
-    localStringBuilder.append(saveDraftUri);
-    localStringBuilder.append(",sendMessageUri=");
-    localStringBuilder.append(sendMessageUri);
-    localStringBuilder.append(",expungeMessageUri=");
-    localStringBuilder.append(expungeMessageUri);
-    localStringBuilder.append(",undoUri=");
-    localStringBuilder.append(undoUri);
-    localStringBuilder.append(",settingsIntentUri=");
-    localStringBuilder.append(settingsIntentUri);
-    localStringBuilder.append(",helpIntentUri=");
-    localStringBuilder.append(helpIntentUri);
-    localStringBuilder.append(",sendFeedbackIntentUri=");
-    localStringBuilder.append(sendFeedbackIntentUri);
-    localStringBuilder.append(",reauthenticationIntentUri=");
-    localStringBuilder.append(reauthenticationIntentUri);
-    localStringBuilder.append(",syncStatus=");
-    localStringBuilder.append(syncStatus);
-    localStringBuilder.append(",composeIntentUri=");
-    localStringBuilder.append(composeIntentUri);
-    localStringBuilder.append(",mimeType=");
-    localStringBuilder.append(mimeType);
-    localStringBuilder.append(",recentFoldersUri=");
-    localStringBuilder.append(recentFolderListUri);
-    localStringBuilder.append(",color=");
-    localStringBuilder.append(Integer.toHexString(color));
-    localStringBuilder.append(",defaultRecentFoldersUri=");
-    localStringBuilder.append(defaultRecentFolderListUri);
-    localStringBuilder.append(",settings=");
-    localStringBuilder.append(settings.serialize());
-    return localStringBuilder.toString();
+    return a();
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    super.writeToParcel(paramParcel, paramInt);
-    paramParcel.writeInt(providerVersion);
-    paramParcel.writeParcelable(uri, 0);
-    paramParcel.writeInt(capabilities);
-    paramParcel.writeParcelable(folderListUri, 0);
-    paramParcel.writeParcelable(fullFolderListUri, 0);
-    paramParcel.writeParcelable(searchUri, 0);
-    paramParcel.writeString(accountFromAddresses);
-    paramParcel.writeParcelable(saveDraftUri, 0);
-    paramParcel.writeParcelable(sendMessageUri, 0);
-    paramParcel.writeParcelable(expungeMessageUri, 0);
-    paramParcel.writeParcelable(undoUri, 0);
-    paramParcel.writeParcelable(settingsIntentUri, 0);
-    paramParcel.writeParcelable(helpIntentUri, 0);
-    paramParcel.writeParcelable(sendFeedbackIntentUri, 0);
-    paramParcel.writeParcelable(reauthenticationIntentUri, 0);
-    paramParcel.writeInt(syncStatus);
-    paramParcel.writeParcelable(composeIntentUri, 0);
-    paramParcel.writeString(mimeType);
-    paramParcel.writeParcelable(recentFolderListUri, 0);
-    paramParcel.writeInt(color);
-    paramParcel.writeParcelable(defaultRecentFolderListUri, 0);
-    paramParcel.writeParcelable(manualSyncUri, 0);
-    paramParcel.writeParcelable(viewIntentProxyUri, 0);
-    paramParcel.writeParcelable(accoutCookieQueryUri, 0);
-    if (settings == null) {
-      LogUtils.e(LOG_TAG, "unexpected null settings object in writeToParcel", new Object[0]);
-    }
-    if (settings != null) {}
-    for (String str = settings.serialize();; str = "")
+    paramParcel.writeString(a);
+    paramParcel.writeString(b);
+    paramParcel.writeString(e);
+    paramParcel.writeString(c);
+    paramParcel.writeInt(f);
+    paramParcel.writeParcelable(g, 0);
+    paramParcel.writeLong(h);
+    paramParcel.writeParcelable(i, 0);
+    paramParcel.writeParcelable(j, 0);
+    paramParcel.writeParcelable(k, 0);
+    paramParcel.writeParcelable(l, 0);
+    paramParcel.writeParcelable(m, 0);
+    paramParcel.writeString(n);
+    paramParcel.writeParcelable(o, 0);
+    paramParcel.writeParcelable(p, 0);
+    paramParcel.writeParcelable(q, 0);
+    paramParcel.writeParcelable(r, 0);
+    paramParcel.writeParcelable(s, 0);
+    paramParcel.writeParcelable(t, 0);
+    paramParcel.writeInt(u);
+    paramParcel.writeParcelable(v, 0);
+    paramParcel.writeString(w);
+    paramParcel.writeParcelable(x, 0);
+    paramParcel.writeParcelable(y, 0);
+    paramParcel.writeParcelable(A, 0);
+    paramParcel.writeParcelable(B, 0);
+    paramParcel.writeParcelable(C, 0);
+    paramParcel.writeParcelable(D, 0);
+    paramParcel.writeParcelable(E, 0);
+    paramParcel.writeInt(F);
+    paramParcel.writeString(G);
+    paramParcel.writeParcelable(H, 0);
+    paramParcel.writeString(I);
+    paramParcel.writeInt(J);
+    paramParcel.writeString(K);
+    paramParcel.writeParcelable(L, 0);
+    paramParcel.writeParcelable(M, 0);
+    paramParcel.writeParcelable(N, 0);
+    if (z == null)
     {
-      paramParcel.writeString(str);
+      cvm.e(T, "unexpected null settings object in writeToParcel", new Object[0]);
+      paramParcel.writeInt(0);
+    }
+    for (;;)
+    {
+      paramParcel.writeString(d);
+      paramParcel.writeString(O);
+      paramParcel.writeString(P);
+      paramParcel.writeString(Q);
+      paramParcel.writeParcelable(R, 0);
       return;
+      paramParcel.writeInt(1);
+      paramParcel.writeParcelable(z, 0);
     }
   }
 }

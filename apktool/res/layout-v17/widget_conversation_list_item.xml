@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/widget_conversation_list_item" android:layout_width="fill_parent" android:layout_height="72.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/widget_background" android:background="@drawable/conversation_item_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="10.0sp" android:layout_marginRight="16.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/widget_priority" android:paddingRight="@dimen/conv_list_priority_padding_end" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/conv_list_priority_padding_end" />
+            <TextView android:textSize="@dimen/senders_font_size" android:ellipsize="end" android:id="@id/widget_senders" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_weight="1.0" style="@style/WidgetSendersStyle" />
+            <ImageView android:id="@id/widget_attachment" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WidgetAttachStyle" />
+            <TextView android:gravity="top" android:id="@id/widget_date" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <TextView android:id="@id/widget_subject" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:maxLines="1" android:includeFontPadding="false" android:textAlignment="viewStart" />
+        <TextView android:id="@id/widget_snippet" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:maxLines="1" android:includeFontPadding="false" android:textAlignment="viewStart" />
+        <LinearLayout android:gravity="bottom" android:layout_gravity="end" android:id="@id/labels" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/widget_folder_0" android:layout_width="32.0dip" android:layout_height="6.0sp" android:scaleType="fitXY" />
+            <ImageView android:id="@id/widget_folder_1" android:layout_width="32.0dip" android:layout_height="6.0sp" android:scaleType="fitXY" />
+            <ImageView android:id="@id/widget_folder_2" android:layout_width="32.0dip" android:layout_height="6.0sp" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

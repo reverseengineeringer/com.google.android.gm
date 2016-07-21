@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/error_text_view" />
+    <TextView android:id="@id/last_added_account" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/AccountSetupInfoText" />
+    <TextView android:id="@id/account_options_instructions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_setup_add_account" style="@style/AccountSetupOptionsInfoText" />
+    <com.android.email.activity.setup.MultilineSelectionGroup android:id="@id/account_options" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:enabled="false" android:id="@id/view_email_addresses" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_account_type_buttons_vertical_spacing" android:text="@string/view_email_addresses_label" style="@style/AccountSetupTextAction" />
+    <TextView android:id="@id/add_google_account_instructions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setup_account_type_buttons_vertical_spacing" android:text="@string/account_setup_cannot_add_google_account" style="@style/AccountSetupFooterText" />
+</LinearLayout>

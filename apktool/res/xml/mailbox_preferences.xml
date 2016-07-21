@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="@string/lc_name" android:key="folder_name" />
+    <CheckBoxPreference android:title="@string/lc_nest_under" android:key="nest_folder_under" />
+    <Preference android:title="@string/lc_no_parent" android:key="parent_folder" android:dependency="nest_folder_under" />
+    <CheckBoxPreference android:title="@string/mailbox_settings_sync_enabled_label" android:key="sync_enabled" android:summary="@string/mailbox_settings_sync_enabled_summary" android:defaultValue="false" />
+    <ListPreference android:persistent="false" android:entries="@array/account_settings_mail_window_entries_with_default" android:title="@string/mailbox_settings_mailbox_sync_window_label" android:key="sync_window" android:dialogTitle="@string/mailbox_settings_mailbox_sync_window_label" android:entryValues="@array/account_settings_mail_window_values_with_default" />
+    <Preference android:title="@string/delete" android:key="delete_folder" />
+</PreferenceScreen>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/attachment_tile_thumbnail" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/attachment_info_min_height" style="@style/AttachmentInfoStyle">
+        <ImageView android:id="@id/attachment_tile_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/AttachmentInfoTextStyle">
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_color_black" android:ellipsize="middle" android:id="@id/attachment_tile_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/text_color_grey" android:ellipsize="end" android:id="@id/attachment_tile_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        </LinearLayout>
+        <ImageButton android:id="@id/attachment_tile_save" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_file_download_grey600_24dp" android:contentDescription="@string/save_attachment" />
+        <ImageButton android:id="@id/attachment_tile_save_to_cloud" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_drive_grey600_24dp" android:contentDescription="@string/save_attachment_to_cloud" />
+        <ImageButton android:id="@id/attachment_tile_remove" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_close_24dp" android:contentDescription="@string/remove_attachment_desc" />
+    </LinearLayout>
+</LinearLayout>

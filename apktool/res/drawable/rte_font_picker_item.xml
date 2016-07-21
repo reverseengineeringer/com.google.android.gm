@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rte_font_picker_item_background" />
+    <item android:left="@dimen/rte_toolbar_button_insetLeft">
+        <selector>
+            <item android:state_checked="true">
+                <bitmap android:gravity="center|left" android:src="@drawable/quantum_ic_check_black_24" android:alpha="@dimen/rte_toolbar_button_enabled_alpha" />
+            </item>
+        </selector>
+    </item>
+</layer-list>

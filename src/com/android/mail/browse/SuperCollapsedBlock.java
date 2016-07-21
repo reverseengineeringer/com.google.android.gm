@@ -2,27 +2,27 @@ package com.android.mail.browse;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Shader.TileMode;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import com.android.mail.utils.LogTag;
+import buc;
+import buh;
+import bxv;
+import bzz;
+import caa;
+import cxe;
 
 public class SuperCollapsedBlock
   extends FrameLayout
   implements View.OnClickListener
 {
-  private static final String LOG_TAG = ;
-  private View mBackgroundView;
-  private OnClickListener mClick;
-  private TextView mCountView;
-  private View mIconView;
-  private ConversationViewAdapter.SuperCollapsedBlockItem mModel;
+  public bxv a;
+  public caa b;
+  public TextView c;
+  public View d;
+  public int e;
   
   public SuperCollapsedBlock(Context paramContext)
   {
@@ -36,52 +36,21 @@ public class SuperCollapsedBlock
     setOnClickListener(this);
   }
   
-  public void bind(ConversationViewAdapter.SuperCollapsedBlockItem paramSuperCollapsedBlockItem)
-  {
-    mModel = paramSuperCollapsedBlockItem;
-    setCount(paramSuperCollapsedBlockItem.getEnd() - paramSuperCollapsedBlockItem.getStart() + 1);
-  }
-  
-  public void initialize(OnClickListener paramOnClickListener)
-  {
-    mClick = paramOnClickListener;
-  }
-  
   public void onClick(View paramView)
   {
-    ((TextView)findViewById(2131755250)).setText(2131493083);
-    mCountView.setVisibility(8);
-    if (mClick != null) {
-      getHandler().post(new Runnable()
-      {
-        public void run()
-        {
-          mClick.onSuperCollapsedClick(mModel);
-        }
-      });
+    c.setVisibility(8);
+    d.setVisibility(0);
+    cxe.a(this, getResources().getQuantityString(buh.w, e, new Object[] { Integer.valueOf(e) }));
+    if (b != null) {
+      post(new bzz(this));
     }
   }
   
   protected void onFinishInflate()
   {
     super.onFinishInflate();
-    mIconView = findViewById(2131755248);
-    mCountView = ((TextView)findViewById(2131755249));
-    mBackgroundView = findViewById(2131755247);
-    BitmapDrawable localBitmapDrawable = (BitmapDrawable)getResources().getDrawable(2130837544);
-    localBitmapDrawable.setTileModeXY(Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
-    mBackgroundView.setBackgroundDrawable(localBitmapDrawable);
-  }
-  
-  public void setCount(int paramInt)
-  {
-    mCountView.setText(Integer.toString(paramInt));
-    mIconView.getBackground().setLevel(paramInt);
-  }
-  
-  public static abstract interface OnClickListener
-  {
-    public abstract void onSuperCollapsedClick(ConversationViewAdapter.SuperCollapsedBlockItem paramSuperCollapsedBlockItem);
+    c = ((TextView)findViewById(buc.fh));
+    d = findViewById(buc.fg);
   }
 }
 
